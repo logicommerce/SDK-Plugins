@@ -2,7 +2,7 @@ package com.logicommerce.sdk.models.payment;
 
 import java.time.LocalDateTime;
 import com.logicommerce.sdk.definition.OrderStatusDefinition;
-import com.logicommerce.sdk.definition.OrderStatusDefinitionBuilder;
+import com.logicommerce.sdk.definition.implementations.OrderStatusDefinitionImpl;
 import com.logicommerce.sdk.enums.PaymentValidateResponseType;
 
 public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<PaymentValidateResponseBuilder, PaymentValidateResponse>{
@@ -12,7 +12,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	private LocalDateTime paymentDate;
 	private PaymentValidateResponseType type;
 	private OrderStatusDefinition orderStatus;
-	private OrderStatusDefinitionBuilder<PaymentValidateResponseBuilder> orderStatusBuilder;
+	private OrderStatusDefinitionImpl.Builder<PaymentValidateResponseBuilder> orderStatusBuilder;
 	private boolean simulateAbort;
 	private String messageLog;
 
@@ -60,9 +60,9 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		return returnThis();
 	}
 	
-	public OrderStatusDefinitionBuilder<PaymentValidateResponseBuilder> orderStatus() {
+	public OrderStatusDefinitionImpl.Builder<PaymentValidateResponseBuilder> orderStatus() {
 		if (orderStatusBuilder == null) {
-			orderStatusBuilder = new OrderStatusDefinitionBuilder<>(returnThis());
+			orderStatusBuilder = new OrderStatusDefinitionImpl.Builder<>(returnThis());
 		}
 		return orderStatusBuilder;
 	}
