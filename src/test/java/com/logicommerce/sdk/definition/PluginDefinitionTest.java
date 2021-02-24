@@ -4,9 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+import com.logicommerce.sdk.definition.implementations.MappedFieldDefinitionImpl;
 import com.logicommerce.sdk.definition.implementations.PaymentSystemDefinitionImpl;
 import com.logicommerce.sdk.definition.implementations.ShipperDefinitionImpl;
 import com.logicommerce.sdk.enums.ConnectorType;
+import com.logicommerce.sdk.enums.MappedItemType;
 
 public class PluginDefinitionTest {
 
@@ -19,6 +21,21 @@ public class PluginDefinitionTest {
 		} catch (PluginDefinitionException e) {
 			fail(e.getMessage());
 		}
+
+		MappedFieldDefinition mappedFieldDefinition = new MappedFieldDefinitionImpl.Builder<>()
+			.addField("field1")
+			.type(MappedItemType.USER)
+			.build();
+
+		pluginDefinition.getMappedFields().add(mappedFieldDefinition);
+
+		ShipperDefinition shipperDefinition = new ShipperDefinitionImpl.Builder()
+				.mappedField()
+					.type(MappedItemType.USER)
+					.addField("field2")
+					.done()
+				.build();
+		assertThrows(PluginDefinitionException.class, () -> pluginDefinition.addConnectorDefinition(shipperDefinition));
 		assertTrue(true);
 	}
 
@@ -28,6 +45,7 @@ public class PluginDefinitionTest {
 			private List<PropertyDefinition> properties = new ArrayList<>();
 			private List<PropertyDefinition> additionalProperties = new ArrayList<>();
 			private List<ConnectorDefinition> connectorDefinitions = new ArrayList<>();
+			private List<MappedFieldDefinition> mappedFields = new ArrayList<>();
 
 			@Override
 			public boolean hasAdditionalProperties() {
@@ -41,7 +59,7 @@ public class PluginDefinitionTest {
 
 			@Override
 			public List<MappedFieldDefinition> getMappedFields() {
-				return new ArrayList<>();
+				return mappedFields;
 			}
 
 			@Override
@@ -101,6 +119,11 @@ public class PluginDefinitionTest {
 					throw new PluginDefinitionException(getClass(), "Connector is already defined");
 				}
 				getConnectorDefinitions().add(connectorDefinition);
+			}
+
+			@Override
+			public void addMappedField(MappedFieldDefinition mappedField) {
+				mappedFields.add(mappedField);
 			}
 		};
 	}

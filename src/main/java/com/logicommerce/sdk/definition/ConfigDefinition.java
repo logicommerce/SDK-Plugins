@@ -16,4 +16,6 @@ public interface ConfigDefinition {
 
 	List<MappedFieldDefinition> getMappedFields();
 
+	void addMappedField(MappedFieldDefinition mappedField);
+
 }

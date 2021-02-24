@@ -14,7 +14,7 @@ public interface PluginDefinition extends ConfigDefinition {
 	String getVersion();
 
 	List<ConnectorDefinition> getConnectorDefinitions();
-	
+
 	<T extends ConnectorDefinition> void addConnectorDefinition(T connectorDefinition) throws PluginDefinitionException;
 
 	<T extends ConnectorDefinition> T getConnectorDefinition(ConnectorType connectorType);
