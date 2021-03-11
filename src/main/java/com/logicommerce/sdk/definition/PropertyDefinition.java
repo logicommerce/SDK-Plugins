@@ -14,6 +14,8 @@ public interface PropertyDefinition {
 	
 	boolean isLanguageValue();
 	
+	boolean isMultipleValue();
+
 	String getEntryValueMode();
 
 	List<PropertyDefinitionValue> getValues();

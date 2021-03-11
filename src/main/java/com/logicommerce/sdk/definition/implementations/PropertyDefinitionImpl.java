@@ -14,6 +14,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	private boolean required;
 	private String defaultValue;
 	private boolean languageValue;
+	private boolean multipleValue;
 	private List<PropertyDefinitionValue> values;
 	private DefinitionLanguages languages;
 	private String entryValueMode = "single";
@@ -41,6 +42,11 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	@Override
 	public boolean isLanguageValue() {
 		return languageValue;
+	}
+
+	@Override
+	public boolean isMultipleValue() {
+		return multipleValue;
 	}
 
 	@Override
@@ -78,6 +84,10 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		this.languageValue = languageValue;
 	}
 
+	public void setMultipleValue(boolean multipleValue) {
+		this.multipleValue = multipleValue;
+	}
+
 	public void setEntryValueMode(String entryValueMode) {
 		this.entryValueMode = entryValueMode;
 	}
@@ -98,6 +108,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		private boolean required;
 		private String defaultValue;
 		private boolean languageValue;
+		private boolean multipleValue;
 		private String entryValueMode;
 		private List<PropertyDefinitionValueImpl.Builder> values;
 		private DefinitionLanguagesImpl.Builder<Builder<T>> languages;
@@ -105,6 +116,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		public Builder() {
 			type = "string";
 			values = new ArrayList<>();
+			languages = new DefinitionLanguagesImpl.Builder<>(this);
 		}
 		public Builder(T parentBuilder) {
 			this();
@@ -136,6 +148,11 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			return this;
 		}
 
+		public Builder<T> multipleValue(boolean multipleValue) {
+			this.multipleValue = multipleValue;
+			return this;
+		}
+
 		public Builder<T> entryValueMode(String entryValueMode) {
 			this.entryValueMode = entryValueMode;
 			return this;
@@ -148,7 +165,6 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		}
 
 		public DefinitionLanguagesImpl.Builder<Builder<T>> languages() {
-			this.languages = new DefinitionLanguagesImpl.Builder<>(this);
 			return languages;
 		}
 		
@@ -159,6 +175,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			propertyDefinition.setRequired(required);
 			propertyDefinition.setDefaultValue(defaultValue);
 			propertyDefinition.setLanguageValue(languageValue);
+			propertyDefinition.setMultipleValue(multipleValue);
 			propertyDefinition.setEntryValueMode(entryValueMode);
 			propertyDefinition.setValues(values.stream().map(PropertyDefinitionValueImpl.Builder::build).collect(Collectors.toList()));
 			propertyDefinition.setLanguages(languages.build());

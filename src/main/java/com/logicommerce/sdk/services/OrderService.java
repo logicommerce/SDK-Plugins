@@ -6,4 +6,6 @@ public interface OrderService extends PluginService {
 
 	void create(Order order) throws PluginServiceException;
 
+	void edit(Order order) throws PluginServiceException;
+
 }
