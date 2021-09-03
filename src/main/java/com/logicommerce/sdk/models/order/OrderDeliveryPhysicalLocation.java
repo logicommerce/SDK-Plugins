@@ -18,6 +18,5 @@ public interface OrderDeliveryPhysicalLocation {
 
 	String getPostalCode();
 
-	Location getLocation();
-	
+	Location getLocation();	
 }

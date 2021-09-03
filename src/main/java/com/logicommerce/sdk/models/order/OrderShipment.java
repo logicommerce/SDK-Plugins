@@ -18,7 +18,7 @@ public interface OrderShipment {
 
 	ShipmentAddress getDestinationAddress();
 
-	LocalDate getIncommingDate();
+	LocalDate getIncomingDate();
 
 	List<OrderShipmentItem> getItems();
 

@@ -11,7 +11,7 @@ public interface OrderShippingTracking {
 
 	void setTrackingNumber(String trackingNumber);
 
-	List<OrderShippingTrackingPackage> getTrackingPackages();
+	List<OrderShippingTrackingPackage> getPackages();
 
 	void addPackage(OrderShippingTrackingPackage trackingPackage);
 

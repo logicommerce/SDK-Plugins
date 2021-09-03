@@ -23,6 +23,8 @@ public interface OrderShipping {
 	ShippingCalculation getShippingCalculation();
 
 	String getShipperPId();
+	
+	int getShipperId();
 
 	String getShippingTypePId();
 

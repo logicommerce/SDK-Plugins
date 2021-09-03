@@ -1,5 +1,5 @@
 package com.logicommerce.sdk.enums;
 
-public enum TrackerAmbience {
+public enum WidgetAmbience {
 	ALL,DESKTOP,MOBILE;
 }

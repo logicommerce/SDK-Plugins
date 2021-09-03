@@ -31,12 +31,12 @@ public class PaymentTest {
 		assertThat(payment.getData(), is(nullValue()));
 		assertThat(payment.getType(), is(PaymentType.OFFLINE));
 	}
-
+	
 	@Test
-	public void testNoPayOK() {
+	public void testWidgetOK() {
 		Payment payment = new PaymentBuilder()
 				.ok()
-				.noPay()
+				.widget()
 				.message(MESSAGE)
 				.transactionId(TRANSACTION_ID)
 				.build();
@@ -46,6 +46,25 @@ public class PaymentTest {
 		assertThat(payment.isSuccess(), is(SUCCESSFUL));
 		assertThat(payment.getTransactionId(), is(TRANSACTION_ID));
 		assertThat(payment.getData(), is(nullValue()));
+		assertThat(payment.getType(), is(PaymentType.WIDGET));
+	}
+
+
+	@Test
+	public void testNoPayOK() {
+		Payment payment = new PaymentBuilder()
+				.ok()
+				.noPay().done()
+				.message(MESSAGE)
+				.transactionId(TRANSACTION_ID)
+				.build();
+
+		assertThat(payment, is(not(nullValue())));
+		assertThat(payment.getMessage(), is(MESSAGE));
+		assertThat(payment.isSuccess(), is(SUCCESSFUL));
+		assertThat(payment.getTransactionId(), is(TRANSACTION_ID));
+		assertThat(payment.getData(), is(notNullValue()));
+		assertThat(payment.getData(), instanceOf(PaymentDataNoPay.class));
 		assertThat(payment.getType(), is(PaymentType.NO_PAY));
 	}
 

@@ -4,7 +4,7 @@ public abstract class PaymentDataBuilder<S, T> {
 
 	private S parentBuilder;
 
-	public PaymentDataBuilder(S parentBuilder) {
+	protected PaymentDataBuilder(S parentBuilder) {
 		this.parentBuilder = parentBuilder;
 	}
 

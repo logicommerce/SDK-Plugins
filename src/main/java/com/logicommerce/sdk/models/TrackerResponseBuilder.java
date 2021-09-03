@@ -1,19 +1,19 @@
 package com.logicommerce.sdk.models;
 
-import com.logicommerce.sdk.enums.TrackerAmbience;
-import com.logicommerce.sdk.enums.TrackerPageType;
-import com.logicommerce.sdk.enums.TrackerPosition;
 import com.logicommerce.sdk.enums.TrackerScriptType;
+import com.logicommerce.sdk.enums.WidgetAmbience;
+import com.logicommerce.sdk.enums.WidgetPageType;
+import com.logicommerce.sdk.enums.WidgetPosition;
 
 public class TrackerResponseBuilder {
 
 	private String script;
 
-	private TrackerPageType pageType = TrackerPageType.ALL;
+	private WidgetPageType pageType = WidgetPageType.ALL;
 
-	private TrackerAmbience ambience = TrackerAmbience.ALL;
+	private WidgetAmbience ambience = WidgetAmbience.ALL;
 
-	private TrackerPosition position = TrackerPosition.HEAD_TOP;
+	private WidgetPosition position = WidgetPosition.HEAD_TOP;
 
 	private TrackerScriptType type = TrackerScriptType.CODE;
 
@@ -22,17 +22,17 @@ public class TrackerResponseBuilder {
 		return this;
 	}
 
-	public TrackerResponseBuilder pageType(TrackerPageType pageType) {
+	public TrackerResponseBuilder pageType(WidgetPageType pageType) {
 		this.pageType = pageType;
 		return this;
 	}
 
-	public TrackerResponseBuilder ambience(TrackerAmbience ambience) {
+	public TrackerResponseBuilder ambience(WidgetAmbience ambience) {
 		this.ambience = ambience;
 		return this;
 	}
 
-	public TrackerResponseBuilder position(TrackerPosition position) {
+	public TrackerResponseBuilder position(WidgetPosition position) {
 		this.position = position;
 		return this;
 	}

@@ -1,8 +1,11 @@
-package com.logicommerce.sdk.models.order;
+package com.logicommerce.sdk.models.order.implementations;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import com.logicommerce.sdk.models.order.OrderShippingTrackingPackage;
+import com.logicommerce.sdk.models.order.OrderShippingTrackingPackageActivity;
+import com.logicommerce.utilities.annotations.Uses;
 
 public class OrderShippingTrackingPackageImpl implements OrderShippingTrackingPackage {
 
@@ -10,6 +13,8 @@ public class OrderShippingTrackingPackageImpl implements OrderShippingTrackingPa
 	private Double weight;
 	private String weightUnits;
 	private LocalDateTime lastUpdate;
+	
+	@Uses(value = OrderShippingTrackingPackageActivityImpl.class)
 	private List<OrderShippingTrackingPackageActivity> activities;
 
 	@Override
@@ -54,6 +59,10 @@ public class OrderShippingTrackingPackageImpl implements OrderShippingTrackingPa
 		}
 		activities.add(activity);
 	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public void setLastUpdate(LocalDateTime lastUpdate) {
 		this.lastUpdate = lastUpdate;
@@ -62,5 +71,4 @@ public class OrderShippingTrackingPackageImpl implements OrderShippingTrackingPa
 	public void setActivities(List<OrderShippingTrackingPackageActivity> activities) {
 		this.activities = activities;
 	}
-
 }

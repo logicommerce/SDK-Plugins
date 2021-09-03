@@ -1,6 +1,5 @@
 package com.logicommerce.sdk.definition;
 
-import java.util.List;
 import com.logicommerce.sdk.enums.ConnectorType;
 
 public interface ShipperDefinition extends ConnectorDefinition {
@@ -9,9 +8,4 @@ public interface ShipperDefinition extends ConnectorDefinition {
 	default ConnectorType getType() {
 		return ConnectorType.SHIPPER;
 	}
-
-	List<StatusCodeDefinition> getStatusCodes();
-
-	void setStatusCodes(List<StatusCodeDefinition> statusCodes);
-
 }

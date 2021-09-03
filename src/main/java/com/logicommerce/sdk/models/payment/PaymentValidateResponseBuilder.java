@@ -14,7 +14,16 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	private OrderStatusDefinition orderStatus;
 	private OrderStatusDefinitionImpl.Builder<PaymentValidateResponseBuilder> orderStatusBuilder;
 	private boolean simulateAbort;
+	private boolean validated;
 	private String messageLog;
+
+	public PaymentValidateResponseBuilder validated(){
+		this.type = PaymentValidateResponseType.VALIDATED; 
+		this.success = true;
+		this.paid = true;
+		this.validated = true;
+		return returnThis();
+	}
 
 	public PaymentValidateResponseBuilder simulateAbort() {
 		this.success = false;
@@ -86,6 +95,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 			payment.setOrderStatus(orderStatusBuilder.build());
 		}
 		payment.setSimulateAbort(simulateAbort);
+		payment.setValidated(validated);
 		payment.setMessageLog(messageLog);
 	}
 

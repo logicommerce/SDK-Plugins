@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import com.logicommerce.sdk.definition.implementations.MappedFieldDefinitionImpl;
+import com.logicommerce.sdk.definition.implementations.MarketplaceDefinitionImpl;
+import com.logicommerce.sdk.definition.implementations.MarketplaceDefinitionImpl.Builder;
 import com.logicommerce.sdk.definition.implementations.PaymentSystemDefinitionImpl;
 import com.logicommerce.sdk.definition.implementations.ShipperDefinitionImpl;
 import com.logicommerce.sdk.enums.ConnectorType;
@@ -18,6 +20,7 @@ public class PluginDefinitionTest {
 		try {
 			pluginDefinition.addConnectorDefinition(new PaymentSystemDefinitionImpl.Builder().build());
 			pluginDefinition.addConnectorDefinition(new ShipperDefinitionImpl.Builder().build());
+			pluginDefinition.addConnectorDefinition(getMarketplaceBuilder().build());
 		} catch (PluginDefinitionException e) {
 			fail(e.getMessage());
 		}
@@ -126,6 +129,30 @@ public class PluginDefinitionTest {
 				mappedFields.add(mappedField);
 			}
 		};
+	}
+	
+	private Builder getMarketplaceBuilder() {
+		Builder marketplace = new MarketplaceDefinitionImpl.Builder();
+		marketplace.additionalProperty()
+			.identifier("test")
+			.required(false)
+			.entryValueMode("select")
+			.languages()
+				.language("es", "test marketplace1")
+				.language("en", "test marketplace2")
+				.language("chi", "test marketplace3")		
+				.done()
+			.value()
+				.languages()
+					.language("es", "test1")
+					.language("en", "test2")
+					.language("chi", "test3")
+				.done()
+				.value("test")
+			.done()
+		.build();
+		
+		return marketplace; 
 	}
 
 }

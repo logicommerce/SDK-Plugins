@@ -1,19 +1,19 @@
 package com.logicommerce.sdk.models;
 
-import com.logicommerce.sdk.enums.TrackerAmbience;
-import com.logicommerce.sdk.enums.TrackerPageType;
-import com.logicommerce.sdk.enums.TrackerPosition;
 import com.logicommerce.sdk.enums.TrackerScriptType;
+import com.logicommerce.sdk.enums.WidgetAmbience;
+import com.logicommerce.sdk.enums.WidgetPageType;
+import com.logicommerce.sdk.enums.WidgetPosition;
 
 public class TrackerResponseImpl implements TrackerResponse {
 
 	private String script;
 
-	private TrackerPageType pageType;
+	private WidgetPageType pageType;
 
-	private TrackerAmbience ambience;
+	private WidgetAmbience ambience;
 
-	private TrackerPosition position;
+	private WidgetPosition position;
 
 	private TrackerScriptType type;
 
@@ -23,17 +23,17 @@ public class TrackerResponseImpl implements TrackerResponse {
 	}
 
 	@Override
-	public TrackerPageType getPageType() {
+	public WidgetPageType getPageType() {
 		return pageType;
 	}
 
 	@Override
-	public TrackerAmbience getAmbience() {
+	public WidgetAmbience getAmbience() {
 		return ambience;
 	}
 
 	@Override
-	public TrackerPosition getPosition() {
+	public WidgetPosition getPosition() {
 		return position;
 	}
 
@@ -46,15 +46,15 @@ public class TrackerResponseImpl implements TrackerResponse {
 		this.script = script;
 	}
 
-	public void setPageType(TrackerPageType pageType) {
+	public void setPageType(WidgetPageType pageType) {
 		this.pageType = pageType;
 	}
 
-	public void setAmbience(TrackerAmbience ambience) {
+	public void setAmbience(WidgetAmbience ambience) {
 		this.ambience = ambience;
 	}
 
-	public void setPosition(TrackerPosition position) {
+	public void setPosition(WidgetPosition position) {
 		this.position = position;
 	}
 

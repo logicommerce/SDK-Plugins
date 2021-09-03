@@ -1,6 +1,6 @@
 package com.logicommerce.sdk.enums;
 
-public enum TrackerPageType {
+public enum WidgetPageType {
 	ALL,
 	HOME,
 	AREA,

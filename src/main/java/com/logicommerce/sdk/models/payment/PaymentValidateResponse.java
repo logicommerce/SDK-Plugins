@@ -27,5 +27,7 @@ public interface PaymentValidateResponse {
 	OrderStatusDefinition getOrderStatus();
 		
 	boolean simulateAbort();
+	
+	boolean validated();
 
 }

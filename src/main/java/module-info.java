@@ -1,4 +1,6 @@
 module com.logicommerce.sdk {
+	requires com.logicommerce.utilities;
+	
 	exports com.logicommerce.sdk;
 	exports com.logicommerce.sdk.definition;
 	exports com.logicommerce.sdk.definition.implementations;
@@ -8,4 +10,6 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.models.order;
 	exports com.logicommerce.sdk.models.payment;
 	exports com.logicommerce.sdk.enums;
+	exports com.logicommerce.sdk.builders;
+	exports com.logicommerce.sdk.builders.order;
 }

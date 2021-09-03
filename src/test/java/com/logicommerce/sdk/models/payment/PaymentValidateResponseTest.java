@@ -107,4 +107,15 @@ public class PaymentValidateResponseTest {
 		assertThat(response.getType(), is(nullValue()));
 		assertThat(response.getData(), is(nullValue()));
 	}
+	
+	@Test
+	public void testValidated() {
+		PaymentValidateResponse response = new PaymentValidateResponseBuilder()
+				.validated()
+				.build();
+		
+		assertThat(response, is(not(nullValue())));
+		assertThat(response.isSuccess(), is(SUCCESSFUL));
+		assertThat(response.validated(), is(true));
+	}
 }

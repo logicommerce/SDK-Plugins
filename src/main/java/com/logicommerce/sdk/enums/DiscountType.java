@@ -5,5 +5,6 @@ public enum DiscountType {
 	GIFT,
 	UNIT,
 	SELECTABLE_GIFT,
-	MXN;
+	MXN,
+	PERCENT_N_UNIT;
 }

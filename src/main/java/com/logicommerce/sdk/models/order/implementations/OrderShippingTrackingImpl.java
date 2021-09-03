@@ -1,48 +1,53 @@
-package com.logicommerce.sdk.models.order;
+package com.logicommerce.sdk.models.order.implementations;
 
 import java.util.ArrayList;
 import java.util.List;
 import com.logicommerce.sdk.models.ElementProperty;
 import com.logicommerce.sdk.models.ElementProperyImpl;
+import com.logicommerce.sdk.models.order.OrderShippingTracking;
+import com.logicommerce.sdk.models.order.OrderShippingTrackingPackage;
+import com.logicommerce.utilities.annotations.Uses;
 
 public class OrderShippingTrackingImpl implements OrderShippingTracking {
 
 	private Integer id;
+	
 	private String trackingNumber;
-	private List<OrderShippingTrackingPackage> trackingPackages;
+	
+	@Uses(value = OrderShippingTrackingPackageImpl.class)
+	private List<OrderShippingTrackingPackage> packages;
+	
+	@Uses(value = ElementProperyImpl.class)
 	private List<ElementProperty> properties;
 
-	@Override
 	public Integer getId() {
 		return id;
 	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-	@Override
 	public String getTrackingNumber() {
 		return trackingNumber;
 	}
 
-	@Override
 	public void setTrackingNumber(String trackingNumber) {
 		this.trackingNumber = trackingNumber;
 	}
 
-	@Override
-	public List<OrderShippingTrackingPackage> getTrackingPackages() {
-		return trackingPackages;
+	public List<OrderShippingTrackingPackage> getPackages() {
+		return packages;
 	}
 
-	@Override
 	public void addPackage(OrderShippingTrackingPackage trackingPackage) {
-		trackingPackages.add(trackingPackage);
+		packages.add(trackingPackage);
 	}
 
-	@Override
 	public List<ElementProperty> getProperties() {
 		return properties;
 	}
 
-	@Override
 	public void addProperty(ElementProperty property) {
 		if (properties == null) {
 			properties = new ArrayList<>();
@@ -50,13 +55,12 @@ public class OrderShippingTrackingImpl implements OrderShippingTracking {
 		properties.add(property);
 	}
 
-	@Override
 	public void addProperty(String name, String value) {
 		addProperty(new ElementProperyImpl(name, value));
 	}
 
-	public void setTrackingPackages(List<OrderShippingTrackingPackage> trackingPackages) {
-		this.trackingPackages = trackingPackages;
+	public void setPackages(List<OrderShippingTrackingPackage> packages) {
+		this.packages = packages;
 	}
 
 	public void setProperties(List<ElementProperty> properties) {

@@ -20,13 +20,20 @@ public class PaymentBuilder extends PaymentAbstractBuilder<PaymentBuilder,  Paym
 		return setSimpleContent();
 	}
 
-	public PaymentBuilder noPay() {
+	public PaymentDataNoPayBuilder<PaymentBuilder> noPay() {
 		this.type = PaymentType.NO_PAY;
-		return setSimpleContent();
+		PaymentDataNoPayBuilder<PaymentBuilder> data = new PaymentDataNoPayBuilder<>(this);
+		this.content = data;
+		return data;
 	}
 
 	public PaymentBuilder cashOnDelivery() {
 		this.type = PaymentType.CASH_ON_DELIVERY;
+		return setSimpleContent();
+	}
+
+	public PaymentBuilder widget() {
+		this.type = PaymentType.WIDGET;
 		return setSimpleContent();
 	}
 

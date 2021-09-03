@@ -3,6 +3,7 @@ package com.logicommerce.sdk.models;
 public class ElementProperyImpl implements ElementProperty {
 
 	private String name;
+
 	private String value;
 
 	public ElementProperyImpl() {
@@ -33,5 +34,4 @@ public class ElementProperyImpl implements ElementProperty {
 	public void setValue(String value) {
 		this.value = value;
 	}
-
 }

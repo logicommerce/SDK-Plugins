@@ -12,6 +12,7 @@ public class PaymentValidateResponseImpl extends PaymentAbstract implements Paym
 	private PaymentValidateResponseType type;
 	private OrderStatusDefinition orderStatus;
 	private boolean simulateAbort;
+	private boolean validated;
 	private String messageLog;
 
 	@Override
@@ -48,7 +49,12 @@ public class PaymentValidateResponseImpl extends PaymentAbstract implements Paym
 	public String getMessageLog() {
 		return messageLog;
 	}
-	
+
+	@Override
+	public boolean validated() {
+		return validated;
+	}
+
 	public void setAuthorizationCode(String authorizationCode) {
 		this.authorizationCode = authorizationCode;
 	}
@@ -75,7 +81,9 @@ public class PaymentValidateResponseImpl extends PaymentAbstract implements Paym
 
 	public void setMessageLog(String messageLog) {
 		this.messageLog = messageLog;
-		
 	}
 
+	public void setValidated(boolean validated) {
+		this.validated = validated;
+	}
 }
