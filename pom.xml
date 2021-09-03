@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.logicommerce</groupId>
 	<artifactId>sdk</artifactId>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>SDK for Plugins</name>
-	<description>Logicommerce SDK for Java plugins.</description>
+	<name>SDK for Logicommerce Plugins</name>
+	<description>SDK for Logicommerce plugins.</description>
 	<url>https://www.logicommerce.com</url>
 
 	<licenses>
@@ -54,7 +54,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<utilities.version>0.0.1-SNAPSHOT</utilities.version>
+		<logicommerce-utilities.version>1.0.0</logicommerce-utilities.version>
 		<jackson.version>2.11.4</jackson.version>
 
 		<junit.jupiter.version>5.7.2</junit.jupiter.version>
@@ -65,7 +65,7 @@
 		<dependency>
 			<groupId>com.logicommerce</groupId>
 			<artifactId>utilities</artifactId>
-			<version>${utilities.version}</version>
+			<version>${logicommerce-utilities.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
