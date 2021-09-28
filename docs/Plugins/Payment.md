@@ -42,7 +42,7 @@ module com.thirdparty.payment {
 	
     provides com.logicommerce.sdk.services.PaymentService
         with com.thirdparty.payment.Payment;
-    provides com.logicommerce.sdk.services.PaymentKetsService
+    provides com.logicommerce.sdk.services.PaymentKeysService
         with com.thirdparty.payment.PaymentKeys;
     provides com.logicommerce.sdk.services.PaymentSytemService
         with com.thirdparty.payment.PaymentSystem;
@@ -78,13 +78,13 @@ public class PaymentThirdParty implements PaymentService {
         // Your code
     }
     
-   	@Override
-	public List<PaymentToken> getPaymentTokens() {
+    @Override
+    public List<PaymentToken> getPaymentTokens() {
         // Your code
     }
 
     @Override
-	public void deletePaymentToken(String token) {
+    public void deletePaymentToken(String token) {
         // Your code
     }
 
@@ -93,17 +93,17 @@ public class PaymentThirdParty implements PaymentService {
 
 ### Método getPayment
 
-Genera la información que se volverá a Frente y devuelve un objeto tipo **[Payment](../APIReference/Responses/Payment.md)**.
+Genera la información que se volverá a Frente y devuelve un objeto tipo **[Payment](../APIReference/Models/Payment/Payment.md)**.
 
 #### Parámetros
 
-Recibe por parámetros los datos del pedido *order* (Ver [Order](../APIReference/Parameters/Order.md)) y el identificador generado *transactionId*.
+Recibe por parámetros los datos del pedido *order* (Ver [Order](../APIReference/Models/Order/Order.md)) y el identificador generado *transactionId*.
 
 #### Respuesta
 
 En la respuesta hay que devolver *transactionId* ya que se prevé que se permite que el sistema de pago pueda generar su propio identificador.
 
-El SDK proporciona el builder **[PaymentBuilder](PaymentBuilder.md)** para la respuesta de tipo **Payment**. Se facilita así la creación del objeto. Si no se quiere utilizar el builder se puede devolver una clase propia que implemente **Payment**.
+El SDK proporciona el builder **[PaymentBuilder](../APIReference/Models/Payment/Payment.md)** para la respuesta de tipo **Payment**. Se facilita así la creación del objeto. Si no se quiere utilizar el builder se puede devolver una clase propia que implemente **Payment**.
 
 En la respuesta, aparte de volver *transactionId* se determina si es válido, el [tipo](../APIReference/Enums/README.md#PaymentType) que puede ser *formulario*, *offline*, *widget*, *sin pago*. En caso de que sea de tipo *formulario* se debe rellenar con el método, la url y los parámetros. En el caso de que sea de tipo widget se puede pasar mensaje con el elemento.
 
@@ -127,11 +127,12 @@ new PaymentBuilder()
 PaymentBuilder *widget*:
 
 ```java
-return new PaymentBuilder().ok()
-				.transactionId(transactionId)
-				.widget()
-				.message(iframeWidget)
-				.build();
+new PaymentBuilder()
+    .ok()
+    .transactionId(transactionId)
+    .widget()
+    .message(iframeWidget)
+    .build();
 ```
 
 PaymentBuilder *offline*:
@@ -154,11 +155,11 @@ new PaymentBuilder()
 
 ### Método validate
 
-Validar que el pago ha sido correcto y devuelve un objeto [PaymentValidateResponse](../APIReference/Responses/PaymentValidateResponse.md).
+Validar que el pago ha sido correcto y devuelve un objeto [PaymentValidateResponse](../APIReference/Models/Payment/PaymentValidateResponse.md).
 
 #### Parámetros
 
-Recibe por parámetros los datos del pedido *order* (Ver [Order](../APIReference/Parameters/Order.md)) y la respuesta del sistema de pago *paymentValidateParams* (Ver [PaymentValidateParams](../APIReference/modelos/Payment/PaymentValidateParams.md)).
+Recibe por parámetros los datos del pedido *order* (Ver [Order](../APIReference/Models/Order/Order.md)) y la respuesta del sistema de pago *paymentValidateParams* (Ver [PaymentValidateParams](../APIReference/Models/Payment/PaymentValidateParams.md)).
 
 #### Respuesta
 
@@ -181,15 +182,11 @@ new PaymentValidateResponseBuilder()
 
 ### Método getPaymentTokens
 
-Obtener los tokens guardados en función del usuario activo. [List<PaymentToken>](../APIReference/Models/Payment/PaymentToken.md).
-
-#### Parámetros
-
-Recibe por parámetros los datos del pedido *order* (Ver [Order](../APIReference/Parameters/Order.md)) y la respuesta del sistema de pago *paymentValidateParams* (Ver [PaymentValidateParams](../APIReference/modelos/Payment/PaymentValidateParams.md)).
+Obtener los tokens guardados en función del usuario activo. lista de [PaymentToken](../APIReference/Models/Payment/PaymentToken.md).
 
 #### Respuesta
 
-El SDK proporciona el builder [PaymentTokenBuilder](../APIReference/Models/Payment/PaymentToken.md#builder) para la respuesta de tipo **[List<PaymentToken>](../APIReference/Models/Payment/PaymentToken.md)** . Si no se quiere utilizar el builder se puede devolver una clase propia que implemente **PaymentToken**.
+El SDK proporciona el builder [PaymentTokenBuilder](../APIReference/Models/Payment/PaymentToken.md#builder) para la respuesta de tipo **[List PaymentToken](../APIReference/Models/Payment/PaymentToken.md)** . Si no se quiere utilizar el builder se puede devolver una clase propia que implemente **PaymentToken**.
 
 ##### Ejemplo
 
@@ -256,7 +253,7 @@ public class PaymentKeysThirdParty implements PaymentKeysService {
 
 ### Método getPaymentKeys
 
-Comprueba que la respuesta del pago concuerda con sus datos. Devuelve un objeto tipo **[PaymentKeys](../APIReference/Responses/PaymentKeys.md)**.
+Comprueba que la respuesta del pago concuerda con sus datos. Devuelve un objeto tipo **[PaymentKeys](../APIReference/Models/Payment/PaymentKeys.md)**.
 
 #### Parámetros
 
@@ -359,5 +356,5 @@ return new PaymentSystemPropertiesImpl(properties);
 
 Todos los plugins necesitan implementar la interfaz DefinitionService. (com.logicommerce.sdk.services.DefinitionService)
 
-ver  **[DefinitionService](../APIReference/services/DefinitionService.md)**
+ver  **[DefinitionService](../APIReference/Services/DefinitionService.md)**
 
