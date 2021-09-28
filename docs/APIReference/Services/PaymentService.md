@@ -2,10 +2,11 @@
 
 Servicio para el sistema de pago.
 
-Este servicio se utiliza en dos momentos diferentes (e instancias diferentes):
+Este servicio se utiliza en tres momentos diferentes (e instancias diferentes):
 
 1. Preparación del pago.
-2. Recepción y validación del pago desde la pasarela.
+2. Validación del pago desde la pasarela.
+3. Obtener y eliminar tokens de pago.
 
 ## Métodos disponibles
 
@@ -20,19 +21,7 @@ parámetros:
 
 Devuelve **[Payment](../Models/Payment/Payment.md)**.
 
-### Recepción y validación del pago
-
-#### Recepción
-
-Cuando el sistema de pago vuelve los datos, la API no puede saber a qué sistema pertenecen ni su *transactionId*. Se pasa a todos los plugins que implementan *PaymentService* para que éstos devuelvan el transactionId. El encargado es el método *getPaymentKeys*.
-
-parámetros:
-
-- **[PaymentValidateParams](../Models/Payment/PaymentValidateParams.md)** paymentValidateParams
-
-Devuelve **[PaymentKeys](../Models/Payment/PaymentKeys.md)**.
-
-#### Validación
+### Validación del pago
 
 Una vez se sabe con qué sistema se ha efectuado el pago se llama el método *validate*.
 
@@ -43,6 +32,20 @@ parámetros:
 
 Devuelve **[PaymentValidateResponse](../Models/Payment/PaymentValidateResponse)**.
 
+### Tokenización
+
+Para obtener listado de tokens de tarjetas que el usuario puede tener guardados se llama el método *getPaymentTokens*.
+
+Devuleve:
+
+-  **[List<PaymentToken>](../Models/Payment/PaymentToken)**.
+
+Para eliminar un token registrado se llama el método *deletePaymentToken*.
+
+Parámetros:
+
+- **String** token
+
 ## Interfaz
 
 ```java
@@ -50,9 +53,11 @@ public interface PaymentService extends PluginService {
 
     Payment getPayment(Order order, String transactionId) throws PluginServiceException;
 
-    PaymentKeys getPaymentKeys(PaymentValidateParams paymentValidateParams) throws PluginServiceException;
-
     PaymentValidateResponse validate(Order order, PaymentValidateParams paymentValidateParams) throws PluginServiceException;
+    
+   	List<PaymentToken> getPaymentTokens();
+
+	void deletePaymentToken(String token);
 
 }
 ```

@@ -11,6 +11,15 @@ Propiedades del sistema de pago
 - **void** addProperty(**[PaymentSystemProperty](PaymentSystemProperty.md)** paymentProperty)
 - **void** clean()
 
+## Implementación
+
+El SDK facilita el trabajo con una implementación: **PaymentSystemPropertiesImpl** donde a su constructor se le tiene que pasar una lista de propiedaes:  List<PaymentSystemProperty>
+
+```java
+PaymentSystemProperties paymentSystemProperties = new PaymentSystemPropertiesImpl(properties);
+```
+
 ## Referencias
 
 - **[PaymentSystemProperty](PaymentSystemProperty.md)**
+

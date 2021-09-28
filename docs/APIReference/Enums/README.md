@@ -83,6 +83,12 @@
 - MALE
 - FEMALE
 
+## MapperItemType
+
+- USER
+- STATUS_CODE
+- REFUND_CODE
+
 ## OrderShipmentStatusType
 
 - INCIDENTS
@@ -108,6 +114,7 @@
 - FORM
 - OFFLINE
 - NO_PAY
+- WIDGET
 
 ## PaymentValidateResponseType
 

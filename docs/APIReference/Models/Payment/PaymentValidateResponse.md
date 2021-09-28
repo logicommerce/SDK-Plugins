@@ -14,12 +14,15 @@ Respuesta de la validación del pago:
 - **LocalDateTime** getPaymentDate()
 - ***PaymentValidateResponseType*** getType()
 - **[PaymentData](PaymentData.md)** getData()
-- **[OrderStatusDefinition](../../Definitions/OrderStatusDefinition.md)** getOrderStatus();
+- **[OrderStatusDefinition](../../Definitions/OrderStatusDefinition.md)** getOrderStatus()
+- **boolean** simulateAbort()
+- **boolean** validated()
 
 ## Referencias
 
 - **PaymentValidateResponseType**: Enumerado
 - **[PaymentData](PaymentData.md)**
+- **[OrderStatusDefinition](../../Definitions/OrderStatusDefinition.md)** 
 
 ## Builder
 
@@ -36,3 +39,6 @@ Métodos del builder:
 - *paymentDate(LocalDateTime paymentDate)*
 - *noData()*: Cuando la validación no devuelve datos para la vista.
 - *form()*: Cuando la validación devuelve un formulario para la vista (Ver **[PaymentDataForm](PaymentData.md#PaymentDataForm)**).
+- *simulateAbort()*: Cuando la validación no requiere que se muestre en una vista.
+- *validated()*: Para indicar que la validación ya ha sido realizada anteriormente.
+

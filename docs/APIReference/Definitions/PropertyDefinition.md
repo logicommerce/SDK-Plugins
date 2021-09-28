@@ -6,10 +6,13 @@ Devuelve la definición de las propiedades del plugin. Hay que tener en cuenta q
 
 ## Métodos
 
-- **String** getName()
+- **String** getIdentifier()
 - **String** getType()
-- **boolean** getRequired()
+- **boolean** isRequired()
 - **String** getDefaultValue()
+- **boolean** isLanguageValue()
+- **boolean** isMultipleValue()
+- **String** getEntryValueMode()
 - **List\<PropertyDefinitionValue>** getValues()
 - **[DefinitionLanguages](DefinitionLanguages.md)** getLanguages(): Nombre de la propiedad por idioma
 
