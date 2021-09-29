@@ -11,8 +11,9 @@ Muestra y permite generar la información del tracking
 - **void** setTrackingNumber(**String** trackingNumber)
 - **List<[OrderShippingTrackingPackage](OrderShippingTrackingPackage.md)>** getTrackingPackages()
 - **void** addPackage(**[OrderShippingTrackingPackage](OrderShippingTrackingPackage.md)** trackingPackage)
-- **List<[ElementProperty](../ElementProperty.md)>** getProperties();
-- **void** addProperty(**ElementProperty** property);
+- **List<[ElementProperty](../ElementProperty.md)>** getProperties()
+- **void** addProperty(**[ElementProperty](../ElementProperty.md)** property)
+- **void** addProperty(**String**  name, **String** value)
 
 ## Referencias
 

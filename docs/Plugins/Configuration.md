@@ -1,6 +1,6 @@
 # Configuration
 
-La configuración de los plugins se puede capturar con las anotaciones *@Property* i *@PropertyLanguage*.
+La configuración de los plugins se puede capturar con las anotaciones *@Property* , *@PropertyLanguage* y @Mapped.
 
 ```java
 import com.logicommerce.sdk.Property;
@@ -13,15 +13,18 @@ public class Configuration {
     @Property
     private String apiKey;
 
-    @Property(specificConfig = "related_definition")
+    @Property(connector = ConnectorType.related_definition)
     private Integer recommenderType;
-
+    
+    @Mapped(value = MappedItemType.STATUS_CODE)
+    private Map<String, OrderStatusDefinition> mappingStatus;
+    
     // ...
 
 }
 ```
 
-En caso de que a la definción del plugin haya configuración principal con los elementos "endpoint" y "apiKey" y que haya configuración específica de los relacionados.
+En caso de que a la definición del plugin haya configuración principal con los elementos "endpoint" y "apiKey" y que haya configuración específica de los relacionados.
 
 Los datos de la configuración vendrán dadas por Beyond que las lee de la base de datos.
 

@@ -194,7 +194,8 @@ El SDK proporciona el builder [PaymentTokenBuilder](../APIReference/Models/Payme
 new PaymentTokenBuilder()
     .token(token)
     .addItem(key1, value1)
-    .addItem(key2, value2);
+    .addItem(key2, value2)
+    .build();
 ```
 
 ### Método deletePaymentTokens

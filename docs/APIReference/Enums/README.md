@@ -27,7 +27,7 @@
 - FIXED_AMOUNT
 - PERCENTAGE_OVER_TOTAL
 
-## CartItem
+## CartItemType
 
 - PRODUCT
 - GIFT
@@ -47,7 +47,18 @@
 - CUSTOM_TAG
 - RELATED_DEFINITION
 - BASKET
+- MAILING_SYSTEM
+- SEARCH_ENGINE
+- OAUTH_CONNECT
+- TRACKER
+- ASSET
+- MARKETPLACE
 - UNKNOWN
+
+## DeliveryType
+
+- SHIPPING
+- PICKING
 
 ## DiscountApplyTo
 
@@ -71,7 +82,7 @@
 - REFUND_REQUESTS
 - REFUND
 
-## Export status
+## ExportStatusType
 
 - PENDING_TO_SEND
 - PENDING_TO_CONFIRM
@@ -122,7 +133,7 @@
 - FORM
 - XML
 
-## PrevisionType
+## Prevision Type
 
 - RESERVE
 - PREVISION
@@ -148,12 +159,29 @@
 - NOTIFICATION
 - CHANGE_SHIPMENT_STATUS
 
+## ShippingActionType
+
+- PICKUP
+- REFUND
+- TRACKING
+
 ## ShippingCalculation
 
 - BY_WEIGHT
 - BY_UNITS
 
-## TrackerPageType
+## TrackerScriptType
+
+- CODE
+- IFRAME
+
+## WidgetAmbience
+
+- ALL
+- DESKTOP
+- MOBILE
+
+## WidgetPageType
 
 - ALL
 - HOME
@@ -176,9 +204,18 @@
 - BLOG_AUTHOR
 - SEARCH
 
-## TrackerPosition
+## WidgetPosition
 
 - HEAD_TOP
 - HEAD_BOTTOM
 - BODY_TOP
 - BODY_BOTTOM
+- FOOTER_TOP
+- FOOTER_BOTTOM
+- ALL
+
+## WidgetType
+
+- CSS
+- JS
+

@@ -2,17 +2,17 @@
 
 ## Descripción
 
-Mostra l'usuari de la comanda.
+Muestra el usuario del pedido.
 
 ## Métodos
 
 - **String** getEmail()
 - ***Gender*** getGender()
-- **[Address](../resources/Address.md)** getBillingAddress()
-- **[Address](../resources/Address.md)** getShippingAddress()
+- **[UserAddress](../UserAddress.md)** getBillingAddress()
+- **[UserAddress](../UserAddress.md)** getShippingAddress()
 
-## Referéncias
+## Referencias
 
-- **Gender**: Enumerado
-- **[Address](../resources/Address.md)**: Interface que se encuentra en el package *com.logicommerce.sdk.models*.
+- **[Gender](../../Enums/README.md#Gender)**: Enumerado
+- **[UserAddress](../UserAddress.md)**: Interface que se encuentra en el package *com.logicommerce.sdk.models*.
 

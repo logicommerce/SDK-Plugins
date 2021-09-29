@@ -23,6 +23,7 @@ Para facilitar la creación de definiciones, se proporcionan interfaces con el t
 - MailingSystemDefinition
 - MarketplaceDefinition
 - ShippingTypeDefinition
+- CustomTagsDefiniton
 
 ## Referencias
 

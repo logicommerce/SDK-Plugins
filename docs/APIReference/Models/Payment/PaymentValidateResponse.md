@@ -20,7 +20,7 @@ Respuesta de la validación del pago:
 
 ## Referencias
 
-- **PaymentValidateResponseType**: Enumerado
+- **[PaymentValidateResponseType](../../Enums/README.md#PaymentValidateResponseType)**: Enumerado
 - **[PaymentData](PaymentData.md)**
 - **[OrderStatusDefinition](../../Definitions/OrderStatusDefinition.md)** 
 
@@ -38,7 +38,7 @@ Métodos del builder:
 - *paid(boolean paid)*: Determina si el pago se ha efectuado o no.
 - *paymentDate(LocalDateTime paymentDate)*
 - *noData()*: Cuando la validación no devuelve datos para la vista.
-- *form()*: Cuando la validación devuelve un formulario para la vista (Ver **[PaymentDataForm](PaymentData.md#PaymentDataForm)**).
+- *form()*: Cuando la validación devuelve un formulario para la vista (Ver **[PaymentDataForm](PaymentDataForm.md)**).
 - *simulateAbort()*: Cuando la validación no requiere que se muestre en una vista.
 - *validated()*: Para indicar que la validación ya ha sido realizada anteriormente.
 

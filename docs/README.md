@@ -14,7 +14,7 @@ Los plugins sólo se ejecutarán cuando la tienda lo tenga contratado.
 
 ### Definición de la configuración de un plugin
 
-Para la configuración del plugin, éste deberá proporcionar una definición. La definción se puede proporcionar desde el fichero JSON (plugin.json) o con la implementación del servicio *DefinitionService*. Las propiedades de la configuración se guardarán en la base de datos de la tienda para cada plugin.
+Para la configuración del plugin, éste deberá proporcionar una definición. La definición se puede proporcionar desde el fichero JSON (plugin.json) o con la implementación del servicio *DefinitionService*. Las propiedades de la configuración se guardarán en la base de datos de la tienda para cada plugin.
 
 Desde el administrador podrá configurar los parámetros que el plugin necesita.
 
@@ -24,13 +24,13 @@ Una propiedad de la configuración puede tener el valor según el idioma.
 
 #### Definiciones específicas
 
-Según lo que el plugin necesite, puede haber configuraciones específicas de cada módulo de LogiCommerce como prodria ser el sistema de pago, recomendador o transportista entre otros. Esta definición específica generará una configuración por el plugin y por el módulo, permitiendo que un plugin tenga diferentes configuraciones en una misma tienda.
+Según lo que el plugin necesite, puede haber configuraciones específicas de cada módulo de LogiCommerce como podría ser el sistema de pago, recomendador o transportista entre otros. Esta definición específica generará una configuración por el plugin y por el módulo, permitiendo que un plugin tenga diferentes configuraciones en una misma tienda.
 
 Las configuraciones específicas editarán en la pantalla de cada módulo del administrador.
 
 ## Desarrollo de un plugin
 
-Para el desarrollo de un plugin se debe seguir una estructura de ficheros, es requerida una definción y se base en *Services*:
+Para el desarrollo de un plugin se debe seguir una estructura de ficheros, es requerida una definición y se base en *Services*:
 
 ### Creación de un plugin
 

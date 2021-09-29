@@ -48,7 +48,17 @@ El SDK para la creación de los plugins se encuentra en un repositorio propio
 <dependency>
     <groupId>com.logicommerce</groupId>
     <artifactId>sdk</artifactId>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
+</dependency>
+<dependency>
+    <groupId>com.logicommerce</groupId>
+    <artifactId>utilities</artifactId>
+    <version>1.0.1</version>
+</dependency>
+<dependency>
+    <groupId>com.logicommerce</groupId>
+    <artifactId>sdktest</artifactId>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -60,7 +70,9 @@ Crear un archetype para cada tipo de servicio.
 #### Gradle
 
 ```gradle
-compile(group: 'com.logicommerce', name: 'sdk', version: '0.0.1')
+compile(group: 'com.logicommerce', name: 'sdk', version: '1.0.0')
+compile(group: 'com.logicommerce', name: 'utilities', version: '1.0.0')
+compile(group: 'com.logicommerce', name: 'sdktest', version: '1.0.0')
 ```
 
 #### Ivy

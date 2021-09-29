@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Elemento de la cistella.
+Elemento de la cesta.
 
 ## Métodos
 
@@ -18,4 +18,5 @@ Elemento de la cistella.
 
 ## Referencias
 
-- **CartItemType**: Enumerado
+- **[CartItemType](../Enums/README.md#CartItemType)**: Enumerado
+

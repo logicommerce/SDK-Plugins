@@ -36,9 +36,9 @@ Devuelve **[PaymentValidateResponse](../Models/Payment/PaymentValidateResponse)*
 
 Para obtener listado de tokens de tarjetas que el usuario puede tener guardados se llama el método *getPaymentTokens*.
 
-Devuleve:
+Devuelve:
 
--  **[List<PaymentToken>](../Models/Payment/PaymentToken)**.
+-  **[List(PaymentToken)](../Models/Payment/PaymentToken)**.
 
 Para eliminar un token registrado se llama el método *deletePaymentToken*.
 

@@ -15,7 +15,7 @@ Los recursos se definen en base a la anotación *@Resource* como propiedad de la
 
 A algunos modelos de datos se accede como recurso.
 
-- *[PluginDefinition](APIReference/Models/PluginDefinition.md)*: información de plugin.json. Disponible en todos los servicios.
+- *[PluginDefinition](APIReference/Definitions/PluginDefinition.md)*: información de plugin.json. Disponible en todos los servicios.
 
 - *[User](APIReference/Models/User.md)*: Datos del usuario. Sólo disponible en las llamadas de usuario.
 - *[Cart](APIReference/Models/Cart.md)*: Datos de la cesta. Sólo disponible en las llamadas de olmos.

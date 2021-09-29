@@ -8,17 +8,25 @@ Todas las interfaces que definan servicios tienen el sufijo *Service*.
 
 ## Implementable services
 
-- **TODO** [BasketService](BasketService.md)
-- [CheckoutService](CheckoutService.md)
+- [AssetService](AssetService.md)
+- [BasketService](BasketService.md)
 - [CustomFormService](CustomFormService.md)
+- CustomTagService
+- [DataService](DataService.md)
 - [DefinitionService](DefinitionService.md)
 - [NewsletterService](NewsletterService.md)
+- OauthService
 - [OrderIntegrationService](OrderIntegrationService.md)
+- [OrderService](OrderService.md)
 - [OrderStatusService](OrderStatusService.md)
-- [PaymentService](Payment.md)
+- [PaymentService](PaymentService.md)
+- [PaymentKeysService](PaymentKeysService.md)
 - [PaymentSystemService](PaymentSystemService.md)
 - [RelatedItemsService](RelatedItemsService.md)
 - [SearchProductsService](SearchProductsService.md)
+- [ShipmentService](ShipmentService.md)
+- [ShipperService](ShipperService.md)
+- [ShippingTypeService](ShippingTypeService.md)
 - [TrackerService](TrackerService.md)
 - [UserDataService](UserDataService.md)
 - [UserService](UserService.md)

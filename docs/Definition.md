@@ -22,11 +22,12 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
   - **identifier**: define el nombre de la propiedad
   - **type**: Tipo de valor aceptado
     - string
+    - password
     - integer
     - double
     - boolean
     - documentStatuses
-      - country
+    - country
   - **required**: Si el valor es requerido cuando se edita en el Administrador.
   - **languageValue**: Define si sus valores son únicos por idioma de la tienda o global (por defecto es false)
   - **entryValueMode**:

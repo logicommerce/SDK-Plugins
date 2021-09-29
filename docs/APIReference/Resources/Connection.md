@@ -10,7 +10,7 @@ Los métodos *get*, *post*, *put*, *delete* son "finales" y devuelven un objeto 
 
 El resto son mutables y están pensados para que se puedan concatenar (como un builder) y generar la petición.
 
-## Mètodes
+## Métodos
 
 - **Connection** init(String endPoint)
 - **Connection** authorization(String authorization)
@@ -20,12 +20,14 @@ El resto son mutables y están pensados para que se puedan concatenar (como un b
 - **Connection** header(String name, String value)
 - **Connection** cookie(String name, String value)
 - **Connection** params(String params)
+- **Connection** timeout(Integer timeout);
 - **[Response](Response.md)** get() throws **[PluginResourceException](PluginResourceException.md)**
 - **[Response](Response.md)** post(String body) throws **[PluginResourceException](PluginResourceException.md)**
 - **[Response](Response.md)** put(String body) throws **[PluginResourceException](PluginResourceException.md)**
 - **[Response](Response.md)** delete() throws **[PluginResourceException](PluginResourceException.md)**
 
-## Referències
+## Referencias
 
 - **[Response](Response.md)**
 - **[PluginResourceException](PluginResourceException.md)**
+
