@@ -46,7 +46,7 @@ El campo *value* de la anotación indica el tipo de mappeo realizado.
 
 ### *@Resource*
 
-Define un [recurso](./resources.md). Según la interfaz del campo definido (dadas por el SDK) el plugin cargará los recursos.
+Define un [recurso](./Resources.md). Según la interfaz del campo definido (dadas por el SDK) el plugin cargará los recursos.
 
 ## Ejemplo de código con las anotaciones
 
