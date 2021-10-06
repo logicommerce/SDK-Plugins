@@ -6,25 +6,14 @@ Muestra la dirección de un usuario o del usuario del pedido. La dirección pued
 
 ## Métodos
 
-- **String** getAlias()
-- **String** getFirstName()
-- **String** getLastName()
-- **String** getCompany()
+- **String** getName()
 - **String** getAddress()
-- **String** getAddressAdditionalInformation()
-- **String** getNumber()
 - **String** getCity()
 - **String** getState()
 - **String** getPostalCode()
-- **String** getVat()
-- **String** getNif()
 - **[Location](Location.md)** getLocation()
 - **String** getPhone()
 - **String** getMobile()
-- **String** getFax()
-- **boolean** isTax()
-- **boolean** isRe()
-- **boolean** isReverseChargeVat()
 
 ## Referencias
 

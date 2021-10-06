@@ -14,7 +14,7 @@ Interface que devuelve los datos del pago.
 
 ## Referencias
 
-- **PaymentType**: Enumerado
+- **[PaymentType](../../Enums/README.md#PaymentType)**: Enumerado
 - **[PaymentData](PaymentData.md)**
 
 ## Builder

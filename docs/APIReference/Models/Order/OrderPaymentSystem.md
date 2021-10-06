@@ -15,10 +15,9 @@ Muestra el sistema de pago del pedido.
 - **double** getPrice()
 - **double** getIncreaseMin()
 - **boolean** isCashOnDelivery()
-- **boolean** isSaveToken()
-- **int** getPaymentSystemToken()
+- **String** getProperty()
 
 ## Referencias
 
-- **AmountType**: Enumerado
+- **[AmountType](../../Enums/README.md#AmountType)**: Enumerado
 - **[OrderTax](OrderTax.md)**

@@ -38,9 +38,15 @@ El campo *type* de la anotación es obligatorio y define el tipo de valor que es
 
 Se recomienda que no se utilice en una clase principal y que las propiedades se encuentren en una sub clase.
 
+### *@Mapped*
+
+Permite recibir el valor de la propiedad mappeda definida en el Administrador a partir de la definición a *plugin.json*.
+
+El campo *value* de la anotación indica el tipo de mappeo realizado.
+
 ### *@Resource*
 
-Define un [recurso] (Resources.md). Según la interfaz del campo definido (dadas por el SDK) el plugin cargará los recursos.
+Define un [recurso](./Resources.md). Según la interfaz del campo definido (dadas por el SDK) el plugin cargará los recursos.
 
 ## Ejemplo de código con las anotaciones
 
@@ -88,6 +94,9 @@ public class Config {
 
     @Resource
     private Navigator navigator;
+    
+	@Mapped(value = MappedItemType.USER)
+	private Map<String, String> mappedFields;
 
     // ...
 

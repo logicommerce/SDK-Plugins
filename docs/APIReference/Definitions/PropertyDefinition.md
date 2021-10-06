@@ -2,14 +2,17 @@
 
 ## Descripción
 
-Devuelve la definición de las propiedades del plugin. Hay que tener en cuenta que para obtener los valord definidos en el **Administrador**, estos se deben capturar con las anotaciones *@Property* o *@PropertyLanguage*.
+Devuelve la definición de las propiedades del plugin. Hay que tener en cuenta que para obtener los valores definidos en el **Administrador**, estos se deben capturar con las anotaciones *@Property* o *@PropertyLanguage*.
 
 ## Métodos
 
-- **String** getName()
+- **String** getIdentifier()
 - **String** getType()
-- **boolean** getRequired()
+- **boolean** isRequired()
 - **String** getDefaultValue()
+- **boolean** isLanguageValue()
+- **boolean** isMultipleValue()
+- **String** getEntryValueMode()
 - **List\<PropertyDefinitionValue>** getValues()
 - **[DefinitionLanguages](DefinitionLanguages.md)** getLanguages(): Nombre de la propiedad por idioma
 

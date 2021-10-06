@@ -1,4 +1,4 @@
-# Definción
+# Definición
 
 > **Alerta!**
 >
@@ -18,14 +18,15 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
 - **versión**: Versión del plugin.
 - **date**: Fecha de publicación.
 - **author**: Autor del Plugin.
-- **properties**: Propiedades que desde el Administrador se podrán editar desde la pantalla de plugins. Se encontrarán disponibles en*java*a partir del las anotaciones *@Property* y *@PropertyLanguage* al código del plugin. Las propiedades tienen la siguiente definición:
-  - **name**: define el nombre de la propiedad
+- **properties**: Propiedades que desde el Administrador se podrán editar desde la pantalla de plugins. Se encontrarán disponibles en *java* a partir del las anotaciones *@Property* y *@PropertyLanguage* al código del plugin. Las propiedades tienen la siguiente definición:
+  - **identifier**: define el nombre de la propiedad
   - **type**: Tipo de valor aceptado
     - string
+    - password
     - integer
     - double
     - boolean
-    - orderStatus
+    - documentStatuses
     - country
   - **required**: Si el valor es requerido cuando se edita en el Administrador.
   - **languageValue**: Define si sus valores son únicos por idioma de la tienda o global (por defecto es false)
@@ -33,14 +34,17 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
     - single (predeterminado)
     - radio
     - select
-  - **values**: En caso de que *entryValueMode*tenga valores de*radio*o*select*, se espera que este campo exista. Definición de las estructuras de la lista:
+  - **values**: En caso de que *entryValueMode* tenga valores de *radio* o *select*, se espera que este campo exista. Definición de las estructuras de la lista:
     - value: Valor del tipo definido
     - language: nombre del valor que se mostrará al Administrador
   - **language**: Nombre que tiene por idioma del Administrador
+- **mappedFields**: Definición de tipo y valores para elementos mappeados:
+  - **type**: Tipo de mappeo.
+  - **fields**: lista de valores para mappear.
 - **connectors**: Definiciones específicas que afectan a diferentes módulos de LogiCommerce. Cada estructura de la lista tiene la siguiente definición:
   - **type**: Tipo de módulo de LogiCommerce.
   - **properties**: Propiedades. Siguen el mismo patrón que las propiedades principales del plugin.
-  - **additionalData**: Datos adicionals específicos para los diferentes tipos de módulos de LogiCommerce.
+  - **additionalData**: Datos adicionales específicos para los diferentes tipos de módulos de LogiCommerce.
 
 ### Ejemplo
 
@@ -51,12 +55,11 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
     "author": "Larry Fisher",
     "date": "2019-01-15",
     "version": "1.2",
-    "sdkVersion": "1.~",
     "module": "com.thirdparty.finder",
 
     "properties": [
         {
-            "name": "endPoint",
+            "identifier": "endPoint",
             "type": "string",
             "required": true,
             "defaultValue": "www.thirdparty.com/app/",
@@ -67,7 +70,7 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
             }
         },
         {
-            "name": "appKey",
+            "identifier": "appKey",
             "type": "string",
             "required": true,
             "language": {
@@ -77,7 +80,7 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
             }
         },
         {
-            "name": "secretKey",
+            "identifier": "secretKey",
             "type": "string",
             "required": true,
             "language": {
@@ -87,7 +90,7 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
             }
         },
         {
-            "name": "otherKey",
+            "identifier": "otherKey",
             "type": "integer",
             "required": true,
             "languageValue": true,
@@ -98,9 +101,16 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
             }
         }
     ],
+    "mappedFields": [
+		{
+			"type": "STATUS_CODE",
+			"fields": ["PENDING", "PROCESSING", "SHIPPED", "CANCELLED"]
+		}
+	],
     "connectors": [
         {
             "type": "defined_type",
+            "hasAdditionalProperties": true,
             "properties": [
                 // ...
             ],
@@ -114,7 +124,7 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
 
 ## Obtención de la definición
 
-Se implementa el servicio *DefinitionService*. Este servicio permite devolver la definción estática así como una definición dinámica. 
+Se implementa el servicio *DefinitionService*. Este servicio permite devolver la definición estática así como una definición dinámica. 
 
 ```java
 public interface DefinitionService extends PluginService {
@@ -135,16 +145,39 @@ Para tener acceso a la definición estática des de este servicio, se tiene que 
 	private PluginDefinition pluginDefinition;
 ```
 
+## Definición dinámica
 
+En caso de ser necesaria un definición de las propiedades de forma dinámica el SDK facilita la creación, mediante las definiciones preestablecidas:
+
+**[Definiciones](./APIReference/Definitions/README.md)**
+
+Esto se debe de indicar en el servicio DefinitionService, como ejemplo:
+
+```java
+@Override
+public PluginDefinition getPluginDefinition() throws PluginServiceException {
+
+	Builder<?> mapping = new MappedFieldDefinitionImpl.Builder<>();
+	mapping.type(MappedItemType.USER);
+	mapping.addField("filed1");
+    mapping.addField("filed2");
+    
+	pluginDefinition.addMappedField(mapping.build());
+    //...
+    
+    return pluginDefinition;
+}
+```
 
 ## Acceso desde Java
 
-Para acceder a la definción del plugin está el recurso *PluginDefinition* que se puede inyectar vía la anotación *@Resource*. (Ver [Recursos](Resources.md) y [Anotaciones](Annotations.md)).
+Para acceder a la definición del plugin está el recurso *PluginDefinition* que se puede inyectar vía la anotación *@Resource*. (Ver [Recursos](Resources.md) y [Anotaciones](Annotations.md)).
 
-*PluginDefinition* devuelve sólo la definción en objetos. La configuración que venga del Administrador de Logicommerce no se puede acceder desde aquí. Para acceder a la configuración están las siguientes [anotaciones](Annotations.md):
+*PluginDefinition* devuelve sólo la definición en objetos. La configuración que venga del Administrador de Logicommerce no se puede acceder desde aquí. Para acceder a la configuración están las siguientes [anotaciones](Annotations.md):
 
 - *@Property*
 - *@PropertyLanguage*
+- *@Mapped*
 
 Ejemplo de configuración: [Configuration](Plugins/Configuration.md)
 

@@ -10,9 +10,12 @@ Devuelve los datos de un pedido. *Order* llega como parámetro, nunca como *Reso
 - **String** getPId()
 - **List<[CustomTag](../CustomTag.md)>** getCustomTags()
 - **List<[OrderItem](OrderItem.md)>** getItems()
-- **List<[OrderShipment](OrderShipment.md)>** getShipments()
+- **[OrderDelivery](OrderDelivery.md)** getDelivery()
 - **List<[OrderStatus](OrderStatus.md)>** getStatuses()
 - **List<[OrderAdditionalInformation](OrderAdditionalInformation.md)>** getAdditionalInformation()
+- **List<[ElementProperty](../ElementProperty.md)>**  getProperties()
+- **void** addProperty([**ElementProperty**](../ElementProperty.md) property)
+- **void** addProperty(**String** name, **String** value)
 - **List<[OrderCurrency](OrderCurrency.md)>** getCurrencies()
 - **[OrderInformation](OrderInformation.md)** getInformation()
 - **[OrderPaymentSystem](OrderPaymentSystem.md)** getPaymentSystem()
@@ -22,15 +25,15 @@ Devuelve los datos de un pedido. *Order* llega como parámetro, nunca como *Reso
 - **List<[OrderVoucher](OrderVoucher.md)>** getVouchers()
 - **List<[OrderDiscount](OrderDiscount.md)>** getDiscounts()
 - **String** getDocumentNumber()
-- **String** getLanguage()
+- **String** getLanguageId()
 - **LocalDateTime** getDate()
-- ***OrderStatusType*** getStatus()
+- ***[OrderStatusType](../../Enums/README.md#OrderStatusType)*** getStatus()
 - **int** getSubstatusId()
 - **LocalDateTime** getDeliveryDate()
 - **boolean** isPaid()
 - **LocalDateTime** getPaymentDate()
 - **String** getComment()
-- ***ExportStatusType*** getExportStatus()
+- ***[ExportStatusType](../../Enums/README.md#ExportStatusType)*** getExportStatus()
 - **boolean** isReverseChargeVat()
 
 ## Referencias
@@ -50,3 +53,20 @@ Devuelve los datos de un pedido. *Order* llega como parámetro, nunca como *Reso
 - **[OrderDiscount](OrderDiscount.md)**
 - **OrderStatusType**: Enumerado
 - **ExportStatusType**: Enumerado
+
+
+
+## Builder
+
+**OrderSdkBuilder** devuelve **Order**.
+
+Métodos del builder:
+
+- *comment(String comment)*: Añade comentario.
+- *customTag()*: Añade customTag, utiliza CustomTagBuilder.
+- language(): Añade languageId.
+- user(): Añade usuario, utiliza OrderUserBuilder.
+- totals(): Añade los totales, utiliza OrderTotalBuilder.
+- voucher(): Añade vouchers, utiliza OrderVoucherBuilder.
+- items(): Añade items, utiliza OrderItemBuilder.
+

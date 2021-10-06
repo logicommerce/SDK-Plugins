@@ -4,6 +4,8 @@
 
 Muestra el estado del pedido.
 
+Extiende interfaz **OrderBaseStatus**.
+
 ## Métodos
 
 - **Integer** getId()

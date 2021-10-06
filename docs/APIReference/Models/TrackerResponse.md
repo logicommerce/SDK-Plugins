@@ -4,13 +4,14 @@
 
 Para las respuestas de los trackers.
 
+Extiende [**WidgetResponse**](WidgetResponse.md)
+
 ## Métodos
 
-- ***TrackerPageType*** getType()
-- ***TrackerPosition*** getPosition()
-- **String** getCode()
+- ***TrackerScriptType*** getScriptType()
+- **String** getScritpt()
 
 ## Referencias
 
-- **TrackerPageType**: Enumerado
-- **TrackerPosition**: Enumerado
+- **[TrackerScriptType](../Enums/README.md#TrackerScriptType)**: Enumerado
+

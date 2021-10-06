@@ -20,8 +20,8 @@ Muestra las expediciones del pedido.
 
 ## Referencias
 
-- **OrderShipmentStatusType**: Enumerado
-- **ExportStatusType**: Enumerado
+- **[OrderShipmentStatusType](../../Enums/README.md#OrderShipmemtStatusType)**: Enumerado
+- **[ExportStatusType](../../Enums/README.md#ExportStatusType)**: Enumerado
 - **[OrderShipmentItem](OrderShipmentItem.md)**
 - **[OrderShipmentStatus](OrderShipmentStatus.md)**
 - **[OrderShipping](OrderShipping.md)**

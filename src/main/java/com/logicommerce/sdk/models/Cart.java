@@ -12,5 +12,6 @@ public interface Cart {
 	CartTotals getTotals();
 	
 	CartDelivery getDelivery();
-
+	
+	String getAbandonedBasketLink();
 }

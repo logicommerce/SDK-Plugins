@@ -1,5 +1,7 @@
 package com.logicommerce.sdk.resources;
 
+import java.net.URL;
+
 public interface Navigator {
 
 	String getUserAgent();
@@ -27,4 +29,6 @@ public interface Navigator {
 	String getCookies();
 
 	String getIp();
+	
+	URL getStoreUrl();
 }
