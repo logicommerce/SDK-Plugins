@@ -15,8 +15,10 @@ Elemento de la cesta.
 - **Double** getSubtotal()
 - **Double** getTotal()
 - **Double** getTotalTaxes()
+- **List<[CustomTag](CustomTag.md)>** getCustomTagValues()
+- **List<[CustomTag](CustomTag.md)>** getCustomTagPluginValues()
 
 ## Referencias
 
 - **[CartItemType](../Enums/README.md#CartItemType)**: Enumerado
-
+- **[CustomTag](CustomTag.md)**

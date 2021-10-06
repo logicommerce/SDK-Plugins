@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models;
 
+import java.util.List;
 import com.logicommerce.sdk.enums.CartItemType;
 
 public interface CartItem {
@@ -22,4 +23,7 @@ public interface CartItem {
 
 	Double getTotalTaxes();
 
+	List<CustomTag> getCustomTagValues();
+	
+	List<CustomTag> getCustomTagPluginValues();
 }

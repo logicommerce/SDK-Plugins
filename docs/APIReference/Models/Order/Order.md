@@ -53,3 +53,20 @@ Devuelve los datos de un pedido. *Order* llega como parámetro, nunca como *Reso
 - **[OrderDiscount](OrderDiscount.md)**
 - **OrderStatusType**: Enumerado
 - **ExportStatusType**: Enumerado
+
+
+
+## Builder
+
+**OrderSdkBuilder** devuelve **Order**.
+
+Métodos del builder:
+
+- *comment(String comment)*: Añade comentario.
+- *customTag()*: Añade customTag, utiliza CustomTagBuilder.
+- language(): Añade languageId.
+- user(): Añade usuario, utiliza OrderUserBuilder.
+- totals(): Añade los totales, utiliza OrderTotalBuilder.
+- voucher(): Añade vouchers, utiliza OrderVoucherBuilder.
+- items(): Añade items, utiliza OrderItemBuilder.
+
