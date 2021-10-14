@@ -24,6 +24,7 @@ Para facilitar la creación de definiciones, se proporcionan interfaces con el t
 - MarketplaceDefinition
 - ShippingTypeDefinition
 - CustomTagsDefiniton
+- OauthDefinition
 
 ## Referencias
 
