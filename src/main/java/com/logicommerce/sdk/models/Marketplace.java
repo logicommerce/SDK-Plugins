@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models;
 
+import java.util.List;
 import java.util.Map;
 
 public interface Marketplace {
@@ -9,6 +10,8 @@ public interface Marketplace {
 	String getName();
 	
 	String getLogo();
+	
+	List<Carrier> getCarriers();
 	
 	Map<String, String> getAdditionalData();
 

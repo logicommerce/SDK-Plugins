@@ -21,5 +21,7 @@ public interface PropertyDefinition {
 	List<PropertyDefinitionValue> getValues();
 
 	DefinitionLanguages getLanguages();
+	
+	String getReference();
 
 }
