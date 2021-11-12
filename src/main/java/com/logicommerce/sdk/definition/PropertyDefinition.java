@@ -22,6 +22,6 @@ public interface PropertyDefinition {
 
 	DefinitionLanguages getLanguages();
 	
-	String getParent();
+	String getReference();
 
 }
