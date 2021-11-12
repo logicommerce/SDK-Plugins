@@ -18,7 +18,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	private List<PropertyDefinitionValue> values;
 	private DefinitionLanguages languages;
 	private String entryValueMode = "single";
-	private String refrence;
+	private String reference;
 
 	@Override
 	public String getIdentifier() {
@@ -67,7 +67,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	
 	@Override
 	public String getReference() {
-		return refrence;
+		return reference;
 	}	
 
 	public void setIdentifier(String identifier) {
@@ -106,8 +106,8 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		this.languages = languages;
 	}
 	
-	public void setRefrence(String refrence) {
-		this.refrence = refrence;
+	public void setReference(String reference) {
+		this.reference = reference;
 	}
 
 	public static class Builder<T> {
@@ -122,7 +122,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		private String entryValueMode;
 		private List<PropertyDefinitionValueImpl.Builder> values;
 		private DefinitionLanguagesImpl.Builder<Builder<T>> languages;
-		private String parent;
+		private String reference;
 
 		public Builder() {
 			type = "string";
@@ -179,8 +179,8 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			return languages;
 		}
 		
-		public Builder<T> parent(String parent) {
-			this.parent = parent;
+		public Builder<T> reference(String reference) {
+			this.reference = reference;
 			return this;
 		}
 		
@@ -195,7 +195,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			propertyDefinition.setEntryValueMode(entryValueMode);
 			propertyDefinition.setValues(values.stream().map(PropertyDefinitionValueImpl.Builder::build).collect(Collectors.toList()));
 			propertyDefinition.setLanguages(languages.build());
-			propertyDefinition.setRefrence(parent);
+			propertyDefinition.setReference(reference);
 			return propertyDefinition;
 		}
 
