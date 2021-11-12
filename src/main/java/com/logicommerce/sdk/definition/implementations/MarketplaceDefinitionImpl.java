@@ -8,13 +8,13 @@ import com.logicommerce.sdk.models.Marketplace;
 
 public class MarketplaceDefinitionImpl extends ConnectorDefinitionImpl implements MarketplaceDefinition {
 
-	private List<Marketplace> markerplaces;
+	private List<Marketplace> marketplaces;
 	
 	private List<Carrier> shippers;
 	
 	@Override
-	public List<Marketplace> getMarkerplaces() {
-		return markerplaces;
+	public List<Marketplace> getMarketplaces() {
+		return marketplaces;
 	}
 
 	@Override
@@ -22,28 +22,30 @@ public class MarketplaceDefinitionImpl extends ConnectorDefinitionImpl implement
 		return shippers;
 	}
 	
-	public void setMarkerplaces(List<Marketplace> markerplaces) {
-		this.markerplaces = markerplaces;
+	@Override
+	public void setMarketplaces(List<Marketplace> marketplaces) {
+		this.marketplaces = marketplaces;
 	}
 
+	@Override
 	public void setShippers(List<Carrier> shippers) {
 		this.shippers = shippers;
 	}
 
 	public static class Builder extends ConnectorDefinitionImpl.Builder<Builder, MarketplaceDefinition, MarketplaceDefinitionImpl> {
 
-		private List<String> markerplaces;
+		private List<String> marketplaces;
 		
 		private List<Carrier> shippers;
 		
 		public Builder() {
 			super();
-			markerplaces = new ArrayList<>();
+			marketplaces = new ArrayList<>();
 			shippers = new ArrayList<>();
 		}
 
 		public Builder addMarketplace(String marketplace) {
-			markerplaces.add(marketplace);
+			marketplaces.add(marketplace);
 			return returnThis();
 		}
 
