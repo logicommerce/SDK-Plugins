@@ -58,6 +58,8 @@ public class OrderItemBuilder<T> {
 	protected boolean onRequest;
 
 	protected int onRequestDays;
+	
+	protected String supplierReference;
 
 	public OrderItemBuilder() {
 		taxes = new ArrayList<>();
@@ -192,6 +194,11 @@ public class OrderItemBuilder<T> {
 		this.onRequestDays = onRequestDays;
 		return this;
 	}
+	
+	public OrderItemBuilder<T> supplierReference(String supplierReference) {
+		this.supplierReference = supplierReference;
+		return this;
+	}
 
 	public OrderItem build() {
 		OrderItemImpl item = new OrderItemImpl();
@@ -218,6 +225,7 @@ public class OrderItemBuilder<T> {
 		item.setBackOrder(backOrder);
 		item.setOnRequest(onRequest);
 		item.setOnRequestDays(onRequestDays);
+		item.setSupplierReference(supplierReference);
 		return item;
 	}
 

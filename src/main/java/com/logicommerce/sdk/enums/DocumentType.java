@@ -5,5 +5,6 @@ public enum DocumentType {
 	DELIVERY_NOTE,
 	INVOICE,
 	REFUND_REQUESTS,
+	RETURN,
 	REFUND;
 }

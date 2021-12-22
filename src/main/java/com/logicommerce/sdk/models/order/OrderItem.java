@@ -54,4 +54,12 @@ public interface OrderItem {
 	int getOnRequestDays();
 
 	String getLink();
+	
+	void setProductId(Integer productId);
+	
+	void setCombinationId(Integer combinationId);
+
+	Integer getCombinationId();
+	
+	String getSupplierReference();
 }
