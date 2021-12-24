@@ -5,7 +5,7 @@
 
 	<groupId>com.logicommerce</groupId>
 	<artifactId>sdk</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<packaging>jar</packaging>
 
 	<name>SDK for Logicommerce Plugins</name>
@@ -24,6 +24,12 @@
 		<developer>
 			<name>Francesc d'Assís Requesens i Roca</name>
 			<email>francesc.requesens@logicommerce.com</email>
+			<organization>Logicommerce</organization>
+			<organizationUrl>https://www.logicommerce.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Francis Castillo Matilla</name>
+			<email>francis.castillo@logicommerce.com</email>
 			<organization>Logicommerce</organization>
 			<organizationUrl>https://www.logicommerce.com</organizationUrl>
 		</developer>

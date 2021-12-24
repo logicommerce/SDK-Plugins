@@ -13,7 +13,7 @@ public class AddressBuilder<T, S> {
 
 	protected String lastName;
 
-	protected String companyy;
+	protected String company;
 
 	protected String address;
 
@@ -71,8 +71,8 @@ public class AddressBuilder<T, S> {
 		return returnThis();
 	}
 
-	public AddressBuilder<T, S> companyy(String companyy) {
-		this.companyy = companyy;
+	public AddressBuilder<T, S> company(String company) {
+		this.company = company;
 		return returnThis();
 	}
 
@@ -165,7 +165,7 @@ public class AddressBuilder<T, S> {
 		userAddress.setAlias(alias);
 		userAddress.setFirstName(firstName);
 		userAddress.setLastName(lastName);
-		userAddress.setCompany(companyy);
+		userAddress.setCompany(company);
 		userAddress.setAddress(address);
 		userAddress.setAddressAdditionalInformation(addressAdditionalInformation);
 		userAddress.setNumber(number);

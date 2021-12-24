@@ -4,21 +4,21 @@ import com.logicommerce.sdk.definition.ExternalShipperValueDefinition;
 
 public class ExternalShipperValueDefinitionImpl implements ExternalShipperValueDefinition {
 
-	private Integer id;
+	private String id;
 	
-	public ExternalShipperValueDefinitionImpl(Integer id) {
+	public ExternalShipperValueDefinitionImpl(String id) {
 		this.id = id;
 	}
 
 	@Override
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 	
 	public static class Builder<T> {
 
 		private T parentBuilder;
-		private Integer id;
+		private String id;
 
 		public Builder() {
 
@@ -29,7 +29,7 @@ public class ExternalShipperValueDefinitionImpl implements ExternalShipperValueD
 			this.parentBuilder = parentBuilder;
 		}
 
-		public Builder<T> id(Integer id) {
+		public Builder<T> id(String id) {
 			this.id = id;
 			return this;
 		}

@@ -70,6 +70,10 @@ public class OrderItemImpl implements OrderItem {
 	private int onRequestDays;
 
 	private String link;
+	
+	private Integer combinationId;
+	
+	private String supplierReference;
 
 	public double getAffiliatePercentCommission() {
 		return affiliatePercentCommission;
@@ -261,5 +265,22 @@ public class OrderItemImpl implements OrderItem {
 
 	public void setLink(String link) {
 		this.link = link;
+	}
+
+	public Integer getCombinationId() {
+		return combinationId;
+	}
+
+	public void setCombinationId(Integer combinationId) {
+		this.combinationId = combinationId;
+	}
+
+	@Override
+	public String getSupplierReference() {
+		return supplierReference;
+	}
+
+	public void setSupplierReference(String supplierReference) {
+		this.supplierReference = supplierReference;
 	}
 }
