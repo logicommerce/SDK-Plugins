@@ -10,12 +10,12 @@ Muestra y permite generar la información de la actividad del tracking
 - **LocalDateTime** getDateTime()
 - **String** getStatus()
 - **String** getDescription()
-- **List<[ElementProperty](ElementProperty.md)>** getProperties()
+- **List<[ElementProperty](../ElementProperty.md)>** getProperties()
 - **void** setStatus(**String** status)
 - **void** setDescription(**String** description)
-- **void** addProperty(**[ElementProperty](ElementProperty.md)** property)
+- **void** addProperty(**[ElementProperty](../ElementProperty.md)** property)
 - **void** addProperty(**String** name, **String** value)
 
 ### Referencias
 
-- **[ElementProperty](ElementProperty.md)**
+- **[ElementProperty](../ElementProperty.md)**

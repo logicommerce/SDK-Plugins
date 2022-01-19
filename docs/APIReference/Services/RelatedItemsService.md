@@ -11,7 +11,7 @@ Los tipos disponibles son los siguientes (enumera RelatedItemType):
 - *USER*
 - *BASKET*
 
-Con la lista numérica Beyond busca los productos y los devuelve al Servicio con la llamada *updateProducts* por si hay que modifcar algunos datos como sería añadir parámetros o atributos en la ruta del producto. Este método tiene el parámetro `List <Product>` donde [Product](../Resources/Product.md) es una interfaz con los métodos de lectura y escritura permitidos de la información del producto.
+Con la lista numérica Beyond busca los productos y los devuelve al Servicio con la llamada *updateProducts* por si hay que modifcar algunos datos como sería añadir parámetros o atributos en la ruta del producto. Este método tiene el parámetro `List <Product>` donde [Product](../Models/Product.md) es una interfaz con los métodos de lectura y escritura permitidos de la información del producto.
 
 ## Interfaz
 

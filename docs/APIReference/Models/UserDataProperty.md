@@ -6,11 +6,11 @@ Propiedades de usuario persistentes. Sólo disponible cuando el usuario se encue
 
 ## Métodos
 
-- **[DefinitionType](../Definitions/DefinitionType.md)** getDefinitionType()
+- **[ConnectorType](../Enums/README.md)**  getConnectorType()
 - **String** getName()
 - **String** getValue()
 - **void** setValue(String value);
 
 ## Referéncias
 
-- **[DefinitionType](../Definitions/DefinitionType.md)**
+- **[ConnectorType](../Enums/README.md)**

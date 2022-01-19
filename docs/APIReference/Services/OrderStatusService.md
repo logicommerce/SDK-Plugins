@@ -13,7 +13,7 @@ Utiliza el método *changeStatus*.
 Parámetros:
 
 - **[Order](../Models/Order/Order.md)** order
-- **[OrderStatusType](../Models/Enums.md#OrderStatusType)** previousStatusType
+- **[OrderStatusType](../Enums/README.md#OrderStatusType)** previousStatusType
 
 No se espera respuesta.
 

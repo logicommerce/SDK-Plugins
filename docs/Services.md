@@ -6,7 +6,7 @@ Según cada acción del sistema llamará al servicio que requiera. En cada petic
 
 Aparte de implementar la interfaz que le corresponde, las clases pueden utilizar diferentes **[anotaciones](Annotations.md)** para tener la **configuración del plugin **como también diferentes **recursos** (Ver [Resources](Resources.md)).
 
-**[Servicios disponibles](APIReference/services/README.md)**
+**[Servicios disponibles](APIReference/Services/README.md)**
 
 ## Inyección de dependencias
 
