@@ -30,7 +30,7 @@ parámetros:
 - **[Order](../Models/Order/Order.md)** order
 - **[PaymentValidateParams](../Models/Payment/PaymentValidateParams.md)** paymentValidateParams
 
-Devuelve **[PaymentValidateResponse](../Models/Payment/PaymentValidateResponse)**.
+Devuelve **[PaymentValidateResponse](../Models/Payment/PaymentValidateResponse.md)**.
 
 ### Tokenización
 
@@ -38,7 +38,7 @@ Para obtener listado de tokens de tarjetas que el usuario puede tener guardados 
 
 Devuelve:
 
--  **[List(PaymentToken)](../Models/Payment/PaymentToken)**.
+-  **[List(PaymentToken)](../Models/Payment/PaymentToken.md)**.
 
 Para eliminar un token registrado se llama el método *deletePaymentToken*.
 
