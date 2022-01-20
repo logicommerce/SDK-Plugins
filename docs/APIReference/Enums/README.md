@@ -38,6 +38,13 @@
 - ECOMMERCE
 - PAY
 
+## CustomTagItemType
+
+- PRODUCT
+- CATEGORY
+- BASKET
+- PAGE
+
 ## ConnectorType
 
 - NONE
