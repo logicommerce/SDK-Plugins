@@ -11,11 +11,11 @@ Todas las interfaces que definan servicios tienen el sufijo *Service*.
 - [AssetService](AssetService.md)
 - [BasketService](BasketService.md)
 - [CustomFormService](CustomFormService.md)
-- CustomTagService
+- [CustomTagService](CustomTagService.md)
 - [DataService](DataService.md)
 - [DefinitionService](DefinitionService.md)
 - [NewsletterService](NewsletterService.md)
-- OauthService
+- [OauthService](OauthService.md)
 - [OrderIntegrationService](OrderIntegrationService.md)
 - [OrderService](OrderService.md)
 - [OrderStatusService](OrderStatusService.md)
