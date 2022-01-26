@@ -7,7 +7,7 @@ Muestra las acciones de los estados.
 ## Métodos
 
 - **Integer** getId()
-- ***SettingOrderSubstatusActionType*** getActionType()
+- **[SettingOrderSubstatusActionType](../../Enums/README.md#SettingOrderSubstatusActionType)** getActionType()
 - **int** getActionId()
 - **String** getParameter1()
 - **String** getParameter2()

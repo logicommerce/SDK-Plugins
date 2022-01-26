@@ -26,9 +26,14 @@ Elemento del pedido. Forma parte de Order en forma de lista.
 - **boolean** isReverseChargeVat()
 - **[ProductCodes](../ProductCodes.md)** getCodes()
 - **boolean** isNoReturn()
-- ***BackorderMode*** getBackOrder()
+- **[BackorderMode](../../Enums/README.md#BackorderMode)** getBackOrder()
 - **boolean** isOnRequest()
 - **int** getOnRequestDays()
+- **String** getLink()
+- **void** setProductId(**Integer** productId)
+- **void** setCombinationId(**Integer** combinationId)
+- **Integer** getCombinationId()
+- **String** getSupplierReference()
 
 ## Referencias
 
@@ -39,4 +44,4 @@ Elemento del pedido. Forma parte de Order en forma de lista.
 - **[OrderItemStock](OrderItemStock.md)**
 - **[CustomTag](../CustomTag.md)**
 - **[ProductCodes](../ProductCodes.md)**
-- **BackorderMode**: Enumerado
+- **[BackorderMode](../../Enums/README.md#BackorderMode)**: Enumerado

@@ -320,7 +320,7 @@ public class PaymentSystemThirdParty implements PaymentSystemService {
 
 ### Método getProperties
 
-Método utilizado para devolver propiedades adicionales necesarias para la forma de pago. Devuelve un objeto tipo **[PaymentSystemProperties](../APIReference/models/payment/PaymentSystemProperties.md)**.
+Método utilizado para devolver propiedades adicionales necesarias para la forma de pago. Devuelve un objeto tipo **[PaymentSystemProperties](../APIReference/Models/Payment/PaymentSystemProperties.md)**.
 
 #### Parámetros
 

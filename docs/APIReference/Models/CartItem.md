@@ -9,7 +9,7 @@ Elemento de la cesta.
 - **Integer** getId()
 - **String** getHash()
 - **String** getName()
-- ***CartItemType*** getType()
+- **[CartItemType](../Enums/README.md#CartItemType)** getType()
 - **Integer** getQuantity()
 - **Double** getWeight()
 - **Double** getSubtotal()

@@ -6,11 +6,11 @@ Propiedades de usuario persistentes. Sólo disponible cuando el usuario se encue
 
 ## Métodos
 
-- **[ConnectorType](../Enums/README.md)**  getConnectorType()
+- **[ConnectorType](../Enums/README.md#ConnectorType)**  getConnectorType()
 - **String** getName()
 - **String** getValue()
 - **void** setValue(String value);
 
 ## Referéncias
 
-- **[ConnectorType](../Enums/README.md)**
+- **[ConnectorType](../Enums/README.md#ConnectorType)**

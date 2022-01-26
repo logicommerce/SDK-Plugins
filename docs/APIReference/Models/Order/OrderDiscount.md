@@ -10,8 +10,8 @@ Muestra los descuentos del pedido. Forma parte de Order en forma de lista.
 - **Integer** getId()
 - **String** getName()
 - **String** getDescription()
-- ***DiscountApplyTo*** getApplyTo()
-- ***DiscountType*** getDiscountTypeValue()
+- **[DiscountApplyTo](../../Enums/README.md#DiscountApplyTo)** getApplyTo()
+- **[DiscountType](../../Enums/README.md#DiscountType)** getDiscountTypeValue()
 - **Double** getDiscountValue()
 - **Integer** getMinCondition()
 - **Integer** getMaxCondition()
@@ -21,12 +21,12 @@ Muestra los descuentos del pedido. Forma parte de Order en forma de lista.
 - **Integer** getDiscountId()
 - **String** getTriggeredBy()
 - **boolean** getAccumulateProducts()
-- ***CalculationMode*** getCalculationMode()
-- ***BenefitMode*** getBenefitMode()
+- **[CalculationMode](../../Enums/README.md#CalcultionMode)** getCalculationMode()
+- **[BenefitMode](../../Enums/README.md#BenefitMode)** getBenefitMode()
 
 ## Referéncias
 
-- **DiscountApplyTo**: Enumerado
-- **DiscountType**: Enumerado
-- **CalculationMode**: Enumerado
-- **BenefitMode**: Enumerado
+- **[DiscountApplyTo](../../Enums/README.md#DiscountApplyTo)**: Enumerado
+- **[DiscountType](../../Enums/README.md#DiscountType)**: Enumerado
+- **[CalculationMode](../../Enums/README.md#CalculationMode)**: Enumerado
+- **[BenefitMode](../../Enums/README.md#BenefitMode)**: Enumerado
