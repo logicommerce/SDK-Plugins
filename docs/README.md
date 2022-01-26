@@ -52,7 +52,7 @@ Se explica la creación de plugins simples para cada tipo. Hay que tener en cuen
 - [Buscador de productos](Plugins/SearchProducts.md)
 - [Newsletter](Plugins/Newsletter.md)
 - [Sistemas de pago](Plugins/Payment.md)
-- [Pedido](Plugins/Checkout.md)
+- [Pedido](Plugins/Order.md)
 - (TODO) [usuario](Plugins/User.md)
 - (TODO) [Cesta](Plugins/Basket.md) 
 - (TODO) [Sistemas de transporte](Plugins/ShipmentSystems.md)

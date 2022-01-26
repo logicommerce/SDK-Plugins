@@ -129,4 +129,5 @@ public class RelatedItems implements RelatedItemsService {
 }
 ```
 
-En este caso se inyecta la clase Config, propia del plugin (Ver [Configuration](Plugins/Configuration.md)).
+En este caso se inyecta la clase Config, propia del plugin (Ver [Configuration](Configuration.md)).
+
