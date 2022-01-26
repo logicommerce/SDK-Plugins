@@ -9,8 +9,8 @@ Muestra el stock restado del elemento del pedido.
 - **Integer** getId()
 - **int** getQuantity()
 - **Integer** getProductCombinationStockId()
-- ***PrevisionType*** getPrevisionType()
+- **[PrevisionType](../../Enums/README.md#PrevisionType)** getPrevisionType()
 
 ## Referencias
 
-- **PrevisionType**: Enumerado
+- **[PrevisionType](../../Enums/README.md#PrevisionType)**: Enumerado

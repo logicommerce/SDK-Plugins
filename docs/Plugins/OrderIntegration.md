@@ -1,6 +1,6 @@
 # OrderIntegration
 
-Gestiona el finalizado y la edición del pedido.s
+Gestiona el finalizado y la edición del pedidos.
 
 Su uso está pensado para añadir funcionalidades en el momento de crear o editar un pedido.
 

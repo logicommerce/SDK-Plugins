@@ -10,7 +10,7 @@ Procesa los assets retornados por * getAssets *.
 
 parámetros:
 
-- ***[WidgetPageType](../Enums/README.md#TrackerPageType)*** pageType: enumerado que dice a qué ámbito va el asset.
+- ***[WidgetPageType](../Enums/README.md#WidgetPageType)*** pageType: enumerado que dice a qué ámbito va el asset.
 
 Devuelve una lista de **[AssetResponse](../Models/AssetResponse.md)**
 

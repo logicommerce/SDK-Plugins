@@ -140,7 +140,7 @@
 - FORM
 - XML
 
-## Prevision Type
+## PrevisionType
 
 - RESERVE
 - PREVISION

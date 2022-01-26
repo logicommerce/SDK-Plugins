@@ -9,10 +9,10 @@ Muestra el estado de la expedición.
 - **Integer** getId()
 - **List<[OrderStatusAction](OrderStatusAction.md)>** getActions()
 - **LocalDateTime** getCurrentDateTime()
-- ***OrderShipmentStatusType*** getStatus()
+- **[OrderShipmentStatusType](../../Enums/README.md#OrderShipmentStatusType)** getStatus()
 - **int** getSubstatusId()
 
-## Referències
+## Referencias
 
 - **[OrderStatusAction](OrderStatusAction.md)**
-- **OrderShipmentStatusType**: Enumerado
+- **[OrderShipmentStatusType](../../Enums/README.md#OrderShipmentStatusType)**: Enumerado

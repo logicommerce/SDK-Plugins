@@ -1,6 +1,6 @@
-# Recomanador
+# Recomendador
 
-Creación de un plugin de Recomendadores.
+Creación de un plugin para Recomendadores.
 
 ## Definición del plugin
 

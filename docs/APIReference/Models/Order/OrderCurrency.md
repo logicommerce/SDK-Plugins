@@ -7,7 +7,7 @@ Muestra l amoneda del pedido. Forma parte de Order en forma de lista.
 ## Métodos
 
 - **Integer** getId()
-- ***CurrencyMode*** getMode()
+- **[CurrencyMode](../../Enums/README.md#CurrencyMode)** getMode()
 - **int** getCurrencyId()
 - **String** getName()
 - **String** getCode()
@@ -17,4 +17,4 @@ Muestra l amoneda del pedido. Forma parte de Order en forma de lista.
 
 ## Referencias
 
-- **CurrencyMode**: Enumerado
+- **[CurrencyMode](../../Enums/README.md#CurrencyMode)**: Enumerado
