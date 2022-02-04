@@ -6,10 +6,10 @@ Devuelve la definición de las elementos a mappear. Hay que tener en cuenta que 
 
 ## Métodos
 
-- **[MappedItemType](../Enums/README.md#MapperItemType)** getType()
+- **[MappedItemType](../Enums/README.md#MappedItemType)** getType()
 - **List\<String>** getFields()
 
 ## Referencias
 
 - **[Annotations](../../Annotations.md)**
-- **[MappedItemType](../Enums/README.md#MapperItemType)**
+- **[MappedItemType](../Enums/README.md#MappedItemType)**

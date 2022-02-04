@@ -43,8 +43,9 @@ public class PaymentBuilder extends PaymentAbstractBuilder<PaymentBuilder,  Paym
 	}
 	
 	public PaymentBuilder redirectUri(String redirectUri) {
+		this.type = PaymentType.REDIRECT;
 		this.redirectUri = redirectUri;
-		return this;
+		return setSimpleContent();
 	}
 
 	@Override

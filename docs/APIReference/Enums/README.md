@@ -101,7 +101,7 @@
 - MALE
 - FEMALE
 
-## MapperItemType
+## MappedItemType
 
 - USER
 - STATUS_CODE
@@ -133,6 +133,7 @@
 - OFFLINE
 - NO_PAY
 - WIDGET
+- REDIRECT
 
 ## PaymentValidateResponseType
 
