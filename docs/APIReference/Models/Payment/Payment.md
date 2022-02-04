@@ -11,6 +11,7 @@ Interface que devuelve los datos del pago.
 - **String** getTransactionId()
 - ***PaymentType*** getType()
 - **[PaymentData](PaymentData.md)** getData()
+- **String** getRedirectUri()
 
 ## Referencias
 
@@ -30,3 +31,4 @@ Métodos del builder:
 - *offline()*: El pago es offline
 - *noPay()*: El sistema de pago no requiere un pago.
 - *form()*: Cuando devuelve un formulario para la vista (Ver [PaymentData Form](PaymentData.md#Form)).
+- redirectUri(*String redirectUri*): Cuando devuelve una url para hacer redirección.
