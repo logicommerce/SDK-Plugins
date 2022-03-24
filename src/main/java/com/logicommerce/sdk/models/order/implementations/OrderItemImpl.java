@@ -46,8 +46,6 @@ public class OrderItemImpl implements OrderItem {
 	@Uses(value = OrderItemPricesImpl.class)
 	private OrderItemPrices prices;
 
-	private double affiliatePercentCommission;
-
 	private Integer vinculatedTo;
 
 	private String image;
@@ -74,10 +72,6 @@ public class OrderItemImpl implements OrderItem {
 	private Integer combinationId;
 	
 	private String supplierReference;
-
-	public double getAffiliatePercentCommission() {
-		return affiliatePercentCommission;
-	}
 
 	public BackorderMode getBackOrder() {
 		return backOrder;
@@ -169,10 +163,6 @@ public class OrderItemImpl implements OrderItem {
 
 	public String getLink() {
 		return link;
-	}
-
-	public void setAffiliatePercentCommission(double affiliatePercentCommission) {
-		this.affiliatePercentCommission = affiliatePercentCommission;
 	}
 
 	public void setBackOrder(BackorderMode backOrder) {

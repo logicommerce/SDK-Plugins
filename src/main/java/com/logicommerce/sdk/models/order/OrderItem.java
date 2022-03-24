@@ -31,8 +31,6 @@ public interface OrderItem {
 
 	Integer getProductId();
 
-	double getAffiliatePercentCommission();
-
 	Integer getVinculatedTo();
 
 	String getImage();

@@ -18,8 +18,6 @@ public interface User {
 
 	String getCompany();
 
-	Integer getAffiliateId();
-
 	Integer getSalesAgentId();
 
 	Boolean isSalesAgent();

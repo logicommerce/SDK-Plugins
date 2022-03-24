@@ -18,7 +18,6 @@ Elemento del pedido. Forma parte de Order en forma de lista.
 - **List<[OrderItemStock](OrderItemStock.md)>** getStocks()
 - **List<[CustomTag](../CustomTag.md)>** getCustomTags()
 - **Integer** getProductId()
-- **double** getAffiliatePercentCommission()
 - **Integer** getVinculatedTo()
 - **String** getImage()
 - **boolean** isSale()

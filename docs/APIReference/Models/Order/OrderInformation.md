@@ -8,11 +8,9 @@ Muestra la información del pedido.
 
 - **Integer** getId()
 - **int** getChannelId()
-- **Integer** getAffiliateId()
 - **String** getTransactionId()
 - **String** getAuthNumber()
 - **int** getPaymentType()
-- **String** getAffiliateCode()
 - **boolean** isCommissionPaid()
 - **Integer** getMarketplaceId()
 - **String** getTrackingNumber()
