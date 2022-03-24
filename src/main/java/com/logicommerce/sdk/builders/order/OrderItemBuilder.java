@@ -37,8 +37,6 @@ public class OrderItemBuilder<T> {
 
 	protected OrderItemPricesBuilder<OrderItemBuilder<T>> prices;
 
-	protected double affiliatePercentCommission;
-
 	protected Integer vinculatedTo;
 
 	protected String image;
@@ -141,11 +139,6 @@ public class OrderItemBuilder<T> {
 		return prices;
 	}
 
-	public OrderItemBuilder<T> affiliatePercentCommission(double affiliatePercentCommission) {
-		this.affiliatePercentCommission = affiliatePercentCommission;
-		return this;
-	}
-
 	public OrderItemBuilder<T> vinculatedTo(Integer vinculatedTo) {
 		this.vinculatedTo = vinculatedTo;
 		return this;
@@ -214,7 +207,6 @@ public class OrderItemBuilder<T> {
 		item.setProductId(productId);
 		item.setWeight(weight);
 		item.setPrices(prices.build());
-		item.setAffiliatePercentCommission(affiliatePercentCommission);
 		item.setVinculatedTo(vinculatedTo);
 		item.setImage(image);
 		item.setSale(sale);

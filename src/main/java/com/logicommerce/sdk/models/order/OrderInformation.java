@@ -6,13 +6,9 @@ public interface OrderInformation {
 
 	int getChannelId();
 
-	Integer getAffiliateId();
-
 	String getTransactionId();
 
 	String getAuthNumber();
-
-	String getAffiliateCode();
 
 	boolean isCommissionPaid();
 
