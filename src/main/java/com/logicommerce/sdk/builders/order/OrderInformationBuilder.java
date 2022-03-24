@@ -17,10 +17,6 @@ public class OrderInformationBuilder<T> {
 
 	protected Integer marketplaceId;
 
-	protected Integer affiliateId;
-
-	protected String affiliateCode;
-
 	protected boolean commissionPaid;
 
 	public OrderInformationBuilder() {
@@ -57,16 +53,6 @@ public class OrderInformationBuilder<T> {
 		return this;
 	}
 
-	public OrderInformationBuilder<T> affiliateId(Integer affiliateId) {
-		this.affiliateId = affiliateId;
-		return this;
-	}
-
-	public OrderInformationBuilder<T> affiliateCode(String affiliateCode) {
-		this.affiliateCode = affiliateCode;
-		return this;
-	}
-
 	public OrderInformationBuilder<T> commissionPaid(boolean commissionPaid) {
 		this.commissionPaid = commissionPaid;
 		return this;
@@ -79,8 +65,6 @@ public class OrderInformationBuilder<T> {
 		information.setTransactionId(transactionId);
 		information.setAuthNumber(authNumber);
 		information.setMarketplaceId(marketplaceId);
-		information.setAffiliateId(affiliateId);
-		information.setAffiliateCode(affiliateCode);
 		information.setCommissionPaid(commissionPaid);
 		return information;
 	}

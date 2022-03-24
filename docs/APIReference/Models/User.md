@@ -12,7 +12,6 @@ Interfaz del usuario. *User* se puede llamar como *Resource*.
 - **String** getGender()
 - **LocalDate** getBirthday()
 - **String** getCompany()
-- **Integer** getAffiliateId()
 - **Integer** getSalesAgentId()
 - **Boolean** isSalesAgent()
 - **List<[UserAddress](UserAddress.md)>** getBillingAddresses()
