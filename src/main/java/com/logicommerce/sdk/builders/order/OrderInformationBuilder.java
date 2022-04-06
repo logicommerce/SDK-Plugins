@@ -6,7 +6,7 @@ import com.logicommerce.sdk.models.order.implementations.OrderInformationImpl;
 public class OrderInformationBuilder<T> {
 
 	private T parentBuilder;
-	
+
 	protected Integer id;
 
 	protected int channelId;
@@ -17,8 +17,6 @@ public class OrderInformationBuilder<T> {
 
 	protected Integer marketplaceId;
 
-	protected boolean commissionPaid;
-
 	public OrderInformationBuilder() {
 
 	}
@@ -27,12 +25,12 @@ public class OrderInformationBuilder<T> {
 		this();
 		this.parentBuilder = parentBuilder;
 	}
-	
+
 	public OrderInformationBuilder<T> id(Integer id) {
 		this.id = id;
 		return this;
 	}
-	
+
 	public OrderInformationBuilder<T> channelId(int channelId) {
 		this.channelId = channelId;
 		return this;
@@ -53,11 +51,6 @@ public class OrderInformationBuilder<T> {
 		return this;
 	}
 
-	public OrderInformationBuilder<T> commissionPaid(boolean commissionPaid) {
-		this.commissionPaid = commissionPaid;
-		return this;
-	}
-
 	public OrderInformation build() {
 		OrderInformationImpl information = new OrderInformationImpl();
 		information.setId(null);
@@ -65,7 +58,6 @@ public class OrderInformationBuilder<T> {
 		information.setTransactionId(transactionId);
 		information.setAuthNumber(authNumber);
 		information.setMarketplaceId(marketplaceId);
-		information.setCommissionPaid(commissionPaid);
 		return information;
 	}
 

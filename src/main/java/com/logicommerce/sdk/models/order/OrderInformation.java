@@ -10,8 +10,6 @@ public interface OrderInformation {
 
 	String getAuthNumber();
 
-	boolean isCommissionPaid();
-
 	Integer getMarketplaceId();
 
 }
