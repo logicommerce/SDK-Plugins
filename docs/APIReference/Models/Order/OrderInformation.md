@@ -11,6 +11,5 @@ Muestra la información del pedido.
 - **String** getTransactionId()
 - **String** getAuthNumber()
 - **int** getPaymentType()
-- **boolean** isCommissionPaid()
 - **Integer** getMarketplaceId()
 - **String** getTrackingNumber()
