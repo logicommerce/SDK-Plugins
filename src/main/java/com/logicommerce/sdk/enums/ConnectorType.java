@@ -14,5 +14,6 @@ public enum ConnectorType {
 	TRACKER,
 	ASSET,
 	MARKETPLACE,
+	SHIPMENT,
 	UNKNOWN;
 }
