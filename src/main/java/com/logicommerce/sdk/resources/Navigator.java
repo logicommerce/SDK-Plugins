@@ -31,4 +31,8 @@ public interface Navigator {
 	String getIp();
 	
 	URL getStoreUrl();
+	
+	String getBaseUrl();
+	
+	String getCdnAssets();
 }
