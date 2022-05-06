@@ -15,5 +15,6 @@ public enum ConnectorType {
 	ASSET,
 	MARKETPLACE,
 	SHIPMENT,
+	CONFIRM_ORDER,
 	UNKNOWN;
 }
