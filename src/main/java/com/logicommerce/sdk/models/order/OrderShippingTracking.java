@@ -7,9 +7,9 @@ public interface OrderShippingTracking {
 
 	Integer getId();
 
-	String getTrackingNumber();
+	String getTrackingReference();
 
-	void setTrackingNumber(String trackingNumber);
+	void setTrackingReference(String trackingReference);
 
 	List<OrderShippingTrackingPackage> getPackages();
 

@@ -12,7 +12,7 @@ public class OrderShippingTrackingImpl implements OrderShippingTracking {
 
 	private Integer id;
 	
-	private String trackingNumber;
+	private String trackingReference;
 	
 	@Uses(value = OrderShippingTrackingPackageImpl.class)
 	private List<OrderShippingTrackingPackage> packages;
@@ -28,12 +28,12 @@ public class OrderShippingTrackingImpl implements OrderShippingTracking {
 		this.id = id;
 	}
 
-	public String getTrackingNumber() {
-		return trackingNumber;
+	public String getTrackingReference() {
+		return trackingReference;
 	}
 
-	public void setTrackingNumber(String trackingNumber) {
-		this.trackingNumber = trackingNumber;
+	public void setTrackingReference(String trackingReference) {
+		this.trackingReference = trackingReference;
 	}
 
 	public List<OrderShippingTrackingPackage> getPackages() {

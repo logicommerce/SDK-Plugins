@@ -30,4 +30,12 @@ public interface OrderShipment {
 
 	String getHash();
 
+	String getTrackingNumber();
+	
+	void setTrackingNumber(String trackingNumber);
+	
+	String getDocumentNumber();
+	
+	int getSubstatus();
+
 }
