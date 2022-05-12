@@ -32,6 +32,8 @@ public class OrderShipmentBuilder<T> {
 	protected ShipmentAddressBuilder<OrderShipmentBuilder<T>> destinationAddress;
 	
 	protected ExportStatusType exportStatusType;
+	
+	protected String trackingNumber;
 
 	public OrderShipmentBuilder() {
 		items = new ArrayList<>();
@@ -100,6 +102,11 @@ public class OrderShipmentBuilder<T> {
 	public OrderShippingBuilder<OrderShipmentBuilder<T>> shipping() {
 		return shipping;
 	}
+	
+	public OrderShipmentBuilder<T> trackingNumber(String trackingNumber) {
+		this.trackingNumber = trackingNumber;
+		return this;
+	}
 
 	public OrderShipment build() {
 		OrderShipmentImpl shipment = new OrderShipmentImpl();
@@ -113,6 +120,7 @@ public class OrderShipmentBuilder<T> {
 		shipment.setStatuses(statuses.stream().map(OrderShipmentStatusBuilder::build).collect(Collectors.toList()));
 		shipment.setShipping(shipping.build());
 		shipment.setExportStatus(exportStatusType);
+		shipment.setTrackingNumber(trackingNumber);
 
 		return shipment;
 	}
