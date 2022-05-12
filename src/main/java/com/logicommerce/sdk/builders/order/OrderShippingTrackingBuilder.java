@@ -14,7 +14,7 @@ public class OrderShippingTrackingBuilder<T>{
 	
 	protected Integer id;
 
-	protected String trackingNumber;
+	protected String trackingReference;
 
 	protected List<OrderShippingTrackingPackageBuilder<OrderShippingTrackingBuilder<T>>> trackingPackages;
 
@@ -35,8 +35,8 @@ public class OrderShippingTrackingBuilder<T>{
 		return this;
 	}
 
-	public OrderShippingTrackingBuilder<T> trackingNumber(String trackingNumber) {
-		this.trackingNumber = trackingNumber;
+	public OrderShippingTrackingBuilder<T> trackingReference(String trackingReference) {
+		this.trackingReference = trackingReference;
 		return this;
 	}
 	
@@ -54,7 +54,7 @@ public class OrderShippingTrackingBuilder<T>{
 	public OrderShippingTracking build() {
 		OrderShippingTrackingImpl tracking = new OrderShippingTrackingImpl();
 		tracking.setId(null);
-		tracking.setTrackingNumber(trackingNumber);
+		tracking.setTrackingReference(trackingReference);
 		tracking.setProperties(properties);
 		tracking.setPackages(trackingPackages.stream().map(OrderShippingTrackingPackageBuilder<OrderShippingTrackingBuilder<T>>::build).collect(Collectors.toList()));
 		

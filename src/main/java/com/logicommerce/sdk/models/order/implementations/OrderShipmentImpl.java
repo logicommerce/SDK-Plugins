@@ -44,6 +44,12 @@ public class OrderShipmentImpl implements OrderShipment {
 	private OrderShipping shipping;
 
 	private String hash;
+	
+	private String trackingNumber;
+	
+	private String documentNumber;
+	
+	private int substatus;
 
 	public Integer getId() {
 		return id;
@@ -139,5 +145,29 @@ public class OrderShipmentImpl implements OrderShipment {
 
 	public void setHash(String hash) {
 		this.hash = hash;
+	}
+
+	@Override
+	public String getTrackingNumber() {
+		return trackingNumber;
+	}
+
+	@Override
+	public void setTrackingNumber(String trackingNumber) {
+		this.trackingNumber = trackingNumber;
+	}
+
+	@Override
+	public String getDocumentNumber() {
+		return documentNumber;
+	}
+
+	@Override
+	public int getSubstatus() {
+		return substatus;
+	}
+
+	public void setSubstatus(int substatus) {
+		this.substatus = substatus;
 	}
 }
