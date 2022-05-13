@@ -49,7 +49,7 @@ public class OrderShipmentImpl implements OrderShipment {
 	
 	private String documentNumber;
 	
-	private int substatus;
+	private Integer substatus;
 
 	public Integer getId() {
 		return id;
@@ -163,11 +163,11 @@ public class OrderShipmentImpl implements OrderShipment {
 	}
 
 	@Override
-	public int getSubstatus() {
+	public Integer getSubstatus() {
 		return substatus;
 	}
 
-	public void setSubstatus(int substatus) {
+	public void setSubstatus(Integer substatus) {
 		this.substatus = substatus;
 	}
 }
