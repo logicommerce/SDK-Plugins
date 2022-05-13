@@ -36,6 +36,6 @@ public interface OrderShipment {
 	
 	String getDocumentNumber();
 	
-	int getSubstatus();
+	Integer getSubstatus();
 
 }
