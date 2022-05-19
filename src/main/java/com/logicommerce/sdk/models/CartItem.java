@@ -9,6 +9,8 @@ public interface CartItem {
 
 	String getHash();
 
+	CartItemCodes getCodes();
+
 	String getName();
 
 	CartItemType getType();
@@ -24,6 +26,6 @@ public interface CartItem {
 	Double getTotalTaxes();
 
 	List<CustomTag> getCustomTagValues();
-	
+
 	List<CustomTag> getCustomTagPluginValues();
 }
