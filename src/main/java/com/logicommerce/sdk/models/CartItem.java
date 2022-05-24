@@ -9,9 +9,13 @@ public interface CartItem {
 
 	String getHash();
 
-	CartItemCodes getCodes();
-
 	String getName();
+
+	String getUrlSeo();
+
+	String getImageUrl();
+
+	CartItemCodes getCodes();
 
 	CartItemType getType();
 
