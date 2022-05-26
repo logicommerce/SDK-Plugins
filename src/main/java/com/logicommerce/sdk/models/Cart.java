@@ -5,13 +5,17 @@ import java.util.List;
 
 public interface Cart {
 
+	String getToken();
+
 	LocalDateTime getCreatedAt();
 
 	List<CartItem> getItems();
 
 	CartTotals getTotals();
-	
+
 	CartDelivery getDelivery();
-	
+
 	String getAbandonedBasketLink();
+
+	User getUser();
 }

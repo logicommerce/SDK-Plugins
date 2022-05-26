@@ -26,8 +26,10 @@ public interface Connection {
 
 	Connection cookie(String name, String value);
 
+	Connection queryParam(String name, String value);
+
 	Connection params(String params);
-	
+
 	Connection timeout(Integer timeout);
 
 }

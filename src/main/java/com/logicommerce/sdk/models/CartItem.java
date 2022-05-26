@@ -11,6 +11,12 @@ public interface CartItem {
 
 	String getName();
 
+	String getUrlSeo();
+
+	String getImageUrl();
+
+	CartItemCodes getCodes();
+
 	CartItemType getType();
 
 	Integer getQuantity();
@@ -24,6 +30,6 @@ public interface CartItem {
 	Double getTotalTaxes();
 
 	List<CustomTag> getCustomTagValues();
-	
+
 	List<CustomTag> getCustomTagPluginValues();
 }
