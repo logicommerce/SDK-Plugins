@@ -4,6 +4,8 @@ import java.util.List;
 
 public interface CartShipment {
 
+	String getHash();
+
 	List<CartShipmentItem> getItems();
 
 	double getTotal();
