@@ -61,6 +61,10 @@ public class OrderStatusActionBuilder<T> {
 		return this;
 	}
 
+	public T done() {
+		return parentBuilder;
+	}
+
 	public OrderStatusActionBuilder<T> sentText(String sentText) {
 		this.sentText = sentText;
 		return this;
@@ -76,9 +80,5 @@ public class OrderStatusActionBuilder<T> {
 		action.setDone(done);
 		action.setSentText(sentText);
 		return action;
-	}
-
-	public T done() {
-		return parentBuilder;
 	}
 }

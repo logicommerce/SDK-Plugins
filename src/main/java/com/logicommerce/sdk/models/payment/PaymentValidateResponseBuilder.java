@@ -5,8 +5,8 @@ import com.logicommerce.sdk.definition.OrderStatusDefinition;
 import com.logicommerce.sdk.definition.implementations.OrderStatusDefinitionImpl;
 import com.logicommerce.sdk.enums.PaymentValidateResponseType;
 
-public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<PaymentValidateResponseBuilder, PaymentValidateResponse>{
-	
+public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<PaymentValidateResponseBuilder, PaymentValidateResponse> {
+
 	private String authorizationCode;
 	private boolean paid;
 	private LocalDateTime paymentDate;
@@ -17,8 +17,8 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	private boolean validated;
 	private String messageLog;
 
-	public PaymentValidateResponseBuilder validated(){
-		this.type = PaymentValidateResponseType.VALIDATED; 
+	public PaymentValidateResponseBuilder validated() {
+		this.type = PaymentValidateResponseType.VALIDATED;
 		this.success = true;
 		this.paid = true;
 		this.validated = true;
@@ -64,16 +64,16 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		return returnThis();
 	}
 
-	public PaymentValidateResponseBuilder messageLog(String messageLog) {
-		this.messageLog = messageLog;
-		return returnThis();
-	}
-	
 	public OrderStatusDefinitionImpl.Builder<PaymentValidateResponseBuilder> orderStatus() {
 		if (orderStatusBuilder == null) {
 			orderStatusBuilder = new OrderStatusDefinitionImpl.Builder<>(returnThis());
 		}
 		return orderStatusBuilder;
+	}
+
+	public PaymentValidateResponseBuilder messageLog(String messageLog) {
+		this.messageLog = messageLog;
+		return returnThis();
 	}
 
 	@Override

@@ -3,7 +3,6 @@ package com.logicommerce.sdk.builders.order;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import com.logicommerce.sdk.enums.ShippingCalculation;
 import com.logicommerce.sdk.models.order.OrderShipping;
 import com.logicommerce.sdk.models.order.implementations.OrderShippingImpl;
@@ -27,7 +26,7 @@ public class OrderShippingBuilder<T> {
 	protected ShippingCalculation shippingCalculation;
 
 	protected String shipperPId;
-	
+
 	protected int shipperId;
 
 	protected String shippingTypePId;
@@ -91,7 +90,7 @@ public class OrderShippingBuilder<T> {
 		this.shipperPId = shipperPId;
 		return this;
 	}
-	
+
 	public OrderShippingBuilder<T> shipperId(int shipperId) {
 		this.shipperId = shipperId;
 		return this;
@@ -118,14 +117,11 @@ public class OrderShippingBuilder<T> {
 		discounts.add(discount);
 		return discount;
 	}
-	
+
 	public OrderShippingTrackingBuilder<OrderShippingBuilder<T>> tracking() {
-//		OrderShippingTrackingBuilder<OrderShippingBuilder<T>> tracking = new OrderShippingTrackingBuilder<>(this); 
-//		//this.trackings.add(tracking);
-//		this.tracking = tracking;
 		return this.tracking;
 	}
-	
+
 	public OrderShipping build() {
 		OrderShippingImpl shipping = new OrderShippingImpl();
 		shipping.setId(null);
@@ -139,8 +135,12 @@ public class OrderShippingBuilder<T> {
 		shipping.setShipperPId(shipperPId);
 		shipping.setShippingTypePId(shippingTypePId);
 		shipping.setCashOnDelivery(cashOnDelivery);
-		shipping.setTaxes(taxes.stream().map(OrderItemTaxBuilder::build).collect(Collectors.toList()));
-		shipping.setDiscounts(discounts.stream().map(OrderDiscountBuilder::build).collect(Collectors.toList()));
+		shipping.setTaxes(taxes.stream()
+				.map(OrderItemTaxBuilder::build)
+				.collect(Collectors.toList()));
+		shipping.setDiscounts(discounts.stream()
+				.map(OrderDiscountBuilder::build)
+				.collect(Collectors.toList()));
 		shipping.setTracking(tracking.build());
 		return shipping;
 	}

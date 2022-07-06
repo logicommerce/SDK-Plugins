@@ -11,28 +11,32 @@ import com.logicommerce.utilities.annotations.Uses;
 public class OrderDeliveryImpl implements OrderDelivery {
 
 	private DeliveryType type;
-	
+
 	@Uses(value = OrderDeliveryPhysicalLocationImpl.class)
 	private OrderDeliveryPhysicalLocation physicalLocation;
-	
+
 	@Uses(value = OrderShipmentImpl.class)
 	private List<OrderShipment> shipments;
 
 	@Uses(value = GeographicalZoneImpl.class)
 	private GeographicalZone geographicalZone;
 
+	@Override
 	public DeliveryType getType() {
 		return type;
 	}
 
+	@Override
 	public OrderDeliveryPhysicalLocation getPhysicalLocation() {
 		return physicalLocation;
 	}
 
+	@Override
 	public List<OrderShipment> getShipments() {
 		return shipments;
 	}
 
+	@Override
 	public GeographicalZone getGeographicalZone() {
 		return geographicalZone;
 	}
@@ -48,6 +52,7 @@ public class OrderDeliveryImpl implements OrderDelivery {
 	public void setShipments(List<OrderShipment> shipments) {
 		this.shipments = shipments;
 	}
+
 	public void setGeographicalZone(GeographicalZone geographicalZone) {
 		this.geographicalZone = geographicalZone;
 	}

@@ -5,7 +5,7 @@ import com.logicommerce.sdk.enums.PaymentType;
 public class PaymentBuilder extends PaymentAbstractBuilder<PaymentBuilder,  Payment> {
 
 	protected PaymentType type;
-	
+
 	private String redirectUri;
 
 	public PaymentDataFormBuilder<PaymentBuilder> form() {
@@ -41,7 +41,7 @@ public class PaymentBuilder extends PaymentAbstractBuilder<PaymentBuilder,  Paym
 		this.content = new PaymentDataSimpleBuilder<>(this);
 		return returnThis();
 	}
-	
+
 	public PaymentBuilder redirectUri(String redirectUri) {
 		this.type = PaymentType.REDIRECT;
 		this.redirectUri = redirectUri;
@@ -50,7 +50,7 @@ public class PaymentBuilder extends PaymentAbstractBuilder<PaymentBuilder,  Paym
 
 	@Override
 	public Payment build() {
-		PaymentImpl payment= new PaymentImpl();
+		PaymentImpl payment = new PaymentImpl();
 		setItems(payment);
 		payment.setType(type);
 		payment.setRedirectUri(redirectUri);

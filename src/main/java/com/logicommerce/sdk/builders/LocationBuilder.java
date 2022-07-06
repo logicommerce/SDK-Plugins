@@ -4,7 +4,7 @@ import com.logicommerce.sdk.models.Location;
 import com.logicommerce.sdk.models.implementations.LocationImpl;
 
 public class LocationBuilder<T> {
-	
+
 	private T parentBuilder;
 
 	protected String country;
@@ -14,7 +14,7 @@ public class LocationBuilder<T> {
 	protected Double latitude = 0d;
 
 	protected Double longitude = 0d;
-	
+
 	public LocationBuilder() {
 	}
 
@@ -22,27 +22,27 @@ public class LocationBuilder<T> {
 		this();
 		this.parentBuilder = parentBuilder;
 	}
-	
+
 	public LocationBuilder<T> country(String country) {
 		this.country = country;
 		return this;
 	}
-	
+
 	public LocationBuilder<T> locationId(Integer locationId) {
 		this.locationId = locationId;
 		return this;
 	}
-	
+
 	public LocationBuilder<T> latitude(Double latitude) {
 		this.latitude = latitude;
 		return this;
 	}
-	
+
 	public LocationBuilder<T> longitude(Double longitude) {
 		this.longitude = longitude;
 		return this;
 	}
-	
+
 	public Location build() {
 		LocationImpl location = new LocationImpl();
 		location.setCountry(country);
@@ -52,7 +52,7 @@ public class LocationBuilder<T> {
 		return location;
 	}
 
-	public T done(){
+	public T done() {
 		return parentBuilder;
 	}
 }

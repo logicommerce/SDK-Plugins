@@ -25,7 +25,7 @@ public class OrderSdkBuilder {
 	protected List<OrderVoucherBuilder<OrderSdkBuilder>> vouchers;
 
 	protected List<OrderItemBuilder<OrderSdkBuilder>> items;
-	
+
 	protected OrderDeliveryBuilder<OrderSdkBuilder> delivery;
 
 	protected OrderInformationBuilder<OrderSdkBuilder> information;
@@ -61,7 +61,7 @@ public class OrderSdkBuilder {
 	protected boolean paid;
 
 	protected boolean reverseChargeVat;
-	
+
 	protected List<OrderTaxBuilder<OrderSdkBuilder>> taxes;
 
 	public OrderSdkBuilder() {
@@ -117,10 +117,10 @@ public class OrderSdkBuilder {
 		items.add(item);
 		return item;
 	}
-	
+
 	public OrderDeliveryBuilder<OrderSdkBuilder> delivery() {
 		return delivery;
-	}	
+	}
 
 	public OrderInformationBuilder<OrderSdkBuilder> information() {
 		return information;
@@ -208,7 +208,7 @@ public class OrderSdkBuilder {
 		this.reverseChargeVat = reverseChargeVat;
 		return this;
 	}
-	
+
 	public OrderTaxBuilder<OrderSdkBuilder> tax() {
 		OrderTaxBuilder<OrderSdkBuilder> tax = new OrderTaxBuilder<>(this);
 		taxes.add(tax);
@@ -226,9 +226,11 @@ public class OrderSdkBuilder {
 		order.setItems(items.stream().map(OrderItemBuilder::build).collect(Collectors.toList()));
 		order.setInformation(information.build());
 		order.setPaymentSystem(paymentSystem.build());
-		order.setAdditionalInformation(additionalInformation.stream().map(OrderAdditionalInformationBuilder::build).collect(Collectors.toList()));
+		order.setAdditionalInformation(additionalInformation.stream()
+				.map(OrderAdditionalInformationBuilder::build)
+				.collect(Collectors.toList()));
 		order.setCurrencies(currencies.stream().map(OrderCurrencyBuilder::build).collect(Collectors.toList()));
-		order.setDate((date==null) ? LocalDateTime.now() : date);
+		order.setDate((date == null) ? LocalDateTime.now() : date);
 		order.setDeliveryDate(deliveryDate);
 		order.setDiscounts(discounts.stream().map(OrderDiscountBuilder::build).collect(Collectors.toList()));
 		order.setDocumentNumber(documentNumber);

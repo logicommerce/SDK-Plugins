@@ -64,11 +64,11 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	public DefinitionLanguages getLanguages() {
 		return languages;
 	}
-	
+
 	@Override
 	public String getReference() {
 		return reference;
-	}	
+	}
 
 	public void setIdentifier(String identifier) {
 		this.identifier = identifier;
@@ -105,13 +105,13 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	public void setLanguages(DefinitionLanguages languages) {
 		this.languages = languages;
 	}
-	
+
 	public void setReference(String reference) {
 		this.reference = reference;
 	}
 
 	public static class Builder<T> {
-		
+
 		private T parentBuilder;
 		private String identifier;
 		private String type;
@@ -129,6 +129,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			values = new ArrayList<>();
 			languages = new DefinitionLanguagesImpl.Builder<>(this);
 		}
+
 		public Builder(T parentBuilder) {
 			this();
 			this.parentBuilder = parentBuilder;
@@ -178,12 +179,12 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		public DefinitionLanguagesImpl.Builder<Builder<T>> languages() {
 			return languages;
 		}
-		
+
 		public Builder<T> reference(String reference) {
 			this.reference = reference;
 			return this;
 		}
-		
+
 		public PropertyDefinition build() {
 			PropertyDefinitionImpl propertyDefinition = new PropertyDefinitionImpl();
 			propertyDefinition.setIdentifier(identifier);
