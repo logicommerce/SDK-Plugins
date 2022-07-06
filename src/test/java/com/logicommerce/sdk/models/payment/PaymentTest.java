@@ -1,11 +1,11 @@
 package com.logicommerce.sdk.models.payment;
 
-import org.junit.jupiter.api.Test;
-import com.logicommerce.sdk.enums.PaymentType;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+import com.logicommerce.sdk.enums.PaymentType;
+import org.junit.jupiter.api.Test;
 
-public class PaymentTest {
+class PaymentTest {
 
 	private static final boolean SUCCESSFUL = true;
 	private static final boolean FAILURE = false;
@@ -16,7 +16,7 @@ public class PaymentTest {
 	private static final String PARAM_VALUE = "paramValue";
 
 	@Test
-	public void testOfflineOK() {
+	void testOfflineOK() {
 		Payment payment = new PaymentBuilder()
 				.ok()
 				.offline()
@@ -31,9 +31,9 @@ public class PaymentTest {
 		assertThat(payment.getData(), is(nullValue()));
 		assertThat(payment.getType(), is(PaymentType.OFFLINE));
 	}
-	
+
 	@Test
-	public void testWidgetOK() {
+	void testWidgetOK() {
 		Payment payment = new PaymentBuilder()
 				.ok()
 				.widget()
@@ -51,7 +51,7 @@ public class PaymentTest {
 
 
 	@Test
-	public void testNoPayOK() {
+	void testNoPayOK() {
 		Payment payment = new PaymentBuilder()
 				.ok()
 				.noPay().done()
@@ -69,7 +69,7 @@ public class PaymentTest {
 	}
 
 	@Test
-	public void testFormKO() {
+	void testFormKO() {
 		Payment payment = new PaymentBuilder()
 				.ko()
 				.message(MESSAGE)
@@ -85,7 +85,7 @@ public class PaymentTest {
 	}
 
 	@Test
-	public void testFormOK() {
+	void testFormOK() {
 		Payment payment = new PaymentBuilder()
 				.ok()
 				.message(MESSAGE)
@@ -104,7 +104,7 @@ public class PaymentTest {
 		assertThat(payment.getData(), is(not(nullValue())));
 		assertThat(payment.getData(), instanceOf(PaymentDataForm.class));
 		assertThat(payment.getType(), is(PaymentType.FORM));
-		
+
 		PaymentDataForm data = (PaymentDataForm) payment.getData();
 		assertThat(data.getUrl(), is(URL));
 		assertThat(data.getMethod(), is("post"));

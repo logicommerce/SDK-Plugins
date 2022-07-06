@@ -1,7 +1,6 @@
 package com.logicommerce.sdk.resources;
 
 import java.util.List;
-
 import com.logicommerce.sdk.models.Location;
 
 public interface LocationResource {
@@ -11,7 +10,7 @@ public interface LocationResource {
 	Integer getCountryId(String countryCode);
 
 	String getCountryName(String countryCode);
-	
+
 	String getCountryCode(Integer countryId);
 
 	String getStateCode(Integer languageId, Integer countryId, Integer locationId);

@@ -8,9 +8,9 @@ import com.logicommerce.sdk.models.order.OrderShippingTrackingPackage;
 import com.logicommerce.sdk.models.order.implementations.OrderShippingTrackingPackageImpl;
 
 public class OrderShippingTrackingPackageBuilder<T> {
-	
+
 	private T parentBuilder;
-	
+
 	protected Integer id;
 
 	protected double weight;
@@ -20,12 +20,12 @@ public class OrderShippingTrackingPackageBuilder<T> {
 	protected LocalDateTime lastUpdate;
 
 	protected List<OrderShippingTrackingPackageActivityBuilder<OrderShippingTrackingPackageBuilder<T>>> activities;
-	
+
 	public OrderShippingTrackingPackageBuilder() {
-		this.activities = new ArrayList<>();		
+		this.activities = new ArrayList<>();
 		this.lastUpdate = LocalDateTime.now();
 	}
-	
+
 	public OrderShippingTrackingPackageBuilder(T parentBuilder) {
 		this();
 		this.parentBuilder = parentBuilder;
@@ -50,21 +50,23 @@ public class OrderShippingTrackingPackageBuilder<T> {
 		this.lastUpdate = lastUpdate;
 		return this;
 	}
-	
+
 	public OrderShippingTrackingPackageActivityBuilder<OrderShippingTrackingPackageBuilder<T>> activities() {
-		OrderShippingTrackingPackageActivityBuilder<OrderShippingTrackingPackageBuilder<T>> activity = new OrderShippingTrackingPackageActivityBuilder<>(this);
-		activities.add(activity);		
+		OrderShippingTrackingPackageActivityBuilder<OrderShippingTrackingPackageBuilder<T>> activity =
+				new OrderShippingTrackingPackageActivityBuilder<>(this);
+		activities.add(activity);
 		return activity;
 	}
-	
+
 	public OrderShippingTrackingPackage build() {
 		OrderShippingTrackingPackageImpl trackingPackage = new OrderShippingTrackingPackageImpl();
 		trackingPackage.setId(null);
 		trackingPackage.setWeight(weight);
 		trackingPackage.setWeightUnits(weightUnits);
 		trackingPackage.setLastUpdate(lastUpdate);
-		trackingPackage.setActivities(activities.stream().map(OrderShippingTrackingPackageActivityBuilder<OrderShippingTrackingPackageBuilder<T>>::build).collect(Collectors.toList()));
-		
+		trackingPackage.setActivities(activities.stream()
+				.map(OrderShippingTrackingPackageActivityBuilder<OrderShippingTrackingPackageBuilder<T>>::build)
+				.collect(Collectors.toList()));
 		return trackingPackage;
 	}
 

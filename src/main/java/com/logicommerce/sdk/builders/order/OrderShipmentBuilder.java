@@ -26,13 +26,13 @@ public class OrderShipmentBuilder<T> {
 	protected List<OrderShipmentStatusBuilder<OrderShipmentBuilder<T>>> statuses;
 
 	protected OrderShippingBuilder<OrderShipmentBuilder<T>> shipping;
-	
+
 	protected ShipmentAddressBuilder<OrderShipmentBuilder<T>> originAddress;
 
 	protected ShipmentAddressBuilder<OrderShipmentBuilder<T>> destinationAddress;
-	
+
 	protected ExportStatusType exportStatusType;
-	
+
 	protected String trackingNumber;
 
 	public OrderShipmentBuilder() {
@@ -65,21 +65,27 @@ public class OrderShipmentBuilder<T> {
 		return this;
 	}
 
+	public OrderShipmentStatusBuilder<OrderShipmentBuilder<T>> status() {
+		OrderShipmentStatusBuilder<OrderShipmentBuilder<T>> statusItem = new OrderShipmentStatusBuilder<>(this);
+		statuses.add(statusItem);
+		return statusItem;
+	}
+
 	public OrderShipmentBuilder<T> incomingDate(LocalDate incomingDate) {
 		this.incomingDate = incomingDate;
 		return this;
 	}
-	
+
 	public ShipmentAddressBuilder<OrderShipmentBuilder<T>> originAddress() {
-		ShipmentAddressBuilder<OrderShipmentBuilder<T>> originAddress = new ShipmentAddressBuilder<>(this); 
-		this.originAddress = originAddress;
-		return originAddress;
+		ShipmentAddressBuilder<OrderShipmentBuilder<T>> address = new ShipmentAddressBuilder<>(this);
+		this.originAddress = address;
+		return address;
 	}
-	
+
 	public ShipmentAddressBuilder<OrderShipmentBuilder<T>> destinationAddress() {
-		ShipmentAddressBuilder<OrderShipmentBuilder<T>> destinationAddress = new ShipmentAddressBuilder<>(this); 
-		this.destinationAddress = destinationAddress;
-		return destinationAddress;
+		ShipmentAddressBuilder<OrderShipmentBuilder<T>> address = new ShipmentAddressBuilder<>(this);
+		this.destinationAddress = address;
+		return address;
 	}
 
 	public OrderShipmentItemBuilder<OrderShipmentBuilder<T>> item() {
@@ -88,12 +94,6 @@ public class OrderShipmentBuilder<T> {
 		return item;
 	}
 
-	public OrderShipmentStatusBuilder<OrderShipmentBuilder<T>> status() {
-		OrderShipmentStatusBuilder<OrderShipmentBuilder<T>> statusItem = new OrderShipmentStatusBuilder<>(this);
-		statuses.add(statusItem);
-		return statusItem;
-	}
-	
 	public OrderShipmentBuilder<T> exportStatusType(ExportStatusType exportStatusType) {
 		this.exportStatusType = exportStatusType;
 		return this;
@@ -102,7 +102,7 @@ public class OrderShipmentBuilder<T> {
 	public OrderShippingBuilder<OrderShipmentBuilder<T>> shipping() {
 		return shipping;
 	}
-	
+
 	public OrderShipmentBuilder<T> trackingNumber(String trackingNumber) {
 		this.trackingNumber = trackingNumber;
 		return this;

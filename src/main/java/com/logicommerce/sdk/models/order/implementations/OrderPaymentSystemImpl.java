@@ -27,42 +27,52 @@ public class OrderPaymentSystemImpl implements OrderPaymentSystem {
 
 	private String property;
 
+	@Override
 	public Integer getId() {
-	  return id;
+		return id;
 	}
 
+	@Override
 	public int getPaymentSystemId() {
-	  return paymentSystemId;
+		return paymentSystemId;
 	}
 
+	@Override
 	public List<OrderTax> getTaxes() {
-	  return taxes;
+		return taxes;
 	}
 
+	@Override
 	public String getName() {
-	  return name;
+		return name;
 	}
 
+	@Override
 	public AmountType getIncreaseType() {
-	  return increaseType;
+		return increaseType;
 	}
 
+	@Override
 	public double getIncreaseValue() {
-	  return increaseValue;
+		return increaseValue;
 	}
 
+	@Override
 	public double getPrice() {
-	  return price;
+		return price;
 	}
 
+	@Override
 	public double getIncreaseMin() {
-	  return increaseMin;
+		return increaseMin;
 	}
 
+	@Override
 	public boolean isCashOnDelivery() {
-	  return cashOnDelivery;
+		return cashOnDelivery;
 	}
 
+	@Override
 	public String getProperty() {
 		return property;
 	}

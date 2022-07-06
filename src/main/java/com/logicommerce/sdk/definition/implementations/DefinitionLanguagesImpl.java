@@ -5,10 +5,10 @@ import java.util.Map;
 import com.logicommerce.sdk.definition.DefinitionLanguages;
 
 public class DefinitionLanguagesImpl implements DefinitionLanguages {
-	
+
 	private static final String DEFAULT_LANGUAGE = "en";
 	private Map<String, String> names;
-	
+
 	DefinitionLanguagesImpl(Map<String, String> names) {
 		this.names = names;
 	}
@@ -20,15 +20,17 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 
 	@Override
 	public String getName(String language) {
-		if (names.containsKey(language))
+		if (names.containsKey(language)) {
 			return names.get(language);
-		if (names.containsKey(DEFAULT_LANGUAGE))
+		}
+		if (names.containsKey(DEFAULT_LANGUAGE)) {
 			return names.get(DEFAULT_LANGUAGE);
+		}
 		return null;
 	}
 
 	public static class Builder<T> {
-		
+
 		private T parentBuilder;
 		private Map<String, String> languages;
 
@@ -45,11 +47,11 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 		DefinitionLanguages build() {
 			return new DefinitionLanguagesImpl(languages);
 		}
-		
+
 		public T done() {
 			return parentBuilder;
 		}
-		
+
 	}
 
 }

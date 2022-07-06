@@ -8,10 +8,10 @@ import com.logicommerce.sdk.models.ElementProperyImpl;
 import com.logicommerce.sdk.models.order.OrderShippingTracking;
 import com.logicommerce.sdk.models.order.implementations.OrderShippingTrackingImpl;
 
-public class OrderShippingTrackingBuilder<T>{
-	
+public class OrderShippingTrackingBuilder<T> {
+
 	private T parentBuilder;
-	
+
 	protected Integer id;
 
 	protected String trackingReference;
@@ -19,12 +19,12 @@ public class OrderShippingTrackingBuilder<T>{
 	protected List<OrderShippingTrackingPackageBuilder<OrderShippingTrackingBuilder<T>>> trackingPackages;
 
 	protected List<ElementProperty> properties;
-	
+
 	public OrderShippingTrackingBuilder() {
 		trackingPackages = new ArrayList<>();
 		properties = new ArrayList<>();
 	}
-	
+
 	public OrderShippingTrackingBuilder(T parentBuilder) {
 		this();
 		this.parentBuilder = parentBuilder;
@@ -39,13 +39,14 @@ public class OrderShippingTrackingBuilder<T>{
 		this.trackingReference = trackingReference;
 		return this;
 	}
-	
+
 	public OrderShippingTrackingPackageBuilder<OrderShippingTrackingBuilder<T>> trackingPackages() {
-		OrderShippingTrackingPackageBuilder<OrderShippingTrackingBuilder<T>> trackingPackage = new OrderShippingTrackingPackageBuilder<>(this);
-		trackingPackages.add(trackingPackage);		
+		OrderShippingTrackingPackageBuilder<OrderShippingTrackingBuilder<T>> trackingPackage =
+				new OrderShippingTrackingPackageBuilder<>(this);
+		trackingPackages.add(trackingPackage);
 		return trackingPackage;
 	}
-	
+
 	public OrderShippingTrackingBuilder<T> addProperty(String name, String value) {
 		properties.add(new ElementProperyImpl(name, value));
 		return this;
@@ -56,8 +57,10 @@ public class OrderShippingTrackingBuilder<T>{
 		tracking.setId(null);
 		tracking.setTrackingReference(trackingReference);
 		tracking.setProperties(properties);
-		tracking.setPackages(trackingPackages.stream().map(OrderShippingTrackingPackageBuilder<OrderShippingTrackingBuilder<T>>::build).collect(Collectors.toList()));
-		
+		tracking.setPackages(trackingPackages.stream()
+				.map(OrderShippingTrackingPackageBuilder<OrderShippingTrackingBuilder<T>>::build)
+				.collect(Collectors.toList()));
+
 		return tracking;
 	}
 

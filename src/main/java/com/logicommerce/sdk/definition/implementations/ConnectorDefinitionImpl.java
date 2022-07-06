@@ -65,7 +65,7 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 	public Map<String, Object> getAdditionalData() {
 		return additionalData;
 	}
-	
+
 	public void setProperties(List<PropertyDefinition> properties) {
 		this.properties = properties;
 	}
@@ -93,54 +93,56 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 		private List<PropertyDefinitionImpl.Builder<T>> additionalProperties;
 		private List<MappedFieldDefinitionImpl.Builder<T>> mappedFields;
 		private Map<String, Object> additionalData;
-		
+
 		protected Builder() {
 			properties = new ArrayList<>();
 			additionalProperties = new ArrayList<>();
 			mappedFields = new ArrayList<>();
 			additionalData = new HashMap<>();
 		}
-		
+
 		public PropertyDefinitionImpl.Builder<T> property() {
 			PropertyDefinitionImpl.Builder<T> property = new PropertyDefinitionImpl.Builder<>(returnThis());
-			properties.add(property );
+			properties.add(property);
 			return property;
 		}
-		
+
 		public T hasAdditionalProperties(boolean hasAdditionalProperties) {
 			this.hasAdditionalProperties = hasAdditionalProperties;
 			return returnThis();
 		}
-		
+
 		public PropertyDefinitionImpl.Builder<T> additionalProperty() {
 			PropertyDefinitionImpl.Builder<T> additionalProperty = new PropertyDefinitionImpl.Builder<>(returnThis());
 			additionalProperties.add(additionalProperty);
 			return additionalProperty;
 		}
-		
+
 		public MappedFieldDefinitionImpl.Builder<T> mappedField() {
 			MappedFieldDefinitionImpl.Builder<T> mappedField = new MappedFieldDefinitionImpl.Builder<>(returnThis());
 			mappedFields.add(mappedField);
 			return mappedField;
 		}
-		
+
 		public T addAdditionalData(String name, Object value) {
 			additionalData.putIfAbsent(name, value);
 			return returnThis();
 		}
-		
+
 		protected abstract T returnThis();
-		
+
 		public abstract S build();
-		
+
 		protected void setAttributes(R connector) {
 			connector.setProperties(properties.stream().map(PropertyDefinitionImpl.Builder::build).collect(Collectors.toList()));
 			connector.setHasAdditionalProperties(hasAdditionalProperties);
-			connector.setAdditionalProperties(additionalProperties.stream().map(PropertyDefinitionImpl.Builder::build).collect(Collectors.toList()));
+			connector.setAdditionalProperties(additionalProperties.stream()
+					.map(PropertyDefinitionImpl.Builder::build)
+					.collect(Collectors.toList()));
 			connector.setMappedFields(mappedFields.stream().map(MappedFieldDefinitionImpl.Builder::build).collect(Collectors.toList()));
 			connector.setAdditionalData(additionalData);
 		}
-		
+
 	}
 
 }

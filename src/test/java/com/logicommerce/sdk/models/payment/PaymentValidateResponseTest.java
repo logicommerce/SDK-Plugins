@@ -1,13 +1,13 @@
 package com.logicommerce.sdk.models.payment;
 
-import org.junit.jupiter.api.Test;
-import com.logicommerce.sdk.enums.OrderStatusType;
-import com.logicommerce.sdk.enums.PaymentValidateResponseType;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import java.time.LocalDateTime;
+import com.logicommerce.sdk.enums.OrderStatusType;
+import com.logicommerce.sdk.enums.PaymentValidateResponseType;
+import org.junit.jupiter.api.Test;
 
-public class PaymentValidateResponseTest {
+class PaymentValidateResponseTest {
 
 	private static final boolean SUCCESSFUL = true;
 	private static final boolean FAILURE = false;
@@ -21,13 +21,13 @@ public class PaymentValidateResponseTest {
 	private static final LocalDateTime PAYMENT_DATE = LocalDateTime.now();
 
 	@Test
-	public void testDenied() {
+	void testDenied() {
 		PaymentValidateResponse response = new PaymentValidateResponseBuilder()
 				.ko()
 				.message(MESSAGE)
 				.transactionId(TRANSACTION_ID)
 				.build();
-		
+
 		assertThat(response, is(not(nullValue())));
 		assertThat(response.isSuccess(), is(FAILURE));
 		assertThat(response.getMessage(), is(MESSAGE));
@@ -37,7 +37,7 @@ public class PaymentValidateResponseTest {
 	}
 
 	@Test
-	public void testOkNoData() {
+	void testOkNoData() {
 		PaymentValidateResponse response = new PaymentValidateResponseBuilder()
 				.ok()
 				.message(MESSAGE)
@@ -47,7 +47,7 @@ public class PaymentValidateResponseTest {
 				.paymentDate(PAYMENT_DATE)
 				.noData()
 				.build();
-		
+
 		assertThat(response, is(not(nullValue())));
 		assertThat(response.isSuccess(), is(SUCCESSFUL));
 		assertThat(response.getMessage(), is(MESSAGE));
@@ -60,7 +60,7 @@ public class PaymentValidateResponseTest {
 	}
 
 	@Test
-	public void testOkForm() {
+	void testOkForm() {
 		PaymentValidateResponse response = new PaymentValidateResponseBuilder()
 				.ko()
 				.message(MESSAGE)
@@ -71,18 +71,18 @@ public class PaymentValidateResponseTest {
 				.orderStatus()
 					.status(OrderStatusType.INCOMING)
 					.substatus(0)
-					.done()					
+					.done()
 				.form()
 					.post()
 					.url(URL)
 					.param(PARAM_NAME, PARAM_VALUE)
 					.done()
 				.build();
-		
+
 		assertThat(response, is(not(nullValue())));
 		assertThat(response.getType(), is(PaymentValidateResponseType.FORM));
 		assertThat(response.getData(), instanceOf(PaymentDataForm.class));
-		
+
 		PaymentDataForm data = (PaymentDataForm) response.getData();
 		assertThat(data.getUrl(), is(URL));
 		assertThat(data.getMethod(), is("post"));
@@ -92,13 +92,13 @@ public class PaymentValidateResponseTest {
 	}
 
 	@Test
-	public void testSimulateAbort() {
+	void testSimulateAbort() {
 		PaymentValidateResponse response = new PaymentValidateResponseBuilder()
 				.simulateAbort()
 				.message(MESSAGE)
 				.transactionId(TRANSACTION_ID)
 				.build();
-		
+
 		assertThat(response, is(not(nullValue())));
 		assertThat(response.isSuccess(), is(FAILURE));
 		assertThat(response.simulateAbort(), is(true));
@@ -107,13 +107,13 @@ public class PaymentValidateResponseTest {
 		assertThat(response.getType(), is(nullValue()));
 		assertThat(response.getData(), is(nullValue()));
 	}
-	
+
 	@Test
-	public void testValidated() {
+	void testValidated() {
 		PaymentValidateResponse response = new PaymentValidateResponseBuilder()
 				.validated()
 				.build();
-		
+
 		assertThat(response, is(not(nullValue())));
 		assertThat(response.isSuccess(), is(SUCCESSFUL));
 		assertThat(response.validated(), is(true));
