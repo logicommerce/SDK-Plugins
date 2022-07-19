@@ -138,12 +138,19 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>${maven-javadoc-plugin.version}</version>
-				<configuration>
+				<configuration>				
 					<javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
-				</configuration>
+					<additionalparam>-version</additionalparam>
+				</configuration>				
 				<executions>
 					<execution>
-					<id>attach-javadocs</id>
+                        <id>update</id>
+                        <goals>
+                            <goal>fix</goal>
+                        </goals>
+                    </execution>
+					<execution>
+						<id>attach-javadocs</id>
 						<goals>
 							<goal>jar</goal>
 						</goals>

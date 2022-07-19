@@ -4,15 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 import com.logicommerce.sdk.definition.RelatedItemsDefinition;
 
+/**
+ * <p>RelatedItemsDefinitionImpl class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public class RelatedItemsDefinitionImpl extends ConnectorDefinitionImpl implements RelatedItemsDefinition {
 
 	private List<String> allowedTypes;
 
+	/** {@inheritDoc} */
 	@Override
 	public List<String> getAllowedTypes() {
 		return allowedTypes;
 	}
 
+	/**
+	 * <p>Setter for the field <code>allowedTypes</code>.</p>
+	 *
+	 * @param allowedTypes a {@link java.util.List} object
+	 */
 	public void setAllowedTypes(List<String> allowedTypes) {
 		this.allowedTypes = allowedTypes;
 	}

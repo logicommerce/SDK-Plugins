@@ -2,14 +2,26 @@ package com.logicommerce.sdk.definition.implementations;
 
 import com.logicommerce.sdk.definition.ChannelValueDefinition;
 
+/**
+ * <p>ChannelValueDefinitionImpl class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public class ChannelValueDefinitionImpl implements ChannelValueDefinition {
 
 	private Integer id;
 	
+	/**
+	 * <p>Constructor for ChannelValueDefinitionImpl.</p>
+	 *
+	 * @param id a {@link java.lang.Integer} object
+	 */
 	public ChannelValueDefinitionImpl(Integer id) {
 		this.id = id;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public Integer getId() {
 		return id;

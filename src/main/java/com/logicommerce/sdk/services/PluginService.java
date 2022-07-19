@@ -1,5 +1,11 @@
 package com.logicommerce.sdk.services;
 
+/**
+ * <p>PluginService interface.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public interface PluginService {
 
 }
