@@ -1,5 +1,11 @@
 package com.logicommerce.sdk.enums;
 
+/**
+ * <p>MarketplaceValues class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public enum MarketplaceValues {
 	MARKETPLACE_ID,
 	MARKETPLACE_ORDER,

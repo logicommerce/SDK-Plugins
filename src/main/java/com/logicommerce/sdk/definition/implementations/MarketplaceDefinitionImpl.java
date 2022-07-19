@@ -6,27 +6,37 @@ import com.logicommerce.sdk.definition.MarketplaceDefinition;
 import com.logicommerce.sdk.models.Carrier;
 import com.logicommerce.sdk.models.Marketplace;
 
+/**
+ * <p>MarketplaceDefinitionImpl class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public class MarketplaceDefinitionImpl extends ConnectorDefinitionImpl implements MarketplaceDefinition {
 
 	private List<Marketplace> marketplaces;
 	
 	private List<Carrier> shippers;
 	
+	/** {@inheritDoc} */
 	@Override
 	public List<Marketplace> getMarketplaces() {
 		return marketplaces;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public List<Carrier> getShippers() {
 		return shippers;
 	}
 	
+	/** {@inheritDoc} */
 	@Override
 	public void setMarketplaces(List<Marketplace> marketplaces) {
 		this.marketplaces = marketplaces;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public void setShippers(List<Carrier> shippers) {
 		this.shippers = shippers;

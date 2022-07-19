@@ -4,6 +4,12 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import com.logicommerce.sdk.definition.DefinitionLanguages;
 
+/**
+ * <p>DefinitionLanguagesImpl class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public class DefinitionLanguagesImpl implements DefinitionLanguages {
 
 	private static final String DEFAULT_LANGUAGE = "en";
@@ -13,11 +19,13 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 		this.names = names;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public Map<String, String> getNames() {
 		return names;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public String getName(String language) {
 		if (names.containsKey(language)) {

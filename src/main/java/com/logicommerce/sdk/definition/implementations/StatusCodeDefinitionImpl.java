@@ -3,21 +3,35 @@ package com.logicommerce.sdk.definition.implementations;
 import com.logicommerce.sdk.definition.DefinitionLanguages;
 import com.logicommerce.sdk.definition.StatusCodeDefinition;
 
+/**
+ * <p>StatusCodeDefinitionImpl class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public class StatusCodeDefinitionImpl implements StatusCodeDefinition {
 
 	private String code;
 	private DefinitionLanguages languages;
 
+	/**
+	 * <p>Constructor for StatusCodeDefinitionImpl.</p>
+	 *
+	 * @param code a {@link java.lang.String} object
+	 * @param languages a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
+	 */
 	public StatusCodeDefinitionImpl(String code, DefinitionLanguages languages) {
 		this.code = code;
 		this.languages = languages;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public String getCode() {
 		return code;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public DefinitionLanguages getLanguages() {
 		return languages;

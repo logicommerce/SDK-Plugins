@@ -1,5 +1,11 @@
 package com.logicommerce.sdk.enums;
 
+/**
+ * <p>OptionValueType class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public enum OptionValueType {
 	BOOLEAN,
 	SHORT_TEXT,

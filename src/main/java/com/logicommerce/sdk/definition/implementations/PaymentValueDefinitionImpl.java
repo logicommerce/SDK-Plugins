@@ -2,14 +2,26 @@ package com.logicommerce.sdk.definition.implementations;
 
 import com.logicommerce.sdk.definition.PaymentValueDefinition;
 
+/**
+ * <p>PaymentValueDefinitionImpl class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public class PaymentValueDefinitionImpl implements PaymentValueDefinition {
 
 	private Integer id;
 	
+	/**
+	 * <p>Constructor for PaymentValueDefinitionImpl.</p>
+	 *
+	 * @param id a {@link java.lang.Integer} object
+	 */
 	public PaymentValueDefinitionImpl(Integer id) {
 		this.id = id;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public Integer getId() {
 		return id;

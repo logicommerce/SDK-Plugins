@@ -2,14 +2,26 @@ package com.logicommerce.sdk.definition.implementations;
 
 import com.logicommerce.sdk.definition.WarehouseValueDefinition;
 
+/**
+ * <p>WarehouseValueDefinitionImpl class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public class WarehouseValueDefinitionImpl implements WarehouseValueDefinition {
 
 	private Integer id;
 	
+	/**
+	 * <p>Constructor for WarehouseValueDefinitionImpl.</p>
+	 *
+	 * @param id a {@link java.lang.Integer} object
+	 */
 	public WarehouseValueDefinitionImpl(Integer id) {
 		this.id = id;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public Integer getId() {
 		return id;
