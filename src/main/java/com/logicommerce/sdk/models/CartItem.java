@@ -16,7 +16,7 @@ public interface CartItem {
 
 	/**
 	 * <p>Get the identifier of this item.</p>
-	 * 
+	 *
 	 * @since 1.0.16
 	 * @return a {@link java.lang.Integer} object
 	 */
@@ -50,7 +50,7 @@ public interface CartItem {
 	/**
 	 * <p>Get image URL of this item.</p>
 	 * <p>Ex. https://test.test/image.png<p>
-	 * 
+	 *
 	 * @since 1.0.16
 	 * @return a {@link java.lang.String} object
 	 */
@@ -87,6 +87,14 @@ public interface CartItem {
 	 * @return a {@link java.lang.Double Double} object
 	 */
 	Double getWeight();
+
+	/**
+	 * <p>Get the unitPrice value of this item.</p>
+	 *
+	 * @since 1.0.18
+	 * @return a {@link java.lang.Double Double} object
+	 */
+	Double getUnitPrice();
 
 	/**
 	 * <p>Get subtotal value of this item, this value define the price of the item without taxes.</p>

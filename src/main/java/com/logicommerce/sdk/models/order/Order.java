@@ -143,6 +143,14 @@ public interface Order {
 	List<OrderDiscount> getDiscounts();
 
 	/**
+	 * <p>getDocumentId.</p>
+	 *
+	 * @since 1.0.18
+	 * @return a {@link java.lang.String} object
+	 */
+	Integer getDocumentId();
+
+	/**
 	 * <p>getDocumentNumber.</p>
 	 *
 	 * @return a {@link java.lang.String} object

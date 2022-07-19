@@ -40,7 +40,7 @@ public class OrderShipmentBuilder<T> {
 	protected ExportStatusType exportStatusType;
 
 	protected String trackingNumber;
-	
+
 	protected Integer substatus;
 
 	/**
@@ -54,7 +54,7 @@ public class OrderShipmentBuilder<T> {
 		destinationAddress = new ShipmentAddressBuilder<>(this);
 		incomingDate = LocalDate.now();
 		exportStatusType = ExportStatusType.PENDING_TO_SEND;
-		substatus = 0 ;
+		substatus = 0;
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class OrderShipmentBuilder<T> {
 		this.incomingDate = incomingDate;
 		return this;
 	}
-	
+
 	/**
 	 * <p>originAddress.</p>
 	 *
@@ -127,7 +127,7 @@ public class OrderShipmentBuilder<T> {
 		this.originAddress = address;
 		return address;
 	}
-	
+
 	/**
 	 * <p>destinationAddress.</p>
 	 *
@@ -149,7 +149,7 @@ public class OrderShipmentBuilder<T> {
 		items.add(item);
 		return item;
 	}
-	
+
 	/**
 	 * <p>exportStatusType.</p>
 	 *
@@ -169,7 +169,7 @@ public class OrderShipmentBuilder<T> {
 	public OrderShippingBuilder<OrderShipmentBuilder<T>> shipping() {
 		return shipping;
 	}
-	
+
 	/**
 	 * <p>trackingNumber.</p>
 	 *
@@ -180,6 +180,7 @@ public class OrderShipmentBuilder<T> {
 		this.trackingNumber = trackingNumber;
 		return this;
 	}
+
 	/**
 	 * <p>substatus.</p>
 	 *
