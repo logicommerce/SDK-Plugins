@@ -89,6 +89,14 @@ public interface CartItem {
 	Double getWeight();
 
 	/**
+	 * <p>Get the unitPrive value of this item.</p>
+	 *
+	 * @since 1.0.18
+	 * @return a {@link java.lang.Double Double} object
+	 */
+	Double getUnitPrice();
+
+	/**
 	 * <p>Get subtotal value of this item, this value define the price of the item without taxes.</p>
 	 *
 	 * @return a {@link java.lang.Double Double} object

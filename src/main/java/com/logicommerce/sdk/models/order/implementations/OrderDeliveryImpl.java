@@ -93,6 +93,7 @@ public class OrderDeliveryImpl implements OrderDelivery {
 	public void setShipments(List<OrderShipment> shipments) {
 		this.shipments = shipments;
 	}
+
 	/**
 	 * <p>Setter for the field <code>geographicalZone</code>.</p>
 	 *

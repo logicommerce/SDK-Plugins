@@ -1,6 +1,7 @@
 package com.logicommerce.sdk.models;
 
 import com.logicommerce.sdk.enums.WidgetType;
+
 /**
  * Interface for a assets attributes extends {@link com.logicommerce.sdk.models.WidgetResponse}.
  *

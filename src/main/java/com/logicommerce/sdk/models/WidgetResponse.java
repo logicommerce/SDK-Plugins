@@ -3,6 +3,7 @@ package com.logicommerce.sdk.models;
 import com.logicommerce.sdk.enums.WidgetAmbience;
 import com.logicommerce.sdk.enums.WidgetPageType;
 import com.logicommerce.sdk.enums.WidgetPosition;
+
 /**
  * Interface for a widgets attributes.
  *
@@ -22,6 +23,7 @@ public interface WidgetResponse {
 	 * @since           1.0.16
 	 */
 	WidgetPageType getPageType();
+
 	/**
 	 * Return {@link com.logicommerce.sdk.enums.WidgetAmbience} param value.
 	 *
@@ -30,6 +32,7 @@ public interface WidgetResponse {
 	 * @since           1.0.16
 	 */
 	WidgetAmbience getAmbience();
+
 	/**
 	 * Return {@link com.logicommerce.sdk.enums.WidgetPosition} param value.
 	 *

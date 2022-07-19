@@ -58,7 +58,7 @@ public class OrderImpl implements Order  {
 
 	@Uses(value = OrderAdditionalInformationImpl.class)
 	private List<OrderAdditionalInformation> additionalInformation;
-	
+
 	@NoMappable
 	private List<ElementProperty> properties;
 
@@ -80,10 +80,10 @@ public class OrderImpl implements Order  {
 
 	private String pId;
 
+	private Integer documentId;
+
 	private LocalDateTime paymentDate;
 
-	//@Uses(value = OrderDeliveryImpl.class)
-	//TODO tema location
 	@Uses(value = OrderDeliveryImpl.class)
 	private OrderDelivery delivery;
 
@@ -98,7 +98,7 @@ public class OrderImpl implements Order  {
 
 	private boolean reverseChargeVat;
 
-	@Uses(value = OrderInformationImpl.class)	
+	@Uses(value = OrderInformationImpl.class)
 	private OrderInformation information;
 
 	@Uses(value = OrderTaxImpl.class)
@@ -109,6 +109,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderAdditionalInformation> getAdditionalInformation() {
 		return additionalInformation;
 	}
@@ -118,11 +119,13 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<ElementProperty> getProperties() {
 		return properties;
 	}
 
 	/** {@inheritDoc} */
+	@Override
 	public void addProperty(ElementProperty property) {
 		if (properties == null) {
 			properties = new ArrayList<>();
@@ -131,6 +134,7 @@ public class OrderImpl implements Order  {
 	}
 
 	/** {@inheritDoc} */
+	@Override
 	public void addProperty(String name, String value) {
 		if (name == null || value == null) {
 			return;
@@ -143,6 +147,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getComment() {
 		return comment;
 	}
@@ -152,6 +157,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderCurrency> getCurrencies() {
 		return currencies;
 	}
@@ -161,6 +167,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<CustomTag> getCustomTags() {
 		return customTags;
 	}
@@ -170,6 +177,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.time.LocalDateTime} object
 	 */
+	@Override
 	public LocalDateTime getDate() {
 		return date;
 	}
@@ -179,6 +187,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.time.LocalDateTime} object
 	 */
+	@Override
 	public LocalDateTime getDeliveryDate() {
 		return deliveryDate;
 	}
@@ -188,6 +197,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderDiscount> getDiscounts() {
 		return discounts;
 	}
@@ -197,6 +207,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getDocumentNumber() {
 		return documentNumber;
 	}
@@ -206,6 +217,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link com.logicommerce.sdk.enums.ExportStatusType} object
 	 */
+	@Override
 	public ExportStatusType getExportStatus() {
 		return exportStatus;
 	}
@@ -215,6 +227,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.lang.Integer} object
 	 */
+	@Override
 	public Integer getId() {
 		return id;
 	}
@@ -224,6 +237,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderItem> getItems() {
 		return items;
 	}
@@ -233,8 +247,9 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.lang.Integer} object
 	 */
+	@Override
 	public Integer getLanguageId() {
-		
+
 		return languageId;
 	}
 
@@ -243,8 +258,19 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getPId() {
 		return pId;
+	}
+
+	/**
+	 * <p>Getter for the field <code>documentId</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
+	@Override
+	public Integer getDocumentId() {
+		return documentId;
 	}
 
 	/**
@@ -252,6 +278,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.time.LocalDateTime} object
 	 */
+	@Override
 	public LocalDateTime getPaymentDate() {
 		return paymentDate;
 	}
@@ -261,6 +288,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderInformation} object
 	 */
+	@Override
 	public OrderInformation getInformation() {
 		return information;
 	}
@@ -270,6 +298,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderPaymentSystem} object
 	 */
+	@Override
 	public OrderPaymentSystem getPaymentSystem() {
 		return paymentSystem;
 	}
@@ -279,6 +308,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link com.logicommerce.sdk.enums.OrderStatusType} object
 	 */
+	@Override
 	public OrderStatusType getStatus() {
 		return status;
 	}
@@ -288,6 +318,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderStatus> getStatuses() {
 		return statuses;
 	}
@@ -297,6 +328,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a int
 	 */
+	@Override
 	public int getSubstatusId() {
 		return substatusId;
 	}
@@ -306,6 +338,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderTax> getTaxes() {
 		return taxes;
 	}
@@ -315,6 +348,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderTotal} object
 	 */
+	@Override
 	public OrderTotal getTotals() {
 		return totals;
 	}
@@ -324,6 +358,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderUser} object
 	 */
+	@Override
 	public OrderUser getUser() {
 		return user;
 	}
@@ -333,6 +368,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderDelivery} object
 	 */
+	@Override
 	public OrderDelivery getDelivery() {
 		return delivery;
 	}
@@ -342,6 +378,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderVoucher> getVouchers() {
 		return vouchers;
 	}
@@ -351,6 +388,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isPaid() {
 		return paid;
 	}
@@ -360,6 +398,7 @@ public class OrderImpl implements Order  {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isReverseChargeVat() {
 		return reverseChargeVat;
 	}
@@ -595,7 +634,7 @@ public class OrderImpl implements Order  {
 	public void cleanProperties() {
 		this.properties = null;
 	}
-	
+
 	/**
 	 * <p>Setter for the field <code>taxes</code>.</p>
 	 *

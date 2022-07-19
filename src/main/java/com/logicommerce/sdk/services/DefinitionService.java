@@ -26,9 +26,10 @@ import com.logicommerce.sdk.enums.ConnectorType;
  * @since 1.0.16
  */
 public interface DefinitionService extends PluginService {
-	
+
 	/**
-	 * <p>Get plugin definition data. This method return plugin properties settings defined in the JSON config file and defined in this method.</p>
+	 * <p>Get plugin definition data. This method return plugin properties settings defined in the JSON config file and
+	 * defined in this method.</p>
 	 *
 	 * @see com.logicommerce.sdk.definition.PluginDefinition PluginDefinition
 	 * @return a {@link com.logicommerce.sdk.definition.PluginDefinition PluginDefinition} object
@@ -36,9 +37,10 @@ public interface DefinitionService extends PluginService {
 	 * @throws com.logicommerce.sdk.services.PluginServiceException PluginServiceException if any.
 	 */
 	PluginDefinition getPluginDefinition() throws PluginServiceException;
-	
+
 	/**
-	 * <p>Get connector definition property by a connector type. This method return plugin connector properties settings defined in the json file and defined in this method.</p>
+	 * <p>Get connector definition property by a connector type. This method return plugin connector properties
+	 * settings defined in the json file and defined in this method.</p>
 	 *
 	 * @see com.logicommerce.sdk.enums.ConnectorType ConnectorType
 	 * @param connectorType a {@link com.logicommerce.sdk.enums.ConnectorType ConnectorType} object
@@ -50,7 +52,7 @@ public interface DefinitionService extends PluginService {
 
 	/**
 	 * <p>Get all connector definitions properties.</p>
-	 * 
+	 *
 	 * @see com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition
 	 * @return a {@link java.util.List List}<{@link com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition}> object
 	 * @since 1.0.16

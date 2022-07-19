@@ -20,7 +20,7 @@ public class LocationBuilder<T> {
 	protected Double latitude = 0d;
 
 	protected Double longitude = 0d;
-	
+
 	/**
 	 * <p>Constructor for LocationBuilder.</p>
 	 */
@@ -36,7 +36,7 @@ public class LocationBuilder<T> {
 		this();
 		this.parentBuilder = parentBuilder;
 	}
-	
+
 	/**
 	 * <p>country.</p>
 	 *
@@ -47,7 +47,7 @@ public class LocationBuilder<T> {
 		this.country = country;
 		return this;
 	}
-	
+
 	/**
 	 * <p>locationId.</p>
 	 *
@@ -58,7 +58,7 @@ public class LocationBuilder<T> {
 		this.locationId = locationId;
 		return this;
 	}
-	
+
 	/**
 	 * <p>latitude.</p>
 	 *
@@ -69,7 +69,7 @@ public class LocationBuilder<T> {
 		this.latitude = latitude;
 		return this;
 	}
-	
+
 	/**
 	 * <p>longitude.</p>
 	 *
@@ -80,7 +80,7 @@ public class LocationBuilder<T> {
 		this.longitude = longitude;
 		return this;
 	}
-	
+
 	/**
 	 * <p>build.</p>
 	 *
@@ -100,7 +100,7 @@ public class LocationBuilder<T> {
 	 *
 	 * @return a T object
 	 */
-	public T done(){
+	public T done() {
 		return parentBuilder;
 	}
 }
