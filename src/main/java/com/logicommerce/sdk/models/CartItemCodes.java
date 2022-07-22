@@ -11,7 +11,7 @@ public interface CartItemCodes {
 
 	/**
 	 * <p>Get the PID value.</p>
-	 * 
+	 *
 	 * @since 	1.0.16
 	 * @return a {@link java.lang.String String} object
 	 */
@@ -34,7 +34,7 @@ public interface CartItemCodes {
 	String getEan();
 
 	/**
-	 * <p>Get the ISBN code value.</p>>
+	 * <p>Get the ISBN code value.</p>
 	 *
 	 * @since 	1.0.16
 	 * @return a {@link java.lang.String String} object

@@ -18,7 +18,7 @@ public interface ConfigDefinition {
 	 *
 	 * @see com.logicommerce.sdk.definition.PropertyDefinition PropertyDefinition
 	 * @since 1.0.16
-	 * @return a {@link java.util.List List}<{@link com.logicommerce.sdk.definition.PropertyDefinition PropertyDefinition}> object
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.definition.PropertyDefinition PropertyDefinition}&gt; object
 	 */
 	List<PropertyDefinition> getProperties();
 
@@ -44,7 +44,7 @@ public interface ConfigDefinition {
 	 *
 	 * @see com.logicommerce.sdk.definition.PropertyDefinition PropertyDefinition
 	 * @since 1.0.16
-	 * @return a {@link java.util.List List}<{@link com.logicommerce.sdk.definition.PropertyDefinition PropertyDefinition}> object
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.definition.PropertyDefinition PropertyDefinition}&gt; object
 	 */
 	List<PropertyDefinition> getAdditionalProperties();
 
@@ -62,7 +62,7 @@ public interface ConfigDefinition {
 	 *
 	 * @see com.logicommerce.sdk.definition.MappedFieldDefinition MappedFieldDefinition
 	 * @since 1.0.16
-	 * @return a {@link java.util.List List}<{@link com.logicommerce.sdk.definition.MappedFieldDefinition MappedFieldDefinition}> object
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.definition.MappedFieldDefinition MappedFieldDefinition}&gt; object
 	 */
 	List<MappedFieldDefinition> getMappedFields();
 

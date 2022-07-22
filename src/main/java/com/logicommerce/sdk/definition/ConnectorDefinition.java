@@ -6,9 +6,10 @@ import com.logicommerce.sdk.enums.ConnectorType;
 /**
  * <p>ConnectorDefinition interface. To implement a plugin connnector definition properties</p>
  * <p>Extends the functionality of configDefinition.</p>
- * <p>Returns the plugin connector properties definition of a LogiCommerce module.<p> 
- * <p>Note that to get the values ​​defined in Logicommerce, they must be captured 
- *  with <strong>@Property</strong> or <strong>@PropertyLanguage</strong> annotations and will only be available to your services.</p>
+ * <p>Returns the plugin connector properties definition of a LogiCommerce module.</p>
+ * <p>Note that to get the values ​​defined in Logicommerce, they must be captured with
+ * <strong>@Property</strong> or <strong>@PropertyLanguage</strong> annotations and will
+ * only be available to your services.</p>
  *
  * @see com.logicommerce.sdk.definition.ConfigDefinition ConfigDefinition
  * @see com.logicommerce.sdk.definition.PluginDefinition PluginDefinition
@@ -30,9 +31,9 @@ public interface ConnectorDefinition extends ConfigDefinition {
 
 	/**
 	 * <p>Get additional data.</p>
-	 * 
+	 *
 	 * @since 1.0.16
-	 * @return a {@link java.util.Map Map}<{@link java.util.String String}, {@link java.util.Object Object}> object
+	 * @return a {@link java.util.Map Map}&lt;{@link java.lang.String String}, {@link java.lang.Object Object}&gt; object
 	 */
 	Map<String, Object> getAdditionalData();
 

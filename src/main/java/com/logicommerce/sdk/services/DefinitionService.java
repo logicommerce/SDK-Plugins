@@ -54,7 +54,7 @@ public interface DefinitionService extends PluginService {
 	 * <p>Get all connector definitions properties.</p>
 	 *
 	 * @see com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition
-	 * @return a {@link java.util.List List}<{@link com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition}> object
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition}&gt; object
 	 * @since 1.0.16
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */

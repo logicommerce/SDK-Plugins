@@ -17,13 +17,13 @@ public interface Cart {
 	 * <p>Get a cart token value. This value identifies the cart</p>
 	 *
 	 * @since 	1.0.16
-	 * @return a {@link java.lang.String String} object 
+	 * @return a {@link java.lang.String String} object
 	 */
 	String getToken();
 
 	/**
 	 * <p>Get the date when the cart was created</p>
-	 * 
+	 *
 	 * @since 	1.0.16
 	 * @return a {@link java.time.LocalDateTime} object
 	 */
@@ -31,16 +31,16 @@ public interface Cart {
 
 	/**
 	 * <p>Get all Items from the cart.</p>
-	 * 
+	 *
 	 * @see		com.logicommerce.sdk.models.CartItem CartItem
 	 * @since 	1.0.16
-	 * @return a {@link java.util.List List}<{@link com.logicommerce.sdk.models.CartItem CartItem}> object
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.models.CartItem CartItem}&gt; object
 	 */
 	List<CartItem> getItems();
 
 	/**
 	 * <p>Get Totals values of the cart.</p>
-	 * 
+	 *
 	 * @see		com.logicommerce.sdk.models.CartTotals CartTotals
 	 * @since 	1.0.16
 	 * @return a {@link com.logicommerce.sdk.models.CartTotals CartTotals} object
@@ -49,7 +49,7 @@ public interface Cart {
 
 	/**
 	 * <p>Get Delivery object of the card.</p>
-	 * 
+	 *
 	 * @see		com.logicommerce.sdk.models.CartDelivery CartDelivery
 	 * @since 	1.0.16
 	 * @return a {@link com.logicommerce.sdk.models.CartDelivery} object
@@ -58,7 +58,7 @@ public interface Cart {
 
 	/**
 	 * <p>Get abandonedBasketLink, this link is for a recovery abandoned carts.</p>
-	 * 
+	 *
 	 * @since 	1.0.16
 	 * @return a {@link java.lang.String String} object
 	 */
@@ -66,7 +66,7 @@ public interface Cart {
 
 	/**
 	 * <p>Get User of the cart.</p>
-	 * 
+	 *
 	 * @see		com.logicommerce.sdk.models.User User
 	 * @since 	1.0.16
 	 * @return a {@link com.logicommerce.sdk.models.User User} object

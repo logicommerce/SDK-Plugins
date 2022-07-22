@@ -27,7 +27,7 @@ public interface CartShipment {
 	 *
 	 * @see com.logicommerce.sdk.models.CartShipmentItem CartShipmentItem
 	 * @since 1.0.16
-	 * @return a {@link java.util.List List}<{@link com.logicommerce.sdk.models.CartShipmentItem CartShipmentItem}> object
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.models.CartShipmentItem CartShipmentItem}&gt; object
 	 */
 	List<CartShipmentItem> getItems();
 

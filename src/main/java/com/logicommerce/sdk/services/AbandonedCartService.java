@@ -15,7 +15,7 @@ public interface AbandonedCartService {
 	/**
 	 * <p>This method is called when a cart is abandoned.</p>
 	 *
-	 * @param 	item a {@link com.logicommerce.sdk.models.Cart Cart} object
+	 * @param 	cart a {@link com.logicommerce.sdk.models.Cart Cart} object
 	 * @see		com.logicommerce.sdk.models.Cart Cart
 	 * @since 	1.0.18
 	 * @throws 	com.logicommerce.sdk.services.PluginServiceException if any.
@@ -25,7 +25,7 @@ public interface AbandonedCartService {
 	/**
 	 * <p>This method is called when a abandoned cart is recovered.</p>
 	 *
-	 * @param 	item a {@link com.logicommerce.sdk.models.Cart Cart} object
+	 * @param 	cart a {@link com.logicommerce.sdk.models.Cart Cart} object
 	 * @see		com.logicommerce.sdk.models.Cart Cart
 	 * @since 	1.0.18
 	 * @throws 	com.logicommerce.sdk.services.PluginServiceException if any.
@@ -35,7 +35,7 @@ public interface AbandonedCartService {
 	/**
 	 * <p>This method is called when a abandoned cart is finally removed.</p>
 	 *
-	 * @param 	item a {@link com.logicommerce.sdk.models.Cart Cart} object
+	 * @param 	cart a {@link com.logicommerce.sdk.models.Cart Cart} object
 	 * @see		com.logicommerce.sdk.models.Cart Cart
 	 * @since 	1.0.18
 	 * @throws 	com.logicommerce.sdk.services.PluginServiceException if any.

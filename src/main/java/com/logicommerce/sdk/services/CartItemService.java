@@ -27,7 +27,7 @@ public interface CartItemService extends PluginService {
 	/**
 	 * <p>To define some action when an item is updated.</p>
 	 * <p>This method is called when cart has an update item action.</p>
-	 * 
+	 *
 	 * @param 	item a {@link com.logicommerce.sdk.models.CartItem CartItem} object
 	 * @see		com.logicommerce.sdk.models.CartItem CartItem
 	 * @since 	1.0.16
@@ -39,7 +39,7 @@ public interface CartItemService extends PluginService {
 	 * <p>To define some action when some items are added to the cart in one time.</p>
 	 * <p>This method is called when cart has an add items action.</p>
 	 *
-	 * @param items a {@link java.util.List List}<{@link com.logicommerce.sdk.models.CartItem CartItem}> object
+	 * @param items a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.models.CartItem CartItem}&gt; object
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */
 	void addItems(List<CartItem> items) throws PluginServiceException;
@@ -48,7 +48,7 @@ public interface CartItemService extends PluginService {
 	 * <p>To define some action when some items are updated.</p>
 	 * <p>This method is called when cart has an update items action.</p>
 	 *
-	 * @param items a {@link java.util.List List}<{@link com.logicommerce.sdk.models.CartItem CartItem}> object
+	 * @param items a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.models.CartItem CartItem}&gt; object
 	 * @see		com.logicommerce.sdk.models.CartItem CartItem
 	 * @since 	1.0.16
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.

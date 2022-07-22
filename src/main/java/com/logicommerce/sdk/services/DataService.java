@@ -17,8 +17,8 @@ public interface DataService extends PluginService {
 	 * <p>Params contains the data defined by the plugin.</p>
 	 *
 	 * @param action a {@link java.lang.String String} object
-	 * @param params a {@link java.util.Map Map}<{@link java.lang.String String}, {@link java.lang.String String}> object
-	 * @return a {@link java.util.Map Map}<{@link java.lang.String String} {@link java.lang.Object Object}> object
+	 * @param params a {@link java.util.Map Map}&lt;{@link java.lang.String String}, {@link java.lang.String String}&gt; object
+	 * @return a {@link java.util.Map Map}&lt;{@link java.lang.String String} {@link java.lang.Object Object}&gt; object
 	 * @since 1.0.16
 	 * @throws com.logicommerce.sdk.services.PluginServiceException PluginServiceException if any.
 	 */

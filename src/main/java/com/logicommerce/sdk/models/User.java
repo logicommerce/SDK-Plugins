@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * <p>User interface. Get user data associated to the cart.</p>
- * 
+ *
  * @see		com.logicommerce.sdk.models.Cart Cart
  * @see 	com.logicommerce.sdk.models.UserAddress UserAddress
  * @author 	Logicommerce
@@ -83,7 +83,7 @@ public interface User {
 	 *
 	 * @see com.logicommerce.sdk.models.UserAddress UserAddress
 	 * @since 1.0.16
-	 * @return a {@link java.util.List List}<{@link com.logicommerce.sdk.models.UserAddress UserAddress}> object
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.models.UserAddress UserAddress}&gt; object
 	 */
 	List<UserAddress> getBillingAddresses();
 
@@ -92,7 +92,7 @@ public interface User {
 	 *
 	 * @see	com.logicommerce.sdk.models.UserAddress UserAddress
 	 * @since 1.0.16
-	 * @return a {@link java.util.List List}<{@link com.logicommerce.sdk.models.UserAddress UserAddress}> object
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.models.UserAddress UserAddress}&gt; object
 	 */
 	List<UserAddress> getShippingAddresses();
 
@@ -100,7 +100,7 @@ public interface User {
 	 * <p> Get the user custom tags. This is a map with key, value, and de key is the name of the custom tag.</p>
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.util.Map Map}<{@link java.lang.String String}, {@link java.lang.String String}> object
+	 * @return a {@link java.util.Map Map}&lt;{@link java.lang.String String}, {@link java.lang.String String}&gt; object
 	 */
 	Map<String, String> getCustomTags();
 

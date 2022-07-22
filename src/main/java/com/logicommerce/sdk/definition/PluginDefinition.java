@@ -5,7 +5,7 @@ import com.logicommerce.sdk.enums.ConnectorType;
 
 /**
  * <p>PluginDefinition interface. To implement a plugin definition data and properties.<br>
- * Extends {@Link com.logicommerce.sdk.definition.ConfigDefinition ConfigDefinition}</p>
+ * Extends {@link com.logicommerce.sdk.definition.ConfigDefinition ConfigDefinition}</p>
  *
  * @see com.logicommerce.sdk.definition.ConfigDefinition ConfigDefinition
  * @author Logicommerce
@@ -49,13 +49,13 @@ public interface PluginDefinition extends ConfigDefinition {
 	 * <p>Get all connector definitions of the plugin.</p>
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.util.List List}<{@link com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition}> object
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition}&gt; object
 	 */
 	List<ConnectorDefinition> getConnectorDefinitions();
 
 	/**
 	 * <p>Add connector definition.</p>
-	 * 
+	 *
 	 * @see com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition
 	 * @param connectorDefinition a T object
 	 * @param <T> a T class
