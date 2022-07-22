@@ -12,7 +12,7 @@ package com.logicommerce.sdk.models;
 public interface Brand {
 
 	/**
-	 * <p>Get the id of brand.</p>
+	 * <p>Get the id.</p>
 	 *
 	 * @since 1.0.18
 	 * @return a {@link java.lang.Integer Integer} object
@@ -20,7 +20,7 @@ public interface Brand {
 	Integer getId();
 
 	/**
-	 * <p>Get the public id of brand.</p>
+	 * <p>Get the public id.</p>
 	 *
 	 * @since 1.0.18
 	 * @return a {@link java.lang.String String} object
@@ -28,7 +28,7 @@ public interface Brand {
 	String getPId();
 
 	/**
-	 * <p>Get the name of brand.</p>
+	 * <p>Get the name.</p>
 	 *
 	 * @since 1.0.18
 	 * @return a {@link java.lang.String String} object
@@ -36,10 +36,10 @@ public interface Brand {
 	String getName();
 
 	/**
-	 * <p>Get image URL of brand.</p>
+	 * <p>Get the image URL path.</p>
 	 * <p>Ex. https://test.test/image.png<p>
 	 *
-	 * @since 1.0.16
+	 * @since 1.0.18
 	 * @return a {@link java.lang.String} object
 	 */
 	String getImageUrl();

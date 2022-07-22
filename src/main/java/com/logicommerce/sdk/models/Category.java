@@ -12,7 +12,7 @@ package com.logicommerce.sdk.models;
 public interface Category {
 
 	/**
-	 * <p>Get the id for brand.</p>
+	 * <p>Get the id.</p>
 	 *
 	 * @since 1.0.18
 	 * @return a {@link java.lang.Integer Integer} object
@@ -20,7 +20,7 @@ public interface Category {
 	Integer getId();
 
 	/**
-	 * <p>Get the name for brand.</p>
+	 * <p>Get the name.</p>
 	 *
 	 * @since 1.0.18
 	 * @return a {@link java.lang.String String} object
