@@ -10,7 +10,7 @@ import com.logicommerce.sdk.models.Cart;
  * @author	Logicommerce
  * @since	1.0.18
  */
-public interface AbandonedCartService {
+public interface AbandonedCartService extends PluginService {
 
 	/**
 	 * <p>This method is called when a cart is abandoned.</p>
