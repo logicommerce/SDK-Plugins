@@ -134,4 +134,21 @@ public interface CartItem {
 	 * @return a {@link java.util.List List} object
 	 */
 	List<CustomTag> getCustomTagPluginValues();
+
+	/**
+	 * <p>Get the specific brand for cart item.</p>
+	 *
+	 * @since 1.0.18
+	 * @return a {@link com.logicommerce.sdk.models.Brand Brand} object
+	 */
+	Brand getBrand();
+
+	/**
+	 * <p>Get the specific category for cart item.</p>
+	 *
+	 * @since 1.0.18
+	 * @return a {@link com.logicommerce.sdk.models.Category Category} object
+	 */
+	Category getMainCategory();
+
 }
