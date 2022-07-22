@@ -36,6 +36,14 @@ public interface Brand {
 	String getName();
 
 	/**
+	 * <p>Get the URL Seo.</p>
+	 *
+	 * @since 1.0.18
+	 * @return a {@link java.lang.String} object
+	 */
+	String getUrlSeo();
+
+	/**
 	 * <p>Get the image URL path.</p>
 	 * <p>Ex. https://test.test/image.png<p>
 	 *
