@@ -9,6 +9,12 @@ import com.logicommerce.sdk.definition.ConnectorDefinition;
 import com.logicommerce.sdk.definition.MappedFieldDefinition;
 import com.logicommerce.sdk.definition.PropertyDefinition;
 
+/**
+ * <p>Abstract ConnectorDefinitionImpl class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 
 	private List<PropertyDefinition> properties;
@@ -17,6 +23,7 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 	private List<MappedFieldDefinition> mappedFields;
 	private Map<String, Object> additionalData;
 
+	/** {@inheritDoc} */
 	@Override
 	public List<PropertyDefinition> getProperties() {
 		if (properties == null) {
@@ -25,16 +32,19 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 		return properties;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public void addProperty(PropertyDefinition property) {
 		getProperties().add(property);
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public boolean hasAdditionalProperties() {
 		return hasAdditionalProperties;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public List<PropertyDefinition> getAdditionalProperties() {
 		if (additionalProperties == null) {
@@ -43,11 +53,13 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 		return additionalProperties;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public void addAdditionalProperty(PropertyDefinition property) {
 		getAdditionalProperties().add(property);
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public List<MappedFieldDefinition> getMappedFields() {
 		if (mappedFields == null) {
@@ -56,32 +68,59 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 		return mappedFields;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public void addMappedField(MappedFieldDefinition mappedField) {
 		getMappedFields().add(mappedField);
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public Map<String, Object> getAdditionalData() {
 		return additionalData;
 	}
-
+	
+	/**
+	 * <p>Setter for the field <code>properties</code>.</p>
+	 *
+	 * @param properties a {@link java.util.List} object
+	 */
 	public void setProperties(List<PropertyDefinition> properties) {
 		this.properties = properties;
 	}
 
+	/**
+	 * <p>Setter for the field <code>hasAdditionalProperties</code>.</p>
+	 *
+	 * @param hasAdditionalProperties a boolean
+	 */
 	public void setHasAdditionalProperties(boolean hasAdditionalProperties) {
 		this.hasAdditionalProperties = hasAdditionalProperties;
 	}
 
+	/**
+	 * <p>Setter for the field <code>additionalProperties</code>.</p>
+	 *
+	 * @param additionalProperties a {@link java.util.List} object
+	 */
 	public void setAdditionalProperties(List<PropertyDefinition> additionalProperties) {
 		this.additionalProperties = additionalProperties;
 	}
 
+	/**
+	 * <p>Setter for the field <code>mappedFields</code>.</p>
+	 *
+	 * @param mappedFields a {@link java.util.List} object
+	 */
 	public void setMappedFields(List<MappedFieldDefinition> mappedFields) {
 		this.mappedFields = mappedFields;
 	}
 
+	/**
+	 * <p>Setter for the field <code>additionalData</code>.</p>
+	 *
+	 * @param additionalData a {@link java.util.Map} object
+	 */
 	public void setAdditionalData(Map<String, Object> additionalData) {
 		this.additionalData = additionalData;
 	}

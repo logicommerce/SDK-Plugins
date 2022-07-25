@@ -2,14 +2,26 @@ package com.logicommerce.sdk.definition.implementations;
 
 import com.logicommerce.sdk.definition.UserValueDefinition;
 
+/**
+ * <p>UserValueDefinitionImpl class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public class UserValueDefinitionImpl implements UserValueDefinition {
 
 	private Integer id;
 	
+	/**
+	 * <p>Constructor for UserValueDefinitionImpl.</p>
+	 *
+	 * @param id a {@link java.lang.Integer} object
+	 */
 	public UserValueDefinitionImpl(Integer id) {
 		this.id = id;
 	}
 
+	/** {@inheritDoc} */
 	@Override
 	public Integer getId() {
 		return id;

@@ -2,6 +2,12 @@ package com.logicommerce.sdk.definition.implementations;
 
 import com.logicommerce.sdk.definition.ShipperDefinition;
 
+/**
+ * <p>ShipperDefinitionImpl class.</p>
+ *
+ * @author Logicommerce
+ * @since 1.0.16
+ */
 public class ShipperDefinitionImpl extends ConnectorDefinitionImpl implements ShipperDefinition {
 
 		
