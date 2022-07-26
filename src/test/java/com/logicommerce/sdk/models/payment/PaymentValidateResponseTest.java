@@ -92,19 +92,18 @@ class PaymentValidateResponseTest {
 	}
 
 	@Test
-	void testSimulateAbort() {
+	void testTypeMessage() {
 		PaymentValidateResponse response = new PaymentValidateResponseBuilder()
-				.simulateAbort()
+				.webhookMessage()
 				.message(MESSAGE)
 				.transactionId(TRANSACTION_ID)
 				.build();
 
 		assertThat(response, is(not(nullValue())));
-		assertThat(response.isSuccess(), is(FAILURE));
-		assertThat(response.simulateAbort(), is(true));
+		assertThat(response.isSuccess(), is(SUCCESSFUL));
+		assertThat(response.getType(), is(PaymentValidateResponseType.WEBHOOK_MESSAGE));
 		assertThat(response.getMessage(), is(MESSAGE));
 		assertThat(response.getTransactionId(), is(TRANSACTION_ID));
-		assertThat(response.getType(), is(nullValue()));
 		assertThat(response.getData(), is(nullValue()));
 	}
 

@@ -17,6 +17,7 @@ public class PaymentValidateResponseImpl extends PaymentAbstract implements Paym
 	private LocalDateTime paymentDate;
 	private PaymentValidateResponseType type;
 	private OrderStatusDefinition orderStatus;
+	@Deprecated
 	private boolean simulateAbort;
 	private boolean validated;
 	private String messageLog;
@@ -53,6 +54,7 @@ public class PaymentValidateResponseImpl extends PaymentAbstract implements Paym
 
 	/** {@inheritDoc} */
 	@Override
+	@Deprecated(since = "1.0.19")
 	public boolean simulateAbort() {
 		return simulateAbort;
 	}

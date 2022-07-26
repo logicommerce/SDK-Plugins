@@ -10,5 +10,6 @@ public enum PaymentValidateResponseType {
 	NO_DATA,
 	FORM,
 	XML,
-	VALIDATED;
+	REDIRECT,
+	WEBHOOK_MESSAGE;
 }
