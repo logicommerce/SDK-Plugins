@@ -62,7 +62,12 @@ public interface PaymentValidateResponse {
 	LocalDateTime getPaymentDate();
 
 	/**
-	 * <p>getType.</p>
+	 * <p>Get payment validate response type.<br>
+	 * 	NO_DATA,<br>
+	 *	FORM,<br>
+	 *	XML,<br>
+	 *	REDIRECT: for a redirect to confirm or denied order.<br>
+	 *	WEBHOOK_MESSAGE: for a webhooks requests, print message on screen.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.enums.PaymentValidateResponseType} object
 	 */
@@ -86,7 +91,9 @@ public interface PaymentValidateResponse {
 	 * <p>simulateAbort.</p>
 	 *
 	 * @return a boolean
+	 * @since 1.0.19
 	 */
+	@Deprecated(since = "1.0.19")
 	boolean simulateAbort();
 	
 	/**
