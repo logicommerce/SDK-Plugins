@@ -19,19 +19,18 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	private PaymentValidateResponseType type;
 	private OrderStatusDefinition orderStatus;
 	private OrderStatusDefinitionImpl.Builder<PaymentValidateResponseBuilder> orderStatusBuilder;
+	@Deprecated(since = "1.0.19")
 	private boolean simulateAbort;
 	private boolean validated;
 	private String messageLog;
 
 	/**
-	 * <p>validated.</p>
+	 * <p>For a previuos validated order.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
 	 */
-	public PaymentValidateResponseBuilder validated() {
-		this.type = PaymentValidateResponseType.VALIDATED; 
+	public PaymentValidateResponseBuilder validated() { 
 		this.success = true;
-		this.paid = true;
 		this.validated = true;
 		return returnThis();
 	}
@@ -41,14 +40,37 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
 	 */
+	@Deprecated(since = "1.0.19")
 	public PaymentValidateResponseBuilder simulateAbort() {
 		this.success = false;
 		this.simulateAbort = true;
 		return returnThis();
 	}
+	
+	/**
+	 * <p>For a webhook request messages.</p>
+	 *
+	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
+	 */
+	public PaymentValidateResponseBuilder webhookMessage() {
+		this.success = true;
+		this.type = PaymentValidateResponseType.WEBHOOK_MESSAGE;
+		return returnThis();
+	}
+	
+	/**
+	 * <p>For a redirect response.</p>
+	 *
+	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
+	 */
+	public PaymentValidateResponseBuilder redirect() {
+		this.success = true;
+		this.type = PaymentValidateResponseType.REDIRECT;
+		return returnThis();
+	}
 
 	/**
-	 * <p>authorizationCode.</p>
+	 * <p>For set the authorization code.</p>
 	 *
 	 * @param authorizationCode a {@link java.lang.String} object
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
@@ -59,7 +81,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	}
 
 	/**
-	 * <p>paid.</p>
+	 * <p>For set is order is paid.</p>
 	 *
 	 * @param paid a boolean
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
@@ -70,7 +92,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	}
 
 	/**
-	 * <p>paymentDate.</p>
+	 * <p>For set the payment date.</p>
 	 *
 	 * @param paymentDate a {@link java.time.LocalDateTime} object
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
@@ -104,7 +126,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	}
 
 	/**
-	 * <p>orderStatus.</p>
+	 * <p>For set the order status and substatus from OrderStatusDefiniton.</p>
 	 *
 	 * @param orderStatus a {@link com.logicommerce.sdk.definition.OrderStatusDefinition} object
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
@@ -115,7 +137,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	}
 	
 	/**
-	 * <p>orderStatus.</p>
+	 * <p>Order status builder.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.definition.implementations.OrderStatusDefinitionImpl.Builder} object
 	 */
@@ -137,6 +159,18 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		return returnThis();
 	}
 	
+	/**
+	 * <p>Type of payment validate response.</p>
+	 *
+	 * @param type a {@link com.logicommerce.sdk.enums.PaymentValidateResponseType } PaymentValidateResponseType
+	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
+	 * @since 1.0.19
+	 */
+	public PaymentValidateResponseBuilder type(PaymentValidateResponseType type) {
+		this.type = type;
+		return returnThis();
+	}
+	
 	/** {@inheritDoc} */
 	@Override
 	public PaymentValidateResponse build() {
@@ -146,7 +180,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	}
 
 	/**
-	 * <p>setValues.</p>
+	 * <p>Set all the values from payment.</p>
 	 *
 	 * @param payment a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseImpl} object
 	 */
@@ -161,7 +195,6 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		} else if (orderStatusBuilder != null) {
 			payment.setOrderStatus(orderStatusBuilder.build());
 		}
-		payment.setSimulateAbort(simulateAbort);
 		payment.setValidated(validated);
 		payment.setMessageLog(messageLog);
 	}
