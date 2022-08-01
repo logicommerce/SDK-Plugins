@@ -3,7 +3,8 @@ package com.logicommerce.sdk.services;
 import com.logicommerce.sdk.models.order.Order;
 
 /**
- * <p>OrderService interface.</p>
+ * OrderService interface.<br><br>
+ * This service can't inject the resources Cart and Storage.
  *
  * @author Logicommerce
  * @since 1.0.16
@@ -11,15 +12,26 @@ import com.logicommerce.sdk.models.order.Order;
 public interface OrderService extends PluginService {
 
 	/**
-	 * <p>create.</p>
+	 * Create order
+	 * @deprecated Use CheckoutService.createOrder instead for Order creation
+	 * or use validate method for Order with validateCallback payment.
+	 * @param order a {@link com.logicommerce.sdk.models.order.Order} object
+	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
+	 */
+	@Deprecated
+	void create(Order order) throws PluginServiceException;
+
+	/**
+	 * Validate callback order<br>
+	 * Method called when an Order payment is validated.
 	 *
 	 * @param order a {@link com.logicommerce.sdk.models.order.Order} object
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */
-	void create(Order order) throws PluginServiceException;
+	void validateCallback(Order order) throws PluginServiceException;
 
 	/**
-	 * <p>edit.</p>
+	 * Edit order callback
 	 *
 	 * @param order a {@link com.logicommerce.sdk.models.order.Order} object
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
