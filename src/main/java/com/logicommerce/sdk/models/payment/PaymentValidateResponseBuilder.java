@@ -12,14 +12,14 @@ import com.logicommerce.sdk.enums.PaymentValidateResponseType;
  * @since 1.0.16
  */
 public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<PaymentValidateResponseBuilder, PaymentValidateResponse> {
-	
+
 	private String authorizationCode;
 	private boolean paid;
 	private LocalDateTime paymentDate;
 	private PaymentValidateResponseType type;
 	private OrderStatusDefinition orderStatus;
 	private OrderStatusDefinitionImpl.Builder<PaymentValidateResponseBuilder> orderStatusBuilder;
-	@Deprecated(since = "1.0.19")
+	@Deprecated(since = "1.0.19", forRemoval = true)
 	private boolean simulateAbort;
 	private boolean validated;
 	private String messageLog;
@@ -29,7 +29,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
 	 */
-	public PaymentValidateResponseBuilder validated() { 
+	public PaymentValidateResponseBuilder validated() {
 		this.success = true;
 		this.validated = true;
 		return returnThis();
@@ -46,7 +46,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		this.simulateAbort = true;
 		return returnThis();
 	}
-	
+
 	/**
 	 * <p>For a webhook request messages.</p>
 	 *
@@ -57,7 +57,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		this.type = PaymentValidateResponseType.WEBHOOK_MESSAGE;
 		return returnThis();
 	}
-	
+
 	/**
 	 * <p>For a redirect response.</p>
 	 *
@@ -135,7 +135,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		this.orderStatus = orderStatus;
 		return returnThis();
 	}
-	
+
 	/**
 	 * <p>Order status builder.</p>
 	 *
@@ -158,7 +158,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		this.messageLog = messageLog;
 		return returnThis();
 	}
-	
+
 	/**
 	 * <p>Type of payment validate response.</p>
 	 *
@@ -170,7 +170,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		this.type = type;
 		return returnThis();
 	}
-	
+
 	/** {@inheritDoc} */
 	@Override
 	public PaymentValidateResponse build() {
