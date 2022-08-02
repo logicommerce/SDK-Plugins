@@ -18,7 +18,7 @@ public interface OrderService extends PluginService {
 	 * @param order a {@link com.logicommerce.sdk.models.order.Order} object
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */
-	@Deprecated
+	@Deprecated(since = "1.0.20", forRemoval = true)
 	void create(Order order) throws PluginServiceException;
 
 	/**

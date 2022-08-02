@@ -8,7 +8,7 @@ import com.logicommerce.sdk.models.order.Order;
  * @author Logicommerce
  * @since 1.0.20
  */
-public interface CheckoutService {
+public interface CheckoutService extends PluginService {
 
 	/**
 	 * Create order callback<br>
