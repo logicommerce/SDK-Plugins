@@ -3,6 +3,7 @@ package com.logicommerce.sdk.models.payment;
 import java.time.LocalDateTime;
 import com.logicommerce.sdk.definition.OrderStatusDefinition;
 import com.logicommerce.sdk.enums.PaymentValidateResponseType;
+import com.logicommerce.sdk.enums.PaymentValidateStatusType;
 
 /**
  * <p>PaymentValidateResponse interface.</p>
@@ -102,5 +103,19 @@ public interface PaymentValidateResponse {
 	 * @return a boolean
 	 */
 	boolean validated();
+	
+	/**
+	 * <p>
+	 * 	Get payment validate response type.<br>
+	 * 	DO_NOTHING: skip actions,<br>
+	 *	VALIDATED: for a order allready validated ,<br>
+	 *	OK: for validate new order,<br>
+	 *	KO: for denied order.<br>
+	 *	</p>
+	 *
+	 * @since 	1.0.22
+	 * @return a {@link com.logicommerce.sdk.enums.PaymentValidateStatusType} object
+	 */
+	PaymentValidateStatusType getStatus();
 
 }
