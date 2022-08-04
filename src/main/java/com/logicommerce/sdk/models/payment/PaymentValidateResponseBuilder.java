@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import com.logicommerce.sdk.definition.OrderStatusDefinition;
 import com.logicommerce.sdk.definition.implementations.OrderStatusDefinitionImpl;
 import com.logicommerce.sdk.enums.PaymentValidateResponseType;
+import com.logicommerce.sdk.enums.PaymentValidateStatusType;
 
 /**
  * <p>PaymentValidateResponseBuilder class.</p>
@@ -25,13 +26,26 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	private String messageLog;
 
 	/**
-	 * <p>For a previuos validated order.</p>
+	 * <p>For a previous validated order.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
 	 */
 	public PaymentValidateResponseBuilder validated() {
 		this.success = true;
 		this.validated = true;
+		this.status = PaymentValidateStatusType.VALIDATED;
+		return returnThis();
+	}
+
+	/**
+	 * <p>For skip order actions.</p>
+	 *
+	 * @since 	1.0.22
+	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
+	 */
+	public PaymentValidateResponseBuilder skip() {
+		this.success = false;
+		this.status = PaymentValidateStatusType.DO_NOTHING;
 		return returnThis();
 	}
 
@@ -53,7 +67,6 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
 	 */
 	public PaymentValidateResponseBuilder webhookMessage() {
-		this.success = true;
 		this.type = PaymentValidateResponseType.WEBHOOK_MESSAGE;
 		return returnThis();
 	}
@@ -66,6 +79,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	public PaymentValidateResponseBuilder redirect() {
 		this.success = true;
 		this.type = PaymentValidateResponseType.REDIRECT;
+		this.status = PaymentValidateStatusType.OK;
 		return returnThis();
 	}
 
@@ -197,6 +211,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		}
 		payment.setValidated(validated);
 		payment.setMessageLog(messageLog);
+		payment.setStatus(status);
 	}
 
 	/** {@inheritDoc} */

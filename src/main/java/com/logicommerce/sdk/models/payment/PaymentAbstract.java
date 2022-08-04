@@ -1,5 +1,7 @@
 package com.logicommerce.sdk.models.payment;
 
+import com.logicommerce.sdk.enums.PaymentValidateStatusType;
+
 /**
  * <p>Abstract PaymentAbstract class.</p>
  *
@@ -15,6 +17,8 @@ public abstract class PaymentAbstract {
 	private String transactionId;
 
 	private PaymentData data;
+
+	private PaymentValidateStatusType status;
 
 	/**
 	 * <p>Getter for the field <code>data</code>.</p>
@@ -50,6 +54,16 @@ public abstract class PaymentAbstract {
 	 */
 	public boolean isSuccess() {
 		return success;
+	}
+	
+	/**
+	 * <p>Getter for the field <code>status</code>.</p>
+	 * 
+	 * @since 1.0.22
+	 * @return a {@link com.logicommerce.sdk.enums.PaymentValidateStatusType} object
+	 */
+	public PaymentValidateStatusType getStatus() {
+		return status;
 	}
 
 	/**
@@ -87,5 +101,14 @@ public abstract class PaymentAbstract {
 	public void setData(PaymentData data) {
 		this.data = data;
 	}
-
+	
+	/**
+	 * <p>Setter for the field <code>status</code>.</p>
+	 *
+	 * @since 1.0.22
+	 * @param status a {@link com.logicommerce.sdk.enums.PaymentValidateStatusType} object
+	 */
+	public void setStatus(PaymentValidateStatusType status) {
+		this.status = status;
+	}
 }

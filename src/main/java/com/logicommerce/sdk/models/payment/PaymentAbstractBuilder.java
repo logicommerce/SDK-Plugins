@@ -1,5 +1,7 @@
 package com.logicommerce.sdk.models.payment;
 
+import com.logicommerce.sdk.enums.PaymentValidateStatusType;
+
 /**
  * <p>Abstract PaymentAbstractBuilder class.</p>
  *
@@ -15,29 +17,39 @@ public abstract class PaymentAbstractBuilder<S, T> {
 	protected PaymentDataBuilder<S, ?> content;
 
 	protected String transactionId;
+	
+	protected PaymentValidateStatusType status;
 
 	/**
-	 * <p>ok.</p>
+	 * <p>
+	 * Use for validate response success,<br>
+	 * Set status to OK.
+	 * </p>
 	 *
 	 * @return a S object
 	 */
 	public S ok() {
 		this.success = true;
+		this.status = PaymentValidateStatusType.OK;
 		return returnThis();
 	}
 
 	/**
-	 * <p>ko.</p>
+	 * <p>
+	 * Use for validate response unsuccess,<br>
+	 * Set status to KO.
+	 * </p>
 	 *
 	 * @return a S object
 	 */
 	public S ko() {
 		this.success = false;
+		this.status = PaymentValidateStatusType.KO;
 		return returnThis();
 	}
 
 	/**
-	 * <p>message.</p>
+	 * <p>Use for set message.</p>
 	 *
 	 * @param message a {@link java.lang.String} object
 	 * @return a S object
@@ -48,7 +60,7 @@ public abstract class PaymentAbstractBuilder<S, T> {
 	}
 
 	/**
-	 * <p>transactionId.</p>
+	 * <p>Use for set transactionId.</p>
 	 *
 	 * @param transactionId a {@link java.lang.String} object
 	 * @return a S object
