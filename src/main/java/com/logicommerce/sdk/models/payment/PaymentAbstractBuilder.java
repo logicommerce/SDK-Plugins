@@ -10,6 +10,7 @@ import com.logicommerce.sdk.enums.PaymentValidateStatusType;
  */
 public abstract class PaymentAbstractBuilder<S, T> {
 
+	@Deprecated(since = "1.0.22", forRemoval = true)
 	protected boolean success;
 
 	protected String message;

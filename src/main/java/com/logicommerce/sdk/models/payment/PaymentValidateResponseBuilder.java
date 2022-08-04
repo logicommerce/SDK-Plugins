@@ -22,6 +22,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	private OrderStatusDefinitionImpl.Builder<PaymentValidateResponseBuilder> orderStatusBuilder;
 	@Deprecated(since = "1.0.19", forRemoval = true)
 	private boolean simulateAbort;
+	@Deprecated(since = "1.0.22", forRemoval = true)
 	private boolean validated;
 	private String messageLog;
 
@@ -45,7 +46,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	 */
 	public PaymentValidateResponseBuilder skip() {
 		this.success = false;
-		this.status = PaymentValidateStatusType.DO_NOTHING;
+		this.status = PaymentValidateStatusType.SKIP;
 		return returnThis();
 	}
 

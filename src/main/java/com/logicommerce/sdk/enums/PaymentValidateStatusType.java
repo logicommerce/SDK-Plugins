@@ -7,7 +7,7 @@ package com.logicommerce.sdk.enums;
  * @since 1.0.22
  */
 public enum PaymentValidateStatusType {
-	DO_NOTHING,
+	SKIP,
 	VALIDATED,
 	OK,
 	KO;
