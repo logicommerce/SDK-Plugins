@@ -5,7 +5,7 @@
 
 	<groupId>com.logicommerce</groupId>
 	<artifactId>sdk</artifactId>
-	<version>1.0.21</version>
+	<version>1.0.22</version>
 	<packaging>jar</packaging>
 
 	<name>SDK for Logicommerce Plugins</name>
