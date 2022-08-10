@@ -43,17 +43,17 @@ public class PropertyDefinitionValueImpl implements PropertyDefinitionValue {
 		Builder(PropertyDefinitionImpl.Builder<?> parentBuilder) {
 			this.parentBuilder = parentBuilder;
 		}
-		
+
 		public Builder value(String value) {
 			this.value = value;
 			return this;
 		}
-		
+
 		public DefinitionLanguagesImpl.Builder<Builder> languages() {
 			this.languages = new DefinitionLanguagesImpl.Builder<>(this);
 			return languages;
 		}
-		
+
 		PropertyDefinitionValue build() {
 			PropertyDefinitionValueImpl properyDefinitionValue = new PropertyDefinitionValueImpl();
 			properyDefinitionValue.setValue(value);
@@ -61,6 +61,7 @@ public class PropertyDefinitionValueImpl implements PropertyDefinitionValue {
 			return properyDefinitionValue;
 		}
 
+		@SuppressWarnings("squid:S1452")
 		public PropertyDefinitionImpl.Builder<?> done() {
 			return parentBuilder;
 		}

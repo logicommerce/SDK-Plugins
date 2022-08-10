@@ -22,35 +22,6 @@ public interface BasketService extends PluginService {
 	void calculate() throws PluginServiceException;
 
 	/**
-	 * <p>addItem.</p>
-	 * @since	1.0.16
-	 * @param itemHash a {@link java.lang.String} object
-	 * @param quantity a {@link java.lang.Integer} object
-	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
-	 */
-	@Deprecated
-	void addItem(String itemHash, Integer quantity) throws PluginServiceException;
-
-	/**
-	 * <p>updateItem.</p>
-	 *
-	 * @param itemHash a {@link java.lang.String} object
-	 * @param quantity a {@link java.lang.Integer} object
-	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
-	 */
-	@Deprecated
-	void updateItem(String itemHash, Integer quantity) throws PluginServiceException;
-
-	/**
-	 * <p>deleteItem.</p>
-	 *
-	 * @param itemHash a {@link java.lang.String} object
-	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
-	 */
-	@Deprecated
-	void deleteItem(String itemHash) throws PluginServiceException;
-
-	/**
 	 * <p>For define some action when clear basket call.</p>
 	 * <p>This method is called when basket has a clear action.</p>
 	 *
