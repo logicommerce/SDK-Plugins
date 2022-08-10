@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models.payment;
 
+import com.logicommerce.sdk.enums.PaymentStatusType;
 import com.logicommerce.sdk.enums.PaymentType;
 
 /**
@@ -9,13 +10,6 @@ import com.logicommerce.sdk.enums.PaymentType;
  * @since 1.0.16
  */
 public interface Payment {
-
-	/**
-	 * <p>isSuccess.</p>
-	 *
-	 * @return a boolean
-	 */
-	boolean isSuccess();
 
 	/**
 	 * <p>getMessage.</p>
@@ -51,5 +45,17 @@ public interface Payment {
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentData} object
 	 */
 	PaymentData getData();
+	
+	/**
+	 * <p>
+	 * 	Get payment response type.<br>
+	 *	OK: for validate new order,<br>
+	 *	KO: for denied order.<br>
+	 *	</p>
+	 *
+	 * @since 	1.1.0
+	 * @return a {@link com.logicommerce.sdk.enums.PaymentStatusType} object
+	 */
+	PaymentStatusType getStatus();
 
 }
