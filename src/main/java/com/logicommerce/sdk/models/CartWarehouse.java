@@ -53,13 +53,6 @@ public interface CartWarehouse {
 	String getState();
 
 	/**
-	 * <p>Get locationId of warehouse.</p>
-	 *
-	 * @return a int
-	 */
-	int getLocationId();
-
-	/**
 	 * <p>Get postalCode of warehouse.</p>
 	 *
 	 * @since 1.0.16

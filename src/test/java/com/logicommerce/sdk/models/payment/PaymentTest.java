@@ -2,13 +2,12 @@ package com.logicommerce.sdk.models.payment;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+import com.logicommerce.sdk.enums.PaymentStatusType;
 import com.logicommerce.sdk.enums.PaymentType;
 import org.junit.jupiter.api.Test;
 
 class PaymentTest {
 
-	private static final boolean SUCCESSFUL = true;
-	private static final boolean FAILURE = false;
 	private static final String MESSAGE = "message";
 	private static final String TRANSACTION_ID = "transactionId";
 	private static final String URL = "url";
@@ -26,7 +25,7 @@ class PaymentTest {
 
 		assertThat(payment, is(not(nullValue())));
 		assertThat(payment.getMessage(), is(MESSAGE));
-		assertThat(payment.isSuccess(), is(SUCCESSFUL));
+		assertThat(payment.getStatus(), is(PaymentStatusType.OK));
 		assertThat(payment.getTransactionId(), is(TRANSACTION_ID));
 		assertThat(payment.getData(), is(nullValue()));
 		assertThat(payment.getType(), is(PaymentType.OFFLINE));
@@ -43,7 +42,7 @@ class PaymentTest {
 
 		assertThat(payment, is(not(nullValue())));
 		assertThat(payment.getMessage(), is(MESSAGE));
-		assertThat(payment.isSuccess(), is(SUCCESSFUL));
+		assertThat(payment.getStatus(), is(PaymentStatusType.OK));
 		assertThat(payment.getTransactionId(), is(TRANSACTION_ID));
 		assertThat(payment.getData(), is(nullValue()));
 		assertThat(payment.getType(), is(PaymentType.WIDGET));
@@ -61,7 +60,7 @@ class PaymentTest {
 
 		assertThat(payment, is(not(nullValue())));
 		assertThat(payment.getMessage(), is(MESSAGE));
-		assertThat(payment.isSuccess(), is(SUCCESSFUL));
+		assertThat(payment.getStatus(), is(PaymentStatusType.OK));
 		assertThat(payment.getTransactionId(), is(TRANSACTION_ID));
 		assertThat(payment.getData(), is(notNullValue()));
 		assertThat(payment.getData(), instanceOf(PaymentDataNoPay.class));
@@ -78,7 +77,7 @@ class PaymentTest {
 
 		assertThat(payment, is(not(nullValue())));
 		assertThat(payment.getMessage(), is(MESSAGE));
-		assertThat(payment.isSuccess(), is(FAILURE));
+		assertThat(payment.getStatus(), is(PaymentStatusType.KO));
 		assertThat(payment.getTransactionId(), is(TRANSACTION_ID));
 		assertThat(payment.getData(), is(nullValue()));
 		assertThat(payment.getType(), is(nullValue()));
@@ -99,7 +98,7 @@ class PaymentTest {
 
 		assertThat(payment, is(not(nullValue())));
 		assertThat(payment.getMessage(), is(MESSAGE));
-		assertThat(payment.isSuccess(), is(SUCCESSFUL));
+		assertThat(payment.getStatus(), is(PaymentStatusType.OK));
 		assertThat(payment.getTransactionId(), is(TRANSACTION_ID));
 		assertThat(payment.getData(), is(not(nullValue())));
 		assertThat(payment.getData(), instanceOf(PaymentDataForm.class));

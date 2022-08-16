@@ -3,6 +3,7 @@ package com.logicommerce.sdk.models.payment;
 import java.time.LocalDateTime;
 import com.logicommerce.sdk.definition.OrderStatusDefinition;
 import com.logicommerce.sdk.enums.PaymentValidateResponseType;
+import com.logicommerce.sdk.enums.PaymentValidateStatusType;
 
 /**
  * <p>PaymentValidateResponseImpl class.</p>
@@ -16,10 +17,8 @@ public class PaymentValidateResponseImpl extends PaymentAbstract implements Paym
 	private boolean paid;
 	private LocalDateTime paymentDate;
 	private PaymentValidateResponseType type;
+	private PaymentValidateStatusType status;
 	private OrderStatusDefinition orderStatus;
-	@Deprecated
-	private boolean simulateAbort;
-	private boolean validated;
 	private String messageLog;
 
 	/** {@inheritDoc} */
@@ -51,24 +50,11 @@ public class PaymentValidateResponseImpl extends PaymentAbstract implements Paym
 	public OrderStatusDefinition getOrderStatus() {
 		return orderStatus;
 	}
-
-	/** {@inheritDoc} */
-	@Override
-	@Deprecated(since = "1.0.19")
-	public boolean simulateAbort() {
-		return simulateAbort;
-	}
 	
 	/** {@inheritDoc} */
 	@Override
 	public String getMessageLog() {
 		return messageLog;
-	}
-
-	/** {@inheritDoc} */
-	@Override
-	public boolean validated() {
-		return validated;
 	}
 
 	/**
@@ -117,15 +103,6 @@ public class PaymentValidateResponseImpl extends PaymentAbstract implements Paym
 	}
 
 	/**
-	 * <p>Setter for the field <code>simulateAbort</code>.</p>
-	 *
-	 * @param simulateAbort a boolean
-	 */
-	public void setSimulateAbort(boolean simulateAbort) {
-		this.simulateAbort = simulateAbort;
-	}
-
-	/**
 	 * <p>Setter for the field <code>messageLog</code>.</p>
 	 *
 	 * @param messageLog a {@link java.lang.String} object
@@ -133,13 +110,24 @@ public class PaymentValidateResponseImpl extends PaymentAbstract implements Paym
 	public void setMessageLog(String messageLog) {
 		this.messageLog = messageLog;
 	}
+	
+	/**
+	 * <p>Getter for the field <code>status</code>.</p>
+	 * 
+	 * @since 1.0.22
+	 * @return a {@link com.logicommerce.sdk.enums.PaymentValidateStatusType} object
+	 */
+	public PaymentValidateStatusType getStatus() {
+		return status;
+	}
 
 	/**
-	 * <p>Setter for the field <code>validated</code>.</p>
+	 * <p>Setter for the field <code>status</code>.</p>
 	 *
-	 * @param validated a boolean
+	 * @since 1.0.22
+	 * @param status a {@link com.logicommerce.sdk.enums.PaymentValidateStatusType} object
 	 */
-	public void setValidated(boolean validated) {
-		this.validated = validated;
+	public void setStatus(PaymentValidateStatusType status) {
+		this.status = status;
 	}
 }

@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models.payment;
 
+import com.logicommerce.sdk.enums.PaymentStatusType;
 import com.logicommerce.sdk.enums.PaymentType;
 
 /**
@@ -11,6 +12,8 @@ import com.logicommerce.sdk.enums.PaymentType;
 public class PaymentImpl extends PaymentAbstract implements Payment {
 
 	private PaymentType type;
+	
+	private PaymentStatusType status;
 
 	private String redirectUri;
 
@@ -42,6 +45,22 @@ public class PaymentImpl extends PaymentAbstract implements Payment {
 	 */
 	public void setRedirectUri(String redirectUri) {
 		this.redirectUri = redirectUri;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public PaymentStatusType getStatus() {
+		return status;
+	}
+
+	/**
+	 * <p>Setter for the field <code>status</code>.</p>
+	 *
+	 * @param type a {@link com.logicommerce.sdk.enums.PaymentStatusType} object
+	 * @since 1.1.0
+	 */
+	public void setStatus(PaymentStatusType status) {
+		this.status = status;
 	}
 
 }

@@ -14,13 +14,6 @@ import com.logicommerce.sdk.enums.PaymentValidateStatusType;
 public interface PaymentValidateResponse {
 
 	/**
-	 * <p>isSuccess.</p>
-	 *
-	 * @return a boolean
-	 */
-	boolean isSuccess();
-
-	/**
 	 * <p>getMessage.</p>
 	 *
 	 * @return a {@link java.lang.String} object
@@ -87,28 +80,12 @@ public interface PaymentValidateResponse {
 	 * @return a {@link com.logicommerce.sdk.definition.OrderStatusDefinition} object
 	 */
 	OrderStatusDefinition getOrderStatus();
-		
-	/**
-	 * <p>simulateAbort.</p>
-	 *
-	 * @return a boolean
-	 * @since 1.0.19
-	 */
-	@Deprecated(since = "1.0.19")
-	boolean simulateAbort();
-	
-	/**
-	 * <p>validated.</p>
-	 *
-	 * @return a boolean
-	 */
-	boolean validated();
 	
 	/**
 	 * <p>
 	 * 	Get payment validate response type.<br>
 	 * 	DO_NOTHING: skip actions,<br>
-	 *	VALIDATED: for a order allready validated ,<br>
+	 *	VALIDATED: for a order already validated ,<br>
 	 *	OK: for validate new order,<br>
 	 *	KO: for denied order.<br>
 	 *	</p>

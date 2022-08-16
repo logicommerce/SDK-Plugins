@@ -14,23 +14,23 @@ import com.logicommerce.sdk.models.order.implementations.OrderBaseStatusImpl;
  * @since 1.0.16
  */
 public abstract class OrderBaseStatusBuilder<T, P> {
-	
+
 	private P parentBuilder;
-	
+
 	protected List<OrderStatusActionBuilder<OrderBaseStatusBuilder<T, P>>> actions;
-	
+
 	protected LocalDateTime currentDateTime;
-	
+
 	protected Integer id;
-	
+
 	protected T status;
-	
+
 	protected int substatusId;
-	
+
 	/**
 	 * <p>Constructor for OrderBaseStatusBuilder.</p>
 	 */
-	public OrderBaseStatusBuilder() {
+	protected OrderBaseStatusBuilder() {
 		id = null;
 		actions = new ArrayList<>();
 		currentDateTime = LocalDateTime.now();
@@ -42,7 +42,7 @@ public abstract class OrderBaseStatusBuilder<T, P> {
 	 *
 	 * @param parentBuilder a P object
 	 */
-	public OrderBaseStatusBuilder(P parentBuilder) {
+	protected OrderBaseStatusBuilder(P parentBuilder) {
 		this();
 		this.parentBuilder = parentBuilder;
 	}
@@ -101,7 +101,7 @@ public abstract class OrderBaseStatusBuilder<T, P> {
 		this.substatusId = substatusId;
 		return this;
 	}
-	
+
 	/**
 	 * <p>setFields.</p>
 	 *
@@ -114,7 +114,7 @@ public abstract class OrderBaseStatusBuilder<T, P> {
 		statusLine.setStatus(status);
 		statusLine.setSubstatusId(substatusId);
 	}
-	
+
 	/**
 	 * <p>build.</p>
 	 *

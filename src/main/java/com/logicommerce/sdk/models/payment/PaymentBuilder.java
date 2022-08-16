@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models.payment;
 
+import com.logicommerce.sdk.enums.PaymentStatusType;
 import com.logicommerce.sdk.enums.PaymentType;
 
 /**
@@ -13,6 +14,36 @@ public class PaymentBuilder extends PaymentAbstractBuilder<PaymentBuilder,  Paym
 	protected PaymentType type;
 
 	private String redirectUri;
+	
+	private PaymentStatusType status;
+
+	/**
+	 * <p>
+	 * Use for validate response success,<br>
+	 * Set status to OK.
+	 * </p>
+	 *
+	 * @since 1.1.0
+	 * @return a PaymentValidateResponseBuilder object
+	 */
+	public PaymentBuilder ok() {
+		this.status = PaymentStatusType.OK;
+		return returnThis();
+	}
+
+	/**
+	 * <p>
+	 * Use for validate response unsuccess,<br>
+	 * Set status to KO.
+	 * </p>
+	 *
+	 * @since 1.1.0
+	 * @return a PaymentValidateResponseBuilder object
+	 */
+	public PaymentBuilder ko() {
+		this.status = PaymentStatusType.KO;
+		return returnThis();
+	}
 
 	/**
 	 * <p>form.</p>
@@ -92,6 +123,7 @@ public class PaymentBuilder extends PaymentAbstractBuilder<PaymentBuilder,  Paym
 		setItems(payment);
 		payment.setType(type);
 		payment.setRedirectUri(redirectUri);
+		payment.setStatus(status);
 		return payment;
 	}
 
