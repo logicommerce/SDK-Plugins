@@ -20,11 +20,34 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	private PaymentValidateResponseType type;
 	private OrderStatusDefinition orderStatus;
 	private OrderStatusDefinitionImpl.Builder<PaymentValidateResponseBuilder> orderStatusBuilder;
-	@Deprecated(since = "1.0.19", forRemoval = true)
-	private boolean simulateAbort;
-	@Deprecated(since = "1.0.22", forRemoval = true)
-	private boolean validated;
 	private String messageLog;
+	private PaymentValidateStatusType status;
+
+	/**
+	 * <p>
+	 * Use for validate response success,<br>
+	 * Set status to OK.
+	 * </p>
+	 *
+	 * @return a PaymentValidateResponseBuilder object
+	 */
+	public PaymentValidateResponseBuilder ok() {
+		this.status = PaymentValidateStatusType.OK;
+		return returnThis();
+	}
+
+	/**
+	 * <p>
+	 * Use for validate response unsuccess,<br>
+	 * Set status to KO.
+	 * </p>
+	 *
+	 * @return a PaymentValidateResponseBuilder object
+	 */
+	public PaymentValidateResponseBuilder ko() {
+		this.status = PaymentValidateStatusType.KO;
+		return returnThis();
+	}
 
 	/**
 	 * <p>For a previous validated order.</p>
@@ -32,8 +55,6 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
 	 */
 	public PaymentValidateResponseBuilder validated() {
-		this.success = true;
-		this.validated = true;
 		this.status = PaymentValidateStatusType.VALIDATED;
 		return returnThis();
 	}
@@ -45,20 +66,7 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
 	 */
 	public PaymentValidateResponseBuilder skip() {
-		this.success = false;
 		this.status = PaymentValidateStatusType.SKIP;
-		return returnThis();
-	}
-
-	/**
-	 * <p>simulateAbort.</p>
-	 *
-	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
-	 */
-	@Deprecated(since = "1.0.19")
-	public PaymentValidateResponseBuilder simulateAbort() {
-		this.success = false;
-		this.simulateAbort = true;
 		return returnThis();
 	}
 
@@ -78,7 +86,6 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
 	 */
 	public PaymentValidateResponseBuilder redirect() {
-		this.success = true;
 		this.type = PaymentValidateResponseType.REDIRECT;
 		this.status = PaymentValidateStatusType.OK;
 		return returnThis();
@@ -210,7 +217,6 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 		} else if (orderStatusBuilder != null) {
 			payment.setOrderStatus(orderStatusBuilder.build());
 		}
-		payment.setValidated(validated);
 		payment.setMessageLog(messageLog);
 		payment.setStatus(status);
 	}

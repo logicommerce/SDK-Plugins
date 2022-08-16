@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.UserAddress;
  * @since 1.0.16
  */
 public class UserAddressImpl extends AddressImpl implements UserAddress {
-	
+
 	private boolean defaultAddress;
 
 	private String alias;
@@ -41,6 +41,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isDefaultAddress() {
 		return defaultAddress;
 	}
@@ -59,6 +60,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getAlias() {
 		return alias;
 	}
@@ -77,6 +79,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getFirstName() {
 		return firstName;
 	}
@@ -95,6 +98,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getLastName() {
 		return lastName;
 	}
@@ -113,6 +117,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getCompany() {
 		return company;
 	}
@@ -131,6 +136,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getAddressAdditionalInformation() {
 		return addressAdditionalInformation;
 	}
@@ -149,6 +155,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getNumber() {
 		return number;
 	}
@@ -167,6 +174,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getFax() {
 		return fax;
 	}
@@ -185,6 +193,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getNif() {
 		return nif;
 	}
@@ -203,6 +212,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getVat() {
 		return vat;
 	}
@@ -221,6 +231,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isTax() {
 		return tax;
 	}
@@ -239,6 +250,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isRe() {
 		return re;
 	}
@@ -257,6 +269,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isReverseChargeVat() {
 		return reverseChargeVat;
 	}
@@ -275,6 +288,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getName() {
 		if (getCompany() != null && getCompany().isEmpty()) {
 			return getCompany();

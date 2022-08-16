@@ -12,16 +12,6 @@ import com.logicommerce.sdk.models.order.Order;
 public interface OrderService extends PluginService {
 
 	/**
-	 * Create order
-	 * @deprecated Use CheckoutService.createOrder instead for Order creation
-	 * or use validate method for Order with validateCallback payment.
-	 * @param order a {@link com.logicommerce.sdk.models.order.Order} object
-	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
-	 */
-	@Deprecated(since = "1.0.20", forRemoval = true)
-	void create(Order order) throws PluginServiceException;
-
-	/**
 	 * Validate callback order<br>
 	 * Method called when an Order payment is validated.
 	 *

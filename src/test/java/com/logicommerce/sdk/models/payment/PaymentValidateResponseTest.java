@@ -5,12 +5,11 @@ import static org.hamcrest.Matchers.*;
 import java.time.LocalDateTime;
 import com.logicommerce.sdk.enums.OrderStatusType;
 import com.logicommerce.sdk.enums.PaymentValidateResponseType;
+import com.logicommerce.sdk.enums.PaymentValidateStatusType;
 import org.junit.jupiter.api.Test;
 
 class PaymentValidateResponseTest {
 
-	private static final boolean SUCCESSFUL = true;
-	private static final boolean FAILURE = false;
 	private static final String MESSAGE = "message";
 	private static final String TRANSACTION_ID = "transactionId";
 	private static final String AUTH_CODE = "authCode";
@@ -29,7 +28,7 @@ class PaymentValidateResponseTest {
 				.build();
 
 		assertThat(response, is(not(nullValue())));
-		assertThat(response.isSuccess(), is(FAILURE));
+		assertThat(response.getStatus(), is(PaymentValidateStatusType.KO));
 		assertThat(response.getMessage(), is(MESSAGE));
 		assertThat(response.getTransactionId(), is(TRANSACTION_ID));
 		assertThat(response.getType(), is(nullValue()));
@@ -49,7 +48,7 @@ class PaymentValidateResponseTest {
 				.build();
 
 		assertThat(response, is(not(nullValue())));
-		assertThat(response.isSuccess(), is(SUCCESSFUL));
+		assertThat(response.getStatus(), is(PaymentValidateStatusType.OK));
 		assertThat(response.getMessage(), is(MESSAGE));
 		assertThat(response.getTransactionId(), is(TRANSACTION_ID));
 		assertThat(response.getAuthorizationCode(), is(AUTH_CODE));
@@ -82,6 +81,7 @@ class PaymentValidateResponseTest {
 		assertThat(response, is(not(nullValue())));
 		assertThat(response.getType(), is(PaymentValidateResponseType.FORM));
 		assertThat(response.getData(), instanceOf(PaymentDataForm.class));
+		assertThat(response.getStatus(), is(PaymentValidateStatusType.KO));
 
 		PaymentDataForm data = (PaymentDataForm) response.getData();
 		assertThat(data.getUrl(), is(URL));
@@ -94,13 +94,13 @@ class PaymentValidateResponseTest {
 	@Test
 	void testTypeMessage() {
 		PaymentValidateResponse response = new PaymentValidateResponseBuilder()
+				.ok()
 				.webhookMessage()
 				.message(MESSAGE)
 				.transactionId(TRANSACTION_ID)
 				.build();
 
 		assertThat(response, is(not(nullValue())));
-		assertThat(response.isSuccess(), is(SUCCESSFUL));
 		assertThat(response.getType(), is(PaymentValidateResponseType.WEBHOOK_MESSAGE));
 		assertThat(response.getMessage(), is(MESSAGE));
 		assertThat(response.getTransactionId(), is(TRANSACTION_ID));
@@ -114,7 +114,6 @@ class PaymentValidateResponseTest {
 				.build();
 
 		assertThat(response, is(not(nullValue())));
-		assertThat(response.isSuccess(), is(SUCCESSFUL));
-		assertThat(response.validated(), is(true));
+		assertThat(response.getStatus(), is(PaymentValidateStatusType.VALIDATED));
 	}
 }

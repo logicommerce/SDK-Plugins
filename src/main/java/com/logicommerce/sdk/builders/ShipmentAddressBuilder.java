@@ -12,7 +12,7 @@ import com.logicommerce.sdk.models.order.implementations.ShipmentAddressImpl;
 public class ShipmentAddressBuilder<T> {
 
 	private T parentBuilder;
-	
+
 	protected String name;
 
 	protected String address;
@@ -37,7 +37,7 @@ public class ShipmentAddressBuilder<T> {
 	public ShipmentAddressBuilder() {
 		this.location = new LocationBuilder<>(this);
 	}
-	
+
 	/**
 	 * <p>Constructor for ShipmentAddressBuilder.</p>
 	 *
@@ -47,7 +47,7 @@ public class ShipmentAddressBuilder<T> {
 		this();
 		this.parentBuilder = parentBuilder;
 	}
-	
+
 	/**
 	 * <p>name.</p>
 	 *
@@ -58,7 +58,7 @@ public class ShipmentAddressBuilder<T> {
 		this.name = name;
 		return this;
 	}
-	
+
 	/**
 	 * <p>address.</p>
 	 *
@@ -69,7 +69,7 @@ public class ShipmentAddressBuilder<T> {
 		this.address = address;
 		return this;
 	}
-	
+
 	/**
 	 * <p>city.</p>
 	 *
@@ -80,7 +80,7 @@ public class ShipmentAddressBuilder<T> {
 		this.city = city;
 		return this;
 	}
-	
+
 	/**
 	 * <p>state.</p>
 	 *
@@ -91,7 +91,7 @@ public class ShipmentAddressBuilder<T> {
 		this.state = state;
 		return this;
 	}
-	
+
 	/**
 	 * <p>postalCode.</p>
 	 *
@@ -102,7 +102,7 @@ public class ShipmentAddressBuilder<T> {
 		this.postalCode = postalCode;
 		return this;
 	}
-	
+
 	/**
 	 * <p>mobile.</p>
 	 *
@@ -113,7 +113,7 @@ public class ShipmentAddressBuilder<T> {
 		this.mobile = mobile;
 		return this;
 	}
-	
+
 	/**
 	 * <p>phone.</p>
 	 *
@@ -124,7 +124,7 @@ public class ShipmentAddressBuilder<T> {
 		this.phone = phone;
 		return this;
 	}
-	
+
 	/**
 	 * <p>email.</p>
 	 *
@@ -135,16 +135,16 @@ public class ShipmentAddressBuilder<T> {
 		this.email = email;
 		return this;
 	}
-	
+
 	/**
 	 * <p>location.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.builders.LocationBuilder} object
 	 */
 	public LocationBuilder<ShipmentAddressBuilder<T>> location() {
-		LocationBuilder<ShipmentAddressBuilder<T>> location = new LocationBuilder<ShipmentAddressBuilder<T>>(this);
-		this.location = location;
-		return location;
+		LocationBuilder<ShipmentAddressBuilder<T>> locationBuilder = new LocationBuilder<>(this);
+		this.location = locationBuilder;
+		return locationBuilder;
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class ShipmentAddressBuilder<T> {
 	 * @return a {@link com.logicommerce.sdk.models.order.ShipmentAddress} object
 	 */
 	public ShipmentAddress build() {
-		ShipmentAddressImpl shipmentAddress = new ShipmentAddressImpl();		
+		ShipmentAddressImpl shipmentAddress = new ShipmentAddressImpl();
 		shipmentAddress.setAddress(address);
 		shipmentAddress.setCity(city);
 		shipmentAddress.setEmail(email);
@@ -164,9 +164,9 @@ public class ShipmentAddressBuilder<T> {
 		shipmentAddress.setPhone(phone);
 		shipmentAddress.setPostalCode(postalCode);
 		shipmentAddress.setState(state);
-		
+
 		return shipmentAddress;
-	}	
+	}
 
 	/**
 	 * <p>done.</p>
