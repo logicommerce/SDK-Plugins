@@ -80,11 +80,11 @@ public interface PaymentValidateResponse {
 	 * @return a {@link com.logicommerce.sdk.definition.OrderStatusDefinition} object
 	 */
 	OrderStatusDefinition getOrderStatus();
-	
+
 	/**
 	 * <p>
 	 * 	Get payment validate response type.<br>
-	 * 	DO_NOTHING: skip actions,<br>
+	 * 	SKIP: skip actions,<br>
 	 *	VALIDATED: for a order already validated ,<br>
 	 *	OK: for validate new order,<br>
 	 *	KO: for denied order.<br>

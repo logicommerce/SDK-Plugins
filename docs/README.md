@@ -6,7 +6,7 @@ Los plugins son aplicaciones programadas sobre un SDK proporcionado por Logicomm
 
 ### Ejecución de un plugin
 
-Todas las ejecuciones de un plugin empiezan por un "servicio". Este servicio es una interfaz que proporcionada por el SDK que hay que definir el module-info.java e implementar. De este modo Beyond podrá llamar a los métodos del servicio que necesite con la implementación del plugin.
+Todas las ejecuciones de un plugin empiezan por un "servicio". Este servicio es una interfaz proporcionada por el SDK que hay que definir en el module-info.java e implementar. De este modo Beyond podrá llamar a los métodos del servicio que necesite con la implementación del plugin.
 
 #### Permisos de ejecución de la tienda
 
