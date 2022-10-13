@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import com.logicommerce.sdk.definition.DefinitionLanguages;
 import com.logicommerce.sdk.definition.PropertyDefinition;
+import com.logicommerce.sdk.definition.PropertyDefinitionPermission;
 import com.logicommerce.sdk.definition.PropertyDefinitionValue;
 
 /**
@@ -25,6 +26,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	private DefinitionLanguages languages;
 	private String entryValueMode = "single";
 	private String reference;
+	private List<PropertyDefinitionPermission> permissions;
 
 	/** {@inheritDoc} */
 	@Override
@@ -84,6 +86,12 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	@Override
 	public String getReference() {
 		return reference;
+	}
+	
+	/** {@inheritDoc} */
+	@Override
+	public List<PropertyDefinitionPermission> getPermissions() {
+		return permissions;
 	}
 
 	/**
@@ -175,6 +183,16 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	public void setReference(String reference) {
 		this.reference = reference;
 	}
+	
+	/**
+	 * <p>Setter for the field <code>permissionType</code>.</p>
+	 *
+	 * @since 1.1.1
+	 * @param permissionType a {@link com.logicommerce.sdk.enums.PermissionType} object
+	 */
+	public void setPermissions(List<PropertyDefinitionPermission> permissions) {
+		this.permissions = permissions;
+	}
 
 	public static class Builder<T> {
 
@@ -189,11 +207,13 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		private List<PropertyDefinitionValueImpl.Builder> values;
 		private DefinitionLanguagesImpl.Builder<Builder<T>> languages;
 		private String reference;
+		private List<PropertyDefinitionPermissionImpl.Builder> permissions;
 
 		public Builder() {
 			type = "string";
 			values = new ArrayList<>();
 			languages = new DefinitionLanguagesImpl.Builder<>(this);
+			permissions = new ArrayList<>();
 		}
 
 		public Builder(T parentBuilder) {
@@ -251,6 +271,12 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			return this;
 		}
 
+		public PropertyDefinitionPermissionImpl.Builder permissions() {
+			PropertyDefinitionPermissionImpl.Builder permission = new PropertyDefinitionPermissionImpl.Builder(this);
+			this.permissions.add(permission);
+			return permission;
+		}
+
 		public PropertyDefinition build() {
 			PropertyDefinitionImpl propertyDefinition = new PropertyDefinitionImpl();
 			propertyDefinition.setIdentifier(identifier);
@@ -263,6 +289,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			propertyDefinition.setValues(values.stream().map(PropertyDefinitionValueImpl.Builder::build).collect(Collectors.toList()));
 			propertyDefinition.setLanguages(languages.build());
 			propertyDefinition.setReference(reference);
+			propertyDefinition.setPermissions(permissions.stream().map(PropertyDefinitionPermissionImpl.Builder::build).collect(Collectors.toList()));
 			return propertyDefinition;
 		}
 
