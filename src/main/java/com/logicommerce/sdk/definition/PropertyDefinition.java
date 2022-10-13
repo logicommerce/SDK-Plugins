@@ -79,5 +79,13 @@ public interface PropertyDefinition {
 	 * @return a {@link java.lang.String} object
 	 */
 	String getReference();
+	
+	/**
+	 * <p>getPermission.</p>
+	 * 
+	 * @since 1.1.1
+	 * @return a {@link com.logicommerce.sdk.enums.PermissionType} object
+	 */
+	List<PropertyDefinitionPermission> getPermissions();
 
 }

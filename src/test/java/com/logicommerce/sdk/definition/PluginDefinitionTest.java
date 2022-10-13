@@ -1,5 +1,7 @@
 package com.logicommerce.sdk.definition;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasSize;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +12,7 @@ import com.logicommerce.sdk.definition.implementations.PaymentSystemDefinitionIm
 import com.logicommerce.sdk.definition.implementations.ShipperDefinitionImpl;
 import com.logicommerce.sdk.enums.ConnectorType;
 import com.logicommerce.sdk.enums.MappedItemType;
+import com.logicommerce.sdk.enums.PermissionType;
 import org.junit.jupiter.api.Test;
 
 class PluginDefinitionTest {
@@ -25,13 +28,16 @@ class PluginDefinitionTest {
 			fail(e.getMessage());
 		}
 
+		ConnectorDefinition conn = pluginDefinition.getConnectorDefinition(ConnectorType.MARKETPLACE);		
+		assertThat(conn.getAdditionalProperties().get(0).getPermissions(), hasSize(2));
+
 		MappedFieldDefinition mappedFieldDefinition = new MappedFieldDefinitionImpl.Builder<>()
 			.addField("field1")
 			.type(MappedItemType.USER)
 			.build();
 
 		pluginDefinition.getMappedFields().add(mappedFieldDefinition);
-
+		
 		ShipperDefinition shipperDefinition = new ShipperDefinitionImpl.Builder()
 				.mappedField()
 					.type(MappedItemType.USER)
@@ -150,6 +156,8 @@ class PluginDefinitionTest {
 				.done()
 				.value("test")
 			.done()
+			.permissions().permission(PermissionType.LC_SUPER_ADMINISTRATOR_USER).done()
+			.permissions().permission(PermissionType.LC_ADMINISTRATOR_USER).done()
 		.build();
 
 		return marketplace;
