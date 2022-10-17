@@ -5,7 +5,9 @@ package com.logicommerce.sdk.services;
  *
  * @author Logicommerce
  * @since 1.0.16
+ * @deprecated
  */
+@Deprecated(since = "1.1.2", forRemoval = true)
 public interface NewsletterService extends PluginService {
 
 	/**
