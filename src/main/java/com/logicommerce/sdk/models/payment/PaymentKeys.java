@@ -22,4 +22,21 @@ public interface PaymentKeys {
 	 */
 	String getAuthorizationCode();
 
+	
+	/**
+	 * <p>skip action from paymentkeys if order is missing</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 * @since 1.1.2
+	 */
+	boolean skipIfOrderIsMissing();
+	
+	/**
+	 * <p>getMessage for paymentkeys</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 * @since 1.1.2
+	 */
+	String getMessage();
+
 }
