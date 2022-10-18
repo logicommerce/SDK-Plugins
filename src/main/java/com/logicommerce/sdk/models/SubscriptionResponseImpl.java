@@ -3,6 +3,13 @@ package com.logicommerce.sdk.models;
 import com.logicommerce.sdk.enums.SubscriptionActionStatus;
 import com.logicommerce.sdk.enums.SubscriptionStatus;
 
+/**
+ * SubscriptionResponse Implementation
+ *
+ * @author Logicommerce
+ * @since 1.1.2
+ *
+ */
 public class SubscriptionResponseImpl implements SubscriptionResponse {
 
 	private SubscriptionActionStatus actionStatus;

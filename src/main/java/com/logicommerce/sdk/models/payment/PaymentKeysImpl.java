@@ -11,16 +11,16 @@ public class PaymentKeysImpl implements PaymentKeys {
 	private String transactionId;
 
 	private String authorizationCode;
-	
+
 	private boolean skipIfOrderIsMissing = false;
-	
+
 	private String message;
 
 	/**
 	 * <p>Constructor for PaymentKeysImpl.</p>
 	 */
 	public PaymentKeysImpl() {
-		
+
 	}
 
 	/**
@@ -35,14 +35,14 @@ public class PaymentKeysImpl implements PaymentKeys {
 		setSkipIfOrderIsMissing(false);
 		setMessage("");
 	}
-	
+
 
 	/**
 	 * <p>Constructor for PaymentKeysImpl skip case.</p>
 	 *
 	 * @param transactionId a {@link java.lang.String} object
 	 * @param authorizationCode a {@link java.lang.String} object
-	 * @param skipIfOrderIsMissing a {@link java.lang.String} object
+	 * @param skipIfOrderIsMissing a boolean
 	 * @param message a {@link java.lang.String} object
 	 * @since 1.1.2
 	 */
@@ -58,7 +58,7 @@ public class PaymentKeysImpl implements PaymentKeys {
 	public String getTransactionId() {
 		return transactionId;
 	}
-	
+
 	/**
 	 * <p>Setter for the field <code>transactionId</code>.</p>
 	 *
@@ -98,7 +98,7 @@ public class PaymentKeysImpl implements PaymentKeys {
 	/**
 	 * <p>Setter for the field <code>skipIfOrderIsMissing</code>.</p>
 	 *
-	 * @param skipIfOrderIsMissing a {@link java.lang.boolean} object
+	 * @param skipIfOrderIsMissing a boolean
 	 * @since 1.1.2
 	 */
 	public void setSkipIfOrderIsMissing(boolean skipIfOrderIsMissing) {
