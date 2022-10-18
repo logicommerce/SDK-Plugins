@@ -1,9 +1,10 @@
 package com.logicommerce.sdk.models;
 
-import com.logicommerce.sdk.enums.SubscriptionStatusType;
+import com.logicommerce.sdk.enums.SubscriptionActionStatus;
+import com.logicommerce.sdk.enums.SubscriptionStatus;
 
 /**
- * Interface for subcription response
+ * Interface for newsletter subscription response
  *
  * @author	Logicommerce
  * @since	1.1.2
@@ -11,12 +12,20 @@ import com.logicommerce.sdk.enums.SubscriptionStatusType;
 public interface SubscriptionResponse {
 
 	/**
-	 * Return status type
+	 * Return action status result
 	 *
-	 * @return          {@link com.logicommerce.sdk.enums.SubscriptionStatusType}
+	 * @return          {@link com.logicommerce.sdk.enums.SubscriptionActionStatus}
 	 * @since           1.1.2
 	 */
-	SubscriptionStatusType getStatus();
+	SubscriptionActionStatus getActionStatus();
+
+	/**
+	 * Return subscription status
+	 *
+	 * @return          {@link com.logicommerce.sdk.enums.SubscriptionStatus}
+	 * @since           1.1.2
+	 */
+	SubscriptionStatus getStatus();
 
 	/**
 	 * Return message

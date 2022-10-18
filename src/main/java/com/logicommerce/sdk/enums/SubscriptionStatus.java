@@ -1,12 +1,12 @@
 package com.logicommerce.sdk.enums;
 
 /**
- * Subscription status type
+ * Subscription status
  *
  * @author Logicommerce
  * @since 1.1.2
  */
-public enum SubscriptionStatusType {
+public enum SubscriptionStatus {
 	SUBSCRIBED,
 	NOT_SUBSCRIBED,
 	ERROR;
