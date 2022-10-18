@@ -81,13 +81,13 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	public DefinitionLanguages getLanguages() {
 		return languages;
 	}
-	
+
 	/** {@inheritDoc} */
 	@Override
 	public String getReference() {
 		return reference;
 	}
-	
+
 	/** {@inheritDoc} */
 	@Override
 	public List<PropertyDefinitionPermission> getPermissions() {
@@ -174,7 +174,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	public void setLanguages(DefinitionLanguages languages) {
 		this.languages = languages;
 	}
-	
+
 	/**
 	 * <p>Setter for the field <code>reference</code>.</p>
 	 *
@@ -183,12 +183,12 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	public void setReference(String reference) {
 		this.reference = reference;
 	}
-	
+
 	/**
 	 * <p>Setter for the field <code>permissionType</code>.</p>
 	 *
 	 * @since 1.1.1
-	 * @param permissionType a {@link com.logicommerce.sdk.enums.PermissionType} object
+	 * @param permissions a {@link java.util.List} object
 	 */
 	public void setPermissions(List<PropertyDefinitionPermission> permissions) {
 		this.permissions = permissions;
@@ -286,10 +286,14 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			propertyDefinition.setLanguageValue(languageValue);
 			propertyDefinition.setMultipleValue(multipleValue);
 			propertyDefinition.setEntryValueMode(entryValueMode);
-			propertyDefinition.setValues(values.stream().map(PropertyDefinitionValueImpl.Builder::build).collect(Collectors.toList()));
+			propertyDefinition.setValues(values.stream()
+					.map(PropertyDefinitionValueImpl.Builder::build)
+					.collect(Collectors.toList()));
 			propertyDefinition.setLanguages(languages.build());
 			propertyDefinition.setReference(reference);
-			propertyDefinition.setPermissions(permissions.stream().map(PropertyDefinitionPermissionImpl.Builder::build).collect(Collectors.toList()));
+			propertyDefinition.setPermissions(permissions.stream()
+					.map(PropertyDefinitionPermissionImpl.Builder::build)
+					.collect(Collectors.toList()));
 			return propertyDefinition;
 		}
 

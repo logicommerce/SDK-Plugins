@@ -12,7 +12,7 @@ import com.logicommerce.sdk.enums.PaymentType;
 public class PaymentImpl extends PaymentAbstract implements Payment {
 
 	private PaymentType type;
-	
+
 	private PaymentStatusType status;
 
 	private String redirectUri;
@@ -56,7 +56,7 @@ public class PaymentImpl extends PaymentAbstract implements Payment {
 	/**
 	 * <p>Setter for the field <code>status</code>.</p>
 	 *
-	 * @param type a {@link com.logicommerce.sdk.enums.PaymentStatusType} object
+	 * @param status a {@link com.logicommerce.sdk.enums.PaymentStatusType} object
 	 * @since 1.1.0
 	 */
 	public void setStatus(PaymentStatusType status) {
