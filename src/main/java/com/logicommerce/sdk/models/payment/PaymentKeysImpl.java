@@ -11,6 +11,10 @@ public class PaymentKeysImpl implements PaymentKeys {
 	private String transactionId;
 
 	private String authorizationCode;
+	
+	private boolean skipIfOrderIsMissing = false;
+	
+	private String message;
 
 	/**
 	 * <p>Constructor for PaymentKeysImpl.</p>
@@ -28,6 +32,25 @@ public class PaymentKeysImpl implements PaymentKeys {
 	public PaymentKeysImpl(String transactionId, String authorizationCode) {
 		setTransactionId(transactionId);
 		setAuthorizationCode(authorizationCode);
+		setSkipIfOrderIsMissing(false);
+		setMessage("");
+	}
+	
+
+	/**
+	 * <p>Constructor for PaymentKeysImpl skip case.</p>
+	 *
+	 * @param transactionId a {@link java.lang.String} object
+	 * @param authorizationCode a {@link java.lang.String} object
+	 * @param skipIfOrderIsMissing a {@link java.lang.String} object
+	 * @param message a {@link java.lang.String} object
+	 * @since 1.1.2
+	 */
+	public PaymentKeysImpl(String transactionId, String authorizationCode, boolean skipIfOrderIsMissing, String message) {
+		setTransactionId(transactionId);
+		setAuthorizationCode(authorizationCode);
+		setSkipIfOrderIsMissing(skipIfOrderIsMissing);
+		setMessage(message);
 	}
 
 	/** {@inheritDoc} */
@@ -58,6 +81,38 @@ public class PaymentKeysImpl implements PaymentKeys {
 	 */
 	public void setAuthorizationCode(String authorizationCode) {
 		this.authorizationCode = authorizationCode;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public boolean skipIfOrderIsMissing() {
+		return skipIfOrderIsMissing;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public String getMessage() {
+		return message;
+	}
+
+	/**
+	 * <p>Setter for the field <code>skipIfOrderIsMissing</code>.</p>
+	 *
+	 * @param skipIfOrderIsMissing a {@link java.lang.boolean} object
+	 * @since 1.1.2
+	 */
+	public void setSkipIfOrderIsMissing(boolean skipIfOrderIsMissing) {
+		this.skipIfOrderIsMissing = skipIfOrderIsMissing;
+	}
+
+	/**
+	 * <p>Setter for the field <code>message</code>.</p>
+	 *
+	 * @param message a {@link java.lang.String} object
+	 * @since 1.1.2
+	 */
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 }
