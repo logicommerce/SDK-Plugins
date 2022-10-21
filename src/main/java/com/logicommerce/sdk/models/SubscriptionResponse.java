@@ -1,6 +1,7 @@
 package com.logicommerce.sdk.models;
 
 import com.logicommerce.sdk.enums.SubscriptionActionStatus;
+import com.logicommerce.sdk.enums.SubscriptionMessageType;
 import com.logicommerce.sdk.enums.SubscriptionStatus;
 
 /**
@@ -26,6 +27,14 @@ public interface SubscriptionResponse {
 	 * @since           1.1.2
 	 */
 	SubscriptionStatus getStatus();
+
+	/**
+	 * Return message
+	 *
+	 * @return          {@link com.logicommerce.sdk.enums.SubscriptionMessageType}
+	 * @since           1.1.3
+	 */
+	SubscriptionMessageType getMessageType();
 
 	/**
 	 * Return message
