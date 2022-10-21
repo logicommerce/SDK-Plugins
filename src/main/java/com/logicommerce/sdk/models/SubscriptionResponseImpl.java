@@ -1,6 +1,7 @@
 package com.logicommerce.sdk.models;
 
 import com.logicommerce.sdk.enums.SubscriptionActionStatus;
+import com.logicommerce.sdk.enums.SubscriptionMessageType;
 import com.logicommerce.sdk.enums.SubscriptionStatus;
 
 /**
@@ -16,6 +17,8 @@ public class SubscriptionResponseImpl implements SubscriptionResponse {
 
 	private SubscriptionStatus status;
 
+	private SubscriptionMessageType messageType;
+
 	private String message;
 
 	public SubscriptionResponseImpl() {
@@ -26,6 +29,7 @@ public class SubscriptionResponseImpl implements SubscriptionResponse {
 		setActionStatus(actionStatus);
 		setStatus(status);
 		setMessage(message);
+		setMessageType(SubscriptionMessageType.INFO);
 	}
 
 	@Override
@@ -43,6 +47,11 @@ public class SubscriptionResponseImpl implements SubscriptionResponse {
 		return message;
 	}
 
+	@Override
+	public SubscriptionMessageType getMessageType() {
+		return messageType;
+	}
+
 	public void setActionStatus(SubscriptionActionStatus actionStatus) {
 		this.actionStatus = actionStatus;
 	}
@@ -53,6 +62,10 @@ public class SubscriptionResponseImpl implements SubscriptionResponse {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public void setMessageType(SubscriptionMessageType messageType) {
+		this.messageType = messageType;
 	}
 
 }
