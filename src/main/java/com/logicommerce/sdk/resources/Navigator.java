@@ -1,6 +1,7 @@
 package com.logicommerce.sdk.resources;
 
 import java.net.URL;
+import com.logicommerce.sdk.models.Cookie;
 
 /**
  * <p>Navigator interface.</p>
@@ -72,15 +73,23 @@ public interface Navigator {
 	 * @param name a {@link java.lang.String} object
 	 * @return a {@link java.lang.String} object
 	 */
-	String getCookie(String name);
+	Cookie getCookie(String name);
 
 	/**
 	 * <p>setCookie.</p>
 	 *
 	 * @param name a {@link java.lang.String} object
 	 * @param value a {@link java.lang.String} object
+	 * @param ttl a int
 	 */
-	void setCookie(String name, String value);
+	void setCookie(String name, String value, int ttl);
+	
+	/**
+	 * <p>setCookie.</p>
+	 *
+	 * @param cookie a {@link com.logicommerce.sdk.models.Cookie} object
+	 */
+	void setCookie(Cookie cookie);
 	
 	/**
 	 * <p>removeCookie.</p>
