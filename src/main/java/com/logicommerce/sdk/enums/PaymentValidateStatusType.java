@@ -10,5 +10,6 @@ public enum PaymentValidateStatusType {
 	SKIP,
 	VALIDATED,
 	OK,
-	KO;
+	KO,
+	ACCEPTED;
 }
