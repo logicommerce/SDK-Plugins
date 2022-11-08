@@ -50,6 +50,19 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	}
 
 	/**
+	 * <p>
+	 * Use for validate response already in process,<br>
+	 * Set status to ACCEPTED.
+	 * </p>
+	 *
+	 * @return a PaymentValidateResponseBuilder object
+	 */
+	public PaymentValidateResponseBuilder accepted() {
+		this.status = PaymentValidateStatusType.ACCEPTED;
+		return returnThis();
+	}
+
+	/**
 	 * <p>For a previous validated order.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponseBuilder} object
