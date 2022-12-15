@@ -4,6 +4,7 @@ package com.logicommerce.sdk.resources;
  * Cache Resource
  *
  * @author Logicommerce
+ * @since 1.1.7
  */
 public interface Cache {
 

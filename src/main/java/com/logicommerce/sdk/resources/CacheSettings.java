@@ -9,6 +9,7 @@ import java.lang.annotation.Target;
  * Cache settings
  *
  * @author Logicommerce
+ * @since 1.1.7
  *
  */
 @Retention(RUNTIME)
