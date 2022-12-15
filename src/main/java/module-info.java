@@ -1,6 +1,6 @@
 module com.logicommerce.sdk {
 	requires com.logicommerce.utilities;
-	
+
 	exports com.logicommerce.sdk;
 	exports com.logicommerce.sdk.definition;
 	exports com.logicommerce.sdk.definition.implementations;
