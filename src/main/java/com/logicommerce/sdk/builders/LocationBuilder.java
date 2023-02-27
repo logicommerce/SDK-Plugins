@@ -21,6 +21,9 @@ public class LocationBuilder<T> {
 
 	protected Double longitude = 0d;
 
+	protected String stateCode;
+
+
 	/**
 	 * <p>Constructor for LocationBuilder.</p>
 	 */
@@ -81,6 +84,18 @@ public class LocationBuilder<T> {
 		return this;
 	}
 
+
+	/**
+	 * <p>stateCode.</p>
+	 *
+	 * @param stateCode a {@link java.lang.String} object
+	 * @return a {@link com.logicommerce.sdk.builders.LocationBuilder} object
+	 */
+	public LocationBuilder<T> stateCode(String stateCode) {
+		this.stateCode = stateCode;
+		return this;
+	}
+
 	/**
 	 * <p>build.</p>
 	 *
@@ -92,6 +107,7 @@ public class LocationBuilder<T> {
 		location.setLocationId(locationId);
 		location.setLatitude(latitude);
 		location.setLongitude(longitude);
+		location.setStateCode(stateCode);
 		return location;
 	}
 
