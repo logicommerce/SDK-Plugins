@@ -18,11 +18,14 @@ public class LocationImpl implements Location {
 
 	private Double longitude;
 
+	private String stateCode;
+
 	/**
 	 * <p>Getter for the field <code>country</code>.</p>
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getCountry() {
 		return country;
 	}
@@ -32,6 +35,7 @@ public class LocationImpl implements Location {
 	 *
 	 * @return a {@link java.lang.Integer} object
 	 */
+	@Override
 	public Integer getLocationId() {
 		return locationId;
 	}
@@ -41,6 +45,7 @@ public class LocationImpl implements Location {
 	 *
 	 * @return a {@link java.lang.Double} object
 	 */
+	@Override
 	public Double getLatitude() {
 		return latitude;
 	}
@@ -50,12 +55,23 @@ public class LocationImpl implements Location {
 	 *
 	 * @return a {@link java.lang.Double} object
 	 */
+	@Override
 	public Double getLongitude() {
 		return longitude;
 	}
 
 	/**
-	 * <p>Setter for the field <code>country</code>.</p>
+	 * <p>Getter for the field <code>stateCode</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
+	@Override
+	public String getStateCode() {
+		return stateCode;
+	}
+
+	/**
+	 * <p>Getter for the field <code>country</code>.</p>
 	 *
 	 * @param country a {@link java.lang.String} object
 	 */
@@ -88,5 +104,14 @@ public class LocationImpl implements Location {
 	 */
 	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
+	}
+
+	/**
+	 * <p>Setter for the field <code>stateCode</code>.</p>
+	 *
+	 * @param stateCode a {@link java.lang.String} object
+	 */
+	public void setStateCode(String stateCode) {
+		this.stateCode = stateCode;
 	}
 }

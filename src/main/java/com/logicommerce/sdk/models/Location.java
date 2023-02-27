@@ -41,4 +41,11 @@ public interface Location {
 	 */
 	Double getLongitude();
 
+	/**
+	 * <p>Get ISO code of the location level 1.</p>
+	 *
+	 * @since 1.1.9
+	 * @return a {@link java.lang.String String} object
+	 */
+	String getStateCode();
 }
