@@ -1,6 +1,7 @@
 package com.logicommerce.sdk.models.implementations;
 
 import com.logicommerce.sdk.models.ProductCodes;
+import com.logicommerce.sdk.models.RowCodes;
 
 /**
  * <p>ProductCodesImpl class.</p>
@@ -8,7 +9,7 @@ import com.logicommerce.sdk.models.ProductCodes;
  * @author Logicommerce
  * @since 1.0.16
  */
-public class ProductCodesImpl implements ProductCodes {
+public class ProductCodesImpl implements ProductCodes, RowCodes {
 
 	private String ean;
 
@@ -21,6 +22,18 @@ public class ProductCodesImpl implements ProductCodes {
 	private String sku;
 
 	private String upc;
+	
+	private String pId;
+
+	/**
+	 * <p>Getter for the field <code>ean</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
+	@Override
+	public String getPId() {
+		return pId;
+	}	
 
 	/**
 	 * <p>Getter for the field <code>ean</code>.</p>
@@ -129,4 +142,14 @@ public class ProductCodesImpl implements ProductCodes {
 	public void setUpc(String upc) {
 		this.upc = upc;
 	}
+
+	/**
+	 * <p>Setter for the field <code>pId</code>.</p>
+	 *
+	 * @param sku a {@link java.lang.String} object
+	 */
+	public void setPId(String pId) {
+		this.pId = pId;
+	}
+
 }

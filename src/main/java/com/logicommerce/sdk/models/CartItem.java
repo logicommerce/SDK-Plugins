@@ -58,11 +58,20 @@ public interface CartItem {
 
 	/**
 	 * <p>Get the CartItemCodes object.</p>
-	 *
+	 * @deprecated
 	 * @since 1.0.16
 	 * @return a {@link com.logicommerce.sdk.models.CartItemCodes CartItemCodes} object
 	 */
+	@Deprecated(forRemoval = true)
 	CartItemCodes getCodes();
+	
+	/**
+	 * <p>Get the CartItemCodes object.</p>
+	 *
+	 * @since 1.1.10
+	 * @return a {@link com.logicommerce.sdk.models.CartItemCodes CartItemCodes} object
+	 */
+	RowCodes getRowCodes();
 
 	/**
 	 * <p>Get Type of this item. </p>

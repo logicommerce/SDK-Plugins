@@ -48,7 +48,7 @@ public interface Cart {
 	CartTotals getTotals();
 
 	/**
-	 * <p>Get Delivery object of the card.</p>
+	 * <p>Get Delivery object of the cart.</p>
 	 *
 	 * @see		com.logicommerce.sdk.models.CartDelivery CartDelivery
 	 * @since 	1.0.16
@@ -72,4 +72,13 @@ public interface Cart {
 	 * @return a {@link com.logicommerce.sdk.models.User User} object
 	 */
 	User getUser();
+
+	/**
+	 * <p>Get currencyCode from user info for the cart.</p>
+	 *
+	 * @since 	1.1.10
+	 * @return a {@link java.lang.String String} object
+	 */
+	String getCurrencyCode();
+
 }

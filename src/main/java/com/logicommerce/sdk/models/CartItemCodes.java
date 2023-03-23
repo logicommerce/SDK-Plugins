@@ -6,7 +6,9 @@ package com.logicommerce.sdk.models;
  * @see	 com.logicommerce.sdk.models.CartItem CartItem
  * @author Logicommerce
  * @since 1.0.16
+ * @deprecated
  */
+@Deprecated(forRemoval = true, since = "1.1.10")
 public interface CartItemCodes {
 
 	/**
