@@ -66,10 +66,10 @@ public interface CartItem {
 	CartItemCodes getCodes();
 	
 	/**
-	 * <p>Get the CartItemCodes object.</p>
+	 * <p>Get the RowCodes object.</p>
 	 *
 	 * @since 1.1.10
-	 * @return a {@link com.logicommerce.sdk.models.CartItemCodes CartItemCodes} object
+	 * @return a {@link com.logicommerce.sdk.models.RowCodes RowCodes} object
 	 */
 	RowCodes getRowCodes();
 
