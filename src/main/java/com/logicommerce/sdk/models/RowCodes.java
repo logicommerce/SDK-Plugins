@@ -1,13 +1,21 @@
 package com.logicommerce.sdk.models;
 
 /**
- * <p>ProductCodes interface.</p>
+ * <p>RowCodes interface. To get codes values of the cart / order item.</p>
  *
+ * @see	 com.logicommerce.sdk.models.CartItem CartItem
+ * @see	 com.logicommerce.sdk.models.order.OrderItem OrderItem
  * @author Logicommerce
- * @since 1.0.16
+ * @since 1.1.10
  */
-@Deprecated(forRemoval = true, since = "1.1.10")
-public interface ProductCodes {
+public interface RowCodes {
+
+	/**
+	 * <p>Get the PID value.</p>
+	 *
+	 * @return a {@link java.lang.String String} object
+	 */
+	String getPId();
 
 	/**
 	 * <p>getSku.</p>
@@ -50,5 +58,5 @@ public interface ProductCodes {
 	 * @return a {@link java.lang.String} object
 	 */
 	String getManufacturerSku();
-
+	
 }

@@ -129,4 +129,5 @@ public class ProductCodesImpl implements ProductCodes {
 	public void setUpc(String upc) {
 		this.upc = upc;
 	}
+
 }

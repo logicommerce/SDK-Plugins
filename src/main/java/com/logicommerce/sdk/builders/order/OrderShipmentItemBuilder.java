@@ -18,6 +18,8 @@ public class OrderShipmentItemBuilder<T> {
 	protected int quantity;
 
 	protected Integer orderItemId;
+	
+	protected double weight;
 
 	/**
 	 * <p>Constructor for OrderShipmentItemBuilder.</p>
@@ -69,6 +71,17 @@ public class OrderShipmentItemBuilder<T> {
 	}
 
 	/**
+	 * <p>weight.</p>
+	 *
+	 * @param weight a double
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderShipmentItemBuilder} object
+	 */
+	public OrderShipmentItemBuilder<T> weight(double weight) {
+		this.weight = weight;
+		return this;
+	}
+	
+	/**
 	 * <p>build.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderShipmentItem} object
@@ -78,6 +91,7 @@ public class OrderShipmentItemBuilder<T> {
 		item.setId(null);
 		item.setQuantity(quantity);
 		item.setOrderItemId(orderItemId);
+		item.setWeight(weight);
 		return item;
 	}
 
