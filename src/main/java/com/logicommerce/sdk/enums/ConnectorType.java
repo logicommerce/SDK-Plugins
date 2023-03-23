@@ -23,5 +23,6 @@ public enum ConnectorType {
 	SHIPMENT,
 	CONFIRM_ORDER,
 	ORDER_STATUS,
+	MARKETING,
 	UNKNOWN;
 }

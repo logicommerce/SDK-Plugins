@@ -15,6 +15,8 @@ public class OrderShipmentItemImpl implements OrderShipmentItem {
 	private int quantity;
 
 	private Integer orderItemId;
+	
+	private double weight;
 
 	/**
 	 * <p>Getter for the field <code>id</code>.</p>
@@ -69,4 +71,15 @@ public class OrderShipmentItemImpl implements OrderShipmentItem {
 	public void setOrderItemId(Integer orderItemId) {
 		this.orderItemId = orderItemId;
 	}
+
+	@Override
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+	
+	
 }

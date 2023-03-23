@@ -4,6 +4,7 @@ import java.util.List;
 import com.logicommerce.sdk.enums.BackorderMode;
 import com.logicommerce.sdk.models.CustomTag;
 import com.logicommerce.sdk.models.ProductCodes;
+import com.logicommerce.sdk.models.RowCodes;
 
 /**
  * <p>OrderItem interface.</p>
@@ -136,8 +137,17 @@ public interface OrderItem {
 	 * <p>getCodes.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.ProductCodes} object
+	 * @deprecated
 	 */
+	@Deprecated(forRemoval = true)
 	ProductCodes getCodes();
+
+	/**
+	 * <p>getRowCodes.</p>
+	 *
+	 * @return a {@link com.logicommerce.sdk.models.ProductCodes} object
+	 */
+	RowCodes getRowCodes();
 
 	/**
 	 * <p>isNoReturn.</p>
