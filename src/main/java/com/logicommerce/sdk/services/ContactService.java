@@ -15,7 +15,6 @@ public interface ContactService extends PluginService {
 	/**
 	 * <p>SendContact.<br>When user send contact message</p>
 	 *
-	 *
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */
 	void contactUser() throws PluginServiceException;

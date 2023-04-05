@@ -14,9 +14,9 @@ public interface ShoppingListService extends PluginService {
 	/**
 	 * <p>add Element to default shoppingList .</p>
 	 *
+	 * @param product a {@link com.logicommerce.sdk.models.Product} object
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */
 	void upsert(List<Product> product) throws PluginServiceException;
-
 
 }
