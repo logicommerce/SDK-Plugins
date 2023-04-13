@@ -3,7 +3,6 @@ package com.logicommerce.sdk.models.order;
 import java.util.List;
 import com.logicommerce.sdk.enums.BackorderMode;
 import com.logicommerce.sdk.models.CustomTag;
-import com.logicommerce.sdk.models.ProductCodes;
 import com.logicommerce.sdk.models.RowCodes;
 
 /**
@@ -134,18 +133,9 @@ public interface OrderItem {
 	boolean isReverseChargeVat();
 
 	/**
-	 * <p>getCodes.</p>
-	 *
-	 * @return a {@link com.logicommerce.sdk.models.ProductCodes} object
-	 * @deprecated
-	 */
-	@Deprecated(forRemoval = true)
-	ProductCodes getCodes();
-
-	/**
 	 * <p>getRowCodes.</p>
 	 *
-	 * @return a {@link com.logicommerce.sdk.models.ProductCodes} object
+	 * @return a {@link com.logicommerce.sdk.models.RowCodes} object
 	 */
 	RowCodes getRowCodes();
 

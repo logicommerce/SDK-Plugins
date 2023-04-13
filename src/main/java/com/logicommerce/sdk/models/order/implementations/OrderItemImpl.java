@@ -3,10 +3,9 @@ package com.logicommerce.sdk.models.order.implementations;
 import java.util.List;
 import com.logicommerce.sdk.enums.BackorderMode;
 import com.logicommerce.sdk.models.CustomTag;
-import com.logicommerce.sdk.models.ProductCodes;
 import com.logicommerce.sdk.models.RowCodes;
 import com.logicommerce.sdk.models.implementations.CustomTagImpl;
-import com.logicommerce.sdk.models.implementations.ProductCodesImpl;
+import com.logicommerce.sdk.models.implementations.RowCodesImpl;
 import com.logicommerce.sdk.models.order.OrderDiscount;
 import com.logicommerce.sdk.models.order.OrderItem;
 import com.logicommerce.sdk.models.order.OrderItemOption;
@@ -14,7 +13,7 @@ import com.logicommerce.sdk.models.order.OrderItemPrices;
 import com.logicommerce.sdk.models.order.OrderItemStock;
 import com.logicommerce.sdk.models.order.OrderItemTax;
 import com.logicommerce.utilities.annotations.Uses;
-
+import com.logicommerce.utilities.annotations.Mapped;
 /**
  * <p>OrderItemImpl class.</p>
  *
@@ -62,11 +61,9 @@ public class OrderItemImpl implements OrderItem {
 	private boolean stockManagement;
 
 	private boolean reverseChargeVat;
-
-	@Uses(value = ProductCodesImpl.class)
-	private ProductCodes codes;
 	
-	@Uses(value = ProductCodesImpl.class)
+	@Mapped(name = "codes")
+	@Uses(value = RowCodesImpl.class)
 	private RowCodes rowCodes;
 
 	private boolean noReturn;
@@ -90,15 +87,6 @@ public class OrderItemImpl implements OrderItem {
 	 */
 	public BackorderMode getBackOrder() {
 		return backOrder;
-	}
-
-	/**
-	 * <p>Getter for the field <code>codes</code>.</p>
-	 *
-	 * @return a {@link com.logicommerce.sdk.models.ProductCodes} object
-	 */
-	public ProductCodes getCodes() {
-		return codes;
 	}
 
 	/**
@@ -297,15 +285,6 @@ public class OrderItemImpl implements OrderItem {
 	 */
 	public void setBackOrder(BackorderMode backOrder) {
 		this.backOrder = backOrder;
-	}
-
-	/**
-	 * <p>Setter for the field <code>codes</code>.</p>
-	 *
-	 * @param codes a {@link com.logicommerce.sdk.models.ProductCodes} object
-	 */
-	public void setCodes(ProductCodes codes) {
-		this.codes = codes;
 	}
 
 	/**
@@ -531,7 +510,7 @@ public class OrderItemImpl implements OrderItem {
 	/**
 	 * <p>Setter for the field <code>codes</code>.</p>
 	 *
-	 * @param codes a {@link com.logicommerce.sdk.models.ProductCodes} object
+	 * @param codes a {@link com.logicommerce.sdk.models.RowCodes} object
 	 */
 	public void setRowCodes(RowCodes rowCodes) {
 		this.rowCodes = rowCodes;

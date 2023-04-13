@@ -35,4 +35,10 @@ public interface ContactService extends PluginService {
 	 */
 	void recommendProduct(Product product) throws PluginServiceException;
 
+	/**
+	 * <p>subscribeNotification.<br>When user subscribe to a newsLetter, for notification event.</p>
+	 *
+	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
+	 */
+	void subscribeNotification() throws PluginServiceException;
 }

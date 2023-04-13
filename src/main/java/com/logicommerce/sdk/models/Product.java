@@ -18,14 +18,7 @@ public interface Product {
 	/**
 	 * <p>getCodes.</p>
 	 *
-	 * @return a {@link com.logicommerce.sdk.models.ProductCodes} object
-	 */
-	ProductCodes getCodes();
-	
-	/**
-	 * <p>getCodes.</p>
-	 *
-	 * @return a {@link com.logicommerce.sdk.models.ProductCodes} object
+	 * @return a {@link com.logicommerce.sdk.models.RowCodes} object
 	 */
 	RowCodes getRowCodes();
 
