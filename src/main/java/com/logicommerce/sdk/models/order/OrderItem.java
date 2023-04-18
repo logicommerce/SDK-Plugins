@@ -137,7 +137,7 @@ public interface OrderItem {
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.RowCodes} object
 	 */
-	RowCodes getRowCodes();
+	RowCodes getCodes();
 
 	/**
 	 * <p>isNoReturn.</p>

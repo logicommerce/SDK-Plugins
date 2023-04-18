@@ -13,7 +13,6 @@ import com.logicommerce.sdk.models.order.OrderItemPrices;
 import com.logicommerce.sdk.models.order.OrderItemStock;
 import com.logicommerce.sdk.models.order.OrderItemTax;
 import com.logicommerce.utilities.annotations.Uses;
-import com.logicommerce.utilities.annotations.Mapped;
 /**
  * <p>OrderItemImpl class.</p>
  *
@@ -61,10 +60,9 @@ public class OrderItemImpl implements OrderItem {
 	private boolean stockManagement;
 
 	private boolean reverseChargeVat;
-	
-	@Mapped(name = "codes")
+
 	@Uses(value = RowCodesImpl.class)
-	private RowCodes rowCodes;
+	private RowCodes codes;
 
 	private boolean noReturn;
 
@@ -503,8 +501,8 @@ public class OrderItemImpl implements OrderItem {
 
 	/** {@inheritDoc} */
 	@Override
-	public RowCodes getRowCodes() {
-		return rowCodes;
+	public RowCodes getCodes() {
+		return codes;
 	}
 	
 	/**
@@ -512,7 +510,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @param codes a {@link com.logicommerce.sdk.models.RowCodes} object
 	 */
-	public void setRowCodes(RowCodes rowCodes) {
-		this.rowCodes = rowCodes;
+	public void setCodes(RowCodes codes) {
+		this.codes = codes;
 	}
 }

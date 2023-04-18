@@ -62,7 +62,7 @@ public interface CartItem {
 	 * @since 1.1.10
 	 * @return a {@link com.logicommerce.sdk.models.RowCodes RowCodes} object
 	 */
-	RowCodes getRowCodes();
+	RowCodes getCodes();
 
 	/**
 	 * <p>Get Type of this item. </p>

@@ -20,7 +20,7 @@ public interface Product {
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.RowCodes} object
 	 */
-	RowCodes getRowCodes();
+	RowCodes getCodes();
 
 	/**
 	 * <p>getLanguage.</p>

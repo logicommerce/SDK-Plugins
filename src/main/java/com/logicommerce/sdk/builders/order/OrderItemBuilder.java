@@ -53,7 +53,7 @@ public class OrderItemBuilder<T> {
 
 	protected boolean reverseChargeVat;
 	
-	protected RowCodesBuilder<OrderItemBuilder<T>> rowCodes;
+	protected RowCodesBuilder<OrderItemBuilder<T>> codes;
 
 	protected boolean noReturn;
 
@@ -75,7 +75,7 @@ public class OrderItemBuilder<T> {
 		customTags = new ArrayList<>();
 		discounts = new ArrayList<>();
 		prices = new OrderItemPricesBuilder<>(this);
-		rowCodes = new RowCodesBuilder<>(this);
+		codes = new RowCodesBuilder<>(this);
 		backOrder = BackorderMode.NONE;
 	}
 
@@ -279,8 +279,8 @@ public class OrderItemBuilder<T> {
 	 *
 	 * @return a {@link com.logicommerce.sdk.builders.RowCodesBuilder} object
 	 */
-	public RowCodesBuilder<OrderItemBuilder<T>> rowCodes() {
-		return rowCodes;
+	public RowCodesBuilder<OrderItemBuilder<T>> codes() {
+		return codes;
 	}
 
 	/**
@@ -362,7 +362,7 @@ public class OrderItemBuilder<T> {
 		item.setSale(sale);
 		item.setStockManagement(stockManagement);
 		item.setReverseChargeVat(reverseChargeVat);
-		item.setRowCodes(rowCodes.build());
+		item.setCodes(codes.build());
 		item.setNoReturn(noReturn);
 		item.setBackOrder(backOrder);
 		item.setOnRequest(onRequest);
