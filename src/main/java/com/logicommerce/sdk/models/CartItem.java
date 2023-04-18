@@ -55,15 +55,6 @@ public interface CartItem {
 	 * @return a {@link java.lang.String} object
 	 */
 	String getImageUrl();
-
-	/**
-	 * <p>Get the CartItemCodes object.</p>
-	 * @deprecated
-	 * @since 1.0.16
-	 * @return a {@link com.logicommerce.sdk.models.CartItemCodes CartItemCodes} object
-	 */
-	@Deprecated(forRemoval = true)
-	CartItemCodes getCodes();
 	
 	/**
 	 * <p>Get the RowCodes object.</p>
@@ -71,7 +62,7 @@ public interface CartItem {
 	 * @since 1.1.10
 	 * @return a {@link com.logicommerce.sdk.models.RowCodes RowCodes} object
 	 */
-	RowCodes getRowCodes();
+	RowCodes getCodes();
 
 	/**
 	 * <p>Get Type of this item. </p>

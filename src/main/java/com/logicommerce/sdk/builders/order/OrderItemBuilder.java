@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import com.logicommerce.sdk.builders.CustomTagBuilder;
-import com.logicommerce.sdk.builders.ProductCodesBuilder;
+import com.logicommerce.sdk.builders.RowCodesBuilder;
 import com.logicommerce.sdk.enums.BackorderMode;
 import com.logicommerce.sdk.models.order.OrderItem;
 import com.logicommerce.sdk.models.order.implementations.OrderItemImpl;
@@ -52,8 +52,8 @@ public class OrderItemBuilder<T> {
 	protected boolean stockManagement;
 
 	protected boolean reverseChargeVat;
-
-	protected ProductCodesBuilder<OrderItemBuilder<T>> codes;
+	
+	protected RowCodesBuilder<OrderItemBuilder<T>> codes;
 
 	protected boolean noReturn;
 
@@ -75,7 +75,7 @@ public class OrderItemBuilder<T> {
 		customTags = new ArrayList<>();
 		discounts = new ArrayList<>();
 		prices = new OrderItemPricesBuilder<>(this);
-		codes = new ProductCodesBuilder<>(this);
+		codes = new RowCodesBuilder<>(this);
 		backOrder = BackorderMode.NONE;
 	}
 
@@ -273,13 +273,13 @@ public class OrderItemBuilder<T> {
 		this.reverseChargeVat = reverseChargeVat;
 		return this;
 	}
-
+	
 	/**
 	 * <p>codes.</p>
 	 *
-	 * @return a {@link com.logicommerce.sdk.builders.ProductCodesBuilder} object
+	 * @return a {@link com.logicommerce.sdk.builders.RowCodesBuilder} object
 	 */
-	public ProductCodesBuilder<OrderItemBuilder<T>> codes() {
+	public RowCodesBuilder<OrderItemBuilder<T>> codes() {
 		return codes;
 	}
 
