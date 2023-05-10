@@ -78,7 +78,11 @@ public class RowCodesImpl implements RowCodes {
 		return upc;
 	}
 
-	@Override
+	/**
+	 * <p>Getter for the field <code>pId</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
 	public String getPId() {		
 		return pId;
 	}
@@ -142,7 +146,7 @@ public class RowCodesImpl implements RowCodes {
 	 *
 	 * @param pId a {@link java.lang.String} object
 	 */
-	public void setpId(String pId) {
+	public void setPId(String pId) {
 		this.pId = pId;
 	}
 }

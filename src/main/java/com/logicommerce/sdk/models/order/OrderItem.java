@@ -133,7 +133,7 @@ public interface OrderItem {
 	boolean isReverseChargeVat();
 
 	/**
-	 * <p>getRowCodes.</p>
+	 * <p>getCodes.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.RowCodes} object
 	 */

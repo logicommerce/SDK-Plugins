@@ -24,5 +24,8 @@ public enum ConnectorType {
 	CONFIRM_ORDER,
 	ORDER_STATUS,
 	MARKETING,
-	UNKNOWN;
+	DATA,
+	UNKNOWN,
+	CAPTCHA,
+	MAPS;
 }
