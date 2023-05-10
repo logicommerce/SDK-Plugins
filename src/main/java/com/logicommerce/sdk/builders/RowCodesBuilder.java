@@ -134,7 +134,7 @@ public class RowCodesBuilder<T> {
 		codes.setManufacturerSku(manufacturerSku);
 		codes.setSku(sku);
 		codes.setUpc(upc);
-		codes.setpId(ean);
+		codes.setPId(ean);
 		return codes;
 	}
 
