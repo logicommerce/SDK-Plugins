@@ -15,6 +15,10 @@ public class CookieImpl implements Cookie {
 	private String value;
 
 	private int ttl;
+	
+	private boolean secure;
+	
+	private boolean httpOnly;
 
 	/**
 	 * <p>Constructor for CookieImpl.</p>
@@ -30,10 +34,12 @@ public class CookieImpl implements Cookie {
 	 * @param value a {@link java.lang.String} object
 	 * @param ttl a int
 	 */
-	public CookieImpl(String name, String value, int ttl) {
+	public CookieImpl(String name, String value) {
 		this.name = name;
 		this.value = value;
-		this.ttl = ttl;
+		this.ttl = 1000;
+		this.httpOnly = true;
+		this.secure = false;
 	}
 
 	/** {@inheritDoc} */
@@ -72,4 +78,23 @@ public class CookieImpl implements Cookie {
 		this.ttl = ttl;
 	}
 
+	@Override
+	public void setHttpOnly(boolean httpOnly) {
+		this.httpOnly = httpOnly;
+	}
+
+	@Override
+	public boolean getHttpOnly() {
+		return httpOnly;
+	}
+
+	@Override
+	public boolean getSecure() {
+		return secure;
+	}
+
+	@Override
+	public void setSecure(boolean secure) {
+		this.secure = secure;		
+	}
 }
