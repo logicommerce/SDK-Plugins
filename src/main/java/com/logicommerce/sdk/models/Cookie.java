@@ -53,5 +53,37 @@ public interface Cookie {
 	 * @since  1.1.4
 	 */
 	public void setTtl(int ttl);
+	
+	/**
+	 * <p>Set httpOnly value of the cookie.</p>
+	 *
+	 * @param httpOnly a boolean
+	 * @since  1.1.14
+	 */
+	public void setHttpOnly(boolean httpOnly);
+	
+	/**
+	 * <p>Get httpOnly value of the cookie.</p>
+	 *
+	 * @since  1.1.14
+	 * @return a boolean
+	 */
+	public boolean getHttpOnly();
+	
+	/**
+	 * <p>Get secure value of the cookie.</p>
+	 *
+	 * @since  1.1.14
+	 * @return a boolean
+	 */
+	public boolean getSecure();
+	
+	/**
+	 * <p>Set secure value of the cookie.</p>
+	 *
+	 * @param secure a boolean
+	 * @since  1.1.14
+	 */
+	public void setSecure(boolean secure);
 
 }
