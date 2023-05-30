@@ -22,4 +22,11 @@ public interface OrderItemTax {
 	 */
 	double getTaxValue();
 
+	/**
+	 * <p>getTaxValue.</p>
+	 *
+	 * @return a double
+	 */
+	double getTaxRate();
+
 }

@@ -13,6 +13,8 @@ public class OrderItemTaxImpl implements OrderItemTax {
 	private double base;
 
 	private double taxValue;
+	
+	private double taxRate;
 
 	/**
 	 * <p>Getter for the field <code>base</code>.</p>
@@ -50,4 +52,23 @@ public class OrderItemTaxImpl implements OrderItemTax {
 		this.taxValue = taxValue;
 	}
 
+	/**
+	 * <p>Getter for the field <code>taxRate</code>.</p>
+	 *
+	 * @return a double
+	 */
+	@Override
+	public double getTaxRate() {
+		return taxRate;
+	}
+	
+	/**
+	 * <p>Setter for the field <code>taxRate</code>.</p>
+	 *
+	 * @param taxRate a double
+	 */
+	public void setTaxRate(double taxRate) {
+		this.taxRate = taxRate;
+	}
+	
 }

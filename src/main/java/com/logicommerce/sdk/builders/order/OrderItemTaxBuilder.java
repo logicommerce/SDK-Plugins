@@ -16,6 +16,8 @@ public class OrderItemTaxBuilder<T> {
 	protected double base;
 
 	protected double taxValue;
+	
+	protected double taxRate;
 
 	/**
 	 * <p>Constructor for OrderItemTaxBuilder.</p>
@@ -54,7 +56,18 @@ public class OrderItemTaxBuilder<T> {
 		this.taxValue = taxValue;
 		return this;
 	}
-
+	
+	/**
+	 * <p>taxRate.</p>
+	 *
+	 * @param taxRate a double
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderItemTaxBuilder} object
+	 */
+	public OrderItemTaxBuilder<T> taxRate(double taxRate) {
+		this.taxRate = taxRate;
+		return this;
+	}
+	
 	/**
 	 * <p>build.</p>
 	 *
@@ -64,6 +77,7 @@ public class OrderItemTaxBuilder<T> {
 		OrderItemTaxImpl tax = new OrderItemTaxImpl();
 		tax.setBase(base);
 		tax.setTaxValue(taxValue);
+		tax.setTaxRate(taxRate);
 		return tax;
 	}
 
