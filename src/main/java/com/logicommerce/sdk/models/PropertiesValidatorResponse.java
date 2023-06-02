@@ -1,4 +1,4 @@
-package com.logicommerce.sdk.services;
+package com.logicommerce.sdk.models;
 
 import java.util.Map;
 

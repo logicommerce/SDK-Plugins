@@ -14,9 +14,10 @@ public interface PropertyValueMap {
 	/**
 	 * Get property value with its type.
 	 * 
+	 * @param <T> the generic type
 	 * @param key a {@link java.lang.String String} object
 	 * @param type a {@link java.lang.Class Class}&lt;T&gt; object
-	 * @return the property value
+	 * @return the property value as T
 	 */
 	<T> T get(String key, Class<T> type);
 
