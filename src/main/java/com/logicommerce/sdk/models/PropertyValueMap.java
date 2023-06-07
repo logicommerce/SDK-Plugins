@@ -3,9 +3,9 @@ package com.logicommerce.sdk.models;
 import java.util.Set;
 
 /**
- * PropertyValueMap interface.
+ * PropertyValueMap.
+ * <p>Used for validate property values from the LogiCommerce Backoffice.</p>
  * 
- * <p>It is used for validate property values from the LogiCommerce</p>
  * @author LogiCommerce
  * @since 1.1.16
  */
@@ -15,8 +15,8 @@ public interface PropertyValueMap {
 	 * Get property value with its type.
 	 * 
 	 * @param <T> the generic type
-	 * @param key a {@link java.lang.String String} object
-	 * @param type a {@link java.lang.Class Class}&lt;T&gt; object
+	 * @param key a {@link String String} object
+	 * @param type a {@link Class Class}&lt;T&gt; object
 	 * @return the property value as T
 	 */
 	<T> T get(String key, Class<T> type);
@@ -24,7 +24,7 @@ public interface PropertyValueMap {
 	/**
 	 * Get raw property value.
 	 * 
-	 * @param key a {@link java.lang.String String} object
+	 * @param key a {@link String String} object
 	 * @return the property value as Object
 	 */
 	Object getRaw(String key);
@@ -32,7 +32,7 @@ public interface PropertyValueMap {
 	/**
 	 * Check if the property value exists.
 	 * 
-	 * @param key a {@link java.lang.String String} object
+	 * @param key a {@link String String} object
 	 * @return true, if successful
 	 */
 	boolean containsKey(String key);

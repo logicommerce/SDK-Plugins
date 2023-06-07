@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <p>Response interface.</p>
+ * Response interface for HTTP requests.
  *
  * @author Logicommerce
  * @since 1.0.16
@@ -12,23 +12,23 @@ import java.util.Map;
 public interface Response {
 
 	/**
-	 * <p>getResponse.</p>
+	 * Response body.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return a {@link String} object
 	 */
 	String getResponse();
 
 	/**
-	 * <p>getStatusCode.</p>
+	 * Status code of the response.
 	 *
 	 * @return a int
 	 */
 	int getStatusCode();
 
 	/**
-	 * <p>getHeaders.</p>
+	 * Headers of the response.
 	 *
-	 * @return a {@link java.util.Map} object
+	 * @return a {@link Map} object
 	 */
 	Map<String, List<String>> getHeaders();
 
