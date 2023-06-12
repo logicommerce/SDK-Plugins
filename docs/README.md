@@ -2,11 +2,11 @@
 
 ## Filosofía
 
-Los plugins son aplicaciones programadas sobre un SDK proporcionado por Logicommerce que La API Beyond utiliza y ejecuta cuando lo requiere.
+Los plugins son aplicaciones programadas sobre un *SDK* proporcionado por Logicommerce que **LogiCommerce Headless API** utiliza y ejecuta cuando lo requiere.
 
 ### Ejecución de un plugin
 
-Todas las ejecuciones de un plugin empiezan por un "servicio". Este servicio es una interfaz proporcionada por el SDK que hay que definir en el module-info.java e implementar. De este modo Beyond podrá llamar a los métodos del servicio que necesite con la implementación del plugin.
+Todas las ejecuciones de un plugin empiezan por un *servicio*. Este servicio es una interfaz proporcionada por el *SDK* que hay que definir en el module-info.java e implementar. De este modo Beyond podrá llamar a los métodos del servicio que necesite con la implementación del plugin.
 
 #### Permisos de ejecución de la tienda
 
@@ -46,21 +46,21 @@ Explicación base de la concreción de un plugin.
 
 ### Tipo de Plugin
 
-Se explica la creación de plugins simples para cada tipo. Hay que tener en cuenta, sin embargo, que un plugin no sólo puede ser de un solo tipo. Puede tener varios ya que cada tipo puede equivaler a un * Servicio *.
+Se explica la creación de plugins simples para cada tipo. Hay que tener en cuenta, sin embargo, que un plugin no sólo puede ser de un solo tipo. Puede tener varios ya que cada tipo puede equivaler a un *Servicio*.
 
 - [Recomendador - Secciones - Relacionados](Plugins/RelatedItems.md)
 - [Buscador de productos](Plugins/SearchProducts.md)
 - [Newsletter](Plugins/Newsletter.md)
 - [Sistemas de pago](Plugins/Payment.md)
 - [Pedido](Plugins/Order.md)
-- (TODO) [usuario](Plugins/User.md)
-- (TODO) [Cesta](Plugins/Basket.md) 
-- (TODO) [Sistemas de transporte](Plugins/ShipmentSystems.md)
-- (TODO) [Trackers](Plugins/Trackers.md)
+- [usuario](Plugins/User.md)
+- [Cesta](Plugins/Basket.md) 
+- [Sistemas de transporte](Plugins/ShipmentSystems.md)
+- [Trackers](Plugins/Trackers.md)
 
 ### API Reference
 
-Referencia general de toda la API de Beyond para la creación de plugins.
+Referencia general para la creación de plugins.
 
 [Referencia de la API](APIReference/)
 

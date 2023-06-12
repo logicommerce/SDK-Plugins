@@ -12,7 +12,7 @@ import com.logicommerce.sdk.models.Cookie;
 public interface Navigator {
 
 	/**
-	 * <p>getUserAgent.</p>
+	 * Gets the navigator user agent.
 	 *
 	 * @return a {@link java.lang.String} object
 	 */

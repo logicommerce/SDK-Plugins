@@ -1,7 +1,7 @@
 package com.logicommerce.sdk.resources;
 
 /**
- * <p>Connection interface.</p>
+ * Connection for executing HTTP requests.
  *
  * @author Logicommerce
  * @since 1.0.16
@@ -9,129 +9,129 @@ package com.logicommerce.sdk.resources;
 public interface Connection {
 
 	/**
-	 * <p>init.</p>
+	 * Initializes the connection.
 	 *
-	 * @param endPoint a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * @param endPoint a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	Connection init(String endPoint);
 
 	/**
-	 * <p>get.</p>
+	 * Sends a GET request.
 	 *
-	 * @return a {@link com.logicommerce.sdk.resources.Response} object
-	 * @throws com.logicommerce.sdk.resources.PluginResourceException if any.
+	 * @return a {@link Response} object
+	 * @throws PluginResourceException if any.
 	 */
 	Response get() throws PluginResourceException;
 
 	/**
-	 * <p>post.</p>
+	 * Sends a POST request.
 	 *
-	 * @param body a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Response} object
-	 * @throws com.logicommerce.sdk.resources.PluginResourceException if any.
+	 * @param body a {@link String} object
+	 * @return a {@link Response} object
+	 * @throws PluginResourceException if any.
 	 */
 	Response post(String body) throws PluginResourceException;
 
 	/**
-	 * <p>put.</p>
+	 * Sends a PUT request.
 	 *
-	 * @param body a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Response} object
-	 * @throws com.logicommerce.sdk.resources.PluginResourceException if any.
+	 * @param body a {@link String} object
+	 * @return a {@link Response} object
+	 * @throws PluginResourceException if any.
 	 */
 	Response put(String body) throws PluginResourceException;
 
 	/**
-	 * <p>patch.</p>
+	 * Sends a PATCH request.
 	 *
-	 * @param body a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Response} object
-	 * @throws com.logicommerce.sdk.resources.PluginResourceException if any.
+	 * @param body a {@link String} object
+	 * @return a {@link Response} object
+	 * @throws PluginResourceException if any.
 	 */
 	Response patch(String body) throws PluginResourceException;
 
 	/**
-	 * <p>delete.</p>
+	 * Sends a DELETE request.
 	 *
-	 * @return a {@link com.logicommerce.sdk.resources.Response} object
-	 * @throws com.logicommerce.sdk.resources.PluginResourceException if any.
+	 * @return a {@link Response} object
+	 * @throws PluginResourceException if any.
 	 */
 	Response delete() throws PluginResourceException;
 
 	/**
-	 * <p>authorization.</p>
+	 * Adds an authorization header to the request.
 	 *
-	 * @param authorization a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * @param authorization a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	Connection authorization(String authorization);
 
 	/**
-	 * <p>path.</p>
+	 * Defines the path for the request.
 	 *
-	 * @param path a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * @param path a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	Connection path(String path);
 
 	/**
-	 * <p>contentType.</p>
+	 * Sets a content type to the request.
 	 *
-	 * @param contentType a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * @param contentType a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	Connection contentType(String contentType);
 
 	/**
-	 * <p>acceptType.</p>
+	 * Sets an accept type to the request.
 	 *
-	 * @param acceptType a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * @param acceptType a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	Connection acceptType(String acceptType);
 
 	/**
-	 * <p>header.</p>
+	 * Adds a header to the request.
 	 *
-	 * @param name a {@link java.lang.String} object
-	 * @param value a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * @param name a {@link String} object
+	 * @param value a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	Connection header(String name, String value);
 
 	/**
-	 * <p>cookie.</p>
+	 * Adds a cookie to the request.
 	 *
-	 * @param name a {@link java.lang.String} object
-	 * @param value a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * @param name a {@link String} object
+	 * @param value a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	Connection cookie(String name, String value);
 
 	/**
-	 * <p>queryParam.</p>
+	 * Adds a query parameter to the request.
 	 *
-	 * @param name a {@link java.lang.String} object
-	 * @param value a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * @param name a {@link String} object
+	 * @param value a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	Connection queryParam(String name, String value);
 
 	/**
-	 * <p>params.</p>
+	 * Adds a path parameter to the request.
 	 *
-	 * @param params a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * @param params a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	Connection params(String params);
 
 	/**
-	 * <p>timeout.</p>
+	 * Defines the timeout in miliseconds for the request. Default is 3000.
 	 *
-	 * @param timeout a {@link java.lang.Integer} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * @param timeout a int in miliseconds
+	 * @return a {@link Connection} object.
 	 */
-	Connection timeout(Integer timeout);
+	Connection timeout(int timeout);
 
 }

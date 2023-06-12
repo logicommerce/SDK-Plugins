@@ -3,115 +3,131 @@ package com.logicommerce.sdk.resources;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * Asynchronous Connection
+ * Asynchronous Connection for executing HTTP requests.
+ * 
  * @author Logicommerce
  * @since 1.0.18
  */
 public interface AsyncConnection {
 
 	/**
-	 * Initializes the connection
-	 * @param endPoint a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * Initializes the connection.
+	 * 
+	 * @param endPoint a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	AsyncConnection init(String endPoint);
 
 	/**
-	 * GET method
-	 * @return a {@link java.util.concurrent.CompletableFuture} object
+	 * Sends a GET request.
+	 * 
+	 * @return a {@link CompletableFuture}&lt;{@link Response}&gt; object
 	 */
 	CompletableFuture<Response> get();
 
 	/**
-	 * POST method
-	 * @param body a {@link java.lang.String} object
-	 * @return a {@link java.util.concurrent.CompletableFuture} object
+	 * Sends a POST request.
+	 * 
+	 * @param body a {@link String} object
+	 * @return a {@link CompletableFuture}&lt;{@link Response}&gt; object
 	 */
 	CompletableFuture<Response> post(String body);
 
 	/**
-	 * PUT method
-	 * @param body a {@link java.lang.String} object
-	 * @return a {@link java.util.concurrent.CompletableFuture} object
+	 * Sends a PUT request.
+	 *
+	 * @param body a {@link String} object
+	 * @return a {@link CompletableFuture}&lt;{@link Response}&gt; object
 	 */
 	CompletableFuture<Response> put(String body);
 
 	/**
-	 * PATCH method
-	 * @param body a {@link java.lang.String} object
-	 * @return a {@link java.util.concurrent.CompletableFuture} object
+	 * Sends a PATCH request.
+	 *
+	 * @param body a {@link String} object
+	 * @return a {@link CompletableFuture}&lt;{@link Response}&gt; object
 	 */
 	CompletableFuture<Response> patch(String body);
 
 	/**
-	 * DELETE method
-	 * @return a {@link java.util.concurrent.CompletableFuture} object
+	 * Sends a DELETE request.
+	 *
+	 * @return a {@link CompletableFuture}&lt;{@link Response}&gt; object
 	 */
 	CompletableFuture<Response> delete();
 
 	/**
-	 * Authorization
-	 * @param authorization a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.Connection} object
+	 * Adds an authorization header to the request.
+	 *
+	 * @param authorization a {@link String} object
+	 * @return a {@link Connection} object
 	 */
 	AsyncConnection authorization(String authorization);
 
 	/**
-	 * Assign path
-	 * @param path a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.AsyncConnection} object
+	 * Defines the path for the request.
+	 *
+	 * @param path a {@link String} object
+	 * @return a {@link AsyncConnection} object
 	 */
 	AsyncConnection path(String path);
 
 	/**
-	 * Assign contentType
-	 * @param contentType a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.AsyncConnection} object
+	 * Sets a content type to the request.
+	 *
+	 * @param contentType a {@link String} object
+	 * @return a {@link AsyncConnection} object
 	 */
 	AsyncConnection contentType(String contentType);
 
 	/**
-	 * Assign acceptType
-	 * @param acceptType a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.AsyncConnection} object
+	 * Sets an accept type to the request.
+	 *
+	 * @param acceptType a {@link String} object
+	 * @return a {@link AsyncConnection} object
 	 */
 	AsyncConnection acceptType(String acceptType);
 
 	/**
-	 * Assign header
-	 * @param name  a {@link java.lang.String} object
-	 * @param value a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.AsyncConnection} object
+	 * Adds a header to the request.
+	 *
+	 * @param name  a {@link String} object
+	 * @param value a {@link String} object
+	 * @return a {@link AsyncConnection} object
 	 */
 	AsyncConnection header(String name, String value);
 
 	/**
 	 * Assign cookie
-	 * @param name  a {@link java.lang.String} object
-	 * @param value a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.AsyncConnection} object
+	 * 
+	 * @param name  a {@link String} object
+	 * @param value a {@link String} object
+	 * @return a {@link AsyncConnection} object
 	 */
 	AsyncConnection cookie(String name, String value);
 
 	/**
-	 * Assign queryParam
-	 * @param name  a {@link java.lang.String} object
-	 * @param value a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.AsyncConnection} object
+	 * Adds a cookie to the request.
+	 *
+	 * @param name  a {@link String} object
+	 * @param value a {@link String} object
+	 * @return a {@link AsyncConnection} object
 	 */
 	AsyncConnection queryParam(String name, String value);
 
 	/**
-	 * Assign params
-	 * @param params a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.resources.AsyncConnection} object
+	 * Adds a path parameter to the request.
+	 * 
+	 * @param params a {@link String} object
+	 * @return a {@link AsyncConnection} object
 	 */
 	AsyncConnection params(String params);
 
 	/**
-	 * Assign timeout
-	 * @param timeout a {@link java.lang.Integer} object
-	 * @return a {@link com.logicommerce.sdk.resources.AsyncConnection} object
+	 * Defines the timeout in miliseconds for the request. Default is 3000.
+	 *
+	 * @param timeout a int in miliseconds
+	 * @return a {@link AsyncConnection} object
 	 */
-	AsyncConnection timeout(Integer timeout);
+	AsyncConnection timeout(int timeout);
 }
