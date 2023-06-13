@@ -112,8 +112,10 @@ public interface UserAddress extends Address {
 	 * <p>isReverseChargeVat. ????</p>
 	 *
 	 * @since 1.0.16
+	 * @deprecated since 1.0.17
 	 * @return a boolean
 	 */
+	@Deprecated(since = "1.0.17", forRemoval = true)
 	boolean isReverseChargeVat();
 
 }
