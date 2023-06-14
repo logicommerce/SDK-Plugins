@@ -7,7 +7,7 @@ public class ResponseParser<T> {
 
 	private ResponseParser() {}
 
-	static <T> T parse(int statusCode, String body, Class<T> type) throws ResponseException {
+	public static <T> T parse(int statusCode, String body, Class<T> type) throws ResponseException {
 		if (statusCode > 399) {
 			throw new ResponseException(body);
 		}
