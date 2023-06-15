@@ -34,7 +34,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 
 	private boolean re;
 
-	@Deprecated(since = "1.0.17", forRemoval = true)
+	@Deprecated(since = "1.1.17", forRemoval = true)
 	private boolean reverseChargeVat;
 
 	/**
@@ -269,10 +269,10 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 * <p>isReverseChargeVat.</p>
 	 *
 	 * @return a boolean
-	 * @deprecated since 1.0.17, forRemoval = true
+	 * @deprecated It will be removed in the next minor version.
 	 */
 	@Override
-	@Deprecated(since = "1.0.17", forRemoval = true)
+	@Deprecated(since = "1.1.17", forRemoval = true)
 	public boolean isReverseChargeVat() {
 		return reverseChargeVat;
 	}
@@ -281,9 +281,9 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 * <p>Setter for the field <code>reverseChargeVat</code>.</p>
 	 *
 	 * @param reverseChargeVat a boolean
-	 * @deprecated since 1.0.17, forRemoval = true
+	 * @deprecated It will be removed in the next minor version.
 	 */
-	@Deprecated(since = "1.0.17", forRemoval = true)
+	@Deprecated(since = "1.1.17", forRemoval = true)
 	public void setReverseChargeVat(boolean reverseChargeVat) {
 		this.reverseChargeVat = reverseChargeVat;
 	}
