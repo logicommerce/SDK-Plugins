@@ -47,6 +47,7 @@ public class AddressBuilder<T, S> {
 
 	protected boolean re;
 
+	@Deprecated(since = "1.1.17", forRemoval = true)
 	protected boolean reverseChargeVat;
 	
 	protected LocationBuilder<AddressBuilder<T, S>> location;
@@ -262,7 +263,9 @@ public class AddressBuilder<T, S> {
 	 *
 	 * @param reverseChargeVat a boolean
 	 * @return a {@link com.logicommerce.sdk.builders.AddressBuilder} object
+	 * @deprecated It will be removed in the next minor version.
 	 */
+	@Deprecated(since = "1.1.17", forRemoval = true)
 	public AddressBuilder<T, S> reverseChargeVat(boolean reverseChargeVat) {
 		this.reverseChargeVat = reverseChargeVat;
 		return returnThis();

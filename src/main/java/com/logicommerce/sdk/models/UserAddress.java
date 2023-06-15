@@ -2,7 +2,7 @@ package com.logicommerce.sdk.models;
 
 
 /**
- * <p>UserAddress interface. Get data of a user address. Extends address object.</p>
+ * UserAddress interface. Get data of a user address. Extends address object.
  *
  * @see	com.logicommerce.sdk.models.User User
  * @see com.logicommerce.sdk.models.Address Address
@@ -12,88 +12,90 @@ package com.logicommerce.sdk.models;
 public interface UserAddress extends Address {
 
 	/**
-	 * <p>Get is Default Address value, return true if this user address is the default user address for this user.</p>
+	 * Get is Default Address value, return true if this user address is the default user address for this user.
 	 *
-	 * @see	com.logicommerce.sdk.models.Address Address
+	 * @see	Address Address
 	 * @since 1.0.16
 	 * @return a boolean
 	 */
 	boolean isDefaultAddress();
 
 	/**
-	 * <p>Get alias value of the user address.</p>
+	 * Get alias value of the user address.
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
+	 * @return a {@link String String} object
 	 */
 	String getAlias();
 
 	/**
-	 * <p>Get user first name of the user address.</p>
+	 * Get user first name of the user address.
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
+	 * @return a {@link String String} object
 	 */
 	String getFirstName();
 
 	/**
-	 * <p>Get user last name of the user address.</p>
+	 * Get user last name of the user address.
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
+	 * @return a {@link String String} object
 	 */
 	String getLastName();
 
 	/**
-	 * <p>Get user company of the user address.</p>
+	 * Get user company of the user address.
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
+	 * @return a {@link String String} object
 	 */
 	String getCompany();
 
 	/**
-	 * <p>Get address additional information of the user address.</p>
+	 * Get address additional information of the user address.
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
+	 * @return a {@link String String} object
 	 */
 	String getAddressAdditionalInformation();
 
 	/**
-	 * <p>Get number of the user address.</p>
+	 * Get number of the user address.
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
+	 * @return a {@link String String} object
 	 */
 	String getNumber();
 
 	/**
-	 * <p>Get fax of the user address.</p>
+	 * Get fax of the user address.
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
+	 * @return a {@link String String} object
+	 * @deprecated  It will be removed in the next minor version.
 	 */
+	@Deprecated(since = "1.1.17", forRemoval = true)
 	String getFax();
 
 	/**
-	 * <p>Get NIF of the user address.</p>
+	 * Get NIF of the user address.
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
+	 * @return a {@link String String} object
 	 */
 	String getNif();
 
 	/**
-	 * <p>Get VAT of the user address.</p>
+	 * Get VAT of the user address.
 	 *
 	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
+	 * @return a {@link String String} object
 	 */
 	String getVat();
 
 	/**
-	 * <p>isTax. ????</p>
+	 * Get is Tax.
 	 *
 	 * @since 1.0.16
 	 * @return a boolean
@@ -101,7 +103,7 @@ public interface UserAddress extends Address {
 	boolean isTax();
 
 	/**
-	 * <p>isRe. ????</p>
+	 * Get is RE.
 	 *
 	 * @since 1.0.16
 	 * @return a boolean
@@ -109,11 +111,13 @@ public interface UserAddress extends Address {
 	boolean isRe();
 
 	/**
-	 * <p>isReverseChargeVat. ????</p>
+	 * Get is Reverse Charge VAT.
 	 *
 	 * @since 1.0.16
+	 * @deprecated  It will be removed in the next minor version.
 	 * @return a boolean
 	 */
+	@Deprecated(since = "1.1.17", forRemoval = true)
 	boolean isReverseChargeVat();
 
 }

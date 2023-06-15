@@ -7,11 +7,11 @@ public class ResponseException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 
-	ResponseException(String message) {
+	public ResponseException(String message) {
 		super(message);
 	}
 
-	ResponseException(String message, Exception e) {
+	public ResponseException(String message, Exception e) {
 		super(message, e);
 	}
 
