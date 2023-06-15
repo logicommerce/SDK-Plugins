@@ -1,13 +1,14 @@
 # Logger
 
-## Descripción
+## Description
 
-Permite escribir logs en el sistema.
+Allows writing logs to the system.
 
-Los logs se almacenarán con el prefijo del nombre del plugin (nombre del módulo).
+The logs will be stored with the prefix of the plugin name (module name).
 
-## Métodos
+## Methods
 
+- **void** debug(String... args) Logs will only be generated if the debug mode is enabled.
 - **void** info(String... args)
 - **void** warning(String... args)
 - **void** severe(String... args)
