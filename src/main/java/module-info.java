@@ -5,10 +5,12 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.definition;
 	exports com.logicommerce.sdk.definition.implementations;
 	exports com.logicommerce.sdk.services;
+	exports com.logicommerce.sdk.services.queues;
 	exports com.logicommerce.sdk.resources;
 	exports com.logicommerce.sdk.models;
 	exports com.logicommerce.sdk.models.order;
 	exports com.logicommerce.sdk.models.payment;
+	exports com.logicommerce.sdk.models.queues;
 	exports com.logicommerce.sdk.enums;
 	exports com.logicommerce.sdk.builders;
 	exports com.logicommerce.sdk.builders.order;
