@@ -5,7 +5,7 @@ import java.util.Set;
 /**
  * Message to be sent to the queue for free message type
  * 
- * @Author LogiCommerce
+ * @author LogiCommerce
  * @since 1.2.0
  */
 public final class FreeQueueMessage extends QueueMessage {

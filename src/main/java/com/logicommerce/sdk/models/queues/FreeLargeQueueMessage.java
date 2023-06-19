@@ -5,7 +5,7 @@ import java.util.Set;
 /**
  * Message to be sent to the queue for free large message type
  * 
- * @Author LogiCommerce
+ * @author LogiCommerce
  * @since 1.2.0
  */
 public class FreeLargeQueueMessage extends QueueMessage {
@@ -18,6 +18,8 @@ public class FreeLargeQueueMessage extends QueueMessage {
 	 * @param action a {@link String} object
 	 * @param attributes a {@link Set} object
 	 * @param settings a {@link Settings} object
+	 * @param body a {@link String} object representing the body of the message and cannot be null, 
+	 * empty or larger than 1MB
 	 */
 	public FreeLargeQueueMessage(String action, Set<Attribute> attributes, Settings settings, String body) {
 		super(action, attributes, settings);
@@ -66,7 +68,7 @@ public class FreeLargeQueueMessage extends QueueMessage {
 		/**
 		 * Sets the body of the message
 		 * @param body a {@link String} object representing the body of the message and cannot be 
-		 * null or empty or larger than 1MB.
+		 * null, empty or larger than 1MB.
 		 * @return a {@link Builder} object
 		 */
 		public Builder body(String body) {

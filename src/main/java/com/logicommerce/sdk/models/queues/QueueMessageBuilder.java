@@ -17,18 +17,10 @@ public abstract class QueueMessageBuilder<T extends QueueMessageBuilder<T>> {
 	private Settings settings;
 	private Settings.Builder<T> settingsBuilder;
 	private List<Attribute.Builder<T>> attributeBuilders = new ArrayList<>();
-	// private Class<T> queueMessageClass;
-
-	// /**
-	//  * QueueMessageBuilder constructor
-	//  */
-	// public QueueMessageBuilder(Class<T> queueMessageClass) {
-	// 	this.queueMessageClass = queueMessageClass;
-	// }
 
 	/**
 	 * Sets the action of the message
-	 * @param action
+	 * @param action a {@link String} object
 	 * @return a {@link QueueMessageBuilder} object
 	 */
 	public T action(String action) {
@@ -38,7 +30,7 @@ public abstract class QueueMessageBuilder<T extends QueueMessageBuilder<T>> {
 
 	/**
 	 * Sets the attributes of the message
-	 * @param attributes
+	 * @param attributes a {@link Set}&lt;{@link Attribute}&gt; object
 	 * @return a {@link QueueMessageBuilder} object
 	 */
 	public T attributes(Set<Attribute> attributes) {
@@ -58,7 +50,7 @@ public abstract class QueueMessageBuilder<T extends QueueMessageBuilder<T>> {
 
 	/**
 	 * Sets the settings of the message
-	 * @param settings
+	 * @param settings a {@link Settings} object
 	 * @return a {@link QueueMessageBuilder} object
 	 */
 	public T settings(Settings settings) {
@@ -83,7 +75,7 @@ public abstract class QueueMessageBuilder<T extends QueueMessageBuilder<T>> {
 
 	/**
 	 * Builds the QueueMessage
-	 * @return a T object
+	 * @return a {@link QueueMessage} object
 	 */
 	public QueueMessage build() {
 		if (settingsBuilder != null) {

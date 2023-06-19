@@ -6,7 +6,7 @@ import com.logicommerce.sdk.models.User;
 /**
  * Message to be sent to the queue for user message type
  * 
- * @Author LogiCommerce
+ * @author LogiCommerce
  * @since 1.2.0
  */
 public class UserQueueMessage extends QueueMessage {
@@ -19,6 +19,7 @@ public class UserQueueMessage extends QueueMessage {
 	 * @param action a {@link String} object
 	 * @param attributes a {@link Set} object
 	 * @param settings a {@link Settings} object
+	 * @param user a {@link User} object
 	 */
 	public UserQueueMessage(String action, Set<Attribute> attributes, Settings settings, User user) {
 		super(action, attributes, settings);

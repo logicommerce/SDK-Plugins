@@ -8,7 +8,7 @@ import com.logicommerce.sdk.services.PluginServiceException;
 /**
  * Service to process user queue messages
  * 
- * @Author LogiCommerce
+ * @author LogiCommerce
  * @since 1.2.0
  */
 public interface UserQueueProcessorService extends QueueProcessorService {

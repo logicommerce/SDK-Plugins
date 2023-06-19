@@ -61,7 +61,7 @@ public class Settings {
 	/**
 	 * Builder for {@link Settings}
 	 */
-	public static final class Builder<T> {
+	public static final class Builder<T extends QueueMessageBuilder<T>> {
 
 		private T parent;
 		private int retryCount;
@@ -75,7 +75,7 @@ public class Settings {
 
 		/**
 		 * Builder constructor
-		 * @param T parent
+		 * @param parent a T object
 		 */
 		public Builder(T parent) {
 			this.parent = parent;
@@ -83,8 +83,8 @@ public class Settings {
 
 		/**
 		 * Sets the retry count of the message
-		 * @param retryCount
-		 * @return
+		 * @param retryCount a int
+		 * @return a {@link Builder} object
 		 */
 		public Builder<T> retryCount(int retryCount) {
 			this.retryCount = retryCount;
@@ -93,8 +93,8 @@ public class Settings {
 
 		/**
 		 * Sets the delay of the message in seconds
-		 * @param delay
-		 * @return
+		 * @param delay a int in seconds
+		 * @return a {@link Builder} object
 		 */
 		public Builder<T> delay(int delay) {
 			this.delay = delay;
@@ -103,8 +103,8 @@ public class Settings {
 
 		/**
 		 * Sets the priority of the message
-		 * @param priority
-		 * @return
+		 * @param priority a int
+		 * @return a {@link Builder} object
 		 */
 		public Builder<T> priority(int priority) {
 			this.priority = priority;
@@ -113,7 +113,7 @@ public class Settings {
 
 		/**
 		 * Builds the {@link Settings} object
-		 * @return
+		 * @return a {@link Settings} object
 		 */
 		public Settings build() {
 			return new Settings(retryCount, delay, priority);

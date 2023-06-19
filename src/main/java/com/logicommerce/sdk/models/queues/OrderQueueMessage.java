@@ -6,7 +6,7 @@ import com.logicommerce.sdk.models.order.Order;
 /**
  * Message to be sent to the queue for order message type
  * 
- * @Author LogiCommerce
+ * @author LogiCommerce
  * @since 1.2.0
  */
 public final class OrderQueueMessage extends QueueMessage {
@@ -19,6 +19,7 @@ public final class OrderQueueMessage extends QueueMessage {
 	 * @param action a {@link String} object
 	 * @param attributes a {@link Set} object
 	 * @param settings a {@link Settings} object
+	 * @param order a {@link Order} object
 	 */
 	public OrderQueueMessage(String action, Set<Attribute> attributes, Settings settings, Order order) {
 		super(action, attributes, settings);

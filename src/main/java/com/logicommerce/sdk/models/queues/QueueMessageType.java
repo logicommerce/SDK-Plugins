@@ -5,7 +5,7 @@ package com.logicommerce.sdk.models.queues;
  * 
  * @see FreeQueueMessage
  * 
- * @Author LogiCommerce
+ * @author LogiCommerce
  * @since 1.2.0
  */
 public enum QueueMessageType {

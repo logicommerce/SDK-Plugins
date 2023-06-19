@@ -7,7 +7,7 @@ import com.logicommerce.sdk.services.PluginServiceException;
 /**
  * Service for processing large free queue messages
  * 
- * @Author LogiCommerce
+ * @author LogiCommerce
  * @since 1.2.0
  */
 public interface FreeLargeQueueProcessorService extends QueueProcessorService {

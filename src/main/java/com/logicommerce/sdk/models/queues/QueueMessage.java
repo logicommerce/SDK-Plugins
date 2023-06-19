@@ -5,7 +5,7 @@ import java.util.Set;
 /**
  * Interface for queue messages
  * 
- * @Author LogiCommerce
+ * @author LogiCommerce
  * @since 1.2.0
  */
 public abstract class QueueMessage {

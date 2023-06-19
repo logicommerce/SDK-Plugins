@@ -6,7 +6,7 @@ package com.logicommerce.sdk.models.queues;
  * @see FreeQueueMessage
  * @see AttributeType
  * 
- * @Author LogiCommerce	
+ * @author LogiCommerce	
  * @since 1.2.0
  */
 public class Attribute {
@@ -27,7 +27,7 @@ public class Attribute {
 		this.name = name;
 		this.type = type;
 		this.value = prepareValue(value);
-		
+
 	}
 
 	private void validateArguments(String name, AttributeType type, Object value) {
@@ -94,7 +94,7 @@ public class Attribute {
 	/**
 	 * Builder for the attribute
 	 */
-	public static final class Builder<T> {
+	public static final class Builder<T extends QueueMessageBuilder<T>> {
 
 		private T parent;
 		private String name;
@@ -108,7 +108,7 @@ public class Attribute {
 
 		/**
 		 * Builder constructor
-		 * @param T parent
+		 * @param parent a &lt;T&gt; object
 		 */
 		public Builder(T parent) {
 			this.parent = parent;
@@ -116,7 +116,7 @@ public class Attribute {
 
 		/**
 		 * Sets the name of the attribute
-		 * @param name
+		 * @param name a {@link String} object
 		 * @return a {@link Builder} object
 		 */
 		public Builder<T> name(String name) {
@@ -126,7 +126,7 @@ public class Attribute {
 
 		/**
 		 * Sets the type of the attribute
-		 * @param type
+		 * @param type a {@link AttributeType} object
 		 * @return a {@link Builder} object
 		 */
 		public Builder<T> type(AttributeType type) {
@@ -136,7 +136,7 @@ public class Attribute {
 
 		/**
 		 * Sets the value of the attribute
-		 * @param value
+		 * @param value a {@link Object} object
 		 * @return a {@link Builder} object
 		 */
 		public Builder<T> value(Object value) {
@@ -154,7 +154,7 @@ public class Attribute {
 
 		/**
 		 * Returns the parent object
-		 * @return a {@link T} object
+		 * @return a &lt;T&gt; object
 		 */
 		public T done() {
 			if (parent == null) {
