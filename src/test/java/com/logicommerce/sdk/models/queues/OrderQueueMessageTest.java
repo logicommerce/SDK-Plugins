@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import com.logicommerce.sdk.models.order.Order;
 import com.logicommerce.sdk.models.order.implementations.OrderImpl;
 
-public class OrderQueueMessageTest {
+class OrderQueueMessageTest {
 
 	@Test
 	void testOrderNotDefined() {

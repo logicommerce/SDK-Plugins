@@ -12,6 +12,10 @@ public class FreeLargeQueueMessage extends QueueMessage {
 
 	private final String body;
 
+	private static final String BODY = "body";
+	private static final int MAX_BODY_SIZE = 1024 * 1024;
+	private static final String MAX_BODY_SIZE_MESSAGE = "body cannot be larger than 1MB";
+
 	/**
 	 * FreeLargeQueueMessage constructor
 	 * 
@@ -23,14 +27,16 @@ public class FreeLargeQueueMessage extends QueueMessage {
 	 */
 	public FreeLargeQueueMessage(String action, Set<Attribute> attributes, Settings settings, String body) {
 		super(action, attributes, settings);
-		if (body == null) {
-			throw new IllegalArgumentException("body cannot be null");
-		} else if (body.isEmpty()) {
-			throw new IllegalArgumentException("body cannot be empty");
-		} else if (body.length() > 1024 * 1024) {
-			throw new IllegalArgumentException("body cannot be larger than 1MB");
-		}
+		validate(body);
 		this.body = body;
+	}
+
+	private void validate(String body) {
+		Validator.validateNotNull(BODY, body);
+		Validator.validateNotEmpty(BODY, body);
+		if (body.length() > MAX_BODY_SIZE) {
+			Validator.raiseError(MAX_BODY_SIZE_MESSAGE);
+		}
 	}
 
 	/**
@@ -39,7 +45,7 @@ public class FreeLargeQueueMessage extends QueueMessage {
 	 */
 	@Override
 	public QueueMessageType getType() {
-		return QueueMessageType.FREE;
+		return QueueMessageType.FREE_LARGE;
 	}
 
 	/**
@@ -85,7 +91,7 @@ public class FreeLargeQueueMessage extends QueueMessage {
 		protected QueueMessage build(String action, Set<Attribute> attributes, Settings settings) {
 			return new FreeLargeQueueMessage(action, attributes, settings, body);
 		}
-		
+
 	}
 
 }

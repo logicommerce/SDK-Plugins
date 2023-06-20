@@ -124,9 +124,7 @@ public class Settings {
 		 * @return T
 		 */
 		public T done() {
-			if (parent == null) {
-				throw new IllegalStateException("parent cannot be null");
-			}
+			Validator.validateNotNull("Parent", parent);
 			return parent;
 		}
 	}

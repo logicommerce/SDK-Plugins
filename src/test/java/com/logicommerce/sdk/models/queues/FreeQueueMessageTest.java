@@ -70,7 +70,7 @@ class FreeQueueMessageTest {
 				.value(ATTRIBUTE_VALUE)
 				.build()))
 			.build();
-		
+
 		assertNotNull(message);
 		assertNotNull(message.getSettings());
 		assertEquals(0, message.getSettings().getDelay());

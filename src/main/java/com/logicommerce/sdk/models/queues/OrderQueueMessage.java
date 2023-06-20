@@ -23,9 +23,7 @@ public final class OrderQueueMessage extends QueueMessage {
 	 */
 	public OrderQueueMessage(String action, Set<Attribute> attributes, Settings settings, Order order) {
 		super(action, attributes, settings);
-		if (order == null) {
-			throw new IllegalArgumentException("Order cannot be null");
-		}
+		Validator.validateNotNull("Order", order);
 		this.order = order;
 	}
 

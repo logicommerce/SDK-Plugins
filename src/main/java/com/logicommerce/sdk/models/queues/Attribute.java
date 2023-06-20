@@ -15,6 +15,10 @@ public class Attribute {
 	private final AttributeType type;
 	private final Object value;
 
+	private static final String NAME = "Name";
+	private static final String TYPE = "Type";
+	private static final String VALUE = "Value";
+
 	/**
 	 * Attribute constructor
 	 *
@@ -23,38 +27,30 @@ public class Attribute {
 	 * @param value a {@link Object} object
 	 */
 	public Attribute(String name, AttributeType type, Object value) {
-		validateArguments(name, type, value);
+		Validator.validateKey(NAME, name);
 		this.name = name;
+
+		Validator.validateNotNull(TYPE, type);
 		this.type = type;
+
 		this.value = prepareValue(value);
-
-	}
-
-	private void validateArguments(String name, AttributeType type, Object value) {
-		if (name == null || name.isEmpty()) {
-			throw new IllegalArgumentException("Name cannot be null or empty");
-		} else if (name.length() > 100) {
-			throw new IllegalArgumentException("Name cannot be longer than 100 characters");
-		} else if (!name.matches("^[a-zA-Z0-9_]+$")) {
-			throw new IllegalArgumentException("Name can only contain alphanumeric characters and underscores");
-		}
-		if (type == null) {
-			throw new IllegalArgumentException("Type cannot be null");
-		}
-		if (value == null) {
-			throw new IllegalArgumentException("Value cannot be null");
-		}
 	}
 
 	private Object prepareValue(Object value) {
+		Validator.validateNotNull(VALUE, value);
+		Validator.validateNotEmpty(VALUE, name);
 		switch (this.type) {
 		case BOOLEAN:
+			Validator.validateBooleanValue(VALUE, value);
 			return Boolean.valueOf(value.toString());
 		case DOUBLE:
+			Validator.validateDoubleValue(VALUE, value);
 			return Double.valueOf(value.toString());
 		case INTEGER:
+			Validator.validateIntegerValue(VALUE, value);
 			return Integer.valueOf(value.toString());
 		default:
+			Validator.validateStringValue(VALUE, value);
 			return value.toString();
 		}
 	}
@@ -115,7 +111,10 @@ public class Attribute {
 		}
 
 		/**
-		 * Sets the name of the attribute
+		 * <p>Sets the name of the attribute.</p>
+		 * The name cannot be null or empty, can only contain alphanumeric characters and 
+		 * underscores and cannot be longer than 100 characters.
+		 * 
 		 * @param name a {@link String} object
 		 * @return a {@link Builder} object
 		 */
@@ -125,7 +124,7 @@ public class Attribute {
 		}
 
 		/**
-		 * Sets the type of the attribute
+		 * Sets the type of the attribute.
 		 * @param type a {@link AttributeType} object
 		 * @return a {@link Builder} object
 		 */
@@ -135,7 +134,17 @@ public class Attribute {
 		}
 
 		/**
-		 * Sets the value of the attribute
+		 * Sets the value of the attribute.
+		 * <p>The value must be of the following types:</p>
+		 * <p> - When the type is {@link AttributeType#BOOLEAN}, the value must be a 
+		 * {@link Boolean} object.</p>
+		 * <p> - When the type is {@link AttributeType#DOUBLE}, the value must be a 
+		 * {@link Double} object.</p>
+		 * <p> - When the type is {@link AttributeType#INTEGER}, the value must be a 
+		 * {@link Integer} object.</p>
+		 * <p> - Otherwise, the value must be a {@link String} object. The value cannot be null and
+		 * cannot be longer than 250 characters.</p>
+		 * 
 		 * @param value a {@link Object} object
 		 * @return a {@link Builder} object
 		 */
@@ -157,9 +166,7 @@ public class Attribute {
 		 * @return a &lt;T&gt; object
 		 */
 		public T done() {
-			if (parent == null) {
-				throw new IllegalArgumentException("Parent cannot be null");
-			}
+			Validator.validateNotNull("Parent", parent);
 			return parent;
 		}
 	}

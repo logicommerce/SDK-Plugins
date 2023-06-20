@@ -11,7 +11,7 @@ import com.logicommerce.sdk.models.User;
  */
 public class UserQueueMessage extends QueueMessage {
 
-	private User user;
+	private final User user;
 
 	/**
 	 * OrderQueueMessage constructor
@@ -23,6 +23,7 @@ public class UserQueueMessage extends QueueMessage {
 	 */
 	public UserQueueMessage(String action, Set<Attribute> attributes, Settings settings, User user) {
 		super(action, attributes, settings);
+		Validator.validateNotNull("User", user);
 		this.user = user;
 	}
 

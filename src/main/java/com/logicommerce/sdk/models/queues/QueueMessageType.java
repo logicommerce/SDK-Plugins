@@ -9,5 +9,5 @@ package com.logicommerce.sdk.models.queues;
  * @since 1.2.0
  */
 public enum QueueMessageType {
-	FREE, ORDER, USER, FREE_LARGE_MESSAGE;
+	FREE, ORDER, USER, FREE_LARGE;
 }

@@ -29,23 +29,13 @@ public abstract class QueueMessage {
 	}
 
 	private void validateArguments(String action, Set<Attribute> attributes, Settings settings) {
-		if (action == null) {
-			throw new IllegalArgumentException("action cannot be null");
-		} else if (action.isEmpty()) {
-			throw new IllegalArgumentException("action cannot be empty");
-		} else if (action.length() > 100) {
-			throw new IllegalArgumentException("action cannot be longer than 100 characters");
-		} else if (!action.matches("^[a-zA-Z0-9_]+$")) {
-			throw new IllegalArgumentException("action can only contain alphanumeric characters and underscores");
-		}
-		if (settings == null) {
-			throw new IllegalArgumentException("settings cannot be null");
-		}
+		Validator.validateKey("Action", action);
+		Validator.validateNotNull("Settings", settings);
 		if (attributes != null) {
 			if (attributes.size() > 10) {
-				throw new IllegalArgumentException("attributes cannot contain more than 10 elements");
+				Validator.raiseError("attributes cannot contain more than 10 elements");
 			} else if (attributes.stream().anyMatch(attribute -> attribute == null)) {
-				throw new IllegalArgumentException("attributes cannot contain null values");
+				Validator.raiseError("attributes cannot contain null values");
 			}
 		} 
 	}
