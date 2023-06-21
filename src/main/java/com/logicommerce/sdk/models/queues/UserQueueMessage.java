@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.User;
  * @author LogiCommerce
  * @since 1.2.0
  */
-public class UserQueueMessage extends QueueMessage {
+public final class UserQueueMessage extends QueueMessage {
 
 	private final Integer userId;
 

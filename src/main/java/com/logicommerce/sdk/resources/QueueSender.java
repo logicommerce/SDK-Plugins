@@ -10,6 +10,12 @@ import com.logicommerce.sdk.models.queues.QueueMessage;
  */
 public interface QueueSender {
 
-	void send(QueueMessage message);
+	/**
+	 * Send a message to a queue
+	 * 
+	 * @param message a {@link QueueMessage} object
+	 * @throws PluginResourceException if any.
+	 */
+	void send(QueueMessage message) throws PluginResourceException;
 
 }

@@ -7,7 +7,7 @@ package com.logicommerce.sdk.models.queues;
  * @author LogiCommerce
  * @since 1.2.0
  */
-public class Settings {
+public final class Settings {
 
 	private static final int MIN_DELAY = 0;
 	private static final int MAX_DELAY = 900;

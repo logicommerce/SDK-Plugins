@@ -1,6 +1,6 @@
 package com.logicommerce.sdk.models.queues;
 
-public class Validator {
+public final class Validator {
 
 	static final int MAX_KEY_LENGTH = 100;
 	static final int MAX_VALUE_LENGTH = 250;

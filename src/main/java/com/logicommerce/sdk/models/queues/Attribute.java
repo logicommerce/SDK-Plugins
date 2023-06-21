@@ -9,7 +9,7 @@ package com.logicommerce.sdk.models.queues;
  * @author LogiCommerce	
  * @since 1.2.0
  */
-public class Attribute {
+public final class Attribute {
 
 	private final String name;
 	private final AttributeType type;

@@ -8,7 +8,7 @@ import java.util.Set;
  * @author LogiCommerce
  * @since 1.2.0
  */
-public class FreeLargeQueueMessage extends QueueMessage {
+public final class FreeLargeQueueMessage extends QueueMessage {
 
 	private final String body;
 
