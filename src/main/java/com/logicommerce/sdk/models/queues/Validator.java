@@ -53,6 +53,12 @@ public class Validator {
 		}
 	}
 
+	static void validateRange(String title, int value, int min, int max) {
+		if (value < min || value > max) {
+			raiseError("%s must be between %d and %d", title, min, max);
+		}
+	}
+
 	static void validateNotNull(String title, Object content) {
 		if (content == null) {
 			raiseError(ILLEGAL_NULL, title);

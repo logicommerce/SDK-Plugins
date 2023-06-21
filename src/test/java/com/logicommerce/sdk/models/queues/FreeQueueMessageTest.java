@@ -119,6 +119,29 @@ class FreeQueueMessageTest {
 		assertNotNull(message);
 	}
 
+	@ParameterizedTest
+	@ValueSource(ints = {-1, 901})
+	void testBuildWithIllegalAttributeType(int interval) {
+		Builder builder = getBasicBuilder().settings()
+			.delay(DELAY)
+			.retryCount(RETRY_COUNT)
+			.interval(interval)
+			.done();
+		assertThrows(IllegalArgumentException.class, builder::build);
+	}
+
+	@ParameterizedTest
+	@ValueSource(ints = {0, 900})
+	void testBuildWithLegalAttributeType(int interval) {
+		Builder builder = getBasicBuilder().settings()
+			.delay(DELAY)
+			.retryCount(RETRY_COUNT)
+			.interval(interval)
+			.done();
+		QueueMessage message = builder.build();
+		assertNotNull(message);
+	}
+
 	private Builder getBasicBuilder() {
 		return FreeQueueMessage.builder()
 			.action(ACTION)
