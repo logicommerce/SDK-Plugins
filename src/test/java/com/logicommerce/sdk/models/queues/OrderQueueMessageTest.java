@@ -9,6 +9,8 @@ import com.logicommerce.sdk.models.order.implementations.OrderImpl;
 
 class OrderQueueMessageTest {
 
+	private static final Integer ORDER_ID = 137;
+
 	@Test
 	void testOrderNotDefined() {
 		assertThrows(IllegalArgumentException.class, () -> OrderQueueMessage.builder()
@@ -35,9 +37,12 @@ class OrderQueueMessageTest {
 
 		assertNotNull(message);
 		assertEquals(QueueMessageType.ORDER, message.getType());
+		assertEquals(ORDER_ID, ((OrderQueueMessage) message).getOrderId());
 	}
 
 	private Order getOrder() {
-		return new OrderImpl();
+		OrderImpl order = new OrderImpl();
+		order.setId(ORDER_ID);
+		return order;
 	}
 }

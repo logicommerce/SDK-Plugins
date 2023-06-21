@@ -11,7 +11,6 @@ public class Settings {
 
 	private final int retryCount;
 	private final int delay;
-	private final int priority;
 
 	/**
 	 * Settings constructor
@@ -20,10 +19,25 @@ public class Settings {
 	 * @param delay a {@link int} object
 	 * @param priority a {@link int} object
 	 */
-	public Settings(int retryCount, int delay, int priority) {
+	public Settings(int retryCount, int delay) {
+		validate(retryCount, delay);
 		this.retryCount = retryCount;
 		this.delay = delay;
-		this.priority = priority;
+	}
+
+	private void validate(int retryCount, int delay) {
+		if (retryCount < 0) {
+			Validator.raiseError("Retry count must be greater than or equal to 0");
+		}
+		if (retryCount > 10) {
+			Validator.raiseError("Retry count must be less than or equal to 10");
+		}
+		if (delay < 0) {
+			Validator.raiseError("Delay must be greater than or equal to 0");
+		}
+		if (delay > 900) {
+			Validator.raiseError("Delay must be less than or equal to 900");
+		}
 	}
 
 	/**
@@ -43,14 +57,6 @@ public class Settings {
 	}
 
 	/**
-	 * Returns the priority of the message
-	 * @return a {@link int} object
-	 */
-	public int getPriority() {
-		return priority;
-	}
-
-	/**
 	 * Returns a new {@link Builder} object
 	 * @return a {@link Builder} object
 	 */
@@ -66,7 +72,6 @@ public class Settings {
 		private T parent;
 		private int retryCount;
 		private int delay;
-		private int priority;
 
 		/**
 		 * Builder constructor
@@ -101,22 +106,13 @@ public class Settings {
 			return this;
 		}
 
-		/**
-		 * Sets the priority of the message
-		 * @param priority a int
-		 * @return a {@link Builder} object
-		 */
-		public Builder<T> priority(int priority) {
-			this.priority = priority;
-			return this;
-		}
 
 		/**
 		 * Builds the {@link Settings} object
 		 * @return a {@link Settings} object
 		 */
 		public Settings build() {
-			return new Settings(retryCount, delay, priority);
+			return new Settings(retryCount, delay);
 		}
 
 		/**

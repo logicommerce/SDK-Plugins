@@ -12,6 +12,8 @@ import com.logicommerce.sdk.models.UserAddress;
 
 class UserQueueMessageTest {
 
+	private static final Integer USER_ID = 73;
+
 	@Test
 	void testUserNotDefined() {
 		assertThrows(IllegalArgumentException.class, () -> UserQueueMessage.builder()
@@ -38,6 +40,7 @@ class UserQueueMessageTest {
 
 		assertNotNull(message);
 		assertEquals(QueueMessageType.USER, message.getType());
+		assertEquals(USER_ID, ((UserQueueMessage) message).getUserId());
 	}
 
 	private User getUser() {
@@ -45,7 +48,7 @@ class UserQueueMessageTest {
 
 			@Override
 			public Integer getId() {
-				return null;
+				return USER_ID;
 			}
 
 			@Override

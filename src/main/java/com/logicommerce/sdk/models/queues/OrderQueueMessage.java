@@ -11,7 +11,7 @@ import com.logicommerce.sdk.models.order.Order;
  */
 public final class OrderQueueMessage extends QueueMessage {
 
-	private final Order order;
+	private final Integer orderId;
 
 	/**
 	 * OrderQueueMessage constructor
@@ -24,7 +24,8 @@ public final class OrderQueueMessage extends QueueMessage {
 	public OrderQueueMessage(String action, Set<Attribute> attributes, Settings settings, Order order) {
 		super(action, attributes, settings);
 		Validator.validateNotNull("Order", order);
-		this.order = order;
+		Validator.validateNotNull("Order id", order.getId());
+		this.orderId = order.getId();
 	}
 
 	/**
@@ -37,11 +38,11 @@ public final class OrderQueueMessage extends QueueMessage {
 	}
 
 	/**
-	 * Returns the order
-	 * @return a {@link Order} object
+	 * Returns the order id
+	 * @return a {@link Integer} object
 	 */
-	public Order getOrder() {
-		return order;
+	public Integer getOrderId() {
+		return orderId;
 	}
 
 	/**
