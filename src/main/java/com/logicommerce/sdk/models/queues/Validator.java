@@ -2,8 +2,8 @@ package com.logicommerce.sdk.models.queues;
 
 public final class Validator {
 
-	static final int MAX_KEY_LENGTH = 100;
-	static final int MAX_VALUE_LENGTH = 250;
+	static final int MAX_KEY_LENGTH = 32;
+	static final int MAX_VALUE_LENGTH = 256;
 	static final String KEY_PATTERN = "^[a-zA-Z0-9_]+$";
 
 	static final String ILLEGAL_NULL = "%s cannot be null";

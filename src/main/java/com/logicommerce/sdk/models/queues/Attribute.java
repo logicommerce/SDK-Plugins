@@ -113,7 +113,7 @@ public final class Attribute {
 		/**
 		 * <p>Sets the name of the attribute.</p>
 		 * The name cannot be null or empty, can only contain alphanumeric characters and 
-		 * underscores and cannot be longer than 100 characters.
+		 * underscores and cannot be longer than 32 characters.
 		 * 
 		 * @param name a {@link String} object
 		 * @return a {@link Builder} object
@@ -143,7 +143,7 @@ public final class Attribute {
 		 * <p> - When the type is {@link AttributeType#INTEGER}, the value must be a 
 		 * {@link Integer} object.</p>
 		 * <p> - Otherwise, the value must be a {@link String} object. The value cannot be null and
-		 * cannot be longer than 250 characters.</p>
+		 * cannot be longer than 256 characters.</p>
 		 * 
 		 * @param value a {@link Object} object
 		 * @return a {@link Builder} object

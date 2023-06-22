@@ -19,7 +19,10 @@ public abstract class QueueMessageBuilder<T extends QueueMessageBuilder<T>> {
 	private List<Attribute.Builder<T>> attributeBuilders = new ArrayList<>();
 
 	/**
-	 * Sets the action of the message
+	 * <p>Sets the action of the message.</p>
+	 * The action cannot be null or empty, can only contain alphanumeric characters and 
+	 * underscores and cannot be longer than 32 characters.
+	 * 
 	 * @param action a {@link String} object
 	 * @return a {@link QueueMessageBuilder} object
 	 */
@@ -29,7 +32,10 @@ public abstract class QueueMessageBuilder<T extends QueueMessageBuilder<T>> {
 	}
 
 	/**
-	 * Sets the attributes of the message
+	 * <p>Sets the attributes of the message.</p>
+	 * Maximum 10 attributes are allowed.
+	 * 
+	 * 
 	 * @param attributes a {@link Set}&lt;{@link Attribute}&gt; object
 	 * @return a {@link QueueMessageBuilder} object
 	 */
@@ -39,7 +45,9 @@ public abstract class QueueMessageBuilder<T extends QueueMessageBuilder<T>> {
 	}
 
 	/**
-	 * Adds an attribute to the message
+	 * <p>Adds an attribute to the message.</p>
+	 * Maximum 10 attributes are allowed.
+	 * 
 	 * @return a {@link Attribute.Builder}
 	 */
 	public Attribute.Builder<T> attribute() {
@@ -49,7 +57,8 @@ public abstract class QueueMessageBuilder<T extends QueueMessageBuilder<T>> {
 	}
 
 	/**
-	 * Sets the settings of the message
+	 * <p>Sets the settings of the message.</p>
+	 * 
 	 * @param settings a {@link Settings} object
 	 * @return a {@link QueueMessageBuilder} object
 	 */
@@ -59,7 +68,8 @@ public abstract class QueueMessageBuilder<T extends QueueMessageBuilder<T>> {
 	}
 
 	/**
-	 * Sets the settings of the message
+	 * <p>Sets the settings of the message.</p>
+	 * 
 	 * @return a {@link Settings.Builder}
 	 */
 	public Settings.Builder<T> settings() {
@@ -68,13 +78,15 @@ public abstract class QueueMessageBuilder<T extends QueueMessageBuilder<T>> {
 	}
 
 	/**
-	 * Returns this object
+	 * <p>Returns this object.</p>
+	 * 
 	 * @return a {@link QueueMessageBuilder} object
 	 */
 	protected abstract T returnThis();
 
 	/**
-	 * Builds the QueueMessage
+	 * <p>Builds the QueueMessage.</p>
+	 * 
 	 * @return a {@link QueueMessage} object
 	 */
 	public QueueMessage build() {
