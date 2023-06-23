@@ -10,6 +10,8 @@ import java.util.Set;
  */
 public abstract class QueueMessage {
 
+	private static final int MAX_ATTRIBUTES = 10;
+
 	private final String action;
 	private final Set<Attribute> attributes;
 	private final Settings settings;
@@ -32,8 +34,8 @@ public abstract class QueueMessage {
 		Validator.validateKey("Action", action);
 		Validator.validateNotNull("Settings", settings);
 		if (attributes != null) {
-			if (attributes.size() > 10) {
-				Validator.raiseError("attributes cannot contain more than 10 elements");
+			if (attributes.size() > MAX_ATTRIBUTES) {
+				Validator.raiseError("attributes cannot contain more than %s elements", MAX_ATTRIBUTES);
 			} else if (attributes.stream().anyMatch(attribute -> attribute == null)) {
 				Validator.raiseError("attributes cannot contain null values");
 			}
