@@ -30,6 +30,7 @@ Todas las interfaces que definan servicios tienen el sufijo *Service*.
 - [TrackerService](TrackerService.md)
 - [UserDataService](UserDataService.md)
 - [UserService](UserService.md)
+- [QueueProcessorService](QueueProcessorService.md)
 
 ## Exception
 

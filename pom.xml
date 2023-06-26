@@ -5,7 +5,7 @@
 
 	<groupId>com.logicommerce</groupId>
 	<artifactId>sdk</artifactId>
-	<version>1.1.17</version>
+	<version>1.2.0</version>
 	<packaging>jar</packaging>
 
 	<name>SDK for Logicommerce Plugins</name>
@@ -59,7 +59,7 @@
 		<maven.compiler.release>${java.version}</maven.compiler.release>
 
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+		<maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
 		<maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
 		<maven-source-plugin.version>3.2.1</maven-source-plugin.version>
 		<maven-javadoc-plugin.version>3.3.0</maven-javadoc-plugin.version>
@@ -120,6 +120,11 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
