@@ -41,14 +41,9 @@ public class AddressBuilder<T, S> {
 
 	protected String mobile;
 
-	protected String fax;
-
 	protected boolean tax;
 
 	protected boolean re;
-
-	@Deprecated(since = "1.1.17", forRemoval = true)
-	protected boolean reverseChargeVat;
 	
 	protected LocationBuilder<AddressBuilder<T, S>> location;
 	
@@ -226,17 +221,6 @@ public class AddressBuilder<T, S> {
 	}
 
 	/**
-	 * <p>fax.</p>
-	 *
-	 * @param fax a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.builders.AddressBuilder} object
-	 */
-	public AddressBuilder<T, S> fax(String fax) {
-		this.fax = fax;
-		return returnThis();
-	}
-
-	/**
 	 * <p>tax.</p>
 	 *
 	 * @param tax a boolean
@@ -258,19 +242,6 @@ public class AddressBuilder<T, S> {
 		return returnThis();
 	}
 
-	/**
-	 * <p>reverseChargeVat.</p>
-	 *
-	 * @param reverseChargeVat a boolean
-	 * @return a {@link com.logicommerce.sdk.builders.AddressBuilder} object
-	 * @deprecated It will be removed in the next minor version.
-	 */
-	@Deprecated(since = "1.1.17", forRemoval = true)
-	public AddressBuilder<T, S> reverseChargeVat(boolean reverseChargeVat) {
-		this.reverseChargeVat = reverseChargeVat;
-		return returnThis();
-	}
-	
 	/**
 	 * <p>location.</p>
 	 *
@@ -322,10 +293,8 @@ public class AddressBuilder<T, S> {
 		userAddress.setNif(nif);
 		userAddress.setPhone(phone);
 		userAddress.setMobile(mobile);
-		userAddress.setFax(fax);
 		userAddress.setTax(tax);
 		userAddress.setRe(re);
-		userAddress.setReverseChargeVat(reverseChargeVat);
 		userAddress.setLocation(location.build());
 		userAddress.setName(name);
 	}

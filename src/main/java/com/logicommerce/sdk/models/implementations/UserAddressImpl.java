@@ -24,8 +24,6 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 
 	private String number;
 
-	private String fax;
-
 	private String nif;
 
 	private String vat;
@@ -33,9 +31,6 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	private boolean tax;
 
 	private boolean re;
-
-	@Deprecated(since = "1.1.17", forRemoval = true)
-	private boolean reverseChargeVat;
 
 	/**
 	 * <p>isDefaultAddress.</p>
@@ -171,25 +166,6 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	}
 
 	/**
-	 * <p>Getter for the field <code>fax</code>.</p>
-	 *
-	 * @return a {@link java.lang.String} object
-	 */
-	@Override
-	public String getFax() {
-		return fax;
-	}
-
-	/**
-	 * <p>Setter for the field <code>fax</code>.</p>
-	 *
-	 * @param fax a {@link java.lang.String} object
-	 */
-	public void setFax(String fax) {
-		this.fax = fax;
-	}
-
-	/**
 	 * <p>Getter for the field <code>nif</code>.</p>
 	 *
 	 * @return a {@link java.lang.String} object
@@ -263,29 +239,6 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 */
 	public void setRe(boolean re) {
 		this.re = re;
-	}
-
-	/**
-	 * <p>isReverseChargeVat.</p>
-	 *
-	 * @return a boolean
-	 * @deprecated It will be removed in the next minor version.
-	 */
-	@Override
-	@Deprecated(since = "1.1.17", forRemoval = true)
-	public boolean isReverseChargeVat() {
-		return reverseChargeVat;
-	}
-
-	/**
-	 * <p>Setter for the field <code>reverseChargeVat</code>.</p>
-	 *
-	 * @param reverseChargeVat a boolean
-	 * @deprecated It will be removed in the next minor version.
-	 */
-	@Deprecated(since = "1.1.17", forRemoval = true)
-	public void setReverseChargeVat(boolean reverseChargeVat) {
-		this.reverseChargeVat = reverseChargeVat;
 	}
 
 	/**

@@ -11,6 +11,8 @@ Los recursos se definen en base a la anotación *@Resource* como propiedad de la
 - *[Navigator](APIReference/Resources/Navigator.md)*: Para acceder y modificar datos de navegación del usuario
 - *[Location](APIReference/Resources/Location.md)*:  Para acceder a datos de localización e idioma.
 
+- *[QueueSender](APIReference/Resources/QueueSender.md)*: Envia mensajes en una cola de procesos.
+
 ## Recursos de modelos
 
 A algunos modelos de datos se accede como recurso.

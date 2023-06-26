@@ -69,16 +69,6 @@ public interface UserAddress extends Address {
 	String getNumber();
 
 	/**
-	 * Get fax of the user address.
-	 *
-	 * @since 1.0.16
-	 * @return a {@link String String} object
-	 * @deprecated  It will be removed in the next minor version.
-	 */
-	@Deprecated(since = "1.1.17", forRemoval = true)
-	String getFax();
-
-	/**
 	 * Get NIF of the user address.
 	 *
 	 * @since 1.0.16
@@ -109,15 +99,5 @@ public interface UserAddress extends Address {
 	 * @return a boolean
 	 */
 	boolean isRe();
-
-	/**
-	 * Get is Reverse Charge VAT.
-	 *
-	 * @since 1.0.16
-	 * @deprecated  It will be removed in the next minor version.
-	 * @return a boolean
-	 */
-	@Deprecated(since = "1.1.17", forRemoval = true)
-	boolean isReverseChargeVat();
 
 }
