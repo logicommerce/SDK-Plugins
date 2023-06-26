@@ -24,7 +24,8 @@ public @interface CacheSettings {
 	public String name() default "";
 
 	/**
-	 * Duration of cache in seconds.
+	 * Duration of cache in seconds. If it is not defined or 0, the duration of cache will be 300 
+	 * seconds.
 	 * @return a long
 	 */
 	public long duration() default 300;
