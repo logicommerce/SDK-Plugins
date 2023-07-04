@@ -44,6 +44,14 @@ public interface PluginDefinition extends ConfigDefinition {
 	 * @return a {@link java.lang.String String} object
 	 */
 	String getVersion();
+	
+	/**
+	 * <p>Get true if the plugin is multiple account.</p>
+	 *
+	 * @since 1.2.1
+	 * @return a {@link java.lang.String String} object
+	 */
+	boolean getMultipleAccount();
 
 	/**
 	 * <p>Get all connector definitions of the plugin.</p>

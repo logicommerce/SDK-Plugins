@@ -134,6 +134,11 @@ class PluginDefinitionTest {
 			public void addMappedField(MappedFieldDefinition mappedField) {
 				mappedFields.add(mappedField);
 			}
+
+			@Override
+			public boolean getMultipleAccount() {
+				return false;
+			}
 		};
 	}
 
