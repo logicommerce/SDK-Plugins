@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Para las respuestas de tipo 
+Para las respuestas de *getShipmentLabel*.
 
 ## Atributos
 

@@ -15,4 +15,3 @@ Muestra el usuario del pedido.
 
 - **[Gender](../../Enums/README.md#Gender)**: Enumerado
 - **[UserAddress](../UserAddress.md)**: Interface que se encuentra en el package *com.logicommerce.sdk.models*.
-

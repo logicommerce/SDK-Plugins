@@ -14,4 +14,3 @@ Extiende [WidgetResponse](WidgetResponse.md)
 ## Referencias
 
 - [**WidgetType**](../Enums/README.md#WidgetType): Enumerado
-

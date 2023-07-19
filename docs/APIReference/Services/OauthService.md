@@ -39,10 +39,10 @@ Devuelve: Objeto [**OauthUser**](../Models/OauthUser.md), con los datos de usuar
 
 ```java
 public interface OauthService extends PluginService {
-		
-	String getOauthUri(String redirectBaseUri, String state) throws PluginServiceException;
 
-	OauthUser callback(String redirectBaseUri, String state, String code) throws PluginServiceException;
+    String getOauthUri(String redirectBaseUri, String state) throws PluginServiceException;
+
+    OauthUser callback(String redirectBaseUri, String state, String code) throws PluginServiceException;
 
 }
 ```

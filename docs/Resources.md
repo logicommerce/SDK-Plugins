@@ -21,4 +21,3 @@ A algunos modelos de datos se accede como recurso.
 
 - *[User](APIReference/Models/User.md)*: Datos del usuario. Sólo disponible en las llamadas de usuario.
 - *[Cart](APIReference/Models/Cart.md)*: Datos de la cesta. Sólo disponible en las llamadas de olmos.
-

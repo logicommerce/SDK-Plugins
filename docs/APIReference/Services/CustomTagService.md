@@ -24,7 +24,7 @@ Devuelve la etiqueta con el nuevo valor.
 ```java
 public interface CustomTagService extends PluginService {
 
-	String getCustomTagValue(CustomTagItemType itemType, String value) throws PluginServiceException;
+    String getCustomTagValue(CustomTagItemType itemType, String value) throws PluginServiceException;
 
 }
 ```

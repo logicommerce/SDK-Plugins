@@ -20,4 +20,3 @@ Métodos del builder:
 
 - *token(String token)*: Añade un token.
 - *addItem(String name, String value)*: Añade un elemento para paymentToken.
-

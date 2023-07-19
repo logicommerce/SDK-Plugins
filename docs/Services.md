@@ -4,7 +4,7 @@ Los servicios de **Beyond SDK** son el puente de comunicación entre Beyond y el
 
 Según cada acción del sistema llamará al servicio que requiera. En cada petición a la API el servicio implementado será una sola instancia. Si el servicio tiene diferentes métodos que pueden ser llamados durante la petición se mantendrá, pues, la misma instancia.
 
-Aparte de implementar la interfaz que le corresponde, las clases pueden utilizar diferentes **[anotaciones](Annotations.md)** para tener la **configuración del plugin **como también diferentes **recursos** (Ver [Resources](Resources.md)).
+Aparte de implementar la interfaz que le corresponde, las clases pueden utilizar diferentes **[anotaciones](Annotations.md)** para tener la **configuración del plugin** como también diferentes **recursos** (Ver [Resources](Resources.md)).
 
 **[Servicios disponibles](APIReference/Services/README.md)**
 
@@ -34,4 +34,3 @@ public class RelatedItems implements RelatedItemsService {
 
 }
 ```
-

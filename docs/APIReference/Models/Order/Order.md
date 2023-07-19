@@ -54,8 +54,6 @@ Devuelve los datos de un pedido. *Order* llega como parámetro, nunca como *Reso
 - **OrderStatusType**: Enumerado
 - **ExportStatusType**: Enumerado
 
-
-
 ## Builder
 
 **OrderSdkBuilder** devuelve **Order**.
@@ -69,4 +67,3 @@ Métodos del builder:
 - totals(): Añade los totales, utiliza OrderTotalBuilder.
 - voucher(): Añade vouchers, utiliza OrderVoucherBuilder.
 - items(): Añade items, utiliza OrderItemBuilder.
-

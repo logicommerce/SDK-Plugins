@@ -9,4 +9,3 @@
 - [PaymentToken](PaymentToken.md)
 - [PaymentValidateParams](PaymentValidateParams.md)
 - [PaymentValidateResponse](PaymentValidateResponse.md)
-

@@ -33,11 +33,11 @@ El archivo module-info.java deberá definir el *provider* (Servicio).
 module com.thirdparty.user {
     requires com.logicommerce.sdk;
 
-	provides com.logicommerce.sdk.services.DefinitionService
-		with com.thirdparty.user.Definition;
+    provides com.logicommerce.sdk.services.DefinitionService
+        with com.thirdparty.user.Definition;
 
-	provides com.logicommerce.sdk.services.UserService
-		with com.thirdparty.user.UserServiceImpl;
+    provides com.logicommerce.sdk.services.UserService
+        with com.thirdparty.user.UserServiceImpl;
 
 }
 ```
@@ -56,28 +56,28 @@ import com.logicommerce.sdk.services.UserService;
 
 public class UserServiceImpl implements UserService {
 
-	@Resource
-	private User user;
+    @Resource
+    private User user;
 
-	@Override
-	public void upsert() throws PluginServiceException {
-		// insert or update action
-	}
+    @Override
+    public void upsert() throws PluginServiceException {
+        // insert or update action
+    }
 
-	@Override
-	public void delete() throws PluginServiceException {
-		// delete user action
-	}
+    @Override
+    public void delete() throws PluginServiceException {
+        // delete user action
+    }
 
-	@Override
-	public void login() throws PluginServiceException {
-		//  login action
-	}
+    @Override
+    public void login() throws PluginServiceException {
+        //  login action
+    }
 
-	@Override
-	public void logout() throws PluginServiceException {
-		// logout action
-	}
+    @Override
+    public void logout() throws PluginServiceException {
+        // logout action
+    }
 ```
 
 Como se puede ver, los métodos de este servicio, no tienen argumentos. La información del usuario de la sesión, se obtiene inyectando el recurso User.

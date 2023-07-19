@@ -11,4 +11,3 @@ Datos relacinados con la entrega.
 ## Referencias
 
 - **[CartShipment](CartShipment.md)**
-

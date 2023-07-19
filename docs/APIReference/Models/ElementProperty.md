@@ -10,4 +10,3 @@ Nombre y valor de propiedades de petido o similars.
 - **String** getValue()
 - **void** setName(**String** name)
 - **void** setValue**String** value)
-

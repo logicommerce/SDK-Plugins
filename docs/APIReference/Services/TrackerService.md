@@ -6,7 +6,7 @@ Servicio para la generación de trackers
 
 ### Obtener los trackers
 
-Procesa el formulario recibido con el método * getTrackers *.
+Procesa el formulario recibido con el método *getTrackers*.
 
 parámetros:
 

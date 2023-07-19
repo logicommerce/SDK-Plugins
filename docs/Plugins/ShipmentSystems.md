@@ -37,21 +37,21 @@ El archivo module-info.java deberá definir los diferentes *providers* referente
 ```java
 module com.thirdparty.shipper {
     requires com.logicommerce.sdk;
-	
-	provides com.logicommerce.sdk.services.DefinitionService
-		with com.thirdparty.shipper.Definition;
-	
-	provides com.logicommerce.sdk.services.ShipperService
-		with com.thirdparty.shipper.Shipper;
-	
-	provides com.logicommerce.sdk.services.ShippingTypeService
-		with com.thirdparty.shipper.ShippingType;
-	
-	provides com.logicommerce.sdk.services.ShipmentActionService
-		with com.thirdparty.shipper.ShipmentAction;
-	
-	provides com.logicommerce.sdk.services.ShipmentStatusService
-		with com.thirdparty.shipper.ShipmentStatus;
+    
+    provides com.logicommerce.sdk.services.DefinitionService
+       with com.thirdparty.shipper.Definition;
+    
+    provides com.logicommerce.sdk.services.ShipperService
+       with com.thirdparty.shipper.Shipper;
+    
+    provides com.logicommerce.sdk.services.ShippingTypeService
+       with com.thirdparty.shipper.ShippingType;
+    
+    provides com.logicommerce.sdk.services.ShipmentActionService
+       with com.thirdparty.shipper.ShipmentAction;
+    
+    provides com.logicommerce.sdk.services.ShipmentStatusService
+       with com.thirdparty.shipper.ShipmentStatus;
 }
 ```
 
@@ -59,7 +59,7 @@ module com.thirdparty.shipper {
 
 ### ShipperService
 
-##### Método getAvailableCarriers
+#### Método getAvailableCarriers
 
 > Comprovar que el nombre es correcto (debería ser shipper?)
 
@@ -87,9 +87,9 @@ Hay tres tipos de acciones:
 
 Estas acciones ser reciben con peticiones que vendran del SQS.
 
-##### Método processAction
+#### Método processAction
 
-Recibe el la expedición del pedido y la acción a realizar. El método devuelve la misma expedición. 
+Recibe el la expedición del pedido y la acción a realizar. El método devuelve la misma expedición.
 
 ### ShipmentStatusService
 
@@ -103,6 +103,6 @@ Acciones de estado disponibles:
 - SHIPPED
 - DELIVERED
 
-##### Método changeStatus
+#### Método changeStatus
 
-Recibe el la expedición del pedido y el cambio de estado. El método devuelve la misma expedición. 
+Recibe el la expedición del pedido y el cambio de estado. El método devuelve la misma expedición.

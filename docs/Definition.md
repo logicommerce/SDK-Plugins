@@ -102,11 +102,11 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
         }
     ],
     "mappedFields": [
-		{
-			"type": "STATUS_CODE",
-			"fields": ["PENDING", "PROCESSING", "SHIPPED", "CANCELLED"]
-		}
-	],
+        {
+            "type": "STATUS_CODE",
+            "fields": ["PENDING", "PROCESSING", "SHIPPED", "CANCELLED"]
+        }
+    ],
     "connectors": [
         {
             "type": "defined_type",
@@ -124,7 +124,7 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
 
 ## Obtención de la definición
 
-Se implementa el servicio *DefinitionService*. Este servicio permite devolver la definición estática así como una definición dinámica. 
+Se implementa el servicio *DefinitionService*. Este servicio permite devolver la definición estática así como una definición dinámica.
 
 ```java
 public interface DefinitionService extends PluginService {
@@ -141,8 +141,8 @@ public interface DefinitionService extends PluginService {
 Para tener acceso a la definición estática des de este servicio, se tiene que inyectar el recurso PluginDefinition.
 
 ```java
-	@Resource
-	private PluginDefinition pluginDefinition;
+    @Resource
+    private PluginDefinition pluginDefinition;
 ```
 
 ## Definición dinámica
@@ -157,12 +157,12 @@ Esto se debe de indicar en el servicio DefinitionService, como ejemplo:
 @Override
 public PluginDefinition getPluginDefinition() throws PluginServiceException {
 
-	Builder<?> mapping = new MappedFieldDefinitionImpl.Builder<>();
-	mapping.type(MappedItemType.USER);
-	mapping.addField("filed1");
+    Builder<?> mapping = new MappedFieldDefinitionImpl.Builder<>();
+    mapping.type(MappedItemType.USER);
+    mapping.addField("filed1");
     mapping.addField("filed2");
     
-	pluginDefinition.addMappedField(mapping.build());
+    pluginDefinition.addMappedField(mapping.build());
     //...
     
     return pluginDefinition;

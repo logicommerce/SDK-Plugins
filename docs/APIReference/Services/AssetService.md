@@ -6,7 +6,7 @@ Servicio para obtener de assets.
 
 ### Obtener los assets
 
-Procesa los assets retornados por * getAssets *.
+Procesa los assets retornados por *getAssets*.
 
 parámetros:
 
@@ -19,7 +19,7 @@ Devuelve una lista de **[AssetResponse](../Models/AssetResponse.md)**
 ```java
 public interface AssetService extends PluginService {
 
-	List<AssetResponse> getAssets(WidgetPageType pageType) throws PluginServiceException;
+    List<AssetResponse> getAssets(WidgetPageType pageType) throws PluginServiceException;
 
 }
 ```

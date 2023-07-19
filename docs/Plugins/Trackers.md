@@ -33,11 +33,11 @@ El archivo module-info.java deberá definir el *provider* (Servicio).
 module com.thirdparty.tracker {
     requires com.logicommerce.sdk;
 
-	provides com.logicommerce.sdk.services.DefinitionService
-		with com.thirdparty.tracker.Definition;
+    provides com.logicommerce.sdk.services.DefinitionService
+        with com.thirdparty.tracker.Definition;
 
-	provides com.logicommerce.sdk.services.TrackerService
-		with com.thirdparty.tracker.Tracker;
+    provides com.logicommerce.sdk.services.TrackerService
+        with com.thirdparty.tracker.Tracker;
 
 }
 ```
@@ -55,13 +55,13 @@ import com.logicommerce.sdk.services.TrackerService;
 
 public class Tracker implements TrackerService {
 
-	@Aggregate
-	private Config config;
+    @Aggregate
+    private Config config;
 
-	@Override
-	public List<TrackerResponse> getTrackers(TrackerPageType pageType, TrackerPosition position) throws PluginServiceException {
-		return new ArrayList<>();
-	}
+    @Override
+    public List<TrackerResponse> getTrackers(TrackerPageType pageType, TrackerPosition position) throws PluginServiceException {
+        return new ArrayList<>();
+    }
 ```
 
 El método getTrackers devuelve una lista de respuestas de tracker.

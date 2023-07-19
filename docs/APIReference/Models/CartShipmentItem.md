@@ -9,4 +9,3 @@ Elemento de un envío.
 - **String** getHash()
 - **String** getItemHash()
 - **int** getQuantity()
-

@@ -2,8 +2,6 @@
 
 Interfaz principal de donde extienden los servicios específicos de cola.
 
-
-
 ```java
 public interface QueueProcessorService extends PluginService {
 
@@ -19,7 +17,7 @@ Servicios que extienden de *QueueProcessorService*:
 ```java
 public interface FreeQueueProcessorService extends QueueProcessorService {
 
-	void process(String action, Set<Attribute> attributes) throws PluginServiceException;
+    void process(String action, Set<Attribute> attributes) throws PluginServiceException;
 
 }
 ```
@@ -29,7 +27,7 @@ public interface FreeQueueProcessorService extends QueueProcessorService {
 ```java
 public interface OrderQueueProcessorService extends QueueProcessorService {
 
-	void process(String action, Set<Attribute> attributes, Order order) throws PluginServiceException;
+    void process(String action, Set<Attribute> attributes, Order order) throws PluginServiceException;
 
 }
 
@@ -40,7 +38,7 @@ public interface OrderQueueProcessorService extends QueueProcessorService {
 ```java
 public interface UserQueueProcessorService extends QueueProcessorService {
 
-	void process(String action, Set<Attribute> attributes, User user) throws PluginServiceException;
+    void process(String action, Set<Attribute> attributes, User user) throws PluginServiceException;
 
 }
 
@@ -51,7 +49,7 @@ public interface UserQueueProcessorService extends QueueProcessorService {
 ```java
 public interface FreeLargeQueueProcessorService extends QueueProcessorService {
 
-	void process(String action, Set<Attribute> attributes, String body) throws PluginServiceException;
+    void process(String action, Set<Attribute> attributes, String body) throws PluginServiceException;
 
 }
 ```

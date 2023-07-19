@@ -54,7 +54,7 @@ Se explica la creación de plugins simples para cada tipo. Hay que tener en cuen
 - [Sistemas de pago](Plugins/Payment.md)
 - [Pedido](Plugins/Order.md)
 - [usuario](Plugins/User.md)
-- [Cesta](Plugins/Basket.md) 
+- [Cesta](Plugins/Basket.md)
 - [Sistemas de transporte](Plugins/ShipmentSystems.md)
 - [Trackers](Plugins/Trackers.md)
 

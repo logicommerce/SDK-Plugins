@@ -83,4 +83,3 @@ En este caso se inyecta la clase Configuration para obtener la configuración de
 El método *create* recibe el parámetro **[order](../APIReference/Models/order/Order.md)** de donde se pueden obtener todos los datos del pedido creado.
 
 El método *edit* recibe el parámetro **[order](../APIReference/Models/order/Order.md)** de donde se pueden obtener todos los datos del pedido modificado.
-

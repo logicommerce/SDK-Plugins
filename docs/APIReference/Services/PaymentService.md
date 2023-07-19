@@ -36,9 +36,9 @@ Devuelve **[PaymentValidateResponse](../Models/Payment/PaymentValidateResponse.m
 
 Para obtener listado de tokens de tarjetas que el usuario puede tener guardados se llama el método *getPaymentTokens*.
 
-Devuelve:
+**Devuelve**:
 
--  **[List(PaymentToken)](../Models/Payment/PaymentToken.md)**.
+- **[List(PaymentToken)](../Models/Payment/PaymentToken.md)**
 
 Para eliminar un token registrado se llama el método *deletePaymentToken*.
 
@@ -55,9 +55,9 @@ public interface PaymentService extends PluginService {
 
     PaymentValidateResponse validate(Order order, PaymentValidateParams paymentValidateParams) throws PluginServiceException;
     
-   	List<PaymentToken> getPaymentTokens();
+    List<PaymentToken> getPaymentTokens();
 
-	void deletePaymentToken(String token);
+    void deletePaymentToken(String token);
 
 }
 ```

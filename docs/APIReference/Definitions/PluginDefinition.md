@@ -23,6 +23,3 @@ Devuelve la definición del plugin (**plugin.json**).
 - **[ConnectorDefinition](ConnectorDefinition.md)**
 
 - **[ConnectorType](../Enums/README.md#ConnectorType)**
-
-  
-

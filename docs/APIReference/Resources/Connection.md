@@ -30,4 +30,3 @@ El resto son mutables y están pensados para que se puedan concatenar (como un b
 
 - **[Response](Response.md)**
 - **[PluginResourceException](PluginResourceException.md)**
-

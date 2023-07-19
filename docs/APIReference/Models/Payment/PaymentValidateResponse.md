@@ -21,7 +21,7 @@ Respuesta de la validación del pago:
 - **[PaymentValidateResponseType](../../Enums/README.md#PaymentValidateResponseType)**: Enumerado
 - **[PaymentValidateStatusType](../../Enums/README.md#PaymentValidateStatusType)**: Enumerado
 - **[PaymentData](PaymentData.md)**
-- **[OrderStatusDefinition](../../Definitions/OrderStatusDefinition.md)** 
+- **[OrderStatusDefinition](../../Definitions/OrderStatusDefinition.md)**
 
 ## Builder
 
@@ -41,4 +41,3 @@ Métodos del builder:
 - *skip()*: Cuando la validación no requiere acciones.
 - *webhookMessage()*: Cuando la validación requiere que se muestre mensaje.
 - *validated()*: Para indicar que la validación ya ha sido realizada anteriormente.
-

@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Devuelve los datos de las imágenes de producto. 
+Devuelve los datos de las imágenes de producto.
 
 - **String** getSmallImage()
 - **String** getMediumImage()

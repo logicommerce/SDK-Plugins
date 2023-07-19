@@ -95,8 +95,8 @@ public class Config {
     @Resource
     private Navigator navigator;
     
-	@Mapped(value = MappedItemType.USER)
-	private Map<String, String> mappedFields;
+    @Mapped(value = MappedItemType.USER)
+    private Map<String, String> mappedFields;
 
     // ...
 

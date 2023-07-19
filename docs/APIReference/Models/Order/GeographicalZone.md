@@ -8,4 +8,3 @@ Devuelve información sobre la Zona geográfica.
 
 - **Int** getCountryId()
 - **Int** getLocationId()
-

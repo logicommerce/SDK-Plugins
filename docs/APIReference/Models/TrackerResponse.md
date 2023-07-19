@@ -14,4 +14,3 @@ Extiende [**WidgetResponse**](WidgetResponse.md)
 ## Referencias
 
 - **[TrackerScriptType](../Enums/README.md#TrackerScriptType)**: Enumerado
-

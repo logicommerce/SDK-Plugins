@@ -12,4 +12,3 @@ Se explica la creación de plugins simples para cada tipo. Hay que tener en cuen
 - [Sistemas de transporte](ShipmentSystems.md)
 - [Trackers](Trackers.md)
 - (TODO) [Valoración de tienda](ShopReview.md)
-

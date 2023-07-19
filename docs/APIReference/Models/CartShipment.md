@@ -15,4 +15,3 @@ Datos del envío relacionado con la cesta de la compra.
 
 - **[CartShipmentItem](CartShipmentItem.md)**
 - **[CartWarehouse](CartWarehouse.md)**
-

@@ -12,4 +12,3 @@ Devuelve la lista de transportistas del sistema de transporte
 ## Referencias
 
 - **[Carrier](Carrier.md)**
-

@@ -13,4 +13,3 @@ public interface PaymentSystemService extends PluginService {
 
 }
 ```
-

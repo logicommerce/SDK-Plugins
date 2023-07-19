@@ -39,7 +39,7 @@ El archivo module-info.java deberá definir el *provider*.
 ```java
 module com.thirdparty.payment {
     requires com.logicommerce.sdk;
-	
+
     provides com.logicommerce.sdk.services.PaymentService
         with com.thirdparty.payment.Payment;
     provides com.logicommerce.sdk.services.PaymentKeysService
@@ -209,16 +209,16 @@ Recibe por parámetro **String** con el token (identificador) a eliminar.
 ##### Ejemplo
 
 ```java
-	@Resource
-	private UserData userData;
-	//...
+    @Resource
+    private UserData userData;
+    //...
 
-	@Override
-	public void deletePaymentToken(String tokenId) {
-		if(userData.get(tokenId) != null) {
-			userData.remove(tokenId);
-		}
-	}
+    @Override
+    public void deletePaymentToken(String tokenId) {
+        if(userData.get(tokenId) != null) {
+            userData.remove(tokenId);
+        }
+    }
 ```
 
 #### **Referencias**
@@ -277,8 +277,6 @@ Map<String, String> params = paymentValidateParams.getParams();
 return new PaymentKeysImpl(params.get(TRANSACTION_KEY), params.get(AUTH_CODE_KEY));
 ```
 
-
-
 ## Implementación PaymentSystemService
 
 En caso de necesitar propiedades adicionales se debe de implementar la interfaz PaymentSystemService.
@@ -304,16 +302,16 @@ import com.logicommerce.sdk.services.PaymentSystemService;
 import com.logicommerce.sdk.services.PluginServiceException;
 
 public class PaymentSystemThirdParty implements PaymentSystemService {
-	
-	@Override
-	public PaymentSystemProperties getProperties() throws PluginServiceException {
-		 // Your code
-	}
     
-	@Override
-	public void selectProperty(String propertyName, Map<String, String> additionalData) throws PluginServiceException {
-		 // Your code
-	}
+    @Override
+    public PaymentSystemProperties getProperties() throws PluginServiceException {
+         // Your code
+    }
+    
+    @Override
+    public void selectProperty(String propertyName, Map<String, String> additionalData) throws PluginServiceException {
+         // Your code
+    }
 
 }
 ```
@@ -340,14 +338,14 @@ private UserData userData;
 // ...
 
 List<PaymentSystemProperty> properties = userData.entrySet().stream()
-			.map(this::prepareProperty)
-			.filter(Objects::nonNull)
-			.collect(Collectors.toList());
+            .map(this::prepareProperty)
+            .filter(Objects::nonNull)
+            .collect(Collectors.toList());
 return new PaymentSystemPropertiesImpl(properties);
 
 ```
 
-#### **Referencias**
+#### Referencias
 
 [@Resource](../Annotations.md#Resource)
 
@@ -358,4 +356,3 @@ return new PaymentSystemPropertiesImpl(properties);
 Todos los plugins necesitan implementar la interfaz DefinitionService. (com.logicommerce.sdk.services.DefinitionService)
 
 ver  **[DefinitionService](../APIReference/Services/DefinitionService.md)**
-

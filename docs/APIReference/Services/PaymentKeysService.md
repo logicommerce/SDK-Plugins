@@ -12,9 +12,9 @@ Cuando el sistema de pago vuelve los datos, la API no puede saber a qué sistema
 
 Se tiene que detectar mediante los parámetros recibidos si el plugin es el responsable de gestionar el pago.
 
-parámetros:
+**Parámetros**:
 
-- **[PaymentValidateParams](../Models/Payment/PaymentValidateParams.md)** paymentValidateParams
+* **[PaymentValidateParams](../Models/Payment/PaymentValidateParams.md)** paymentValidateParams
 
 Devuelve **[PaymentKeys](../Models/Payment/PaymentKeys.md)**.
 
@@ -27,4 +27,3 @@ public interface PaymentKeysService extends PluginService {
 
 }
 ```
-

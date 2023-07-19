@@ -39,7 +39,7 @@ public interface ShipmentService extends PluginService {
 
     OrderShipment processAction(final OrderShipment shipment, ShipmentActionType actionType) throws PluginServiceException;
     
-	void changeStatus(OrderShipment orderShipment, OrderShipmentStatusType orderShipmentStatusType) throws PluginServiceException;
+    void changeStatus(OrderShipment orderShipment, OrderShipmentStatusType orderShipmentStatusType) throws PluginServiceException;
     
     DataFile getShipmentLabel(final OrderShipment shipment) throws PluginServiceException;
 

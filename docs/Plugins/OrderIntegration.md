@@ -77,7 +77,7 @@ El método *importOrders* retorna una lista de pedidos a integrar en el sistema.
 
 Para crear los pedios el plugin dispone de un builder específico **OrderSdkBuilder**
 
-#### **Referencias**
+### Referencias
 
 [Order](../APIReference/Models/Order/Order.md)
 

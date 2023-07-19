@@ -128,4 +128,3 @@ Las clases **Config** y **ConfigBuilder** son propias del plugin.
 Se puede ver cómo se le pasa una instancia de **config** y una implementación **ConnectionFake** y se le acaba pidiendo un objeto de tipo **RelatedItems**.
 
 En cambio el recurso de **Logger** no se añade a PluginInjector. En este caso **PluginInjector** crea un objeto falso de tipo **Logger** que se llamará y no hará nada.
-

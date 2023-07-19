@@ -17,4 +17,3 @@ Muestra las acciones de los estados.
 ## Referencias
 
 - **[SettingOrderSubstatusActionType](../../Enums/README.md#SettingOrderSubstatusActionType)** : Enumerator
-

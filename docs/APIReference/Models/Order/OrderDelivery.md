@@ -18,6 +18,3 @@ Muestra la información de la entrega.
 - **[OrderShipment](OrderShipment.md)**
 
 - **[OrderDeliveryPhysicalLocation](OrderDeliveryPhysicalLocation.md)**
-
-  
-

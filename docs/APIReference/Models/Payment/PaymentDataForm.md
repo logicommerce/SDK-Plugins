@@ -1,18 +1,18 @@
-## PaymentDataForm
+# PaymentDataForm
 
 Extiende interfaz [PaymentData](PaymentData.md)
 
-### Métodos
+## Métodos
 
 - **String** getUrl()
 - **String** getMethod()
 - **List<[Param](../Param.md)>** getParams()
 
-### Referencias
+## Referencias
 
 - **[Param](../Param.md)**
 
-### Builder
+## Builder
 
 Métodos del builder:
 

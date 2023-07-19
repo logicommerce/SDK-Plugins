@@ -8,4 +8,3 @@ Esta interfaz no tiene métodos. Es una definición de tipo. En caso de que los 
 
 * [PaymentDataForm](PaymentDataForm.md)
 * [PaymentDataNoPay](PaymentDataNoPay.md)
-

@@ -25,29 +25,28 @@ Ejemplo de implementación de DefinitionService. Esta implementación devuelve l
 ```java
 public class Definition implements DefinitionService {
 
-	@Resource
-	private PluginDefinition pluginDefinition;
+    @Resource
+    private PluginDefinition pluginDefinition;
 
-	@Override
-	public PluginDefinition getPluginDefinition() throws PluginServiceException {
-		return pluginDefinition;
-	}
+    @Override
+    public PluginDefinition getPluginDefinition() throws PluginServiceException {
+        return pluginDefinition;
+    }
 
-	@Override
-	public List<ConnectorDefinition> getConnectorDefinitions() throws PluginServiceException {
-		return pluginDefinition.getConnectorDefinitions();
-	}
+    @Override
+    public List<ConnectorDefinition> getConnectorDefinitions() throws PluginServiceException {
+        return pluginDefinition.getConnectorDefinitions();
+    }
 
-	@Override
-	public ConnectorDefinition getConnectorDefinition(DefinitionType definitionType) throws PluginServiceException {
-		for (ConnectorDefinition connectorDefinition : getConnectorDefinitions()) {
-			if (connectorDefinition.getType().equals(definitionType)) {
-				return connectorDefinition;
-			}
-		}
-		return null;
-	}
+    @Override
+    public ConnectorDefinition getConnectorDefinition(DefinitionType definitionType) throws PluginServiceException {
+        for (ConnectorDefinition connectorDefinition : getConnectorDefinitions()) {
+            if (connectorDefinition.getType().equals(definitionType)) {
+                return connectorDefinition;
+            }
+        }
+        return null;
+    }
 
 }
 ```
-

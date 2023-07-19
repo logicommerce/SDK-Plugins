@@ -17,20 +17,20 @@ Devuelve la definición de las propiedades del plugin. Hay que tener en cuenta q
 - **[DefinitionLanguages](DefinitionLanguages.md)** getLanguages(): Nombre de la propiedad por idioma
 - **List\<PropertyDefinitionPermission>** getPermissions(): Permisos para cada propiedad
 
-### PropertyDefinitionValue
+**PropertyDefinitionValue**:
 
 Valores posibles que puede tener la propiedad.
 
-### Métodos de la propiedad
+**Métodos de la propiedad**:
 
 - **String** getValue()
 - **[DefinitionLanguages](DefinitionLanguages.md)** getLanguages(): Nombre del valor por idioma
 
-### PropertyDefinitionPermission
+**PropertyDefinitionPermission**:
 
 Permisos posibles que puede tener la propiedad.
 
-### Métodos de la propiedad
+**Métodos de la propiedad**:
 
 - **[PermissionType](../Enums/README.md#PermissionType)** getPermission(): Valor del permisio associado a la propiedad.
 

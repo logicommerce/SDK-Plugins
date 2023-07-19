@@ -8,12 +8,11 @@ Envia mensajes en una cola de procesos. Los mensajes los recibirá *[QueueProces
 
 - **void** send(QueueMessage message)
 
-
 ## QueueMessage
 
 *QueueMessage* es la clase abstracta donde se define el menaje.
 
-### Campos 
+### Campos
 
 - **action**: cadena de texto de no mas de 32 carácteres que define la acció. Solo permite letras, numéros y "_".
 - **attributes**: Lista de atributos del mensaje.
@@ -24,7 +23,6 @@ Envia mensajes en una cola de procesos. Los mensajes los recibirá *[QueueProces
   - **delay**: Tiempo de espera en segundos para mandar el mensaje a la cola. No puede ser inferior a 0 ni superior a 900. Su valor por defecto es 0.
   - **retryCount**: Define el número de reintentos en el caso que no se pueda procesar el mensaje. No puede ser inferior a 0 ni superior a 10. Su valor por defecto es 0 (no hay reintentos).
   - **interval**: Tiempo de espera en segundos entre reintentos. No puede ser inferior a 0 ni superior a 10. Su valor por defecto es 0.
-
 
 Implementaciones de *QueueService*:
 

@@ -5,11 +5,8 @@ Permite cachear cadenas de texto.
 ## Métodos disponibles
 
 - String get(String key): Devuelve el valor cacheado. Si no existe o ha caducado devuelve *null*.
-
 - void put(String key, String value): Guarda un valor en cache.
-
 - void purge(): Límpia la cache.
-
 
 ## Configuracion de la cache
 

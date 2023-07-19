@@ -14,4 +14,3 @@ Devuelve información sobre la dirección de entrega para tienda física.
 - **String** getState()
 - **String** getPostalCode()
 - **[Location](../Location.md)** getLocation()
-

@@ -15,4 +15,3 @@ Para las respuestas de tipo tracker o widtget.
 - **[WidgetAmbience](../Enums/README.md#WidgetAmbience)**: Enumerado
 - **[WidgetPageType](../Enums/README.md#WidgetPageType)**: Enumerado
 - **[WidgetPosition](../Enums/README.md#WidgetPosition)**: Enumerado
-

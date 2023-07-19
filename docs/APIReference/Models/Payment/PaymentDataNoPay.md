@@ -1,12 +1,12 @@
-## PaymentDataNoPay
+# PaymentDataNoPay
 
 Extiende interfaz [PaymentData](PaymentData.md)
 
-### Métodos
+## Métodos
 
 - **String** getToken()
 
-### Builder
+## Builder
 
 Métodos del builder:
 

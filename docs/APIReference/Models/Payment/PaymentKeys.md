@@ -16,4 +16,3 @@ El SDK facilita el trabajo con una implementación: **PaymentKeysImpl** donde a 
 ```java
 PaymentKeys paymentKeys = new PaymentKeysImpl(transactionId, authorizationCode);
 ```
-

@@ -13,7 +13,7 @@ Propiedades del sistema de pago
 
 ## Implementación
 
-El SDK facilita el trabajo con una implementación: **PaymentSystemPropertiesImpl** donde a su constructor se le tiene que pasar una lista de propiedaes:  List<PaymentSystemProperty>
+El SDK facilita el trabajo con una implementación: **PaymentSystemPropertiesImpl** donde a su constructor se le tiene que pasar una lista de propiedaes:  List<[PaymentSystemProperty](PaymentSystemProperty.md)>
 
 ```java
 PaymentSystemProperties paymentSystemProperties = new PaymentSystemPropertiesImpl(properties);
@@ -22,4 +22,3 @@ PaymentSystemProperties paymentSystemProperties = new PaymentSystemPropertiesImp
 ## Referencias
 
 - **[PaymentSystemProperty](PaymentSystemProperty.md)**
-
