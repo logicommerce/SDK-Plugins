@@ -81,4 +81,12 @@ public interface Cart {
 	 */
 	String getCurrencyCode();
 
+	/**
+	 * Get payment method for the cart.
+	 *
+	 * @since 	1.3.0
+	 * @return a {@link CartPaymentSystem} object
+	 */
+	CartPaymentSystem getPaymentSystem();
+
 }

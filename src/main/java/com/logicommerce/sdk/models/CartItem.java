@@ -151,4 +151,12 @@ public interface CartItem {
 	 */
 	Category getMainCategory();
 
+	/**
+	 * Get the tax code for this item if exists. Otherwise, return null.
+	 * 
+	 * @since 1.3.0
+	 * @return a {@link String} object
+	 */
+	String getTaxCode();
+
 }

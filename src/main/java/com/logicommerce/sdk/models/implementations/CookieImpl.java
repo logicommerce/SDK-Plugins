@@ -32,7 +32,6 @@ public class CookieImpl implements Cookie {
 	 * 
 	 * @param name a {@link java.lang.String} object
 	 * @param value a {@link java.lang.String} object
-	 * @param ttl a int
 	 */
 	public CookieImpl(String name, String value) {
 		this.name = name;
