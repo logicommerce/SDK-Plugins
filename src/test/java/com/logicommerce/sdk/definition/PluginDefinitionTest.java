@@ -2,9 +2,12 @@ package com.logicommerce.sdk.definition;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 import java.util.ArrayList;
 import java.util.List;
+import org.junit.jupiter.api.Test;
 import com.logicommerce.sdk.definition.implementations.MappedFieldDefinitionImpl;
 import com.logicommerce.sdk.definition.implementations.MarketplaceDefinitionImpl;
 import com.logicommerce.sdk.definition.implementations.MarketplaceDefinitionImpl.Builder;
@@ -13,7 +16,6 @@ import com.logicommerce.sdk.definition.implementations.ShipperDefinitionImpl;
 import com.logicommerce.sdk.enums.ConnectorType;
 import com.logicommerce.sdk.enums.MappedItemType;
 import com.logicommerce.sdk.enums.PermissionType;
-import org.junit.jupiter.api.Test;
 
 class PluginDefinitionTest {
 
@@ -137,6 +139,16 @@ class PluginDefinitionTest {
 
 			@Override
 			public boolean getMultipleAccount() {
+				return false;
+			}
+
+			@Override
+			public boolean getUserGroupsFilter() {
+				return false;
+			}
+
+			@Override
+			public boolean getCountryZonesFilter() {
 				return false;
 			}
 		};

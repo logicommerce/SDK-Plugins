@@ -52,6 +52,22 @@ public interface PluginDefinition extends ConfigDefinition {
 	 * @return a {@link java.lang.String String} object
 	 */
 	boolean getMultipleAccount();
+	
+	/**
+	 * <p>Get true if the plugin active User/groups filter.</p>
+	 *
+	 * @since 1.2.2
+	 * @return a {@link java.lang.String String} object
+	 */
+	boolean getUserGroupsFilter();
+
+	/**
+	 * <p>Get true if the plugin active Country/zones filter.</p>
+	 *
+	 * @since 1.2.2
+	 * @return a {@link java.lang.String String} object
+	 */
+	boolean getCountryZonesFilter();
 
 	/**
 	 * <p>Get all connector definitions of the plugin.</p>
