@@ -12,12 +12,12 @@ import com.logicommerce.sdk.models.Cart;
 public interface TaxCalculatorService extends PluginService {
 
 	/**
-	 * Calculate the tax for a given cart.
+	 * Calculate the taxes for a given cart.
 	 *
 	 * @param cart a {@link Cart} object
 	 * @return a {@link CalculatedTaxes} object
 	 * @throws PluginServiceException if any.
 	 */
-	CalculatedTaxes calculateTax(Cart cart) throws PluginServiceException;
+	CalculatedTaxes calculateTaxes(Cart cart) throws PluginServiceException;
 
 }
