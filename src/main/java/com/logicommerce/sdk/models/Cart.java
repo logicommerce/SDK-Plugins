@@ -89,4 +89,13 @@ public interface Cart {
 	 */
 	CartPaymentSystem getPaymentSystem();
 
+
+	/**
+	 * Get discounts for the cart.
+	 * 
+	 * @since 	1.3.0
+	 * @return a {@link List} of {@link CartDiscount} objects
+	 */
+	List<CartDiscount> getDiscounts();
+
 }

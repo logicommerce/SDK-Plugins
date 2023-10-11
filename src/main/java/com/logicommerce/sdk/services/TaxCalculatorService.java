@@ -1,7 +1,7 @@
 package com.logicommerce.sdk.services;
 
-import com.logicommerce.sdk.models.CalculatedTaxes;
 import com.logicommerce.sdk.models.Cart;
+import com.logicommerce.sdk.models.taxes.CalculatedTaxes;
 
 /**
  * TaxCalculatorService for Sales Tax Systems

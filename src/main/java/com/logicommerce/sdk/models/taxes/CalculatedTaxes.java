@@ -1,4 +1,4 @@
-package com.logicommerce.sdk.models;
+package com.logicommerce.sdk.models.taxes;
 
 import java.util.List;
 
@@ -15,6 +15,7 @@ public class CalculatedTaxes {
 	private double totalTaxable;
 	private double totalTax;
 	private List<CalculatedTaxRow> rows;
+	private List<CalculatedTaxSummary> summary;
 
 	/**
 	 * Returns external identifier of the calculated taxes.
@@ -96,4 +97,19 @@ public class CalculatedTaxes {
 		this.rows = rows;
 	}
 
+	/**
+	 * Returns list of calculated tax summary.
+	 * @return a {@link List}&lt;{@link CalculatedTaxSummary}&gt; object
+	 */
+	public List<CalculatedTaxSummary> getSummary() {
+		return summary;
+	}
+
+	/**
+	 * Sets list of calculated tax summary.
+	 * @param summary a {@link List}&lt;{@link CalculatedTaxSummary}&gt; object
+	 */
+	public void setSummary(List<CalculatedTaxSummary> summary) {
+		this.summary = summary;
+	}
 }

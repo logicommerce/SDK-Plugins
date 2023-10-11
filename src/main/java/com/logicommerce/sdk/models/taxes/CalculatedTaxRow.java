@@ -1,4 +1,4 @@
-package com.logicommerce.sdk.models;
+package com.logicommerce.sdk.models.taxes;
 
 import com.logicommerce.sdk.enums.TaxRowType;
 
@@ -19,6 +19,7 @@ public class CalculatedTaxRow {
 	private double taxableAmount;
 	private double taxRate;
 	private double taxAmount;
+	private double discountAmount;
 
 	/**
 	 * Returns the internal identifier of the calculated tax row.
@@ -148,4 +149,11 @@ public class CalculatedTaxRow {
 		this.taxAmount = taxAmount;
 	}
 
+	/**
+	 * Returns the discount amount of the calculated tax row.
+	 * @return a double
+	 */
+	public double getDiscountAmount() {
+		return discountAmount;
+	}
 }

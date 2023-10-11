@@ -1,4 +1,4 @@
-package com.logicommerce.sdk.models;
+package com.logicommerce.sdk.models.taxes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +18,7 @@ public class CalculatedTaxesBuilder {
 	private double totalTaxable;
 	private double totalTax;
 	private List<CalculatedTaxRowBuilder> rows;
+	private List<CalculatedTaxSummaryBuilder> summary;
 
 	/**
 	 * Sets external identifier of the calculated taxes.
@@ -73,6 +74,19 @@ public class CalculatedTaxesBuilder {
 	}
 
 	/**
+	 * Adds a calculated tax summary to the calculated taxes.
+	 * @return a {@link CalculatedTaxSummaryBuilder} object
+	 */
+	public CalculatedTaxSummaryBuilder summary() {
+		CalculatedTaxSummaryBuilder summary = new CalculatedTaxSummaryBuilder(this);
+		if (this.summary == null) {
+			this.summary = new ArrayList<>();
+		}
+		this.summary.add(summary);
+		return summary;
+	}
+
+	/**
 	 * Builds a {@link CalculatedTaxes} object.
 	 * @return a {@link CalculatedTaxes} object
 	 */
@@ -85,6 +99,11 @@ public class CalculatedTaxesBuilder {
 		if (rows != null) {
 			calculatedTaxes.setRows(rows.stream()
 				.map(CalculatedTaxRowBuilder::build)
+				.collect(Collectors.toList()));
+		}
+		if (summary != null) {
+			calculatedTaxes.setSummary(summary.stream()
+				.map(CalculatedTaxSummaryBuilder::build)
 				.collect(Collectors.toList()));
 		}
 		return calculatedTaxes;

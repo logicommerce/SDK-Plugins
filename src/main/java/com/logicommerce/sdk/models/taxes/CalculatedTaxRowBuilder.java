@@ -1,4 +1,4 @@
-package com.logicommerce.sdk.models;
+package com.logicommerce.sdk.models.taxes;
 
 import com.logicommerce.sdk.enums.TaxRowType;
 

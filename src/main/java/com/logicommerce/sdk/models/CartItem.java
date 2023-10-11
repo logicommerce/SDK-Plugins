@@ -159,4 +159,12 @@ public interface CartItem {
 	 */
 	String getTaxCode();
 
+	/**
+	 * Get the applied discounts to this item.
+	 * 
+	 * @since 1.3.0
+	 * @return a {@link List}&lt;{@link CartDiscount}&gt; object
+	 */
+	List<CartDiscount> getDiscounts();
+
 }
