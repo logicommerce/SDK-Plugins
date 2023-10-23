@@ -40,6 +40,8 @@ public class OrderShipmentBuilder<T> {
 	protected ExportStatusType exportStatusType;
 
 	protected String trackingNumber;
+	
+	protected String trackingUrl;
 
 	protected Integer substatus;
 
@@ -180,6 +182,17 @@ public class OrderShipmentBuilder<T> {
 		this.trackingNumber = trackingNumber;
 		return this;
 	}
+	
+	/**
+	 * <p>trackingUrl.</p>
+	 *
+	 * @param trackingUrl a {@link java.lang.String} object
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderShipmentBuilder} object
+	 */
+	public OrderShipmentBuilder<T> trackingUrl(String trackingUrl) {
+		this.trackingUrl = trackingUrl;
+		return this;
+	}
 
 	/**
 	 * <p>substatus.</p>
@@ -211,6 +224,7 @@ public class OrderShipmentBuilder<T> {
 		shipment.setExportStatus(exportStatusType);
 		shipment.setTrackingNumber(trackingNumber);
 		shipment.setSubstatus(substatus);
+		shipment.setTrackingUrl(trackingUrl);
 		return shipment;
 	}
 
