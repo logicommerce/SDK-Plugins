@@ -41,4 +41,13 @@ public interface ShipmentService extends PluginService {
 	 */
 	DataFile getShipmentLabel(final OrderShipment shipment) throws PluginServiceException;
 
+	/**
+	 * <p>createShipmentLabel.</p>
+	 *
+	 * @param shipment a {@link com.logicommerce.sdk.models.order.OrderShipment} object
+ 	 * @since 1.2.3
+	 * @return a {@link com.logicommerce.sdk.models.DataFile} object
+	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
+	 */
+	DataFile createShipmentLabel(final OrderShipment shipment) throws PluginServiceException;
 }

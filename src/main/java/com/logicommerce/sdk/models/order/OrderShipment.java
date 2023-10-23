@@ -111,6 +111,22 @@ public interface OrderShipment {
 	void setTrackingNumber(String trackingNumber);
 	
 	/**
+	 * <p>getTrackingUrl.</p>
+	 * @since 1.2.3
+	 * 
+	 * @return a {@link java.lang.String} object
+	 */
+	String getTrackingUrl();
+	
+	/**
+	 * <p>setTrackingUrl.</p>
+	 * @since 1.2.3
+	 * 
+	 * @param trackingNumber a {@link java.lang.String} object
+	 */
+	void setTrackingUrl(String trackingUrl);
+	
+	/**
 	 * <p>getDocumentNumber.</p>
 	 *
 	 * @return a {@link java.lang.String} object
