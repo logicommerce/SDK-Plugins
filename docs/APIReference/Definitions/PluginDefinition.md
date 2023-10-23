@@ -15,6 +15,9 @@ Devuelve la definición del plugin (**plugin.json**).
 - **List<[ConnectorDefinition](ConnectorDefinition.md)>** getConnectorDefinitions()
 - **void** addConnectorDefinition(**T** connectorDefinition)
 - **T** getConnectorDefinition([ConnectorType](../Enums/README.md#ConnectorType) connectorType)
+- **boolean** getMultipleAccount()
+- **boolean** getUserGroupsFilter()
+- **boolean** getCountryZonesFilter()
 
 ## Referencias
 

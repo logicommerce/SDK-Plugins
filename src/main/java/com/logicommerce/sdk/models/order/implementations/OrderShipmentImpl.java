@@ -56,6 +56,8 @@ public class OrderShipmentImpl implements OrderShipment {
 	private String documentNumber;
 	
 	private Integer substatus;
+	
+	private String trackingUrl;
 
 	/**
 	 * <p>Getter for the field <code>id</code>.</p>
@@ -300,5 +302,17 @@ public class OrderShipmentImpl implements OrderShipment {
 	 */
 	public void setSubstatus(Integer substatus) {
 		this.substatus = substatus;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public void setTrackingUrl(String trackingUrl) {
+		this.trackingUrl = trackingUrl;		
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public String getTrackingUrl() {
+		return trackingUrl;
 	}
 }

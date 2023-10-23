@@ -26,7 +26,15 @@ Parámetros:
 
 ### Obtener etiqueta envío
 
-Retorna la etiqueta del envío en formato **[DataFile](../Models/DataFile.md)**.
+Devuelve la etiqueta del envío en formato **[DataFile](../Models/DataFile.md)**.
+
+Parámetros:
+
+- **[OrderShipment](../Models/Order/OrderShipment.md)** orderShipment
+
+### Generar etiqueta envío
+
+Genera la etiqueta del envío en formato **[DataFile](../Models/DataFile.md)**.
 
 Parámetros:
 
@@ -42,6 +50,8 @@ public interface ShipmentService extends PluginService {
 	void changeStatus(OrderShipment orderShipment, OrderShipmentStatusType orderShipmentStatusType) throws PluginServiceException;
     
     DataFile getShipmentLabel(final OrderShipment shipment) throws PluginServiceException;
+    
+    DataFile createShipmentLabel(final OrderShipment shipment) throws PluginServiceException;
 
 }
 
