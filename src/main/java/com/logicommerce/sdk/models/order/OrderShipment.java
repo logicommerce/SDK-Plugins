@@ -122,7 +122,7 @@ public interface OrderShipment {
 	 * <p>setTrackingUrl.</p>
 	 * @since 1.2.3
 	 * 
-	 * @param trackingNumber a {@link java.lang.String} object
+	 * @param trackingUrl a {@link java.lang.String} object
 	 */
 	void setTrackingUrl(String trackingUrl);
 	

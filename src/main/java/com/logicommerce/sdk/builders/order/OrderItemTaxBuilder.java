@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.builders.order;
 
+import com.logicommerce.sdk.enums.TaxType;
 import com.logicommerce.sdk.models.order.OrderItemTax;
 import com.logicommerce.sdk.models.order.implementations.OrderItemTaxImpl;
 
@@ -13,11 +14,15 @@ public class OrderItemTaxBuilder<T> {
 
 	private T parentBuilder;
 
-	protected double base;
+	private double base;
 
-	protected double taxValue;
+	private double taxValue;
 	
-	protected double taxRate;
+	private double taxRate;
+
+	private TaxType type;
+
+	private String code;
 
 	/**
 	 * <p>Constructor for OrderItemTaxBuilder.</p>
@@ -67,6 +72,28 @@ public class OrderItemTaxBuilder<T> {
 		this.taxRate = taxRate;
 		return this;
 	}
+
+	/**
+	 * <p>type.</p>
+	 *
+	 * @param type a {@link com.logicommerce.sdk.enums.TaxType} object
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderItemTaxBuilder} object
+	 */
+	public OrderItemTaxBuilder<T> type(TaxType type) {
+		this.type = type;
+		return this;
+	}
+
+	/**
+	 * <p>code.</p>
+	 *
+	 * @param code a {@link java.lang.String} object
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderItemTaxBuilder} object
+	 */
+	public OrderItemTaxBuilder<T> code(String code) {
+		this.code = code;
+		return this;
+	}
 	
 	/**
 	 * <p>build.</p>
@@ -78,6 +105,8 @@ public class OrderItemTaxBuilder<T> {
 		tax.setBase(base);
 		tax.setTaxValue(taxValue);
 		tax.setTaxRate(taxRate);
+		tax.setType(type);
+		tax.setCode(code);
 		return tax;
 	}
 
