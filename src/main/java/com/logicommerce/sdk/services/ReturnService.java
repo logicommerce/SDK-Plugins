@@ -14,11 +14,11 @@ import com.logicommerce.sdk.models.order.Order;
 public interface ReturnService extends PluginService {
 
 	/**
-	 * Create a return.
+	 * Recieves an order and a credit note when a return is created.
 	 * 
 	 * @param originalOrder {@link Order} object
 	 * @param creditNote {@link CreditNote} object
-	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
+	 * @throws PluginServiceException if any.
 	 */
 	void create(Order originalOrder, CreditNote creditNote) throws PluginServiceException;
 

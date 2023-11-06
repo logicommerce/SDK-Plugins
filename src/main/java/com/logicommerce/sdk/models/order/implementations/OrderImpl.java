@@ -49,7 +49,6 @@ public class OrderImpl implements Order  {
 	@Uses(value = OrderVoucherImpl.class)
 	private List<OrderVoucher> vouchers;
 
-	//@Mapped(name = "rows")
 	@Uses(value = OrderItemImpl.class)
 	private List<OrderItem> items;
 
