@@ -79,7 +79,7 @@ public class OrderItemTaxImpl implements OrderItemTax {
 	/**
 	 * <p>Getter for the field <code>type</code>.</p>
 	 *
-	 * @param type a {@link TaxType} object
+	 * @return a {@link TaxType} object
 	 */
 	@Override
 	public TaxType getType() {
@@ -98,7 +98,7 @@ public class OrderItemTaxImpl implements OrderItemTax {
 	/**
 	 * <p>Getter for the field <code>code</code>.</p>
 	 * 
-	 * @param code a String object
+	 * return a String object
 	 */
 	@Override
 	public String getCode() {
