@@ -14,77 +14,85 @@ import com.logicommerce.sdk.models.RowCodes;
 public interface OrderItem {
 
 	/**
-	 * <p>getId.</p>
+	 * Returns the id.
 	 *
 	 * @return a {@link java.lang.Integer} object
 	 */
 	Integer getId();
 
 	/**
-	 * <p>getPId.</p>
+	 * Returns the pId.
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
 	String getPId();
 
 	/**
-	 * <p>getName.</p>
+	 * Returns the hash.
+	 * 
+	 * @since 1.3.0
+	 * @return a {@link java.lang.String} object
+	 */
+	String getHash();
+
+	/**
+	 * Returns the name.
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
 	String getName();
 
 	/**
-	 * <p>getQuantity.</p>
+	 * Returns the quantity.
 	 *
 	 * @return a int
 	 */
 	int getQuantity();
 
 	/**
-	 * <p>getPrices.</p>
+	 * Returns the price.
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderItemPrices} object
 	 */
 	OrderItemPrices getPrices();
 	
 	/**
-	 * <p>getWeight.</p>
+	 * Returns the weight.
 	 *
 	 * @return a double
 	 */
 	double getWeight();
 	
 	/**
-	 * <p>getDiscounts.</p>
+	 * Returns a list of discounts.
 	 *
 	 * @return a {@link java.util.List} object
 	 */
 	List<OrderDiscount> getDiscounts();
 
 	/**
-	 * <p>getTaxes.</p>
+	 * Returns the taxes.
 	 *
 	 * @return a {@link java.util.List} object
 	 */
 	List<OrderItemTax> getTaxes();
 
 	/**
-	 * <p>getOptions.</p>
+	 * Returns the options.
 	 *
 	 * @return a {@link java.util.List} object
 	 */
 	List<OrderItemOption> getOptions();
 
 	/**
-	 * <p>getStocks.</p>
+	 * Returns the stocks.
 	 *
 	 * @return a {@link java.util.List} object
 	 */
 	List<OrderItemStock> getStocks();
 
 	/**
-	 * <p>getCustomTags.</p>
+	 * Returns the customTags.
 	 *
 	 * @return a {@link java.util.List} object
 	 */
