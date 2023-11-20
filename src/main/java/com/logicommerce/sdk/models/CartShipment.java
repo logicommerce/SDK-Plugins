@@ -22,6 +22,15 @@ public interface CartShipment {
 	 */
 	String getHash();
 
+
+	/**
+	 * Return Shipping
+	 * 
+	 * @since 1.3.0
+	 * @return a {@link com.logicommerce.sdk.models.CartShipping} object
+	 */
+	CartShipping getShipping();
+
 	/**
 	 * <p>Get Items of the shipment.</p>
 	 *
@@ -55,13 +64,5 @@ public interface CartShipment {
 	 * @return a {@link com.logicommerce.sdk.models.CartWarehouse CartWarehouse} object
 	 */
 	CartWarehouse getWarehouse();
-
-	/**
-	 * Get the tax code for shipment if exists. Otherwise, return null.
-	 * 
-	 * @since 1.3.0
-	 * @return a {@link String} object
-	 */
-	String getTaxCode();
 
 }
