@@ -25,6 +25,8 @@ public class OrderTaxImpl implements OrderTax {
 	private double baseWithoutDiscounts;
 
 	private double discount;
+
+	private String code;
 	
 	/** {@inheritDoc} */
 	@Override
@@ -144,5 +146,26 @@ public class OrderTaxImpl implements OrderTax {
 	 */
 	public void setDiscount(double discount) {
 		this.discount = discount;
+	}
+
+	/**
+	 * <p>Getter for the field <code>code</code>.</p>
+	 * 
+	 * @since 1.3.0
+	 * @return a {@link String} object
+	 */
+	@Override
+	public String getCode() {
+		return code;
+	}
+
+	/**
+	 * <p>Setter for the field <code>code</code>.</p>
+	 * 
+	 * @since 1.3.0
+	 * @param code a {@link String} object
+	 */
+	public void setCode(String code) {
+		this.code = code;
 	}
 }

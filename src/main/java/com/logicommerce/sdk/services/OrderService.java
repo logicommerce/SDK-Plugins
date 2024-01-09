@@ -21,7 +21,19 @@ public interface OrderService extends PluginService {
 	void validateCallback(Order order) throws PluginServiceException;
 
 	/**
-	 * Edit order callback
+	 * Start edit order<br>
+	 * Method called when an Order is started to be edited.
+	 * 
+	 * @since 1.3.0
+	 * 
+	 * @param order a {@link com.logicommerce.sdk.models.order.Order} object
+	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
+	 */
+	void startEdit(Order order) throws PluginServiceException;
+
+	/**
+	 * Edit order callback<br>
+	 * Method called when an Order is edited and saved.
 	 *
 	 * @param order a {@link com.logicommerce.sdk.models.order.Order} object
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.

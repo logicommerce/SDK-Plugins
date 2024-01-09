@@ -13,6 +13,7 @@ import com.logicommerce.sdk.models.order.OrderItemPrices;
 import com.logicommerce.sdk.models.order.OrderItemStock;
 import com.logicommerce.sdk.models.order.OrderItemTax;
 import com.logicommerce.utilities.annotations.Uses;
+
 /**
  * <p>OrderItemImpl class.</p>
  *
@@ -24,6 +25,8 @@ public class OrderItemImpl implements OrderItem {
 	private Integer id;
 
 	private String pId;
+
+	private String hash;
 
 	@Uses(value = OrderItemTaxImpl.class)
 	private List<OrderItemTax> taxes;
@@ -83,6 +86,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link com.logicommerce.sdk.enums.BackorderMode} object
 	 */
+	@Override
 	public BackorderMode getBackOrder() {
 		return backOrder;
 	}
@@ -92,6 +96,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<CustomTag> getCustomTags() {
 		return customTags;
 	}
@@ -101,6 +106,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderDiscount> getDiscounts() {
 		return discounts;
 	}
@@ -110,8 +116,20 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.lang.Integer} object
 	 */
+	@Override
 	public Integer getId() {
 		return id;
+	}
+
+	/**
+	 * <p>Getter for the field <code>hash</code>.</p>
+	 *
+	 * @since 1.3.0
+	 * @return a {@link java.lang.String} object
+	 */
+	@Override
+	public String getHash() {
+		return hash;
 	}
 
 	/**
@@ -119,6 +137,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getImage() {
 		return image;
 	}
@@ -128,6 +147,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -137,6 +157,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a int
 	 */
+	@Override
 	public int getOnRequestDays() {
 		return onRequestDays;
 	}
@@ -146,6 +167,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderItemOption> getOptions() {
 		return options;
 	}
@@ -155,6 +177,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getPId() {
 		return pId;
 	}
@@ -164,6 +187,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderItemPrices} object
 	 */
+	@Override
 	public OrderItemPrices getPrices() {
 		return prices;
 	}
@@ -173,6 +197,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.lang.Integer} object
 	 */
+	@Override
 	public Integer getProductId() {
 		return productId;
 	}
@@ -182,6 +207,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a int
 	 */
+	@Override
 	public int getQuantity() {
 		return quantity;
 	}
@@ -191,6 +217,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderItemStock> getStocks() {
 		return stocks;
 	}
@@ -200,6 +227,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
+	@Override
 	public List<OrderItemTax> getTaxes() {
 		return taxes;
 	}
@@ -209,6 +237,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.lang.Integer} object
 	 */
+	@Override
 	public Integer getVinculatedTo() {
 		return vinculatedTo;
 	}
@@ -218,6 +247,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a double
 	 */
+	@Override
 	public double getWeight() {
 		return weight;
 	}
@@ -227,6 +257,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isNoReturn() {
 		return noReturn;
 	}
@@ -236,6 +267,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isOnRequest() {
 		return onRequest;
 	}
@@ -245,6 +277,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isReverseChargeVat() {
 		return reverseChargeVat;
 	}
@@ -254,6 +287,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isSale() {
 		return sale;
 	}
@@ -263,6 +297,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a boolean
 	 */
+	@Override
 	public boolean isStockManagement() {
 		return stockManagement;
 	}
@@ -272,6 +307,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
+	@Override
 	public String getLink() {
 		return link;
 	}
@@ -355,6 +391,15 @@ public class OrderItemImpl implements OrderItem {
 	 */
 	public void setPId(String pId) {
 		this.pId = pId;
+	}
+
+	/**
+	 * <p>Setter for the field <code>hash</code>.</p>
+	 *
+	 * @param hash a {@link java.lang.String} object
+	 */
+	public void setHash(String hash) {
+		this.hash = hash;
 	}
 
 	/** {@inheritDoc} */
@@ -475,6 +520,7 @@ public class OrderItemImpl implements OrderItem {
 	 *
 	 * @return a {@link java.lang.Integer} object
 	 */
+	@Override
 	public Integer getCombinationId() {
 		return combinationId;
 	}

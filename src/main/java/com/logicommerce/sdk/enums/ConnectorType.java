@@ -27,5 +27,6 @@ public enum ConnectorType {
 	DATA,
 	UNKNOWN,
 	CAPTCHA,
-	MAPS;
+	MAPS,
+	TAXES;
 }

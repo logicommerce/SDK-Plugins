@@ -19,31 +19,31 @@ public class OrderShipmentBuilder<T> {
 
 	private T parentBuilder;
 
-	protected Integer id;
+	private Integer id;
 
-	protected String pId;
+	private String pId;
 
-	protected String status;
+	private String status;
 
-	protected LocalDate incomingDate;
+	private LocalDate incomingDate;
 
-	protected List<OrderShipmentItemBuilder<OrderShipmentBuilder<T>>> items;
+	private List<OrderShipmentItemBuilder<OrderShipmentBuilder<T>>> items;
 
-	protected List<OrderShipmentStatusBuilder<OrderShipmentBuilder<T>>> statuses;
+	private List<OrderShipmentStatusBuilder<OrderShipmentBuilder<T>>> statuses;
 
-	protected OrderShippingBuilder<OrderShipmentBuilder<T>> shipping;
+	private OrderShippingBuilder<OrderShipmentBuilder<T>> shipping;
 
-	protected ShipmentAddressBuilder<OrderShipmentBuilder<T>> originAddress;
+	private ShipmentAddressBuilder<OrderShipmentBuilder<T>> originAddress;
 
-	protected ShipmentAddressBuilder<OrderShipmentBuilder<T>> destinationAddress;
+	private ShipmentAddressBuilder<OrderShipmentBuilder<T>> destinationAddress;
 
-	protected ExportStatusType exportStatusType;
+	private ExportStatusType exportStatusType;
 
-	protected String trackingNumber;
+	private String trackingNumber;
 	
-	protected String trackingUrl;
+	private String trackingUrl;
 
-	protected Integer substatus;
+	private Integer substatus;
 
 	/**
 	 * <p>Constructor for OrderShipmentBuilder.</p>
@@ -212,6 +212,9 @@ public class OrderShipmentBuilder<T> {
 	 */
 	public OrderShipment build() {
 		OrderShipmentImpl shipment = new OrderShipmentImpl();
+		if (id != null) {
+			shipment.setId(id);
+		}
 		shipment.setId(null);
 		shipment.setPId(pId);
 		shipment.setStatus(status);

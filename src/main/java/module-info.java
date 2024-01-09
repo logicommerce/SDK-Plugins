@@ -9,8 +9,10 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.resources;
 	exports com.logicommerce.sdk.models;
 	exports com.logicommerce.sdk.models.order;
+	exports com.logicommerce.sdk.models.order.implementations;
 	exports com.logicommerce.sdk.models.payment;
 	exports com.logicommerce.sdk.models.queues;
+	exports com.logicommerce.sdk.models.taxes;
 	exports com.logicommerce.sdk.enums;
 	exports com.logicommerce.sdk.builders;
 	exports com.logicommerce.sdk.builders.order;
