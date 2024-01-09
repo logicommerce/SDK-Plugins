@@ -12,14 +12,12 @@ import com.logicommerce.sdk.models.order.implementations.OrderShipmentItemImpl;
 public class OrderShipmentItemBuilder<T> {
 
 	private T parentBuilder;
-	
-	protected Integer id;
 
-	protected int quantity;
+	private int quantity;
 
-	protected Integer orderItemId;
-	
-	protected double weight;
+	private Integer orderItemId;
+
+	private double weight;
 
 	/**
 	 * <p>Constructor for OrderShipmentItemBuilder.</p>
@@ -40,11 +38,11 @@ public class OrderShipmentItemBuilder<T> {
 	/**
 	 * <p>id.</p>
 	 *
+	 * @deprecated since 1.3.0. For removal in future versions.
 	 * @param id a {@link java.lang.Integer} object
 	 * @return a {@link com.logicommerce.sdk.builders.order.OrderShipmentItemBuilder} object
 	 */
 	public OrderShipmentItemBuilder<T> id(Integer id) {
-		this.id = id;
 		return this;
 	}
 	

@@ -64,4 +64,11 @@ public interface OrderTax {
 	 */
 	double getDiscount();
 
+	/**
+	 * <p>get code</p>
+	 * 
+	 * @since 1.3.0
+	 * @return a String object
+	 */
+	String getCode();
 }

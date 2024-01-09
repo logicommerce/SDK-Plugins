@@ -22,6 +22,15 @@ public interface CartShipment {
 	 */
 	String getHash();
 
+
+	/**
+	 * Return Shipping
+	 * 
+	 * @since 1.3.0
+	 * @return a {@link com.logicommerce.sdk.models.CartShipping} object
+	 */
+	CartShipping getShipping();
+
 	/**
 	 * <p>Get Items of the shipment.</p>
 	 *

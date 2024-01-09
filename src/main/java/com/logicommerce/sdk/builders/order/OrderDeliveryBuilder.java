@@ -18,13 +18,13 @@ public class OrderDeliveryBuilder<T> {
 	
 	private T parentBuilder;
 	
-	protected DeliveryType type;
+	private DeliveryType type;
 	
-	protected OrderDeliveryPhysicalLocationBuilder<OrderDeliveryBuilder<T>> physicalLocation;
+	private OrderDeliveryPhysicalLocationBuilder<OrderDeliveryBuilder<T>> physicalLocation;
 	
-	protected List<OrderShipmentBuilder<OrderDeliveryBuilder<T>>> shipments;
+	private List<OrderShipmentBuilder<OrderDeliveryBuilder<T>>> shipments;
 		
-	protected GeographicalZoneBuilder<OrderDeliveryBuilder<T>> geographicalZone;
+	private GeographicalZoneBuilder<OrderDeliveryBuilder<T>> geographicalZone;
 	
 	/**
 	 * <p>Constructor for OrderDeliveryBuilder.</p>

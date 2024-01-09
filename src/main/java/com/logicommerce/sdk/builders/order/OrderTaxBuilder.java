@@ -29,6 +29,8 @@ public class OrderTaxBuilder<T> {
 
 	protected double discount;
 
+	protected String code;
+
 	/**
 	 * <p>Constructor for OrderTaxBuilder.</p>
 	 */
@@ -135,6 +137,17 @@ public class OrderTaxBuilder<T> {
 	}
 
 	/**
+	 * <p>code.</p>
+	 *
+	 * @param code a {@link String} object
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderTaxBuilder} object
+	 */
+	public OrderTaxBuilder<T> code(String code) {
+		this.code = code;
+		return this;
+	}
+
+	/**
 	 * <p>build.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderTax} object
@@ -149,6 +162,7 @@ public class OrderTaxBuilder<T> {
 		information.setTotalPrice(totalPrice);
 		information.setBaseWithoutDiscounts(baseWithoutDiscounts);
 		information.setDiscount(discount);
+		information.setCode(code);
 		return information;
 	}
 

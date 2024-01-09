@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models.order.implementations;
 
+import com.logicommerce.sdk.enums.TaxType;
 import com.logicommerce.sdk.models.order.OrderItemTax;
 
 /**
@@ -15,6 +16,10 @@ public class OrderItemTaxImpl implements OrderItemTax {
 	private double taxValue;
 	
 	private double taxRate;
+
+	private TaxType type;
+
+	private String code;
 
 	/**
 	 * <p>Getter for the field <code>base</code>.</p>
@@ -69,6 +74,44 @@ public class OrderItemTaxImpl implements OrderItemTax {
 	 */
 	public void setTaxRate(double taxRate) {
 		this.taxRate = taxRate;
+	}
+
+	/**
+	 * <p>Getter for the field <code>type</code>.</p>
+	 *
+	 * @return a {@link TaxType} object
+	 */
+	@Override
+	public TaxType getType() {
+		return type;
+	}
+
+	/**
+	 * <p>Setter for the field <code>type</code>.</p>
+	 * 
+	 * @param type a {@link TaxType} object
+	 */
+	public void setType(TaxType type) {
+		this.type = type;
+	}
+
+	/**
+	 * <p>Getter for the field <code>code</code>.</p>
+	 * 
+	 * return a String object
+	 */
+	@Override
+	public String getCode() {
+		return code;
+	}
+
+	/**
+	 * <p>Setter for the field <code>code</code>.</p>
+	 * 
+	 * @param code a String object
+	 */
+	public void setCode(String code) {
+		this.code = code;
 	}
 	
 }

@@ -11,6 +11,7 @@ public interface Cookie {
 
 	/**
 	 * <p>Get value of the cookie.</p>
+	 * 
 	 * @since  1.1.4
 	 * @return a {@link java.lang.String String} object
 	 */
@@ -26,6 +27,7 @@ public interface Cookie {
 
 	/**
 	 * <p>Get name value of the cookie.</p>
+	 * 
 	 * @since  1.1.4
 	 * @return a {@link java.lang.String String} object
 	 */
@@ -41,6 +43,7 @@ public interface Cookie {
 
 	/**
 	 * <p>Get ttl value of the cookie.</p>
+	 * 
 	 * @since  1.1.4
 	 * @return a int
 	 */

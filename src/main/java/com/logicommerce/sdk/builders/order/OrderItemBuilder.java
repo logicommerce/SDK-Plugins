@@ -19,51 +19,53 @@ public class OrderItemBuilder<T> {
 
 	private T parentBuilder;
 
-	protected Integer id;
+	private Integer id;
 	
-	protected String pId;
+	private String pId;
 
-	protected List<OrderItemTaxBuilder<OrderItemBuilder<T>>> taxes;
+	private String hash;
 
-	protected List<OrderItemOptionBuilder<OrderItemBuilder<T>>> options;
+	private List<OrderItemTaxBuilder<OrderItemBuilder<T>>> taxes;
 
-	protected List<OrderItemStockBuilder<OrderItemBuilder<T>>> stocks;
+	private List<OrderItemOptionBuilder<OrderItemBuilder<T>>> options;
 
-	protected List<CustomTagBuilder<OrderItemBuilder<T>>> customTags;
+	private List<OrderItemStockBuilder<OrderItemBuilder<T>>> stocks;
 
-	protected List<OrderDiscountBuilder<OrderItemBuilder<T>>> discounts;
+	private List<CustomTagBuilder<OrderItemBuilder<T>>> customTags;
 
-	protected String name;
+	private List<OrderDiscountBuilder<OrderItemBuilder<T>>> discounts;
 
-	protected int quantity;
+	private String name;
 
-	protected Integer productId;
+	private int quantity;
 
-	protected double weight;
+	private Integer productId;
 
-	protected OrderItemPricesBuilder<OrderItemBuilder<T>> prices;
+	private double weight;
 
-	protected Integer vinculatedTo;
+	private OrderItemPricesBuilder<OrderItemBuilder<T>> prices;
 
-	protected String image;
+	private Integer vinculatedTo;
 
-	protected boolean sale;
+	private String image;
 
-	protected boolean stockManagement;
+	private boolean sale;
 
-	protected boolean reverseChargeVat;
+	private boolean stockManagement;
+
+	private boolean reverseChargeVat;
 	
-	protected RowCodesBuilder<OrderItemBuilder<T>> codes;
+	private RowCodesBuilder<OrderItemBuilder<T>> codes;
 
-	protected boolean noReturn;
+	private boolean noReturn;
 
-	protected BackorderMode backOrder;
+	private BackorderMode backOrder;
 
-	protected boolean onRequest;
+	private boolean onRequest;
 
-	protected int onRequestDays;
+	private int onRequestDays;
 	
-	protected String supplierReference;
+	private String supplierReference;
 
 	/**
 	 * <p>Constructor for OrderItemBuilder.</p>
@@ -108,6 +110,17 @@ public class OrderItemBuilder<T> {
 	 */
 	public OrderItemBuilder<T> pId(String pId) {
 		this.pId = pId;
+		return this;
+	}
+
+	/**
+	 * <p>hash.</p>
+	 *
+	 * @param hash a {@link java.lang.String} object
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderItemBuilder} object
+	 */
+	public OrderItemBuilder<T> hash(String hash) {
+		this.hash = hash;
 		return this;
 	}
 
@@ -345,8 +358,12 @@ public class OrderItemBuilder<T> {
 	 */
 	public OrderItem build() {
 		OrderItemImpl item = new OrderItemImpl();
+		if (id != null) {
+			item.setId(id);
+		}
 		item.setId(null);
 		item.setPId(pId);
+		item.setHash(hash);
 		item.setTaxes(taxes.stream().map(OrderItemTaxBuilder::build).collect(Collectors.toList()));
 		item.setOptions(options.stream().map(OrderItemOptionBuilder::build).collect(Collectors.toList()));
 		item.setStocks(stocks.stream().map(OrderItemStockBuilder::build).collect(Collectors.toList()));
@@ -372,7 +389,7 @@ public class OrderItemBuilder<T> {
 	}
 
 	/**
-	 * <p>done.</p>
+	 * Returns the parent builder.
 	 *
 	 * @return a T object
 	 */

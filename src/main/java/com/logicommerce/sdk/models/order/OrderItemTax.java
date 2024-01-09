@@ -1,5 +1,7 @@
 package com.logicommerce.sdk.models.order;
 
+import com.logicommerce.sdk.enums.TaxType;
+
 /**
  * <p>OrderItemTax interface.</p>
  *
@@ -28,5 +30,19 @@ public interface OrderItemTax {
 	 * @return a double
 	 */
 	double getTaxRate();
+
+	/** 
+	 * <p>getTaxType.</p>
+	 * 
+	 * @return a {@link TaxType} object
+	*/
+	TaxType getType();
+
+	/**
+	 * <p>get code</p>
+	 * 
+	 * @return a String object
+	 */
+	String getCode();
 
 }
