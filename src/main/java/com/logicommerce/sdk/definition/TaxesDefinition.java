@@ -13,6 +13,6 @@ public interface TaxesDefinition extends ConnectorDefinition {
 	/** {@inheritDoc} */
 	@Override
 	default ConnectorType getType() {
-		return ConnectorType.CAPTCHA;
+		return ConnectorType.TAXES;
 	}
 }
