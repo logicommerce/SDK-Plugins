@@ -3,6 +3,8 @@ package com.logicommerce.sdk.models.payment;
 import java.time.LocalDateTime;
 import com.logicommerce.sdk.definition.OrderStatusDefinition;
 import com.logicommerce.sdk.definition.implementations.OrderStatusDefinitionImpl;
+import com.logicommerce.sdk.definition.implementations.OrderStatusDefinitionImpl.Builder;
+import com.logicommerce.sdk.enums.OrderStatusType;
 import com.logicommerce.sdk.enums.PaymentValidateResponseType;
 import com.logicommerce.sdk.enums.PaymentValidateStatusType;
 
@@ -33,6 +35,24 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	 */
 	public PaymentValidateResponseBuilder ok() {
 		this.status = PaymentValidateStatusType.OK;
+		return returnThis();
+	}
+	
+	/**
+	 * <p>
+	 * Use for validate response success, but not paid,<br>
+	 * orderStatus is pending_confirm,<br> 
+	 * Set status to OK.
+	 * </p>
+	 * @since 1.3.1
+	 *
+	 * @return a PaymentValidateResponseBuilder object
+	 */
+	public PaymentValidateResponseBuilder authorized() {
+		this.status = PaymentValidateStatusType.OK;
+		Builder<PaymentValidateResponseBuilder> statusBuilder = new OrderStatusDefinitionImpl.Builder<>();
+		statusBuilder.status(OrderStatusType.PENDING_CONFIRM);
+		this.orderStatus = statusBuilder.build();
 		return returnThis();
 	}
 

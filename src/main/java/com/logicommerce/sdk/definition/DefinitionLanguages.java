@@ -18,11 +18,26 @@ public interface DefinitionLanguages {
 	Map<String, String> getNames();
 
 	/**
+	 * <p>getNames.</p>
+	 *
+	 * @return a {@link java.util.Map} object
+	 */
+	Map<String, String> getDescriptions();
+
+	/**
 	 * <p>getName.</p>
 	 *
 	 * @param language a {@link java.lang.String} object
 	 * @return a {@link java.lang.String} object
 	 */
 	String getName(String language);
+
+	/**
+	 * <p>getDescription.</p>
+	 *
+	 * @param language a {@link java.lang.String} object
+	 * @return a {@link java.lang.String} object
+	 */
+	String getDescription(String language);
 
 }

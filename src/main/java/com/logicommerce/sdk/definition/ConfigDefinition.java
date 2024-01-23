@@ -8,6 +8,7 @@ import java.util.List;
  * @see com.logicommerce.sdk.definition.PropertyDefinition PropertyDefinition
  * @see com.logicommerce.sdk.definition.MappedFieldDefinition MappedFieldDefinition
  * @see com.logicommerce.sdk.definition.PluginDefinition PluginDefinition
+ * @see com.logicommerce.sdk.definition.PluginActionDefinition PluginActionDefinition
  * @author Logicommerce
  * @since 1.0.16
  */
@@ -65,6 +66,15 @@ public interface ConfigDefinition {
 	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.definition.MappedFieldDefinition MappedFieldDefinition}&gt; object
 	 */
 	List<MappedFieldDefinition> getMappedFields();
+	
+	/**
+	 * <p>Get all mapped fields from the plugin definition.</p>
+	 *
+	 * @see com.logicommerce.sdk.definition.PluginActionDefinition PluginActionDefinition
+	 * @since 1.0.16
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.definition.PluginActionDefinition MappedFieldDefinition}&gt; object
+	 */
+	List<PluginActionDefinition> getPluginActions();
 
 	/**
 	 * <p>Add mapped field to the plugin definition.</p>
@@ -75,4 +85,13 @@ public interface ConfigDefinition {
 	 */
 	void addMappedField(MappedFieldDefinition mappedField);
 
+
+	/**
+	 * <p>Add mapped field to the plugin definition.</p>
+	 *
+	 * @see com.logicommerce.sdk.definition.MappedFieldDefinition PluginActionDefinition
+	 * @param pluginAction a {@link com.logicommerce.sdk.definition.PluginActionDefinition PluginActionDefinition} object
+	 * @since 1.0.16
+	 */
+	void addPluginAction(PluginActionDefinition pluginAction);
 }

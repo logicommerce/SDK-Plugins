@@ -14,15 +14,27 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 
 	private static final String DEFAULT_LANGUAGE = "en";
 	private Map<String, String> names;
-
+	private Map<String, String> descriptions;
+	
 	DefinitionLanguagesImpl(Map<String, String> names) {
 		this.names = names;
+	}
+	
+	DefinitionLanguagesImpl(Map<String, String> names, Map<String, String> descriptions) {
+		this.names = names;
+		this.descriptions = descriptions;
 	}
 
 	/** {@inheritDoc} */
 	@Override
 	public Map<String, String> getNames() {
 		return names;
+	}
+	
+	/** {@inheritDoc} */
+	@Override
+	public Map<String, String> getDescriptions() {
+		return descriptions;
 	}
 
 	/** {@inheritDoc} */
@@ -31,8 +43,21 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 		if (names.containsKey(language)) {
 			return names.get(language);
 		}
-		if (names.containsKey(DEFAULT_LANGUAGE)) {
-			return names.get(DEFAULT_LANGUAGE);
+		if (descriptions.containsKey(DEFAULT_LANGUAGE)) {
+			return descriptions.get(DEFAULT_LANGUAGE);
+		}
+		return null;
+	}
+	
+
+	/** {@inheritDoc} */
+	@Override
+	public String getDescription(String language) {
+		if (descriptions.containsKey(language)) {
+			return descriptions.get(language);
+		}
+		if (descriptions.containsKey(DEFAULT_LANGUAGE)) {
+			return descriptions.get(DEFAULT_LANGUAGE);
 		}
 		return null;
 	}
@@ -40,20 +65,26 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 	public static class Builder<T> {
 
 		private T parentBuilder;
-		private Map<String, String> languages;
+		private Map<String, String> names;
+		private Map<String, String> descriptions;
 
 		Builder(T parentBuilder) {
-			languages = new LinkedHashMap<>();
+			names = new LinkedHashMap<>();
 			this.parentBuilder = parentBuilder;
 		}
 
 		public Builder<T> language(String language, String value) {
-			languages.put(language, value);
+			names.put(language, value);
+			return this;
+		}
+		
+		public Builder<T> description(String language, String value) {
+			descriptions.put(language, value);
 			return this;
 		}
 
 		DefinitionLanguages build() {
-			return new DefinitionLanguagesImpl(languages);
+			return new DefinitionLanguagesImpl(names, descriptions);
 		}
 
 		public T done() {

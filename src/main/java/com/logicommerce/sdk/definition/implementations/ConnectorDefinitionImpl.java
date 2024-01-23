@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import com.logicommerce.sdk.definition.ConnectorDefinition;
 import com.logicommerce.sdk.definition.MappedFieldDefinition;
+import com.logicommerce.sdk.definition.PluginActionDefinition;
 import com.logicommerce.sdk.definition.PropertyDefinition;
 
 /**
@@ -21,6 +22,7 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 	private boolean hasAdditionalProperties;
 	private List<PropertyDefinition> additionalProperties;
 	private List<MappedFieldDefinition> mappedFields;
+	private List<PluginActionDefinition> pluginActions;
 	private Map<String, Object> additionalData;
 
 	/** {@inheritDoc} */
@@ -72,6 +74,21 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 	@Override
 	public void addMappedField(MappedFieldDefinition mappedField) {
 		getMappedFields().add(mappedField);
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public List<PluginActionDefinition> getPluginActions() {
+		if (pluginActions == null) {
+			pluginActions = new ArrayList<>();
+		}
+		return pluginActions;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public void addPluginAction(PluginActionDefinition pluginActions) {
+		getPluginActions().add(pluginActions);
 	}
 
 	/** {@inheritDoc} */
