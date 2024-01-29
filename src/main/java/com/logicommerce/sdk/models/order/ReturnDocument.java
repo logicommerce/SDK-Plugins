@@ -3,12 +3,12 @@ package com.logicommerce.sdk.models.order;
 import java.util.List;
 
 /**
- * CreditNote interface.
+ * Return document interface.
  * 
  * @author Logicommerce
- * @since 1.3.0
+ * @since 1.3.1
  */
-public interface CreditNote extends Document {
+public interface ReturnDocument extends Document {
 
 	/**
 	 * Returns the additional items.
