@@ -24,6 +24,13 @@ public interface Cache {
 	void put(String key, String value);
 
 	/**
+	 * Remove value from cache
+	 * @param key Cache key
+	 * @since 1.3.1
+	 */
+	void remove(String key);
+
+	/**
 	 * Purge cache
 	 */
 	void purge();
