@@ -26,7 +26,7 @@ public interface Cache {
 	/**
 	 * Remove value from cache
 	 * @param key Cache key
-	 * @since 1.3.1
+	 * @since 1.3.2
 	 */
 	void remove(String key);
 

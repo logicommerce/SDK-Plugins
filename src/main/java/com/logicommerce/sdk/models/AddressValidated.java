@@ -58,7 +58,7 @@ public class AddressValidated {
 	 * Returns the valid addresses
 	 * 
 	 * @return a {@link List} object
-	 * @since 1.3.1
+	 * @since 1.3.2
 	 */
 	public List<Address> getValidAddresses() {
 		return validAddresses;

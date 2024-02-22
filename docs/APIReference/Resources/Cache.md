@@ -8,6 +8,8 @@ Permite cachear cadenas de texto.
 
 - void put(String key, String value): Guarda un valor en cache.
 
+- void remove(String key): Elimina un valor en cache.
+
 - void purge(): Límpia la cache.
 
 
