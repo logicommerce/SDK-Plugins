@@ -14,6 +14,8 @@ public class AddressValidated {
 
 	private Address address;
 
+	private List<Address> validAddresses;
+
 	private List<AddressValidatedMessage> messages;
 
 	/**
@@ -50,6 +52,26 @@ public class AddressValidated {
 	 */
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+
+	/**
+	 * Returns the valid addresses
+	 * 
+	 * @return a {@link List} object
+	 * @since 1.3.2
+	 */
+	public List<Address> getValidAddresses() {
+		return validAddresses;
+	}
+
+	/**
+	 * Sets the valid addresses
+	 * 
+	 * @param validAddresses a {@link List} object
+	 * @since 1.3.1
+	 */
+	public void setValidAddresses(List<Address> validAddresses) {
+		this.validAddresses = validAddresses;
 	}
 
 	/**
