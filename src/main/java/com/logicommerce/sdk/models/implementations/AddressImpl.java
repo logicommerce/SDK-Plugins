@@ -16,6 +16,10 @@ public class AddressImpl implements Address {
 
 	private String address;
 
+	private String number;
+
+	private String addressAdditionalInformation;
+
 	private String city;
 
 	private String state;
@@ -45,6 +49,26 @@ public class AddressImpl implements Address {
 	 */
 	public String getAddress() {
 		return address;
+	}
+
+	/**
+	 * <p>Getter for the field <code>number</code>.</p>
+	 *
+	 * @since 1.3.3
+	 * @return a {@link java.lang.String} object
+	 */
+	public String getNumber() {
+		return number;
+	}
+
+	/**
+	 * <p>Getter for the field <code>addressAdditionalInformation</code>.</p>
+	 *
+	 * @since 1.3.3
+	 * @return a {@link java.lang.String} object
+	 */
+	public String getAddressAdditionalInformation() {
+		return addressAdditionalInformation;
 	}
 
 	/**
@@ -117,6 +141,26 @@ public class AddressImpl implements Address {
 	 */
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	/**
+	 * <p>Setter for the field <code>number</code>.</p>
+	 *
+	 * @since 1.3.3
+	 * @param number a {@link java.lang.String} object
+	 */
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+	/**
+	 * <p>Setter for the field <code>addressAdditionalInformation</code>.</p>
+	 *
+	 * @since 1.3.3
+	 * @param addressAdditionalInformation a {@link java.lang.String} object
+	 */
+	public void setAddressAdditionalInformation(String addressAdditionalInformation) {
+		this.addressAdditionalInformation = addressAdditionalInformation;
 	}
 
 	/**

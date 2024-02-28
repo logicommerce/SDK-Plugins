@@ -129,6 +129,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 
 	/**
 	 * <p>Getter for the field <code>addressAdditionalInformation</code>.</p>
+	 * @deprecated This method is deprecated since 1.3.3
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
@@ -139,6 +140,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 
 	/**
 	 * <p>Setter for the field <code>addressAdditionalInformation</code>.</p>
+	 * @deprecated This method is deprecated since 1.3.3
 	 *
 	 * @param addressAdditionalInformation a {@link java.lang.String} object
 	 */
@@ -148,6 +150,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 
 	/**
 	 * <p>Getter for the field <code>number</code>.</p>
+	 * @deprecated This method is deprecated since 1.3.3
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
@@ -158,6 +161,7 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 
 	/**
 	 * <p>Setter for the field <code>number</code>.</p>
+	 * @deprecated This method is deprecated since 1.3.3
 	 *
 	 * @param number a {@link java.lang.String} object
 	 */
