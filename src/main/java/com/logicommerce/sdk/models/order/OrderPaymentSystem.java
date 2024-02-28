@@ -2,6 +2,7 @@ package com.logicommerce.sdk.models.order;
 
 import java.util.List;
 import com.logicommerce.sdk.enums.AmountType;
+import com.logicommerce.sdk.models.ElementProperty;
 
 /**
  * <p>OrderPaymentSystem interface.</p>
@@ -79,6 +80,28 @@ public interface OrderPaymentSystem {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
-	String getProperty();	
+	String getProperty();
+	
+	/**
+	 * <p>getProperties.</p>
+	 *
+	 * @return a {@link java.util.List} object
+	 */
+	List<ElementProperty> getProperties();
+
+	/**
+	 * <p>addProperty.</p>
+	 *
+	 * @param property a {@link com.logicommerce.sdk.models.ElementProperty} object
+	 */
+	void addProperty(ElementProperty property);
+
+	/**
+	 * <p>addProperty.</p>
+	 *
+	 * @param name a {@link java.lang.String} object
+	 * @param value a {@link java.lang.String} object
+	 */
+	void addProperty(String name, String value);
 
 }

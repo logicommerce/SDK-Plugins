@@ -1,7 +1,7 @@
 package com.logicommerce.sdk.definition;
 
 /**
- * <p>MappedFieldDefinition interface.</p>
+ * <p>PluginActionDefinition interface.</p>
  *
  * @author Logicommerce
  * @since 1.0.16
@@ -29,5 +29,15 @@ public interface PluginActionDefinition {
 	 * @return a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
 	 */
 	DefinitionLanguages getLanguages();
+	
+	/**
+	 * <p>isActive.</p>
+	 *
+	 * @return a boolean
+	 */
+	boolean isActive();
+	
+	
+	void setActive(boolean active);
 
 }

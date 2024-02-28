@@ -2,7 +2,9 @@ package com.logicommerce.sdk.models.order;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.logicommerce.sdk.definition.DefinitionLanguages;
 import com.logicommerce.sdk.definition.OrderStatusDefinition;
+import com.logicommerce.sdk.definition.implementations.DefinitionLanguagesImpl;
 import com.logicommerce.sdk.definition.implementations.OrderStatusDefinitionImpl;
 import com.logicommerce.sdk.definition.implementations.OrderStatusDefinitionImpl.Builder;
 import com.logicommerce.sdk.enums.OrderActionStatusType;
@@ -14,7 +16,7 @@ import com.logicommerce.sdk.models.ElementProperyImpl;
  * <p>PaymentValidateResponseBuilder class.</p>
  *
  * @author Logicommerce
- * @since 1.3.1
+ * @since 1.3.3
  */
 public class OrderActionResponseBuilder  {
 
@@ -23,7 +25,13 @@ public class OrderActionResponseBuilder  {
 	private OrderStatusDefinitionImpl.Builder<OrderActionResponseBuilder> orderStatusBuilder;
 	private OrderActionStatusType status;
 	private List<ElementProperty> properties;
+	private DefinitionLanguages message;
+	private DefinitionLanguagesImpl.Builder<OrderActionResponseBuilder> messageBuilder;
 
+	public OrderActionResponseBuilder() {
+		super();
+		this.properties = new ArrayList<>();
+	}
 	/**
 	 * <p>
 	 * Use for validate response success,<br>
@@ -67,7 +75,6 @@ public class OrderActionResponseBuilder  {
 		return returnThis();
 	}
 
-
 	/**
 	 * <p>For set is order is paid.</p>
 	 *
@@ -101,53 +108,61 @@ public class OrderActionResponseBuilder  {
 		}
 		return orderStatusBuilder;
 	}
+	
+	public DefinitionLanguagesImpl.Builder<OrderActionResponseBuilder> message() {
+		if (messageBuilder == null) {
+			messageBuilder = new DefinitionLanguagesImpl.Builder<>(returnThis());
+		}
+		return messageBuilder;
+	}
+	
+	public OrderActionResponseBuilder message(DefinitionLanguages message) {
+		this.message = message;		
+		return returnThis();
+	}
 
 	public OrderActionResponse build() {
 		OrderActionResponseImpl orderAction = new OrderActionResponseImpl();
-		setValues(orderAction);
+		this.setValues(orderAction);
 		return orderAction;
 	}
 	
-	/**
-	 * <p>Getter for the field <code>properties</code>.</p>
-	 *
-	 * @return a {@link java.util.List} object
-	 */
+
+	public OrderActionResponseBuilder addProperty(ElementProperty property) {
+		if (this.properties == null) {
+			this.properties = new ArrayList<>();
+		}
+		this.properties.add(property);
+		return this;
+	}
 	
-	public List<ElementProperty> getProperties() {
-		return properties;
+	public OrderActionResponseBuilder addProperty(String name, String value) {
+		if (name == null || value == null) {
+			return this;
+		}
+		return addProperty(new ElementProperyImpl(name, value));
 	}
 
-	public void addProperty(ElementProperty property) {
-		if (properties == null) {
-			properties = new ArrayList<>();
-		}
-		properties.add(property);
-	}
-	
-	public void addProperty(String name, String value) {
-		if (name == null || value == null) {
-			return;
-		}
-		addProperty(new ElementProperyImpl(name, value));
-	}
 
 	/**
 	 * <p>Set all the values from orderAction.</p>
 	 *
 	 * @param orderAction a {@link com.logicommerce.sdk.models.order.OrderActionResponseImpl} object
 	 */
-	protected void setValues(OrderActionResponseImpl orderAction) {
+	private void setValues(OrderActionResponseImpl orderAction) {
 		orderAction.setPaid(paid);
 		if (orderStatus != null) {
 			orderAction.setOrderStatus(orderStatus);
 		} else if (orderStatusBuilder != null) {
 			orderAction.setOrderStatus(orderStatusBuilder.build());
 		}
-		orderAction.setStatus(status);
-		for (ElementProperty property : this.getProperties()) {
-			orderAction.addProperty(property);
+		if (message != null) {
+			orderAction.setMessage(message);
+		} else if (messageBuilder != null) {
+			orderAction.setMessage(messageBuilder.build());
 		}
+		orderAction.setStatus(status);
+		orderAction.setProperties(properties);
 	}
 
 	public OrderActionResponseBuilder returnThis() {

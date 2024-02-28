@@ -1,6 +1,7 @@
 package com.logicommerce.sdk.models.order;
 
 import java.util.List;
+import com.logicommerce.sdk.definition.DefinitionLanguages;
 import com.logicommerce.sdk.definition.OrderStatusDefinition;
 import com.logicommerce.sdk.enums.OrderActionStatusType;
 import com.logicommerce.sdk.models.ElementProperty;
@@ -9,7 +10,7 @@ import com.logicommerce.sdk.models.ElementProperty;
  * <p>PaymentValidateResponse interface.</p>
  *
  * @author Logicommerce
- * @since 1.0.16
+ * @since 1.3.3
  */
 public interface OrderActionResponse {
 
@@ -59,5 +60,12 @@ public interface OrderActionResponse {
 	 * @param value a {@link java.lang.String} object
 	 */
 	void addProperty(String name, String value);
+
+	/**
+	 * <p>getMessage.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
+	DefinitionLanguages getMessage();
 
 }

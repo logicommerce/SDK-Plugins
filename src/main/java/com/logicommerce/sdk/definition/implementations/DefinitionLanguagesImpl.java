@@ -15,11 +15,11 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 	private static final String DEFAULT_LANGUAGE = "en";
 	private Map<String, String> names;
 	private Map<String, String> descriptions;
-	
+
 	DefinitionLanguagesImpl(Map<String, String> names) {
 		this.names = names;
 	}
-	
+
 	DefinitionLanguagesImpl(Map<String, String> names, Map<String, String> descriptions) {
 		this.names = names;
 		this.descriptions = descriptions;
@@ -30,7 +30,7 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 	public Map<String, String> getNames() {
 		return names;
 	}
-	
+
 	/** {@inheritDoc} */
 	@Override
 	public Map<String, String> getDescriptions() {
@@ -48,7 +48,6 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 		}
 		return null;
 	}
-	
 
 	/** {@inheritDoc} */
 	@Override
@@ -68,8 +67,9 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 		private Map<String, String> names;
 		private Map<String, String> descriptions;
 
-		Builder(T parentBuilder) {
+		public Builder(T parentBuilder) {
 			names = new LinkedHashMap<>();
+			descriptions = new LinkedHashMap<>();
 			this.parentBuilder = parentBuilder;
 		}
 
@@ -77,13 +77,13 @@ public class DefinitionLanguagesImpl implements DefinitionLanguages {
 			names.put(language, value);
 			return this;
 		}
-		
+
 		public Builder<T> description(String language, String value) {
 			descriptions.put(language, value);
 			return this;
 		}
 
-		DefinitionLanguages build() {
+		public DefinitionLanguages build() {
 			return new DefinitionLanguagesImpl(names, descriptions);
 		}
 

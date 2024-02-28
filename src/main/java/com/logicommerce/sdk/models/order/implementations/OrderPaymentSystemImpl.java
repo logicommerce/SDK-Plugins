@@ -1,9 +1,14 @@
 package com.logicommerce.sdk.models.order.implementations;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.logicommerce.sdk.enums.AmountType;
+import com.logicommerce.sdk.models.ElementProperty;
+import com.logicommerce.sdk.models.ElementProperyImpl;
 import com.logicommerce.sdk.models.order.OrderPaymentSystem;
 import com.logicommerce.sdk.models.order.OrderTax;
+import com.logicommerce.utilities.annotations.NoMappable;
+import com.logicommerce.utilities.annotations.Uses;
 
 /**
  * <p>OrderPaymentSystemImpl class.</p>
@@ -32,6 +37,10 @@ public class OrderPaymentSystemImpl implements OrderPaymentSystem {
 	private boolean cashOnDelivery;
 
 	private String property;
+	
+	@NoMappable
+	@Uses(value = ElementProperyImpl.class)
+	private List<ElementProperty> properties;
 
 	/**
 	 * <p>Getter for the field <code>id</code>.</p>
@@ -221,4 +230,27 @@ public class OrderPaymentSystemImpl implements OrderPaymentSystem {
 	public void setProperty(String property) {
 		this.property = property;
 	}
+
+	/**
+	 * <p>Getter for the field <code>properties</code>.</p>
+	 *
+	 * @return a {@link java.util.List} object
+	 */
+	public List<ElementProperty> getProperties() {
+		return properties;
+	}
+
+	/** {@inheritDoc} */
+	public void addProperty(ElementProperty property) {
+		if (properties == null) {
+			properties = new ArrayList<>();
+		}
+		properties.add(property);
+	}
+
+	/** {@inheritDoc} */
+	public void addProperty(String name, String value) {
+		addProperty(new ElementProperyImpl(name, value));
+	}
+
 }

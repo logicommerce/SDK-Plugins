@@ -2,6 +2,7 @@ package com.logicommerce.sdk.models.order;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.logicommerce.sdk.definition.DefinitionLanguages;
 import com.logicommerce.sdk.definition.OrderStatusDefinition;
 import com.logicommerce.sdk.enums.OrderActionStatusType;
 import com.logicommerce.sdk.models.ElementProperty;
@@ -11,7 +12,7 @@ import com.logicommerce.sdk.models.ElementProperyImpl;
  * <p>OrderActionResponseImpl class.</p>
  *
  * @author Logicommerce
- * @since 1.3.1
+ * @since 1.3.3
  */
 public class OrderActionResponseImpl implements OrderActionResponse {
 
@@ -19,6 +20,7 @@ public class OrderActionResponseImpl implements OrderActionResponse {
 	private OrderActionStatusType status;
 	private OrderStatusDefinition orderStatus;
 	private List<ElementProperty> properties = new ArrayList<>();
+	private DefinitionLanguages message;
 
 	/** {@inheritDoc} */
 	@Override
@@ -75,11 +77,15 @@ public class OrderActionResponseImpl implements OrderActionResponse {
 	 *
 	 * @return a {@link java.util.List} object
 	 */
-
 	public List<ElementProperty> getProperties() {
 		return properties;
 	}
 
+	/**
+	 * <p>addProperty.</p>
+	 *
+	 * @param property a {@link com.logicommerce.sdk.models.ElementProperty} object
+	 */
 	public void addProperty(ElementProperty property) {
 		if (properties == null) {
 			properties = new ArrayList<>();
@@ -87,10 +93,41 @@ public class OrderActionResponseImpl implements OrderActionResponse {
 		properties.add(property);
 	}
 
+	/**
+	 * <p>addProperty.</p>
+	 *
+	 * @param name a {@link java.lang.String} object
+	 * @param value a {@link java.lang.String} object
+	 */
 	public void addProperty(String name, String value) {
 		if (name == null || value == null) {
 			return;
 		}
 		addProperty(new ElementProperyImpl(name, value));
 	}
+
+	/**
+	 * <p>Setter for the field <code>properties</code>.</p>
+	 *
+	 * @param properties a {@link java.util.List} object
+	 */
+	public void setProperties(List<ElementProperty> properties) {
+		this.properties = properties;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public DefinitionLanguages getMessage() {
+		return message;
+	}
+
+	/**
+	 * <p>Setter for the field <code>message</code>.</p>
+	 *
+	 * @param message a {@link java.lang.String} object
+	 */
+	public void setMessage(DefinitionLanguages message) {
+		this.message = message;
+	}
+
 }

@@ -44,14 +44,14 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	 * orderStatus is pending_confirm,<br> 
 	 * Set status to OK.
 	 * </p>
-	 * @since 1.3.1
+	 * @since 1.3.3
 	 *
 	 * @return a PaymentValidateResponseBuilder object
 	 */
 	public PaymentValidateResponseBuilder authorized() {
 		this.status = PaymentValidateStatusType.OK;
 		Builder<PaymentValidateResponseBuilder> statusBuilder = new OrderStatusDefinitionImpl.Builder<>();
-		statusBuilder.status(OrderStatusType.PENDING_CONFIRM);
+		statusBuilder.status(OrderStatusType.INCOMING);
 		this.orderStatus = statusBuilder.build();
 		return returnThis();
 	}

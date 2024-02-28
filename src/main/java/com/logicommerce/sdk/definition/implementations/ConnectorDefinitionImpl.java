@@ -141,6 +141,10 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 	public void setAdditionalData(Map<String, Object> additionalData) {
 		this.additionalData = additionalData;
 	}
+	
+	public void setPluginActions(List<PluginActionDefinition> pluginActions) {
+		this.pluginActions = pluginActions;
+	}
 
 	protected abstract static class Builder<T, S extends ConnectorDefinition, R extends ConnectorDefinitionImpl> {
 
@@ -149,12 +153,14 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 		private List<PropertyDefinitionImpl.Builder<T>> additionalProperties;
 		private List<MappedFieldDefinitionImpl.Builder<T>> mappedFields;
 		private Map<String, Object> additionalData;
+		private List<PluginActionDefinitionImpl.Builder<T>> pluginActions;
 
 		protected Builder() {
 			properties = new ArrayList<>();
 			additionalProperties = new ArrayList<>();
 			mappedFields = new ArrayList<>();
 			additionalData = new HashMap<>();
+			pluginActions = new ArrayList<>();
 		}
 
 		public PropertyDefinitionImpl.Builder<T> property() {
@@ -179,6 +185,12 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 			mappedFields.add(mappedField);
 			return mappedField;
 		}
+		
+		public PluginActionDefinitionImpl.Builder<T> pluginAction() {
+			PluginActionDefinitionImpl.Builder<T> pluginAction = new PluginActionDefinitionImpl.Builder<>(returnThis());
+			pluginActions.add(pluginAction);
+			return pluginAction;
+		}
 
 		public T addAdditionalData(String name, Object value) {
 			additionalData.putIfAbsent(name, value);
@@ -197,6 +209,7 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 					.collect(Collectors.toList()));
 			connector.setMappedFields(mappedFields.stream().map(MappedFieldDefinitionImpl.Builder::build).collect(Collectors.toList()));
 			connector.setAdditionalData(additionalData);
+			connector.setPluginActions(pluginActions.stream().map(PluginActionDefinitionImpl.Builder::build).collect(Collectors.toList()));
 		}
 
 	}
