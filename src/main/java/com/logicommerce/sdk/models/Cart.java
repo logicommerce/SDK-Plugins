@@ -14,6 +14,14 @@ import java.util.List;
 public interface Cart {
 
 	/**
+	 * Get the headquarter of the cart.
+	 * 
+	 * @since 	1.3.3
+	 * @return a {@link Headquarter} object
+	 */
+	Headquarter getHeadquarter();
+
+	/**
 	 * <p>Get a cart token value. This value identifies the cart</p>
 	 *
 	 * @since 	1.0.16
