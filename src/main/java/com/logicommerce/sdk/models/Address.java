@@ -26,6 +26,20 @@ public interface Address {
 	String getAddress();
 
 	/**
+	 * <p>Get number.</p>
+	 *
+	 * @return a {@link java.lang.String String} object
+	 */
+	String getNumber();
+
+	/**
+	 * <p>Get additional information.</p>
+	 *
+	 * @return a {@link java.lang.String String} object
+	 */
+	String getAddressAdditionalInformation();
+
+	/**
 	 * <p>Get city of address.</p>
 	 *
 	 * @return a {@link java.lang.String String} object

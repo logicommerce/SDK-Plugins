@@ -65,4 +65,12 @@ public interface CartShipment {
 	 */
 	CartWarehouse getWarehouse();
 
+	/**
+	 * Get the logistics center address.
+	 * 
+	 * @since 1.3.3
+	 * @return a {@link com.logicommerce.sdk.models.Address Address} object
+	 */
+	Address getLogisticsCenterAddress();
+
 }

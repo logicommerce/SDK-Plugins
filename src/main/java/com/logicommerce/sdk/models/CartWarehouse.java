@@ -3,30 +3,14 @@ package com.logicommerce.sdk.models;
 /**
  * <p>CartWarehouse interface. Get warehouse data related to the cart shipment</p>
  *
+ * @see		com.logicommerce.sdk.models.Address Address
  * @see		com.logicommerce.sdk.models.Cart Cart
  * @see		com.logicommerce.sdk.models.CartDelivery CartDelivery
  * @see		com.logicommerce.sdk.models.CartShipment CartShipment
  * @author Logicommerce
  * @since 1.0.16
  */
-public interface CartWarehouse {
-
-	/**
-	 * <p>Get Address of warehouse.</p>
-	 *
-	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
-	 */
-	String getAddress();
-
-	/**
-	 * <p>Get city of warehouse.</p>
-	 *
-	 *
-	 * @since 1.0.16
-	 * @return a  {@link java.lang.String String} object
-	 */
-	String getCity();
+public interface CartWarehouse extends Address {
 
 	/**
 	 * <p>Get country of warehouse.</p>
@@ -35,30 +19,6 @@ public interface CartWarehouse {
 	 * @return a {@link java.lang.String String} object
 	 */
 	String getCountry();
-
-	/**
-	 * <p>Get name of warehouse.</p>
-	 *
-	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
-	 */
-	String getName();
-
-	/**
-	 * <p>Get state of warehouse.</p>
-	 *
-	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
-	 */
-	String getState();
-
-	/**
-	 * <p>Get postalCode of warehouse.</p>
-	 *
-	 * @since 1.0.16
-	 * @return a {@link java.lang.String String} object
-	 */
-	String getPostalCode();
 
 	/**
 	 * <p>get physicalLocationId of warehouse.</p>
@@ -83,4 +43,5 @@ public interface CartWarehouse {
 	 * @return a boolean
 	 */
 	boolean needsShipping();
+
 }
