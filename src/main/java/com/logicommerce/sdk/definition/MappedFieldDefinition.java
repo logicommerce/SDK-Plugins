@@ -20,9 +20,18 @@ public interface MappedFieldDefinition {
 
 	/**
 	 * <p>getFields.</p>
-	 *
+	 * @deprecated use {@link #getValues()} instead
 	 * @return a {@link java.util.List} object
 	 */
+	@Deprecated(forRemoval = true, since = "1.3.3")
 	List<String> getFields();
+
+	/**
+	 * <p>getValues.</p>
+	 *
+	 * @since 1.3.3
+	 * @return a {@link java.util.List} object
+	 */
+	List<PropertyDefinitionValue> getValues();
 
 }
