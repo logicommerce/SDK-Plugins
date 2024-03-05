@@ -1,6 +1,6 @@
 package com.logicommerce.sdk.builders.order;
 
-import com.logicommerce.sdk.builders.AddressBuilder;
+import com.logicommerce.sdk.builders.UserAddressBuilder;
 import com.logicommerce.sdk.enums.Gender;
 import com.logicommerce.sdk.models.UserAddress;
 import com.logicommerce.sdk.models.order.OrderUser;
@@ -20,9 +20,9 @@ public class OrderUserBuilder<T> {
 
 	protected Gender gender;
 
-	protected AddressBuilder<OrderUserBuilder<T>, UserAddress> billingAddress;
+	protected UserAddressBuilder<OrderUserBuilder<T>, UserAddress> billingAddress;
 
-	protected AddressBuilder<OrderUserBuilder<T>, UserAddress> shippingAddress;
+	protected UserAddressBuilder<OrderUserBuilder<T>, UserAddress> shippingAddress;
 
 	/**
 	 * <p>Constructor for OrderUserBuilder.</p>
@@ -31,8 +31,8 @@ public class OrderUserBuilder<T> {
 	 */
 	public OrderUserBuilder(T parentBuilder) {
 		this.parentBuilder = parentBuilder;
-		this.billingAddress = new AddressBuilder<>(this);
-		this.shippingAddress = new AddressBuilder<>(this);
+		this.billingAddress = new UserAddressBuilder<>(this);
+		this.shippingAddress = new UserAddressBuilder<>(this);
 	}
 	
 	/**
@@ -60,18 +60,18 @@ public class OrderUserBuilder<T> {
 	/**
 	 * <p>billingAddress.</p>
 	 *
-	 * @return a {@link com.logicommerce.sdk.builders.AddressBuilder} object
+	 * @return a {@link com.logicommerce.sdk.builders.UserAddressBuilder} object
 	 */
-	public AddressBuilder<OrderUserBuilder<T>, UserAddress> billingAddress() {
+	public UserAddressBuilder<OrderUserBuilder<T>, UserAddress> billingAddress() {
 		return billingAddress;
 	}
 	
 	/**
 	 * <p>shippingAddress.</p>
 	 *
-	 * @return a {@link com.logicommerce.sdk.builders.AddressBuilder} object
+	 * @return a {@link com.logicommerce.sdk.builders.UserAddressBuilder} object
 	 */
-	public AddressBuilder<OrderUserBuilder<T>, UserAddress> shippingAddress() {
+	public UserAddressBuilder<OrderUserBuilder<T>, UserAddress> shippingAddress() {
 		return shippingAddress;
 	}
 
