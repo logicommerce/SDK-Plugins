@@ -41,10 +41,10 @@ public class PaymentValidateResponseBuilder extends PaymentAbstractBuilder<Payme
 	/**
 	 * <p>
 	 * Use for validate response success, but not paid,<br>
-	 * orderStatus is pending_confirm,<br> 
+	 * orderStatus is incoming,<br> 
 	 * Set status to OK.
 	 * </p>
-	 * @since 1.3.3
+	 * @since 1.3.4
 	 *
 	 * @return a PaymentValidateResponseBuilder object
 	 */

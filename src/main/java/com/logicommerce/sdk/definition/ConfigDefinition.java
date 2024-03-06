@@ -80,7 +80,7 @@ public interface ConfigDefinition {
 	 * <p>Get all actinos from the plugin definition.</p>
 	 *
 	 * @see com.logicommerce.sdk.definition.PluginActionDefinition PluginActionDefinition
-	 * @since 1.3.3
+	 * @since 1.3.4
 	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.definition.PluginActionDefinition MappedFieldDefinition}&gt; object
 	 */
 	List<PluginActionDefinition> getPluginActions();
@@ -90,7 +90,7 @@ public interface ConfigDefinition {
 	 *
 	 * @see com.logicommerce.sdk.definition.MappedFieldDefinition PluginActionDefinition
 	 * @param pluginAction a {@link com.logicommerce.sdk.definition.PluginActionDefinition PluginActionDefinition} object
-	 * @since 1.3.3
+	 * @since 1.3.4
 	 */
 	void addPluginAction(PluginActionDefinition pluginAction);
 }

@@ -16,7 +16,7 @@ import com.logicommerce.sdk.models.ElementProperyImpl;
  * <p>PaymentValidateResponseBuilder class.</p>
  *
  * @author Logicommerce
- * @since 1.3.3
+ * @since 1.3.4
  */
 public class OrderActionResponseBuilder  {
 
@@ -48,7 +48,7 @@ public class OrderActionResponseBuilder  {
 	/**
 	 * <p>
 	 * Use for validate response success, but not paid,<br>
-	 * orderStatus is pending_confirm,<br> 
+	 * orderStatus is incoming,<br> 
 	 * Set status to OK.
 	 * </p>
 	 *
@@ -57,7 +57,7 @@ public class OrderActionResponseBuilder  {
 	public OrderActionResponseBuilder authorized() {
 		this.status = OrderActionStatusType.OK;
 		Builder<OrderActionResponseBuilder> statusBuilder = new OrderStatusDefinitionImpl.Builder<>();
-		statusBuilder.status(OrderStatusType.PENDING_CONFIRM);
+		statusBuilder.status(OrderStatusType.INCOMING);
 		this.orderStatus = statusBuilder.build();
 		return returnThis();
 	}

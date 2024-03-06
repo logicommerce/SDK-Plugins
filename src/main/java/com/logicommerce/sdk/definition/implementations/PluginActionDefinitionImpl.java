@@ -9,7 +9,7 @@ import com.logicommerce.sdk.definition.PluginActionDefinition;
  * <p>PluginActionDefinitionImpl class.</p>
  *
  * @author Logicommerce
- * @since 1.3.3
+ * @since 1.3.4
  */
 public class PluginActionDefinitionImpl implements PluginActionDefinition {
 

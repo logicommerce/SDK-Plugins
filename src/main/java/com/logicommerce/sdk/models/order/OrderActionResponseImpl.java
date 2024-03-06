@@ -12,7 +12,7 @@ import com.logicommerce.sdk.models.ElementProperyImpl;
  * <p>OrderActionResponseImpl class.</p>
  *
  * @author Logicommerce
- * @since 1.3.3
+ * @since 1.3.4
  */
 public class OrderActionResponseImpl implements OrderActionResponse {
 

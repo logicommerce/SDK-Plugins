@@ -23,18 +23,5 @@ public interface DataService extends PluginService {
 	 * @throws com.logicommerce.sdk.services.PluginServiceException PluginServiceException if any.
 	 */
 	Map<String, Object> executeAction(String action, Map<String, String> params) throws PluginServiceException;
-	
-	/**
-	 * <p>This method is for define some action to execute in the plugin.</p>
-	 * <p>Action parameter is to know what action should be performed.</p>
-	 * <p>Order for the action.</p>
-	 *
-	 * @param action a {@link java.lang.String String} object
-	 * @param order a {@link com.logicommerce.sdk.models.order.Order} object 
-	 * @return a {@link java.util.Map Map}&lt;{@link java.lang.String String} {@link java.lang.Object Object}&gt; object
-	 * @since 1.2.4
-	 * @throws com.logicommerce.sdk.services.PluginServiceException PluginServiceException if any.
-	 */
-	//Map<String, Object> executeAction(String action, Order order) throws PluginServiceException;
 
 }

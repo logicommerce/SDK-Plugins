@@ -4,16 +4,9 @@ package com.logicommerce.sdk.definition;
  * <p>PluginActionDefinition interface.</p>
  *
  * @author Logicommerce
- * @since 1.0.16
+ * @since 1.3.3
  */
 public interface PluginActionDefinition {
-
-	/**
-	 * <p>getType.</p>
-	 *
-	 * @return a {@link com.logicommerce.sdk.enums.MappedItemType} object
-	 */
-	//MappedItemType getType();
 	
 	/**
 	 * <p>getCode.</p>
@@ -37,7 +30,11 @@ public interface PluginActionDefinition {
 	 */
 	boolean isActive();
 	
-	
+	/**
+	 * <p>setActive.</p>
+	 *
+	 * @param active a boolean
+	 */
 	void setActive(boolean active);
 
 }

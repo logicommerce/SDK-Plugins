@@ -10,7 +10,7 @@ import com.logicommerce.sdk.models.ElementProperty;
  * <p>PaymentValidateResponse interface.</p>
  *
  * @author Logicommerce
- * @since 1.3.3
+ * @since 1.3.4
  */
 public interface OrderActionResponse {
 

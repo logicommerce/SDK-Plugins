@@ -84,7 +84,8 @@ public interface OrderPaymentSystem {
 	
 	/**
 	 * <p>getProperties.</p>
-	 *
+	 * 
+	 * @since 1.3.4
 	 * @return a {@link java.util.List} object
 	 */
 	List<ElementProperty> getProperties();
@@ -92,6 +93,7 @@ public interface OrderPaymentSystem {
 	/**
 	 * <p>addProperty.</p>
 	 *
+	 * @since 1.3.4
 	 * @param property a {@link com.logicommerce.sdk.models.ElementProperty} object
 	 */
 	void addProperty(ElementProperty property);
@@ -99,6 +101,7 @@ public interface OrderPaymentSystem {
 	/**
 	 * <p>addProperty.</p>
 	 *
+ 	 * @since 1.3.4
 	 * @param name a {@link java.lang.String} object
 	 * @param value a {@link java.lang.String} object
 	 */
