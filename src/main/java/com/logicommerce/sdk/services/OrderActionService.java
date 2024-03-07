@@ -34,7 +34,7 @@ public interface OrderActionService extends ActionService {
 	 * @param order
 	 * @param connectorType
 	 * @since 1.3.4
-	 * @return a List<{@link com.logicommerce.sdk.definition.PluginActionDefinition}> object> 
+	 * @return a List{@link com.logicommerce.sdk.definition.PluginActionDefinition} object
 	 * @throws com.logicommerce.sdk.services.PluginServiceException PluginServiceException if any.
 	 */
 	

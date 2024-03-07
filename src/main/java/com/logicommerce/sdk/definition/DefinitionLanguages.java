@@ -13,8 +13,10 @@ public interface DefinitionLanguages {
 	/**
 	 * <p>getNames.</p>
 	 *
+	 * @deprecated use {@link #getValues()} instead
 	 * @return a {@link java.util.Map} object
 	 */
+	@Deprecated(forRemoval = true, since = "1.3.4")
 	Map<String, String> getNames();
 
 	/**
@@ -22,22 +24,24 @@ public interface DefinitionLanguages {
 	 *
 	 * @return a {@link java.util.Map} object
 	 */
-	Map<String, String> getDescriptions();
-
+	Map<String, String> getValues();
+	
 	/**
 	 * <p>getName.</p>
 	 *
 	 * @param language a {@link java.lang.String} object
-	 * @return a {@link java.lang.String} object
+	 * @deprecated use {@link #getValue(String language)} instead
+	 * @return a {@link java.util.List} object
 	 */
+	@Deprecated(forRemoval = true, since = "1.3.4")
 	String getName(String language);
-
+	
 	/**
-	 * <p>getDescription.</p>
+	 * <p>getValue.</p>
 	 *
 	 * @param language a {@link java.lang.String} object
 	 * @return a {@link java.lang.String} object
 	 */
-	String getDescription(String language);
+	String getValue(String language);
 
 }

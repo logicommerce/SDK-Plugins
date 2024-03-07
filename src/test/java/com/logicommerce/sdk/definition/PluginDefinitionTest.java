@@ -43,12 +43,14 @@ class PluginDefinitionTest {
 		
 		PluginActionDefinition pluginActionDefinition = new PluginActionDefinitionImpl.Builder<>()
 			.code("field1")
-			.languages()
-				.description("es", "test description es")
+			.name()
 				.language("es", "name es")
-				.description("en", "test description en")
 				.language("en", "name en")
-				.done()
+			.done()
+			.description()
+				.language("en", "test description en")
+				.language("es", "test description es")
+			.done()
 			.build();
 
 		pluginDefinition.getPluginActions().add(pluginActionDefinition);

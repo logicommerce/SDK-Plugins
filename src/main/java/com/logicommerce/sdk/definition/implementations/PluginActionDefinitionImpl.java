@@ -14,7 +14,8 @@ import com.logicommerce.sdk.definition.PluginActionDefinition;
 public class PluginActionDefinitionImpl implements PluginActionDefinition {
 
 	private String code;
-	private DefinitionLanguages languages;
+	private DefinitionLanguages name;
+	private DefinitionLanguages description;
 	private boolean active;
 
 	/** {@inheritDoc} */
@@ -34,24 +35,46 @@ public class PluginActionDefinitionImpl implements PluginActionDefinition {
 
 	/** {@inheritDoc} */
 	@Override
-	public DefinitionLanguages getLanguages() {
-		return languages;
+	public DefinitionLanguages getName() {
+		return name;
 	}
 
 	/**
-	 * <p>Setter for the field <code>languages</code>.</p>
+	 * <p>Setter for the field <code>name</code>.</p>
 	 *
-	 * @param languages a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
+	 * @param name a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
 	 */
-	public void setLanguages(DefinitionLanguages languages) {
-		this.languages = languages;
+	public void setName(DefinitionLanguages name) {
+		this.name = name;
 	}
 	
-	@JsonProperty("languages")
-	public void setLanguageNames(Map<String, String> names, Map<String, String> descriptions) {
-		this.languages = new DefinitionLanguagesImpl(names, descriptions);
+	@JsonProperty("name")
+	public void setLanguageName(Map<String, String> name) {
+		this.name = new DefinitionLanguagesImpl(name);
+	}
+	
+	/** {@inheritDoc} */
+	@Override
+	public DefinitionLanguages getDescription() {
+		return description;
 	}
 
+	/**
+	 * <p>Setter for the field <code>description</code>.</p>
+	 *
+	 * @param description a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
+	 */
+	public void setDescription(DefinitionLanguages description) {
+		this.description = description;
+	}
+
+
+	@JsonProperty("description")
+	public void setLanguageDescription(Map<String, String> description) {
+		this.description = new DefinitionLanguagesImpl(description);
+	}
+
+	
 	@Override
 	public boolean isActive() {
 		return active;
@@ -65,12 +88,14 @@ public class PluginActionDefinitionImpl implements PluginActionDefinition {
 		
 		private T parentBuilder;
 		private String code;
-		private DefinitionLanguagesImpl.Builder<Builder<T>> languages;
+		private DefinitionLanguagesImpl.Builder<Builder<T>> name;
+		private DefinitionLanguagesImpl.Builder<Builder<T>> description;
 		private boolean active;
 
 		public Builder() {
 			code = "string";
-			languages = new DefinitionLanguagesImpl.Builder<>(this);
+			name = new DefinitionLanguagesImpl.Builder<>(this);
+			description = new DefinitionLanguagesImpl.Builder<>(this);
 		}
 
 		public Builder(T parentBuilder) {
@@ -83,8 +108,12 @@ public class PluginActionDefinitionImpl implements PluginActionDefinition {
 			return this;
 		}
 
-		public DefinitionLanguagesImpl.Builder<Builder<T>> languages() {
-			return languages;
+		public DefinitionLanguagesImpl.Builder<Builder<T>> name() {
+			return name;
+		}
+
+		public DefinitionLanguagesImpl.Builder<Builder<T>> description() {
+			return description;
 		}
 		
 		public Builder<T> active(boolean active) {
@@ -94,7 +123,8 @@ public class PluginActionDefinitionImpl implements PluginActionDefinition {
 
 		public PluginActionDefinition build() {
 			PluginActionDefinitionImpl pluginActionDefinition = new PluginActionDefinitionImpl();
-			pluginActionDefinition.setLanguages(languages.build());
+			pluginActionDefinition.setName(name.build());
+			pluginActionDefinition.setDescription(description.build());
 			pluginActionDefinition.setCode(code);
 			pluginActionDefinition.setActive(active);
 			return pluginActionDefinition;

@@ -4,7 +4,7 @@ package com.logicommerce.sdk.definition;
  * <p>PluginActionDefinition interface.</p>
  *
  * @author Logicommerce
- * @since 1.3.3
+ * @since 1.3.4
  */
 public interface PluginActionDefinition {
 	
@@ -21,7 +21,14 @@ public interface PluginActionDefinition {
 	 *
 	 * @return a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
 	 */
-	DefinitionLanguages getLanguages();
+	DefinitionLanguages getName();
+	
+	/**
+	 * <p>getLanguages.</p>
+	 *
+	 * @return a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
+	 */
+	DefinitionLanguages getDescription();
 	
 	/**
 	 * <p>isActive.</p>
