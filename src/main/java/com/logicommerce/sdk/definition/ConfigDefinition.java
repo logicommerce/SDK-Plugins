@@ -8,6 +8,7 @@ import java.util.List;
  * @see com.logicommerce.sdk.definition.PropertyDefinition PropertyDefinition
  * @see com.logicommerce.sdk.definition.MappedFieldDefinition MappedFieldDefinition
  * @see com.logicommerce.sdk.definition.PluginDefinition PluginDefinition
+ * @see com.logicommerce.sdk.definition.PluginActionDefinition PluginActionDefinition
  * @author Logicommerce
  * @since 1.0.16
  */
@@ -75,4 +76,21 @@ public interface ConfigDefinition {
 	 */
 	void addMappedField(MappedFieldDefinition mappedField);
 
+	/**
+	 * <p>Get all actinos from the plugin definition.</p>
+	 *
+	 * @see com.logicommerce.sdk.definition.PluginActionDefinition PluginActionDefinition
+	 * @since 1.3.4
+	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.definition.PluginActionDefinition MappedFieldDefinition}&gt; object
+	 */
+	List<PluginActionDefinition> getPluginActions();
+
+	/**
+	 * <p>Add action to the plugin definition.</p>
+	 *
+	 * @see com.logicommerce.sdk.definition.MappedFieldDefinition PluginActionDefinition
+	 * @param pluginAction a {@link com.logicommerce.sdk.definition.PluginActionDefinition PluginActionDefinition} object
+	 * @since 1.3.4
+	 */
+	void addPluginAction(PluginActionDefinition pluginAction);
 }

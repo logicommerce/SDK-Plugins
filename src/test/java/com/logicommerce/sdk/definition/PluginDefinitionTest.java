@@ -12,6 +12,7 @@ import com.logicommerce.sdk.definition.implementations.MappedFieldDefinitionImpl
 import com.logicommerce.sdk.definition.implementations.MarketplaceDefinitionImpl;
 import com.logicommerce.sdk.definition.implementations.MarketplaceDefinitionImpl.Builder;
 import com.logicommerce.sdk.definition.implementations.PaymentSystemDefinitionImpl;
+import com.logicommerce.sdk.definition.implementations.PluginActionDefinitionImpl;
 import com.logicommerce.sdk.definition.implementations.ShipperDefinitionImpl;
 import com.logicommerce.sdk.enums.ConnectorType;
 import com.logicommerce.sdk.enums.MappedItemType;
@@ -40,6 +41,20 @@ class PluginDefinitionTest {
 
 		pluginDefinition.getMappedFields().add(mappedFieldDefinition);
 		
+		PluginActionDefinition pluginActionDefinition = new PluginActionDefinitionImpl.Builder<>()
+			.code("field1")
+			.name()
+				.language("es", "name es")
+				.language("en", "name en")
+			.done()
+			.description()
+				.language("en", "test description en")
+				.language("es", "test description es")
+			.done()
+			.build();
+
+		pluginDefinition.getPluginActions().add(pluginActionDefinition);
+		
 		ShipperDefinition shipperDefinition = new ShipperDefinitionImpl.Builder()
 				.mappedField()
 					.type(MappedItemType.USER)
@@ -57,6 +72,7 @@ class PluginDefinitionTest {
 			private List<PropertyDefinition> additionalProperties = new ArrayList<>();
 			private List<ConnectorDefinition> connectorDefinitions = new ArrayList<>();
 			private List<MappedFieldDefinition> mappedFields = new ArrayList<>();
+			private List<PluginActionDefinition> pluginActions = new ArrayList<>();
 
 			@Override
 			public boolean hasAdditionalProperties() {
@@ -150,6 +166,16 @@ class PluginDefinitionTest {
 			@Override
 			public boolean getCountryZonesFilter() {
 				return false;
+			}
+
+			@Override
+			public List<PluginActionDefinition> getPluginActions() {
+				return pluginActions;
+			}
+
+			@Override
+			public void addPluginAction(PluginActionDefinition pluginAction) {
+				pluginActions.add(pluginAction);				
 			}
 		};
 	}

@@ -13,47 +13,75 @@ import com.logicommerce.sdk.definition.DefinitionLanguages;
 public class DefinitionLanguagesImpl implements DefinitionLanguages {
 
 	private static final String DEFAULT_LANGUAGE = "en";
-	private Map<String, String> names;
+	private Map<String, String> values;
+	
 
-	DefinitionLanguagesImpl(Map<String, String> names) {
-		this.names = names;
+	DefinitionLanguagesImpl(Map<String, String> values) {
+		this.values = values;
 	}
 
-	/** {@inheritDoc} */
+	/** {@inheritDoc} 
+	 *@deprecated This method is deprecated since 1.3.4
+	**/
 	@Override
 	public Map<String, String> getNames() {
-		return names;
+		return values;
 	}
 
-	/** {@inheritDoc} */
+	@Override
+	public Map<String, String> getValues() {
+		return values;
+	}
+
+	/** {@inheritDoc} 
+	 *@deprecated This method is deprecated since 1.3.4
+	**/
 	@Override
 	public String getName(String language) {
-		if (names.containsKey(language)) {
-			return names.get(language);
+		if (values.containsKey(language)) {
+			return values.get(language);
 		}
-		if (names.containsKey(DEFAULT_LANGUAGE)) {
-			return names.get(DEFAULT_LANGUAGE);
+		if (values.containsKey(DEFAULT_LANGUAGE)) {
+			return values.get(DEFAULT_LANGUAGE);
 		}
 		return null;
 	}
 
+	@Override
+	public String getValue(String language) {
+		if (values.containsKey(language)) {
+			return values.get(language);
+		}
+		if (values.containsKey(DEFAULT_LANGUAGE)) {
+			return values.get(DEFAULT_LANGUAGE);
+		}
+		return null;
+	}
+	
+
 	public static class Builder<T> {
 
 		private T parentBuilder;
-		private Map<String, String> languages;
+		private Map<String, String> values;
 
-		Builder(T parentBuilder) {
-			languages = new LinkedHashMap<>();
+		public Builder(T parentBuilder) {
+			values = new LinkedHashMap<>();
 			this.parentBuilder = parentBuilder;
 		}
 
+		@Deprecated(forRemoval = true, since = "1.3.4")
 		public Builder<T> language(String language, String value) {
-			languages.put(language, value);
+			values.put(language, value);
 			return this;
 		}
 
-		DefinitionLanguages build() {
-			return new DefinitionLanguagesImpl(languages);
+		public Builder<T> value(String language, String value) {
+			values.put(language, value);
+			return this;
+		}
+
+		public DefinitionLanguages build() {
+			return new DefinitionLanguagesImpl(values);
 		}
 
 		public T done() {
