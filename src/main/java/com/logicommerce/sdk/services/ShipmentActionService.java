@@ -22,6 +22,6 @@ public interface ShipmentActionService extends ActionService {
 	 * @since 1.3.4
 	 * @throws com.logicommerce.sdk.services.PluginServiceException PluginServiceException if any.
 	 */
-	OrderActionResponse executeAction(OrderShipment orderShipment, String action);
+	OrderActionResponse executeAction(OrderShipment orderShipment, String action) throws PluginServiceException;
 	
 }

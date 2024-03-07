@@ -31,8 +31,8 @@ public interface OrderActionService extends ActionService {
 	/**
 	 * <p>This method is for get all plugin action definitions.</p>
 	 * 
-	 * @param order
-	 * @param connectorType
+	 * @param order a {@link com.logicommerce.sdk.models.order.Order} object 
+	 * @param connectorType a{@link java.util.List List} of {@link com.logicommerce.sdk.enums.ConnectorType ConnectorType}
 	 * @since 1.3.4
 	 * @return a List{@link com.logicommerce.sdk.definition.PluginActionDefinition} object
 	 * @throws com.logicommerce.sdk.services.PluginServiceException PluginServiceException if any.
