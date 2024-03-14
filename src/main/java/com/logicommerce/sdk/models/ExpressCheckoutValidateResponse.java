@@ -1,7 +1,5 @@
 package com.logicommerce.sdk.models;
 
-import java.util.Map;
-
 /**
  * Represents the response of the express checkout validation.
  * 
@@ -18,17 +16,10 @@ public interface ExpressCheckoutValidateResponse {
 	boolean isValid();
 
 	/**
-	 * Gets the address associated with the express checkout validation.
+	 * Gets the user associated with the express checkout validation.
 	 * 
-	 * @return the {@link Address} object.
+	 * @return the user associated with the validation.
 	 */
-	Address getAddress();
-
-	/**
-	 * Gets additional data associated with the express checkout validation.
-	 * 
-	 * @return a map containing additional data.
-	 */
-	Map<String, String> getAdditionalData();
+	ExpressCheckoutCustomer getUser();
 
 }
