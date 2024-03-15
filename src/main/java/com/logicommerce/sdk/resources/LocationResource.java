@@ -16,10 +16,22 @@ public interface LocationResource {
 	 *
 	 * @param languageId The ID of the language.
 	 * @param countryId The ID of the country.
-	 * @param locationId The ID of the location.
-	 * @return A list of Location objects.
+	 * @param parentLocationId The ID of the parent location.
+	 * @return A list of {@link Location} objects.
 	 */
-	List<Location> getLocationsPath(Integer languageId, Integer countryId, Integer locationId);
+	List<Location> getLocationsPath(Integer languageId, Integer countryId, Integer parentLocationId);
+
+	/**
+	 * Retrieves location based on the language, country, and postal code.
+	 *
+	 * @since 1.3.5
+	 * 
+	 * @param languageCode The language code.
+	 * @param countryCode The country code.
+	 * @param postalCode The postal code.
+	 * @return The {@link Location}.
+	 */
+	Location getLocation(String languageCode, String countryCode, String postalCode);
 
 	/**
 	 * Retrieves the country ID based on the country code.
@@ -80,16 +92,5 @@ public interface LocationResource {
 	 * @return The language ID.
 	 */
 	Integer getLanguageId(String languageCode);
-
-	/**
-	 * Searches for locations based on the country code and query.
-	 *
-	 * @since 1.3.5
-	 * 
-	 * @param countryCode The country code.
-	 * @param query The search query.
-	 * @return A list of Location objects.
-	 */
-	List<Location> searchLocations(String countryCode, String query);
 
 }

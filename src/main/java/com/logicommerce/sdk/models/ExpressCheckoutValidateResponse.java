@@ -18,7 +18,7 @@ public interface ExpressCheckoutValidateResponse {
 	/**
 	 * Gets the user associated with the express checkout validation.
 	 * 
-	 * @return the user associated with the validation.
+	 * @return the user associated with the validation. {@link ExpressCheckoutCustomer}.
 	 */
 	ExpressCheckoutCustomer getUser();
 

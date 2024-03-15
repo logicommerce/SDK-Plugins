@@ -30,16 +30,16 @@ public interface ExpressCheckoutCustomer {
 	String getLastName();
 
 	/**
-	 * Gets the billing address of the customer.
+	 * Gets the invocing address of the customer. Also known as billing address.
 	 *
-	 * @return the billing address of the customer
+	 * @return the invocing {@link Address} of the customer
 	 */
-	Address getBillingAddress();
+	Address getInvoicingAddress();
 
 	/**
 	 * Gets the shipping address of the customer.
 	 *
-	 * @return the shipping address of the customer
+	 * @return the shipping {@link Address} of the customer
 	 */
 	Address getShippingAddress();
 }
