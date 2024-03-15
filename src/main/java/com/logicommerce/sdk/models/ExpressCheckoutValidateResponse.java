@@ -6,20 +6,61 @@ package com.logicommerce.sdk.models;
  * @author Logicommerce
  * @since 1.3.5
  */
-public interface ExpressCheckoutValidateResponse {
+public class ExpressCheckoutValidateResponse {
+
+	private boolean success;
+	private ExpressCheckoutCustomer customer;
 
 	/**
-	 * Checks if the express checkout validation is valid.
+	 * Constructs a new express checkout validation response.
+	 */
+	public ExpressCheckoutValidateResponse() {}
+
+	/**
+	 * Constructs a new express checkout validation response with the given validation status and customer.
+	 * 
+	 * @param success the validation status.
+	 * @param customer the customer associated with the validation.
+	 */
+	public ExpressCheckoutValidateResponse(boolean success, ExpressCheckoutCustomer customer) {
+		this.success = success;
+		this.customer = customer;
+	}
+
+	/**
+	 * Checks if the express checkout validation is successful.
 	 * 
 	 * @return true if the validation is valid, false otherwise.
 	 */
-	boolean isValid();
+	public boolean isSuccess() {
+		return success;
+	}
 
 	/**
-	 * Gets the user associated with the express checkout validation.
+	 * Sets the validation status.
 	 * 
-	 * @return the user associated with the validation. {@link ExpressCheckoutCustomer}.
+	 * @param success the validation status.
 	 */
-	ExpressCheckoutCustomer getUser();
+	public void setSuccess(boolean success) {
+		this.success = success;
+	}
+
+	/**
+	 * Gets the customer associated with the express checkout validation.
+	 * 
+	 * @return the customer associated with the validation. {@link ExpressCheckoutCustomer}.
+	 */
+	public ExpressCheckoutCustomer getCustomer() {
+		return customer;
+	}
+
+	/**
+	 * Sets the customer associated with the express checkout validation.
+	 * 
+	 * @param customer the customer associated with the validation. {@link ExpressCheckoutCustomer}.
+	 */
+	public void setCustomer(ExpressCheckoutCustomer customer) {
+		this.customer = customer;
+	}
 
 }
