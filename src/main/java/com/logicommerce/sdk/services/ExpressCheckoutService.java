@@ -1,7 +1,8 @@
 package com.logicommerce.sdk.services;
 
-import java.util.Map;
+import com.logicommerce.sdk.models.Cart;
 import com.logicommerce.sdk.models.ExpressCheckoutValidateResponse;
+import com.logicommerce.sdk.models.ValidateParams;
 
 /**
  * ExpressCheckoutService interface.
@@ -17,18 +18,19 @@ public interface ExpressCheckoutService extends PluginService {
 	/**
 	 * Gets the URL for the Express Checkout service.
 	 *
+	 * @param cart the {@link Cart} to use for the Express Checkout service
 	 * @return the URL for the Express Checkout service
 	 * @throws PluginServiceException if an error occurs while retrieving the URL
 	 */
-	String getUrl() throws PluginServiceException;
+	String getUrl(Cart cart) throws PluginServiceException;
 
 	/**
 	 * Validates the given parameters for Express Checkout.
 	 *
-	 * @param params the parameters to validate
+	 * @param validateParams the parameters to validate. {@link ValidateParams}.
 	 * @return the validation response
 	 * @throws PluginServiceException if an error occurs while validating the parameters
 	 */
-	ExpressCheckoutValidateResponse validate(Map<String, String> params) throws PluginServiceException;
+	ExpressCheckoutValidateResponse validate(ValidateParams validateParams) throws PluginServiceException;
 
 }
