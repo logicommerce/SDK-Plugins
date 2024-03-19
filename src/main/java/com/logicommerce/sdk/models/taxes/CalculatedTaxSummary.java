@@ -80,7 +80,7 @@ public class CalculatedTaxSummary {
 	}
 
 	/**
-	 * Returns the tax rate of the calculated tax summary.
+	 * Returns the tax rate of the calculated tax summary. The value is a percentage.
 	 * @return a double
 	 */
 	public double getTaxRate() {
@@ -88,7 +88,7 @@ public class CalculatedTaxSummary {
 	}
 
 	/**
-	 * Sets the tax rate of the calculated tax summary.
+	 * Sets the tax rate of the calculated tax summary. The value is a percentage.
 	 * @param taxRate a double
 	 */
 	public void setTaxRate(double taxRate) {

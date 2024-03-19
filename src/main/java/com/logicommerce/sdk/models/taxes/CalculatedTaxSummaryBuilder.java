@@ -74,7 +74,7 @@ public class CalculatedTaxSummaryBuilder {
 	}
 
 	/**
-	 * Sets the tax rate of the calculated tax summary.
+	 * Sets the tax rate of the calculated tax summary. The tax rate is a percentage.
 	 * @param taxRate a double
 	 * @return a {@link CalculatedTaxSummaryBuilder} object
 	 */
