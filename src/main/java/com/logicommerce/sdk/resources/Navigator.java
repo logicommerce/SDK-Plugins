@@ -4,135 +4,142 @@ import java.net.URL;
 import com.logicommerce.sdk.models.Cookie;
 
 /**
- * <p>Navigator interface.</p>
+ * The Navigator interface represents a navigator object that provides information about the user's browsing context.
+ * It includes methods to retrieve user agent, URL, referer, language, country, currency, default currency, page type,
+ * cookies, IP address, store URL, base URL, and CDN assets and images.
  *
- * @author Logicommerce
- * @since 1.0.16
+ * @version 1.0.16
+ * @author LogiCommerce
  */
 public interface Navigator {
 
 	/**
-	 * Gets the navigator user agent.
+	 * Returns the user agent string of the browser.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the user agent string
 	 */
 	String getUserAgent();
-	
+
 	/**
-	 * <p>getUrl.</p>
+	 * Returns the URL of the current page.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the URL of the current page
 	 */
 	String getUrl();
 
 	/**
-	 * <p>getReferer.</p>
+	 * Returns the referer URL of the current page.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the referer URL of the current page
 	 */
 	String getReferer();
 
 	/**
-	 * <p>getLanguage.</p>
+	 * Returns the language code of the browser.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the language of the browser
 	 */
 	String getLanguage();
-	
+
 	/**
-	 * <p>getCountry.</p>
+	 * Returns the country code of the browser.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the country of the browser
 	 */
 	String getCountry();
-	
+
 	/**
-	 * <p>getCurrency.</p>
+	 * Returns the currency of the browser.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the currency of the browser
 	 */
 	String getCurrency();
-	
+
 	/**
-	 * <p>getDefaultCurrency.</p>
+	 * Returns the default currency of the browser.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the default currency of the browser
 	 */
 	String getDefaultCurrency();
-	
+
 	/**
-	 * <p>getPageType.</p>
+	 * Returns the type of the current page.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the type of the current page
 	 */
 	String getPageType();
 
 	/**
-	 * <p>getCookie.</p>
+	 * Returns the cookie with the specified name.
 	 *
-	 * @param name a {@link java.lang.String} object
-	 * @return a {@link java.lang.String} object
+	 * @param name the name of the cookie
+	 * @return the cookie with the specified name, or null if the cookie does not exist
 	 */
 	Cookie getCookie(String name);
 
 	/**
-	 * <p>setCookie.</p>
+	 * Sets a cookie with the specified name, value, and time-to-live (TTL) in seconds.
 	 *
-	 * @param name a {@link java.lang.String} object
-	 * @param value a {@link java.lang.String} object
-	 * @param ttl a int
+	 * @param name the name of the cookie
+	 * @param value the value of the cookie
+	 * @param ttl the time-to-live (TTL) of the cookie in seconds
 	 */
 	void setCookie(String name, String value, int ttl);
-	
+
 	/**
-	 * <p>setCookie.</p>
+	 * Sets a cookie.
 	 *
-	 * @param cookie a {@link com.logicommerce.sdk.models.Cookie} object
+	 * @param cookie the cookie to be set
 	 */
 	void setCookie(Cookie cookie);
-	
+
 	/**
-	 * <p>removeCookie.</p>
+	 * Removes the cookie with the specified name.
 	 *
-	 * @param name a {@link java.lang.String} object
+	 * @param name the name of the cookie to be removed
 	 */
 	void removeCookie(String name);
-	
+
 	/**
-	 * <p>getCookies.</p>
+	 * Returns a string representation of all cookies.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return a string representation of all cookies
 	 */
 	String getCookies();
 
 	/**
-	 * <p>getIp.</p>
+	 * Returns the IP address of the browser.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the IP address of the browser
 	 */
 	String getIp();
-	
+
 	/**
-	 * <p>getStoreUrl.</p>
+	 * Returns the store URL.
 	 *
-	 * @return a {@link java.net.URL} object
+	 * @return the store URL
 	 */
 	URL getStoreUrl();
-	
+
 	/**
-	 * <p>getBaseUrl.</p>
+	 * Returns the base URL.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the base URL
 	 */
 	String getBaseUrl();
-	
+
 	/**
-	 * <p>getCdnAssets.</p>
+	 * Returns the CDN assets URL.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * @return the CDN assets URL
 	 */
 	String getCdnAssets();
 
+	/**
+	 * Returns the CDN images URL.
+	 *
+	 * @return the CDN images URL
+	 */
 	String getCdnImages();
 
 }
