@@ -125,4 +125,13 @@ public class LocationImpl implements Location {
 	public String getName() {
 		return name;
 	}
+
+	/**
+	 * <p>Setter for the field <code>name</code>.</p>
+	 *
+	 * @param name a {@link java.lang.String} object
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
 }
