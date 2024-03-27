@@ -4,80 +4,93 @@ import java.util.List;
 import com.logicommerce.sdk.models.Location;
 
 /**
- * <p>LocationResource interface.</p>
- *
+ * The LocationResource interface provides methods to retrieve information about locations.
+ * 
  * @author Logicommerce
  * @since 1.0.16
  */
 public interface LocationResource {
 
 	/**
-	 * <p>getLocationsPath.</p>
+	 * Retrieves a list of locations based on the language, country, and location IDs.
 	 *
-	 * @param languageId a {@link java.lang.Integer} object
-	 * @param countryId a {@link java.lang.Integer} object
-	 * @param locationId a {@link java.lang.Integer} object
-	 * @return a {@link java.util.List} object
+	 * @param languageId The ID of the language.
+	 * @param countryId The ID of the country.
+	 * @param parentLocationId The ID of the parent location.
+	 * @return A list of {@link Location} objects.
 	 */
-	List<Location> getLocationsPath(Integer languageId, Integer countryId, Integer locationId);
+	List<Location> getLocationsPath(Integer languageId, Integer countryId, Integer parentLocationId);
 
 	/**
-	 * <p>getCountryId.</p>
+	 * Retrieves a list of locations based on the language, country, and postal code.
 	 *
-	 * @param countryCode a {@link java.lang.String} object
-	 * @return a {@link java.lang.Integer} object
+	 * @since 1.3.5
+	 * 
+	 * @param languageCode The language code.
+	 * @param countryCode The country code.
+	 * @param postalCode The postal code.
+	 * @return A list of {@link Location} objects.
+	 */
+	List<Location> getLocations(String languageCode, String countryCode, String postalCode);
+
+	/**
+	 * Retrieves the country ID based on the country code.
+	 *
+	 * @param countryCode The country code.
+	 * @return The country ID.
 	 */
 	Integer getCountryId(String countryCode);
 
 	/**
-	 * <p>getCountryName.</p>
+	 * Retrieves the country name based on the country code.
 	 *
-	 * @param countryCode a {@link java.lang.String} object
-	 * @return a {@link java.lang.String} object
+	 * @param countryCode The country code.
+	 * @return The country name.
 	 */
 	String getCountryName(String countryCode);
-	
+
 	/**
-	 * <p>getCountryCode.</p>
+	 * Retrieves the country code based on the country ID.
 	 *
-	 * @param countryId a {@link java.lang.Integer} object
-	 * @return a {@link java.lang.String} object
+	 * @param countryId The country ID.
+	 * @return The country code.
 	 */
 	String getCountryCode(Integer countryId);
 
 	/**
-	 * <p>getStateCode.</p>
+	 * Retrieves the state code based on the language, country, and location IDs.
 	 *
-	 * @param languageId a {@link java.lang.Integer} object
-	 * @param countryId a {@link java.lang.Integer} object
-	 * @param locationId a {@link java.lang.Integer} object
-	 * @return a {@link java.lang.String} object
+	 * @param languageId The ID of the language.
+	 * @param countryId The ID of the country.
+	 * @param locationId The ID of the location.
+	 * @return The state code.
 	 */
 	String getStateCode(Integer languageId, Integer countryId, Integer locationId);
 
 	/**
-	 * <p>getStateName.</p>
+	 * Retrieves the state name based on the language, country, and location IDs.
 	 *
-	 * @param languageId a {@link java.lang.Integer} object
-	 * @param countryId a {@link java.lang.Integer} object
-	 * @param locationId a {@link java.lang.Integer} object
-	 * @return a {@link java.lang.String} object
+	 * @param languageId The ID of the language.
+	 * @param countryId The ID of the country.
+	 * @param locationId The ID of the location.
+	 * @return The state name.
 	 */
 	String getStateName(Integer languageId, Integer countryId, Integer locationId);
 
 	/**
-	 * <p>getLanguageCode.</p>
+	 * Retrieves the language code based on the language ID.
 	 *
-	 * @param languageId a {@link java.lang.Integer} object
-	 * @return a {@link java.lang.String} object
+	 * @param languageId The language ID.
+	 * @return The language code.
 	 */
 	String getLanguageCode(Integer languageId);
 
 	/**
-	 * <p>getLanguageId.</p>
+	 * Retrieves the language ID based on the language code.
 	 *
-	 * @param languageCode a {@link java.lang.String} object
-	 * @return a {@link java.lang.Integer} object
+	 * @param languageCode The language code.
+	 * @return The language ID.
 	 */
 	Integer getLanguageId(String languageCode);
+
 }

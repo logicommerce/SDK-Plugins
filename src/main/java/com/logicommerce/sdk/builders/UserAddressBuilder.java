@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.implementations.UserAddressImpl;
  * @author Logicommerce
  * @since 1.3.3
  */
-public class UserAddressBuilder<T, S> extends AddressBuilder<T> {
+public class UserAddressBuilder<T, S> extends AddressBuilder<T, UserAddressBuilder<T, S>> {
 
 	private boolean defaultAddress;
 
@@ -28,7 +28,7 @@ public class UserAddressBuilder<T, S> extends AddressBuilder<T> {
 	protected boolean tax;
 
 	protected boolean re;
-	
+
 	/**
 	 * <p>Constructor for AddressBuilder.</p>
 	 */
@@ -144,7 +144,7 @@ public class UserAddressBuilder<T, S> extends AddressBuilder<T> {
 		this.re = re;
 		return returnThis();
 	}
-	
+
 	/**
 	 * <p>build.</p>
 	 *
@@ -155,7 +155,7 @@ public class UserAddressBuilder<T, S> extends AddressBuilder<T> {
 		setElements(userAddress);
 		return userAddress;
 	}
-	
+
 	/**
 	 * <p>setElements.</p>
 	 *
@@ -173,7 +173,7 @@ public class UserAddressBuilder<T, S> extends AddressBuilder<T> {
 		userAddress.setTax(tax);
 		userAddress.setRe(re);
 	}
-	
+
 	/**
 	 * <p>returnThis.</p>
 	 *

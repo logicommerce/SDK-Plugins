@@ -19,5 +19,5 @@ public interface PaymentKeysService extends PluginService {
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */
 	PaymentKeys getPaymentKeys(PaymentValidateParams paymentValidateParams) throws PluginServiceException;
-	
+
 }

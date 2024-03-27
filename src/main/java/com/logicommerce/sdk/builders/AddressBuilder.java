@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.implementations.AddressImpl;
  * @author Logicommerce
  * @since 1.3.3
  */
-public class AddressBuilder<T> {
+public class AddressBuilder<T, S extends AddressBuilder<T, S>> {
 
 	private T parentBuilder;
 
@@ -31,8 +31,8 @@ public class AddressBuilder<T> {
 
 	protected String mobile;
 
-	protected LocationBuilder<AddressBuilder<T>> location;
-	
+	protected LocationBuilder<S> location;
+
 	/**
 	 * <p>Constructor for AddressBuilder.</p>
 	 */
@@ -56,7 +56,7 @@ public class AddressBuilder<T> {
 	 * @param address a {@link java.lang.String} object
 	 * @return a {@link AddressBuilder} object
 	 */
-	public AddressBuilder<T> address(String address) {
+	public S address(String address) {
 		this.address = address;
 		return returnThis();
 	}
@@ -67,7 +67,7 @@ public class AddressBuilder<T> {
 	 * @param addressAdditionalInformation a {@link java.lang.String} object
 	 * @return a {@link AddressBuilder} object
 	 */
-	public AddressBuilder<T> addressAdditionalInformation(String addressAdditionalInformation) {
+	public S addressAdditionalInformation(String addressAdditionalInformation) {
 		this.addressAdditionalInformation = addressAdditionalInformation;
 		return returnThis();
 	}
@@ -78,7 +78,7 @@ public class AddressBuilder<T> {
 	 * @param number a {@link java.lang.String} object
 	 * @return a {@link AddressBuilder} object
 	 */
-	public AddressBuilder<T> number(String number) {
+	public S number(String number) {
 		this.number = number;
 		return returnThis();
 	}
@@ -89,7 +89,7 @@ public class AddressBuilder<T> {
 	 * @param city a {@link java.lang.String} object
 	 * @return a {@link AddressBuilder} object
 	 */
-	public AddressBuilder<T> city(String city) {
+	public S city(String city) {
 		this.city = city;
 		return returnThis();
 	}
@@ -100,7 +100,7 @@ public class AddressBuilder<T> {
 	 * @param state a {@link java.lang.String} object
 	 * @return a {@link AddressBuilder} object
 	 */
-	public AddressBuilder<T> state(String state) {
+	public S state(String state) {
 		this.state = state;
 		return returnThis();
 	}
@@ -111,7 +111,7 @@ public class AddressBuilder<T> {
 	 * @param postalCode a {@link java.lang.String} object
 	 * @return a {@link AddressBuilder} object
 	 */
-	public AddressBuilder<T> postalCode(String postalCode) {
+	public S postalCode(String postalCode) {
 		this.postalCode = postalCode;
 		return returnThis();
 	}
@@ -122,7 +122,7 @@ public class AddressBuilder<T> {
 	 * @param phone a {@link java.lang.String} object
 	 * @return a {@link AddressBuilder} object
 	 */
-	public AddressBuilder<T> phone(String phone) {
+	public S phone(String phone) {
 		this.phone = phone;
 		return returnThis();
 	}
@@ -133,7 +133,7 @@ public class AddressBuilder<T> {
 	 * @param mobile a {@link java.lang.String} object
 	 * @return a {@link AddressBuilder} object
 	 */
-	public AddressBuilder<T> mobile(String mobile) {
+	public S mobile(String mobile) {
 		this.mobile = mobile;
 		return returnThis();
 	}
@@ -143,17 +143,17 @@ public class AddressBuilder<T> {
 	 *
 	 * @return a {@link LocationBuilder} object
 	 */
-	public LocationBuilder<AddressBuilder<T>> location() {
+	public LocationBuilder<S> location() {
 		return location;
 	}
-	
+
 	/**
 	 * <p>name.</p>
 	 *
 	 * @param name a {@link java.lang.String} object
 	 * @return a {@link AddressBuilder} object
 	 */
-	public AddressBuilder<T> name(String name) {
+	public S name(String name) {
 		this.name = name;
 		return returnThis();
 	}
@@ -168,7 +168,7 @@ public class AddressBuilder<T> {
 		setElements(addressImpl);
 		return addressImpl;
 	}
-	
+
 	/**
 	 * <p>setElements.</p>
 	 *
@@ -201,8 +201,9 @@ public class AddressBuilder<T> {
 	 *
 	 * @return a {@link com.logicommerce.sdk.builders.AddressBuilder} object
 	 */
-	protected AddressBuilder<T> returnThis() {
-		return this;
+	@SuppressWarnings("unchecked")
+	protected S returnThis() {
+		return (S) this;
 	}
 
 }
