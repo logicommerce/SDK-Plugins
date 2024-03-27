@@ -29,8 +29,7 @@ public class LocationBuilder<T> {
 	/**
 	 * <p>Constructor for LocationBuilder.</p>
 	 */
-	public LocationBuilder() {
-	}
+	public LocationBuilder() {}
 
 	/**
 	 * <p>Constructor for LocationBuilder.</p>
