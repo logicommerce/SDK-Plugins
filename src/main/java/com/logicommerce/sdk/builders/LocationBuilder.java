@@ -23,12 +23,13 @@ public class LocationBuilder<T> {
 
 	protected String stateCode;
 
+	protected String name;
+
 
 	/**
 	 * <p>Constructor for LocationBuilder.</p>
 	 */
-	public LocationBuilder() {
-	}
+	public LocationBuilder() {}
 
 	/**
 	 * <p>Constructor for LocationBuilder.</p>
@@ -97,6 +98,17 @@ public class LocationBuilder<T> {
 	}
 
 	/**
+	 * <p>name.</p>
+	 *
+	 * @param name a {@link java.lang.String} object
+	 * @return a {@link com.logicommerce.sdk.builders.LocationBuilder} object
+	 */
+	public LocationBuilder<T> name(String name) {
+		this.name = name;
+		return this;
+	}
+
+	/**
 	 * <p>build.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.Location} object
@@ -108,6 +120,7 @@ public class LocationBuilder<T> {
 		location.setLatitude(latitude);
 		location.setLongitude(longitude);
 		location.setStateCode(stateCode);
+		location.setName(name);
 		return location;
 	}
 

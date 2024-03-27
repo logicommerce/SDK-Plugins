@@ -202,14 +202,20 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 		public abstract S build();
 
 		protected void setAttributes(R connector) {
-			connector.setProperties(properties.stream().map(PropertyDefinitionImpl.Builder::build).collect(Collectors.toList()));
 			connector.setHasAdditionalProperties(hasAdditionalProperties);
-			connector.setAdditionalProperties(additionalProperties.stream()
-					.map(PropertyDefinitionImpl.Builder::build)
-					.collect(Collectors.toList()));
-			connector.setMappedFields(mappedFields.stream().map(MappedFieldDefinitionImpl.Builder::build).collect(Collectors.toList()));
 			connector.setAdditionalData(additionalData);
-			connector.setPluginActions(pluginActions.stream().map(PluginActionDefinitionImpl.Builder::build).collect(Collectors.toList()));
+			connector.setProperties(properties.stream()
+				.map(PropertyDefinitionImpl.Builder::build)
+				.collect(Collectors.toList()));
+			connector.setAdditionalProperties(additionalProperties.stream()
+				.map(PropertyDefinitionImpl.Builder::build)
+				.collect(Collectors.toList()));
+			connector.setMappedFields(mappedFields.stream()
+				.map(MappedFieldDefinitionImpl.Builder::build)
+				.collect(Collectors.toList()));
+			connector.setPluginActions(pluginActions.stream()
+				.map(PluginActionDefinitionImpl.Builder::build)
+				.collect(Collectors.toList()));
 		}
 
 	}

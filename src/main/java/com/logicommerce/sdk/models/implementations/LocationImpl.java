@@ -20,6 +20,8 @@ public class LocationImpl implements Location {
 
 	private String stateCode;
 
+	private String name;
+
 	/**
 	 * <p>Getter for the field <code>country</code>.</p>
 	 *
@@ -113,5 +115,23 @@ public class LocationImpl implements Location {
 	 */
 	public void setStateCode(String stateCode) {
 		this.stateCode = stateCode;
+	}
+
+	/**
+	 * <p>Getter for the field <code>name</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <p>Setter for the field <code>name</code>.</p>
+	 *
+	 * @param name a {@link java.lang.String} object
+	 */
+	public void setName(String name) {
+		this.name = name;
 	}
 }

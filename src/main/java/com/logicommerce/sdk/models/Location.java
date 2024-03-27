@@ -48,4 +48,12 @@ public interface Location {
 	 * @return a {@link java.lang.String String} object
 	 */
 	String getStateCode();
+
+	/**
+	 * <p>Get name of the location level 1.</p>
+	 *
+	 * @since 1.3.5
+	 * @return a {@link java.lang.String String} object
+	 */
+	String getName();
 }

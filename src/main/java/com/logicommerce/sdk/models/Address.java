@@ -1,84 +1,80 @@
 package com.logicommerce.sdk.models;
 
-
 /**
- * <p>Address interface. Get data of a address object.</p>
- *
- * @see com.logicommerce.sdk.models.UserAddress UserAddress
+ * The Address interface represents a physical address.
+ * 
  * @author Logicommerce
- * @see com.logicommerce.sdk.models.Location Location
- * @since 1.0.16
+ * @since 1.3.5
  */
 public interface Address {
 
 	/**
-	 * <p>Get name of address.</p>
+	 * Gets the name associated with the address.
 	 *
-	 * @return a {@link java.lang.String String} object
+	 * @return the name associated with the address
 	 */
 	String getName();
 
 	/**
-	 * <p>Get address value.</p>
+	 * Gets the address.
 	 *
-	 * @return a {@link java.lang.String String} object
+	 * @return the address
 	 */
 	String getAddress();
 
 	/**
-	 * <p>Get number.</p>
+	 * Gets the number associated with the address.
 	 *
-	 * @return a {@link java.lang.String String} object
+	 * @return the number associated with the address
 	 */
 	String getNumber();
 
 	/**
-	 * <p>Get additional information.</p>
+	 * Gets additional information about the address.
 	 *
-	 * @return a {@link java.lang.String String} object
+	 * @return additional information about the address
 	 */
 	String getAddressAdditionalInformation();
 
 	/**
-	 * <p>Get city of address.</p>
+	 * Gets the city of the address.
 	 *
-	 * @return a {@link java.lang.String String} object
+	 * @return the city of the address
 	 */
 	String getCity();
 
 	/**
-	 * <p>Get state of address.</p>
+	 * Gets the state of the address.
 	 *
-	 * @return a {@link java.lang.String String} object
+	 * @return the state of the address
 	 */
 	String getState();
 
 	/**
-	 * <p>Get postal code of address.</p>
+	 * Gets the postal code of the address.
 	 *
-	 * @return a {@link java.lang.String String} object
+	 * @return the postal code of the address
 	 */
 	String getPostalCode();
 
 	/**
-	 * <p>Get location object of address, this contains data about location.</p>
+	 * Gets the location of the address.
 	 *
-	 * @see com.logicommerce.sdk.models.Location Location
-	 * @return a {@link com.logicommerce.sdk.models.Location Location} object
+	 * @return the location of the address
 	 */
 	Location getLocation();
 
 	/**
-	 * <p>Get fixed phone of the address.</p>
+	 * Gets the phone number associated with the address.
 	 *
-	 * @return a {@link java.lang.String String} object
+	 * @return the phone number associated with the address
 	 */
 	String getPhone();
 
 	/**
-	 * <p>Get mobile of the address.</p>
+	 * Gets the mobile number associated with the address.
 	 *
-	 * @return a {@link java.lang.String String} object
+	 * @return the mobile number associated with the address
 	 */
 	String getMobile();
 

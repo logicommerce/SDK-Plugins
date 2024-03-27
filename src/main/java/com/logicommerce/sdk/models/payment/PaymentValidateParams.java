@@ -1,27 +1,17 @@
 package com.logicommerce.sdk.models.payment;
 
-import java.util.Map;
+import com.logicommerce.sdk.models.RequestParams;
 
 /**
- * <p>PaymentValidateParams interface.</p>
- *
- * @author Logicommerce
+ * The PaymentValidateParams interface represents the parameters required for validating a payment.
+ * 
+ * @deprecated As of release 1.3.5, replaced by
+ *    {@link com.logicommerce.sdk.models.RequestParams RequestParams}. In a future major release,
+ *    this interface will be removed.
+ * @author LogiCommerce
  * @since 1.0.16
  */
-public interface PaymentValidateParams {
-
-	/**
-	 * <p>getParams.</p>
-	 *
-	 * @return a {@link java.util.Map} object
-	 */
-	Map<String, String> getParams();
-
-	/**
-	 * <p>getBody.</p>
-	 *
-	 * @return a {@link java.lang.String} object
-	 */
-	String getBody();
+@Deprecated(since = "1.3.5", forRemoval = true)
+public interface PaymentValidateParams extends RequestParams {
 
 }
