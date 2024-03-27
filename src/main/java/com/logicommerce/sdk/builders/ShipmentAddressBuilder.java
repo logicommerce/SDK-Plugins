@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.order.implementations.ShipmentAddressImpl;
  * @author Logicommerce
  * @since 1.0.16
  */
-public class ShipmentAddressBuilder<T> extends AddressBuilder<T> {
+public class ShipmentAddressBuilder<T> extends AddressBuilder<T, ShipmentAddressBuilder<T>> {
 
 	protected String email;
 
