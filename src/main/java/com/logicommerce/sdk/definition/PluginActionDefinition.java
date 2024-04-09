@@ -1,5 +1,7 @@
 package com.logicommerce.sdk.definition;
 
+import com.logicommerce.sdk.enums.ConnectorType;
+
 /**
  * <p>PluginActionDefinition interface.</p>
  *
@@ -13,18 +15,17 @@ public interface PluginActionDefinition {
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
-	String getCode();
-	
+	String getCode();	
 	
 	/**
-	 * <p>getLanguages.</p>
+	 * <p>getName.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
 	 */
 	DefinitionLanguages getName();
 	
 	/**
-	 * <p>getLanguages.</p>
+	 * <p>getDescription.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
 	 */
@@ -43,5 +44,18 @@ public interface PluginActionDefinition {
 	 * @param active a boolean
 	 */
 	void setActive(boolean active);
+	
+	/**
+	 * <p>getConnectorType.</p>
+	 *
+	 * @return a {@link com.logicommerce.sdk.enums.ConnectorType} object
+	 */
+	ConnectorType getConnectorType();
 
+	/**
+	 * <p>setConnectorType.</p>
+	 *
+	 * @param connectorType a {@link com.logicommerce.sdk.enums.ConnectorType} object
+	 */
+	void setConnectorType(ConnectorType connectorType);
 }
