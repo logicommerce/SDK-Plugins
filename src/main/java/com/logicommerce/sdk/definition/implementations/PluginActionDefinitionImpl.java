@@ -4,6 +4,7 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.logicommerce.sdk.definition.DefinitionLanguages;
 import com.logicommerce.sdk.definition.PluginActionDefinition;
+import com.logicommerce.sdk.enums.ConnectorType;
 
 /**
  * <p>PluginActionDefinitionImpl class.</p>
@@ -17,6 +18,7 @@ public class PluginActionDefinitionImpl implements PluginActionDefinition {
 	private DefinitionLanguages name;
 	private DefinitionLanguages description;
 	private boolean active;
+	private ConnectorType connectorType;
 
 	/** {@inheritDoc} */
 	@Override
@@ -74,7 +76,7 @@ public class PluginActionDefinitionImpl implements PluginActionDefinition {
 		this.description = new DefinitionLanguagesImpl(description);
 	}
 
-	
+	/** {@inheritDoc} */
 	@Override
 	public boolean isActive() {
 		return active;
@@ -84,6 +86,18 @@ public class PluginActionDefinitionImpl implements PluginActionDefinition {
 		this.active = active;
 	}
 
+	/** {@inheritDoc} */
+	@Override
+	public ConnectorType getConnectorType() {
+		return connectorType;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public void setConnectorType(ConnectorType connectorType) {
+		this.connectorType = connectorType;
+	}
+
 	public static class Builder<T> {
 		
 		private T parentBuilder;
@@ -91,11 +105,14 @@ public class PluginActionDefinitionImpl implements PluginActionDefinition {
 		private DefinitionLanguagesImpl.Builder<Builder<T>> name;
 		private DefinitionLanguagesImpl.Builder<Builder<T>> description;
 		private boolean active;
+		private ConnectorType connectorType;
 
 		public Builder() {
 			code = "string";
 			name = new DefinitionLanguagesImpl.Builder<>(this);
 			description = new DefinitionLanguagesImpl.Builder<>(this);
+			active = false;
+			connectorType = ConnectorType.NONE;
 		}
 
 		public Builder(T parentBuilder) {
@@ -120,6 +137,11 @@ public class PluginActionDefinitionImpl implements PluginActionDefinition {
 			this.active = active;
 			return this;
 		}
+		
+		public Builder<T> connectorType(ConnectorType connectorType) {
+			this.connectorType = connectorType;
+			return this;
+		}
 
 		public PluginActionDefinition build() {
 			PluginActionDefinitionImpl pluginActionDefinition = new PluginActionDefinitionImpl();
@@ -127,6 +149,7 @@ public class PluginActionDefinitionImpl implements PluginActionDefinition {
 			pluginActionDefinition.setDescription(description.build());
 			pluginActionDefinition.setCode(code);
 			pluginActionDefinition.setActive(active);
+			pluginActionDefinition.setConnectorType(connectorType);
 			return pluginActionDefinition;
 		}
 
