@@ -213,6 +213,7 @@ public class ProviderPickupPointBuilder {
 	 * <p>address</p>
 	 *
 	 * @param address a {@link com.logicommerce.sdk.models.Address} object
+	 * @return a {@link com.logicommerce.sdk.models.pickuppoints.ProviderPickupPointBuilder} object
 	 */
 	public ProviderPickupPointBuilder address(Address address) {
 		this.address = address;		
