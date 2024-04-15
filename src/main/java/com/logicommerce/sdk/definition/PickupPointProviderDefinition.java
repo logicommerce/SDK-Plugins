@@ -6,7 +6,7 @@ import com.logicommerce.sdk.enums.ConnectorType;
  * <p>PickupPointProviderDefinition interface.</p>
  *
  * @author Logicommerce
- * @since 1.3.6
+ * @since 1.3.7
  */
 public interface PickupPointProviderDefinition extends ConnectorDefinition {
 

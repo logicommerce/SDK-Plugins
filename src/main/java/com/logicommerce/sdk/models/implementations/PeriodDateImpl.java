@@ -7,7 +7,7 @@ import com.logicommerce.sdk.models.PeriodDate;
  * <p>PeriodDateImpl class.</p>
  *
  * @author Logicommerce
- * @since 1.3.6
+ * @since 1.3.7
  */
 public class PeriodDateImpl implements PeriodDate {
 

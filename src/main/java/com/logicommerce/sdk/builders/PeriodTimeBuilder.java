@@ -8,7 +8,7 @@ import com.logicommerce.sdk.models.implementations.PeriodTimeImpl;
  * <p>PeriodDateBuilder class.</p>
  *
  * @author Logicommerce
- * @since 1.3.6
+ * @since 1.3.7
  */
 public class PeriodTimeBuilder<T> {
 

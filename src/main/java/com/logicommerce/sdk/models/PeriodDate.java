@@ -6,7 +6,7 @@ import java.time.LocalDate;
  * <p>PickupPointProvider interface.</p>
  *
  * @author 	Logicommerce
- * @since 	1.3.6
+ * @since 	1.3.7
  */
 public interface PeriodDate {
 

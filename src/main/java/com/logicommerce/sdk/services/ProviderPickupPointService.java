@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.pickuppoints.ProviderPickupPoint;
  * Return the list of PickupPointProviders and their pickup points.
  * 
  * @author LogiCommerce
- * @since 1.3.6
+ * @since 1.3.7
  * 
  */
 public interface ProviderPickupPointService extends PluginService {

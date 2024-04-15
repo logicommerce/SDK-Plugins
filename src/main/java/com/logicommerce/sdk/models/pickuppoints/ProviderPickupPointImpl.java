@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.PeriodDate;
  * <p>PickupPointProvider interface.</p>
  *
  * @author 	Logicommerce
- * @since 	1.3.6
+ * @since 	1.3.7
  */
 public class ProviderPickupPointImpl implements ProviderPickupPoint {
 
