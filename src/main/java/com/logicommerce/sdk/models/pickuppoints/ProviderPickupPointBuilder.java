@@ -238,7 +238,7 @@ public class ProviderPickupPointBuilder {
 	/**
 	 * <p>builder.</p>
 	 *
-	 * @return a {@link com.logicommerce.sdk.models.pickuppoints.PickupPointProvider} object
+	 * @return a {@link com.logicommerce.sdk.models.pickuppoints.ProviderPickupPoint} object
 	 */
 	public ProviderPickupPoint build() {
 		ProviderPickupPointImpl providerPickupPoint = new ProviderPickupPointImpl();

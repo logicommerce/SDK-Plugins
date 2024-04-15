@@ -103,7 +103,7 @@ public class PickupPointFilterBuilder {
 	/**
 	 * <p>builder.</p>
 	 *
-	 * @return a {@link com.logicommerce.sdk.models.pickuppoints.PickupPointProvider} object
+	 * @return a {@link com.logicommerce.sdk.models.pickuppoints.PickupPointFilter} object
 	 */
 	public PickupPointFilter build() {
 		PickupPointFilterImpl pickupPointFilter = new PickupPointFilterImpl();

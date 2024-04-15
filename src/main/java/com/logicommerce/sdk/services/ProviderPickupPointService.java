@@ -22,6 +22,6 @@ public interface ProviderPickupPointService extends PluginService {
 	List<ProviderPickupPoint> getPickupPoints(PickupPointFilter filter)  throws PluginServiceException;
 	
 	
-	boolean validatePickupPoint(String key, String countryCode, String postalCode, String weight)  throws PluginServiceException;
+	boolean validatePickupPoint(ProviderPickupPoint pickupPoint, double weight)  throws PluginServiceException;
 
 }
