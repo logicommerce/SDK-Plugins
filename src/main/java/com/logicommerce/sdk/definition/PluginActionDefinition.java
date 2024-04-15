@@ -48,6 +48,7 @@ public interface PluginActionDefinition {
 	/**
 	 * <p>getConnectorType.</p>
 	 *
+	 * @since 1.3.6
 	 * @return a {@link com.logicommerce.sdk.enums.ConnectorType} object
 	 */
 	ConnectorType getConnectorType();
@@ -55,6 +56,7 @@ public interface PluginActionDefinition {
 	/**
 	 * <p>setConnectorType.</p>
 	 *
+	 * @since 1.3.6
 	 * @param connectorType a {@link com.logicommerce.sdk.enums.ConnectorType} object
 	 */
 	void setConnectorType(ConnectorType connectorType);
