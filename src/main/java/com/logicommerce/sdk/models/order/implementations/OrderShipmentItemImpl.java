@@ -81,5 +81,4 @@ public class OrderShipmentItemImpl implements OrderShipmentItem {
 		this.weight = weight;
 	}
 	
-	
 }

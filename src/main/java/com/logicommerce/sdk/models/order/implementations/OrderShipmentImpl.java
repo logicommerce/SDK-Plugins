@@ -3,6 +3,7 @@ package com.logicommerce.sdk.models.order.implementations;
 import java.time.LocalDate;
 import java.util.List;
 import com.logicommerce.sdk.enums.ExportStatusType;
+import com.logicommerce.sdk.models.order.DocumentProviderPickupPoint;
 import com.logicommerce.sdk.models.order.OrderShipment;
 import com.logicommerce.sdk.models.order.OrderShipmentItem;
 import com.logicommerce.sdk.models.order.OrderShipmentStatus;
@@ -58,6 +59,10 @@ public class OrderShipmentImpl implements OrderShipment {
 	private Integer substatus;
 	
 	private String trackingUrl;
+
+	@NoMappable
+	@Uses(value = DocumentProviderPickupPointImpl.class)
+	private DocumentProviderPickupPoint providerPickupPoint;
 
 	/**
 	 * <p>Getter for the field <code>id</code>.</p>
@@ -314,5 +319,17 @@ public class OrderShipmentImpl implements OrderShipment {
 	@Override
 	public String getTrackingUrl() {
 		return trackingUrl;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public DocumentProviderPickupPoint getProviderPickupPoint() {
+		return providerPickupPoint;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public void setProviderPickupPoint(DocumentProviderPickupPoint providerPickupPoint) {
+		this.providerPickupPoint = providerPickupPoint;
 	}
 }

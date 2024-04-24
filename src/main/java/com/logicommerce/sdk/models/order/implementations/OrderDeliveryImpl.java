@@ -2,10 +2,12 @@ package com.logicommerce.sdk.models.order.implementations;
 
 import java.util.List;
 import com.logicommerce.sdk.enums.DeliveryType;
+import com.logicommerce.sdk.enums.DocumentPickingDeliveryMode;
 import com.logicommerce.sdk.models.order.GeographicalZone;
 import com.logicommerce.sdk.models.order.OrderDelivery;
 import com.logicommerce.sdk.models.order.OrderDeliveryPhysicalLocation;
 import com.logicommerce.sdk.models.order.OrderShipment;
+import com.logicommerce.sdk.models.order.ProviderPickupPointPickingDocumentDelivery;
 import com.logicommerce.utilities.annotations.Uses;
 
 /**
@@ -26,6 +28,11 @@ public class OrderDeliveryImpl implements OrderDelivery {
 
 	@Uses(value = GeographicalZoneImpl.class)
 	private GeographicalZone geographicalZone;
+
+	private DocumentPickingDeliveryMode mode;
+
+	@Uses(value = ProviderPickupPointPickingDocumentDeliveryImpl.class)
+	private ProviderPickupPointPickingDocumentDelivery providerPickupPointPickingDocumentDelivery;
 
 	/**
 	 * <p>Getter for the field <code>type</code>.</p>
@@ -68,6 +75,21 @@ public class OrderDeliveryImpl implements OrderDelivery {
 	}
 
 	/**
+	 * <p>Getter for the field <code>mode</code>.</p>
+	 * @since 1.3.8
+	 * @return a {@link com.logicommerce.sdk.enums.DocumentPickingDeliveryMode} object
+	 */
+	@Override
+	public DocumentPickingDeliveryMode getMode() {
+		return mode;
+	}
+
+	@Override
+	public ProviderPickupPointPickingDocumentDelivery getProviderPickupPointPickingDocumentDelivery() {
+		return providerPickupPointPickingDocumentDelivery;
+	}
+
+	/**
 	 * <p>Setter for the field <code>type</code>.</p>
 	 *
 	 * @param type a {@link com.logicommerce.sdk.enums.DeliveryType} object
@@ -101,5 +123,25 @@ public class OrderDeliveryImpl implements OrderDelivery {
 	 */
 	public void setGeographicalZone(GeographicalZone geographicalZone) {
 		this.geographicalZone = geographicalZone;
+	}
+
+	/**
+	 * <p>Setter for the field <code>mode</code>.</p>
+	 * @since 1.3.8
+	 * @param mode a {@link com.logicommerce.sdk.enums.DocumentPickingDeliveryMode} object
+	 */
+	public void setMode(DocumentPickingDeliveryMode mode) {
+		this.mode = mode;
+	}
+
+	/**
+	 * <p>Setter for the field <code>providerPickupPointPickingDocumentDelivery</code>.</p>
+	 *
+	 * @param providerPickupPointPickingDocumentDelivery a 
+	 * {@link com.logicommerce.sdk.models.order.ProviderPickupPointPickingDocumentDelivery} object
+	 */
+	public void setProviderPickupPointPickingDocumentDelivery(ProviderPickupPointPickingDocumentDelivery 
+			providerPickupPointPickingDocumentDelivery) {
+		this.providerPickupPointPickingDocumentDelivery = providerPickupPointPickingDocumentDelivery;
 	}
 }

@@ -150,7 +150,7 @@ public class OpeningTimesBuilder<T> {
 		return openingTimes;
 	}
 	
-	private List<PeriodTime> getPeriods(List<PeriodTimeBuilder<OpeningTimesBuilder<T>>> periods ) {
+	private List<PeriodTime> getPeriods(List<PeriodTimeBuilder<OpeningTimesBuilder<T>>> periods) {
 		return periods.stream()
 				.map(PeriodTimeBuilder::build)
 				.collect(Collectors.toList());

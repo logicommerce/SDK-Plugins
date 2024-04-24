@@ -10,7 +10,8 @@ import com.logicommerce.sdk.definition.DocumentPaymentSystemDefinition;
  */
 public class DocumentPaymentSystemDefinitionImpl extends ConnectorDefinitionImpl implements DocumentPaymentSystemDefinition {
 
-	public static class Builder extends ConnectorDefinitionImpl.Builder<Builder, DocumentPaymentSystemDefinition, DocumentPaymentSystemDefinitionImpl> {
+	public static class Builder extends ConnectorDefinitionImpl.Builder<Builder, 
+		DocumentPaymentSystemDefinition, DocumentPaymentSystemDefinitionImpl> {
 
 		@Override
 		protected Builder returnThis() {

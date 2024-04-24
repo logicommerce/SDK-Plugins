@@ -1,7 +1,7 @@
 package com.logicommerce.sdk.models.pickuppoints;
 
 import java.util.Map;
-import com.logicommerce.sdk.models.Address;
+import com.logicommerce.sdk.models.Location;
 import com.logicommerce.sdk.models.OpeningTimes;
 import com.logicommerce.sdk.models.PeriodDate;
 
@@ -20,8 +20,24 @@ public class ProviderPickupPointImpl implements ProviderPickupPoint {
 	private String key;
 
 	private String email;
+	
+	private String city;
 
-	private Address address;
+	private String state;
+
+	private String postalCode;
+
+	private String address;
+
+	private String addressAdditionalInformation;
+
+	private String number;
+
+	private String phone;
+
+	private String mobile;
+	
+	private Location location;
 
 	private OpeningTimes openingTimes;
 
@@ -80,21 +96,6 @@ public class ProviderPickupPointImpl implements ProviderPickupPoint {
 	 */
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	/** {@inheritDoc} */
-	@Override
-	public Address getAddress() {
-		return address;
-	}
-
-	/**
-	 * <p>Setter for the field <code>address</code>.</p>
-	 *
-	 * @param address a {@link com.logicommerce.sdk.models.Address} object
-	 */
-	public void setAddress(Address address) {
-		this.address = address;
 	}
 
 	/** {@inheritDoc} */
@@ -216,5 +217,94 @@ public class ProviderPickupPointImpl implements ProviderPickupPoint {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
+	/** {@inheritDoc} */
+	@Override
+	public String getAddress() {
+		return address;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public String getNumber() {
+		return number;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public String getAddressAdditionalInformation() {
+		return addressAdditionalInformation;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public String getCity() {
+		return city;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public String getState() {
+		return state;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public Location getLocation() {
+		return location;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public String getPhone() {
+		return phone;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setAddressAdditionalInformation(String addressAdditionalInformation) {
+		this.addressAdditionalInformation = addressAdditionalInformation;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
 }
