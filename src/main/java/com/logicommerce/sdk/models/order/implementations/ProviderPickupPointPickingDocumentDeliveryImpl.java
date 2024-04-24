@@ -7,37 +7,37 @@ import com.logicommerce.sdk.models.order.ProviderPickupPointPickingDocumentDeliv
 public class ProviderPickupPointPickingDocumentDeliveryImpl 
 	implements ProviderPickupPointPickingDocumentDelivery {
 
-	private DocumentPickupPointProvider pickupPointProvider;
+	private DocumentPickupPointProvider provider;
 	
-	private DocumentProviderPickupPoint providerPickupPoint;
+	private DocumentProviderPickupPoint pickupPoint;
 	
 	/** {@inheritDoc} */
 	@Override
-	public DocumentPickupPointProvider getPickupPointProvider() {
-		return pickupPointProvider;
+	public DocumentPickupPointProvider getProvider() {
+		return provider;
 	}
 
 	/** {@inheritDoc} */
 	@Override
-	public DocumentProviderPickupPoint getProviderPickupPoint() {
-		return providerPickupPoint;
+	public DocumentProviderPickupPoint getPickupPoint() {
+		return pickupPoint;
 	}
 
 	/**
-	 * <p>Setter for the field <code>pickupPointProvider</code>.</p>
+	 * <p>Setter for the field <code>provider</code>.</p>
 	 *
-	 * @param pickupPointProvider a {@link com.logicommerce.sdk.models.order.DocumentPickupPointProvider} object
+	 * @param provider a {@link com.logicommerce.sdk.models.order.DocumentPickupPointProvider} object
 	 */
-	public void setPickupPointProvider(DocumentPickupPointProvider pickupPointProvider) {
-		this.pickupPointProvider = pickupPointProvider;
+	public void setProvider(DocumentPickupPointProvider provider) {
+		this.provider = provider;
 	}
 
 	/**
-	 * <p>Setter for the field <code>providerPickupPoint</code>.</p>
+	 * <p>Setter for the field <code>pickupPoint</code>.</p>
 	 *
-	 * @param providerPickupPoint a {@link com.logicommerce.sdk.models.order.DocumentProviderPickupPoint} object
+	 * @param pickupPoint a {@link com.logicommerce.sdk.models.order.DocumentProviderPickupPoint} object
 	 */
-	public void setProviderPickupPoint(DocumentProviderPickupPoint providerPickupPoint) {
-		this.providerPickupPoint = providerPickupPoint;
+	public void setPickupPoint(DocumentProviderPickupPoint pickupPoint) {
+		this.pickupPoint = pickupPoint;
 	}
 }

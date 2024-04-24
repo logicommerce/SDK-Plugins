@@ -45,6 +45,4 @@ public interface PickupPointProvider {
 	 */
 	String getUrl();
 	
-	//data plugin??
-	
 }

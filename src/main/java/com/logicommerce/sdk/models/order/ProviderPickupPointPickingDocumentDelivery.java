@@ -3,17 +3,17 @@ package com.logicommerce.sdk.models.order;
 public interface ProviderPickupPointPickingDocumentDelivery {
 
 	/**
-	 * Returns the pickup point provider from document
+	 * Returns the provider for pickup points from document
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.DocumentPickupPointProvider} object
 	 */
-	DocumentPickupPointProvider getPickupPointProvider();
+	DocumentPickupPointProvider getProvider();
 
 	/**
-	 * Returns provider pickup point from document 
+	 * Returns the pickup point selected from document 
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.DocumentProviderPickupPoint} object
 	 */
-	DocumentProviderPickupPoint getProviderPickupPoint();
+	DocumentProviderPickupPoint getPickupPoint();
 
 }

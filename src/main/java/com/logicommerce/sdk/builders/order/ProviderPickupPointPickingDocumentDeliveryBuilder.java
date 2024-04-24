@@ -14,19 +14,19 @@ public class ProviderPickupPointPickingDocumentDeliveryBuilder<T> {
 	private T parentBuilder;
 
 	private DocumentPickupPointProviderBuilder<ProviderPickupPointPickingDocumentDeliveryBuilder<T>> 
-			pickupPointProvider;
-	
+			provider;
+
 	private DocumentProviderPickupPointBuilder<ProviderPickupPointPickingDocumentDeliveryBuilder<T>> 
-			providerPickupPoint;
+			pickupPoint;
 
 	/**
 	 * <p>Constructor for ProviderPickupPointPickingDocumentDeliveryBuilder.</p>
 	 */
 	public ProviderPickupPointPickingDocumentDeliveryBuilder() {
-		this.pickupPointProvider = new DocumentPickupPointProviderBuilder<>(this);
-		this.providerPickupPoint = new DocumentProviderPickupPointBuilder<>(this);
+		this.provider = new DocumentPickupPointProviderBuilder<>(this);
+		this.pickupPoint = new DocumentProviderPickupPointBuilder<>(this);
 	}
-	
+
 	/**
 	 * <p>Constructor for ProviderPickupPointPickingDocumentDeliveryBuilder.</p>
 	 *
@@ -45,9 +45,9 @@ public class ProviderPickupPointPickingDocumentDeliveryBuilder<T> {
 	public DocumentPickupPointProviderBuilder<ProviderPickupPointPickingDocumentDeliveryBuilder<T>> 
 			pickupPointProvider() {
 		DocumentPickupPointProviderBuilder<ProviderPickupPointPickingDocumentDeliveryBuilder<T>> 
-			pickupPointProviderBuild = new DocumentPickupPointProviderBuilder<>(this);
-		this.pickupPointProvider = pickupPointProviderBuild;
-		return pickupPointProviderBuild;
+			providerBuild = new DocumentPickupPointProviderBuilder<>(this);
+		this.provider = providerBuild;
+		return providerBuild;
 	}
 
 	/**
@@ -58,9 +58,9 @@ public class ProviderPickupPointPickingDocumentDeliveryBuilder<T> {
 	public DocumentProviderPickupPointBuilder<ProviderPickupPointPickingDocumentDeliveryBuilder<T>> 
 		providerPickupPoint() {
 		DocumentProviderPickupPointBuilder<ProviderPickupPointPickingDocumentDeliveryBuilder<T>> 
-		providerPickupPointBuild = new DocumentProviderPickupPointBuilder<>(this);
-		this.providerPickupPoint = providerPickupPointBuild;
-		return providerPickupPointBuild;
+		pickupPointBuild = new DocumentProviderPickupPointBuilder<>(this);
+		this.pickupPoint = pickupPointBuild;
+		return pickupPointBuild;
 	}
 
 	/**
@@ -71,8 +71,8 @@ public class ProviderPickupPointPickingDocumentDeliveryBuilder<T> {
 	public ProviderPickupPointPickingDocumentDelivery build() {
 		ProviderPickupPointPickingDocumentDeliveryImpl providerPickupPointPickingDocumentDelivery =
 				new ProviderPickupPointPickingDocumentDeliveryImpl();
-		providerPickupPointPickingDocumentDelivery.setPickupPointProvider(pickupPointProvider.build());
-		providerPickupPointPickingDocumentDelivery.setProviderPickupPoint(providerPickupPoint.build());
+		providerPickupPointPickingDocumentDelivery.setProvider(provider.build());
+		providerPickupPointPickingDocumentDelivery.setPickupPoint(pickupPoint.build());
 		return providerPickupPointPickingDocumentDelivery;
 	}
 
