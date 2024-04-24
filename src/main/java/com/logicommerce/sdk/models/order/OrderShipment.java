@@ -102,7 +102,7 @@ public interface OrderShipment {
 	 * @return a {@link java.lang.String} object
 	 */
 	String getTrackingNumber();
-	
+
 	/**
 	 * <p>setTrackingNumber.</p>
 	 *
@@ -117,7 +117,7 @@ public interface OrderShipment {
 	 * @return a {@link java.lang.String} object
 	 */
 	String getTrackingUrl();
-	
+
 	/**
 	 * <p>setTrackingUrl.</p>
 	 * @since 1.2.3
@@ -125,19 +125,35 @@ public interface OrderShipment {
 	 * @param trackingUrl a {@link java.lang.String} object
 	 */
 	void setTrackingUrl(String trackingUrl);
-	
+
 	/**
 	 * <p>getDocumentNumber.</p>
 	 *
 	 * @return a {@link java.lang.String} object
 	 */
 	String getDocumentNumber();
-	
+
 	/**
 	 * <p>getSubstatus.</p>
 	 *
 	 * @return a {@link java.lang.Integer} object
 	 */
 	Integer getSubstatus();
+
+	/**
+	 * <p>getProviderPickupPoint.</p>
+	 * @since 1.3.8
+	 * 
+	 * @return a {@link com.logicommerce.sdk.models.order.DocumentProviderPickupPoint} object
+	 */
+	DocumentProviderPickupPoint getProviderPickupPoint();
+
+	/**
+	 * <p>setProviderPickupPoint.</p>
+	 * @since 1.3.8
+	 * 
+	 * @param providerPickupPoint a {@link com.logicommerce.sdk.models.order.DocumentProviderPickupPoint} object
+	 */
+	void setProviderPickupPoint(DocumentProviderPickupPoint providerPickupPoint);
 
 }

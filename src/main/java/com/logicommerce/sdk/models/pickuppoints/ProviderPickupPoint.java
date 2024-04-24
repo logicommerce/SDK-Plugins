@@ -11,8 +11,8 @@ import com.logicommerce.sdk.models.PeriodDate;
  * @author 	Logicommerce
  * @since 	1.3.7
  */
-public interface ProviderPickupPoint {
-	
+public interface ProviderPickupPoint extends Address {
+
 	/**
 	 * <p>Get id value.</p>
 	 *
@@ -42,13 +42,6 @@ public interface ProviderPickupPoint {
 	String getEmail();
 
 	/**
-	 * <p>Get address value.</p>
-	 *
-	 * @return a {@link java.lang.String String} object
-	 */
-	Address getAddress();
-
-	/**
 	 * <p>Get openingTimes value.</p>
 	 *
 	 * @return a {@link java.lang.String String} object
@@ -61,7 +54,7 @@ public interface ProviderPickupPoint {
 	 * @return a {@link java.lang.String String} object
 	 */
 	String getOpeningTimesAdditionalInformation();
-	
+
 	/**
 	 * <p>Get upcomingHolidayClosurePeriods value.</p>
 	 *

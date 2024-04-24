@@ -27,6 +27,7 @@ public class CookieBuilder {
 	public void name(String name) {
 		this.name = name;
 	}
+
 	/**
 	 * <p>Setter for the field <code>value</code>.</p>
 	 *

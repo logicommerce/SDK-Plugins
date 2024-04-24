@@ -32,6 +32,7 @@ public class OrderActionResponseBuilder  {
 		super();
 		this.properties = new ArrayList<>();
 	}
+
 	/**
 	 * <p>
 	 * Use for validate response success,<br>

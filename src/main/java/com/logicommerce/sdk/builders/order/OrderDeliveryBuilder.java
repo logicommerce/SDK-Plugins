@@ -26,6 +26,8 @@ public class OrderDeliveryBuilder<T> {
 		
 	private GeographicalZoneBuilder<OrderDeliveryBuilder<T>> geographicalZone;
 	
+	private ProviderPickupPointPickingDocumentDeliveryBuilder<OrderDeliveryBuilder<T>> providerPickupPointPickingDocumentDelivery;
+	
 	/**
 	 * <p>Constructor for OrderDeliveryBuilder.</p>
 	 */
@@ -34,6 +36,7 @@ public class OrderDeliveryBuilder<T> {
 		shipments = new ArrayList<>();
 		physicalLocation = new OrderDeliveryPhysicalLocationBuilder<>(this);
 		type = DeliveryType.SHIPPING;
+		providerPickupPointPickingDocumentDelivery = new ProviderPickupPointPickingDocumentDeliveryBuilder<>(this);
 	}
 	
 	/**
@@ -87,6 +90,15 @@ public class OrderDeliveryBuilder<T> {
 	}
 	
 	/**
+	 * <p>providerPickupPointPickingDocumentDelivery.</p>
+	 *
+	 * @return a {@link com.logicommerce.sdk.builders.order.ProviderPickupPointPickingDocumentDeliveryBuilder} object
+	 */
+	public ProviderPickupPointPickingDocumentDeliveryBuilder<OrderDeliveryBuilder<T>> providerPickupPointPickingDocumentDelivery() {
+		return this.providerPickupPointPickingDocumentDelivery;
+	}
+	
+	/**
 	 * <p>build.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderDelivery} object
@@ -97,6 +109,7 @@ public class OrderDeliveryBuilder<T> {
 		delivery.setPhysicalLocation(physicalLocation.build());
 		delivery.setShipments(shipments.stream().map(OrderShipmentBuilder::build).collect(Collectors.toList()));
 		delivery.setType(type);
+		delivery.setProviderPickupPointPickingDocumentDelivery(providerPickupPointPickingDocumentDelivery.build());
 		return delivery;
 	}
 

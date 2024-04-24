@@ -10,8 +10,8 @@ import com.logicommerce.sdk.definition.PickupPointProviderDefinition;
  */
 public class PickupPointProviderDefinitionImpl extends ConnectorDefinitionImpl implements PickupPointProviderDefinition {
 
-
-	public static class Builder extends ConnectorDefinitionImpl.Builder<Builder, PickupPointProviderDefinition, PickupPointProviderDefinitionImpl> {
+	public static class Builder extends ConnectorDefinitionImpl.Builder<Builder, 
+		PickupPointProviderDefinition, PickupPointProviderDefinitionImpl> {
 		
 		public Builder() {
 			super();

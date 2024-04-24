@@ -29,6 +29,11 @@ public interface OrderShipmentItem {
 	 */
 	Integer getOrderItemId();
 
-	
+	/**
+	 * <p>getWeight.</p>
+	 *
+	 * @return a double
+	 */
 	double getWeight();
+
 }

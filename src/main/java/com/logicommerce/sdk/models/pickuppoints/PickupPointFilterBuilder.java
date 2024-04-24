@@ -9,7 +9,7 @@ package com.logicommerce.sdk.models.pickuppoints;
 
 public class PickupPointFilterBuilder {
 
-	private Integer providerId;
+	private int providerId;
 
 	private String countryCode;	
 
@@ -21,7 +21,7 @@ public class PickupPointFilterBuilder {
 
 	private String longitude;
 	
-	private Double radius;
+	private double radius = 0;
 
 	/**
 	 * <p>providerId</p>
@@ -29,7 +29,7 @@ public class PickupPointFilterBuilder {
 	 * @param providerId a {@link java.lang.Integer} object
 	 * @return a {@link com.logicommerce.sdk.models.pickuppoints.PickupPointFilterBuilder} object
 	 */
-	public PickupPointFilterBuilder providerId(Integer providerId) {
+	public PickupPointFilterBuilder providerId(int providerId) {
 		this.providerId = providerId;
 		return returnThis();
 	}
@@ -95,7 +95,7 @@ public class PickupPointFilterBuilder {
 	 * @param radius a {@link java.lang.Double} object
 	 * @return a {@link com.logicommerce.sdk.models.pickuppoints.PickupPointFilterBuilder} object
 	 */
-	public PickupPointFilterBuilder radius(Double radius) {
+	public PickupPointFilterBuilder radius(double radius) {
 		this.radius = radius;
 		return returnThis();
 	}
