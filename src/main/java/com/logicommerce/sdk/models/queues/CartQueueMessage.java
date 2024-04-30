@@ -4,7 +4,7 @@ import java.util.Set;
 import com.logicommerce.sdk.models.Cart;
 
 /**
- * Message to be sent to the queue for order message type
+ * Message to be sent to the queue for cart message type
  * 
  * @author LogiCommerce
  * @since 1.3.9
@@ -70,7 +70,7 @@ public final class CartQueueMessage extends QueueMessage {
 		private Cart cart;
 
 		/**
-		 * Sets the order
+		 * Sets the cart
 		 * 
 		 * @param cart a {@link Cart} object
 		 * @return a {@link Builder} object

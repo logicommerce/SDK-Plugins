@@ -6,7 +6,7 @@ import com.logicommerce.sdk.models.queues.Attribute;
 import com.logicommerce.sdk.services.PluginServiceException;
 
 /**
- * Service to process order queue messages
+ * Service to process cart queue messages
  * 
  * @author LogiCommerce
  * @since 1.3.9
