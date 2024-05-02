@@ -74,6 +74,7 @@ public class PickupPointProviderBuilder {
 	 * <p>name</p>
 	 *
 	 * @param name a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
+	 * @return a {@link com.logicommerce.sdk.models.pickuppoints.PickupPointProviderBuilder} object
 	 */
 	public PickupPointProviderBuilder name(DefinitionLanguages name) {
 		this.name = name;		
@@ -96,6 +97,7 @@ public class PickupPointProviderBuilder {
 	 * <p>description</p>
 	 *
 	 * @param description a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
+	 * @return a {@link com.logicommerce.sdk.models.pickuppoints.PickupPointProviderBuilder} object
 	 */
 	public PickupPointProviderBuilder description(DefinitionLanguages description) {
 		this.description = description;		
