@@ -1,13 +1,15 @@
 package com.logicommerce.sdk.models.pickuppoints;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 import com.logicommerce.sdk.builders.LocationBuilder;
 import com.logicommerce.sdk.builders.OpeningTimesBuilder;
 import com.logicommerce.sdk.builders.PeriodDateBuilder;
 import com.logicommerce.sdk.models.Location;
 import com.logicommerce.sdk.models.OpeningTimes;
-import com.logicommerce.sdk.models.PeriodDate;
 
 /**
  * <p>PickupPointProvider interface.</p>
@@ -51,9 +53,7 @@ public class ProviderPickupPointBuilder {
 
 	private String openingTimesAdditionalInformation;
 
-	private PeriodDate upcomingHolidayClosurePeriods;
-
-	private PeriodDateBuilder<ProviderPickupPointBuilder> periodDateBuilder;
+	private List<PeriodDateBuilder<ProviderPickupPointBuilder>> upcomingHolidayClosurePeriods;
 
 	private String upcomingHolidayClosurePeriodsAdditionalInformation;
 
@@ -62,6 +62,13 @@ public class ProviderPickupPointBuilder {
 	private String url;
 
 	private Map<String, String> additionalData;
+	
+	/**
+	 * <p>Constructor for ProviderPickupPointBuilder.</p>
+	 */
+	public ProviderPickupPointBuilder() {
+		upcomingHolidayClosurePeriods = new ArrayList<>();
+	}
 
 	/**
 	 * <p>id</p>
@@ -284,30 +291,10 @@ public class ProviderPickupPointBuilder {
 	 *
 	 * @return a {@link com.logicommerce.sdk.builders.PeriodDateBuilder} object
 	 */	
-	public PeriodDateBuilder<ProviderPickupPointBuilder> upcomingHolidayClosurePeriods() {
-		if (periodDateBuilder == null) {
-			periodDateBuilder = new PeriodDateBuilder<>(returnThis());
-		}
-		return periodDateBuilder;
-	}
-
-	/**
-	 * <p>upcomingHolidayClosurePeriods</p>
-	 *
-	 * @param upcomingHolidayClosurePeriods a {@link java.lang.String} object
-	 * @return a {@link com.logicommerce.sdk.models.pickuppoints.ProviderPickupPointBuilder} object
-	 */
-	public ProviderPickupPointBuilder upcomingHolidayClosurePeriods(PeriodDate upcomingHolidayClosurePeriods) {
-		this.upcomingHolidayClosurePeriods = upcomingHolidayClosurePeriods;
-		return returnThis();
-	}
-
-	private void setUpcomingHolidayClosurePeriods(ProviderPickupPointImpl providerPickupPoint) {
-		if (upcomingHolidayClosurePeriods != null) {
-			providerPickupPoint.setUpcomingHolidayClosurePeriods(upcomingHolidayClosurePeriods);
-		} else if (periodDateBuilder != null) {
-			providerPickupPoint.setUpcomingHolidayClosurePeriods(periodDateBuilder.build());
-		}
+	public PeriodDateBuilder<ProviderPickupPointBuilder> upcomingHolidayClosurePeriod() {
+		PeriodDateBuilder<ProviderPickupPointBuilder> periodDate = new PeriodDateBuilder<>(this);
+		upcomingHolidayClosurePeriods.add(periodDate);
+		return periodDate;
 	}
 
 	/**
@@ -349,7 +336,6 @@ public class ProviderPickupPointBuilder {
 	public ProviderPickupPoint build() {
 		ProviderPickupPointImpl providerPickupPoint = new ProviderPickupPointImpl();
 		this.setLocation(providerPickupPoint);
-		this.setUpcomingHolidayClosurePeriods(providerPickupPoint);
 		this.setOpeningTimes(providerPickupPoint);
 		providerPickupPoint.setName(name);
 		providerPickupPoint.setKey(key);
@@ -360,6 +346,8 @@ public class ProviderPickupPointBuilder {
 		providerPickupPoint.setDistance(distance);
 		providerPickupPoint.setAdditionalData(additionalData);
 		providerPickupPoint.setId(id);
+		providerPickupPoint.setUpcomingHolidayClosurePeriods(upcomingHolidayClosurePeriods.stream()
+				.map(PeriodDateBuilder::build).collect(Collectors.toList()));
 		providerPickupPoint.setCity(city);
 		providerPickupPoint.setState(state);
 		providerPickupPoint.setAddress(address);
