@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models.pickuppoints;
 
+import java.util.List;
 import java.util.Map;
 import com.logicommerce.sdk.models.Location;
 import com.logicommerce.sdk.models.OpeningTimes;
@@ -43,7 +44,7 @@ public class ProviderPickupPointImpl implements ProviderPickupPoint {
 
 	private String openingTimesAdditionalInformation;
 
-	private PeriodDate upcomingHolidayClosurePeriods;
+	private List<PeriodDate> upcomingHolidayClosurePeriods;
 
 	private String upcomingHolidayClosurePeriodsAdditionalInformation;
 
@@ -130,7 +131,7 @@ public class ProviderPickupPointImpl implements ProviderPickupPoint {
 
 	/** {@inheritDoc} */
 	@Override
-	public PeriodDate getUpcomingHolidayClosurePeriods() {
+	public List<PeriodDate> getUpcomingHolidayClosurePeriods() {
 		return upcomingHolidayClosurePeriods;
 	}
 
@@ -139,7 +140,7 @@ public class ProviderPickupPointImpl implements ProviderPickupPoint {
 	 *
 	 * @param upcomingHolidayClosurePeriods a {@link com.logicommerce.sdk.models.PeriodDate} object
 	 */
-	public void setUpcomingHolidayClosurePeriods(PeriodDate upcomingHolidayClosurePeriods) {
+	public void setUpcomingHolidayClosurePeriods(List<PeriodDate> upcomingHolidayClosurePeriods) {
 		this.upcomingHolidayClosurePeriods = upcomingHolidayClosurePeriods;
 	}
 

@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models.pickuppoints;
 
+import java.util.List;
 import java.util.Map;
 import com.logicommerce.sdk.models.Address;
 import com.logicommerce.sdk.models.OpeningTimes;
@@ -58,9 +59,9 @@ public interface ProviderPickupPoint extends Address {
 	/**
 	 * <p>Get upcomingHolidayClosurePeriods value.</p>
 	 *
-	 * @return a {@link java.lang.String String} object
+	 * @return a {@link java.util.List List} object
 	 */
-	PeriodDate getUpcomingHolidayClosurePeriods();
+	List<PeriodDate> getUpcomingHolidayClosurePeriods();
 
 	/**
 	 * <p>Get upcomingHolidayClosurePeriodsAdditionalInformation value.</p>
