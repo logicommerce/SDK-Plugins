@@ -53,6 +53,13 @@ public interface OrderShipment {
 	 * @return a {@link com.logicommerce.sdk.models.order.ShipmentAddress} object
 	 */
 	ShipmentAddress getDestinationAddress();
+	
+	/**
+	 * <p>getDestinationUserAddress.</p>
+	 *
+	 * @return a {@link com.logicommerce.sdk.models.order.ShipmentAddress} object
+	 */
+	ShipmentAddress getDestinationUserAddress();
 
 	/**
 	 * <p>getIncomingDate.</p>

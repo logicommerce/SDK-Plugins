@@ -37,6 +37,10 @@ public class OrderShipmentImpl implements OrderShipment {
 	@Uses(value = ShipmentAddressImpl.class)
 	private ShipmentAddress destinationAddress;
 
+	@NoMappable
+	@Uses(value = ShipmentAddressImpl.class)
+	private ShipmentAddress destinationUserAddress;
+	
 	private LocalDate incomingDate;
 
 	private ExportStatusType exportStatus;
@@ -331,5 +335,20 @@ public class OrderShipmentImpl implements OrderShipment {
 	@Override
 	public void setProviderPickupPoint(DocumentProviderPickupPoint providerPickupPoint) {
 		this.providerPickupPoint = providerPickupPoint;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public ShipmentAddress getDestinationUserAddress() {
+		return destinationUserAddress;
+	}
+
+	/**
+	 * <p>Setter for the field <code>destinationUserAddress</code>.</p>
+	 *
+	 * @param destinationUserAddress a {@link com.logicommerce.sdk.models.order.ShipmentAddress} object
+	 */
+	public void setDestinationUserAddress(ShipmentAddress destinationUserAddress) {
+		this.destinationUserAddress = destinationUserAddress;
 	}
 }
