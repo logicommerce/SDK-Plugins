@@ -137,7 +137,7 @@ public interface Connection {
 	Connection timeout(int timeout);
 	
 	/**
-	 * Defines the response charset in StandarCharsets for the request. Default is UTF-8.
+	 * Defines the response charset in StandardCharsets for the request. Default is UTF-8.
 	 *
 	 * @since 1.3.12
 	 * @param charset a java.nio.charset.Charset 
