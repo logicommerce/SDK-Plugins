@@ -346,6 +346,7 @@ public class OrderShipmentImpl implements OrderShipment {
 	/**
 	 * <p>Setter for the field <code>destinationUserAddress</code>.</p>
 	 *
+	 * @since 1.3.12
 	 * @param destinationUserAddress a {@link com.logicommerce.sdk.models.order.ShipmentAddress} object
 	 */
 	public void setDestinationUserAddress(ShipmentAddress destinationUserAddress) {
