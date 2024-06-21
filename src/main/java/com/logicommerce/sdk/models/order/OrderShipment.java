@@ -48,11 +48,19 @@ public interface OrderShipment {
 	ShipmentAddress getOriginAddress();
 
 	/**
-	 * <p>getDestinationAddress.</p>
+	 * <p>getDestinationAddress. User address data or pickup point address data.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.ShipmentAddress} object
 	 */
 	ShipmentAddress getDestinationAddress();
+
+	/**
+	 * <p>getDestinationUserAddress. User address data when destiantionAddress is a pickup point.</p>
+	 * 
+	 * @since 1.3.12
+	 * @return a {@link com.logicommerce.sdk.models.order.ShipmentAddress} object
+	 */
+	ShipmentAddress getDestinationUserAddress();
 
 	/**
 	 * <p>getIncomingDate.</p>
