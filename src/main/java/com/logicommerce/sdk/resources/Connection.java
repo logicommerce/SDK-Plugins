@@ -1,5 +1,7 @@
 package com.logicommerce.sdk.resources;
 
+import java.nio.charset.Charset;
+
 /**
  * Connection for executing HTTP requests.
  *
@@ -133,5 +135,14 @@ public interface Connection {
 	 * @return a {@link Connection} object.
 	 */
 	Connection timeout(int timeout);
+	
+	/**
+	 * Defines the response charset in StandardCharsets for the request. Default is UTF-8.
+	 *
+	 * @since 1.3.12
+	 * @param charset a java.nio.charset.Charset 
+	 * @return a {@link Connection} object.
+	 */
+	Connection charset(Charset charset);
 
 }
