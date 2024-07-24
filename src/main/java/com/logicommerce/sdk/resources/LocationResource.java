@@ -93,4 +93,13 @@ public interface LocationResource {
 	 */
 	Integer getLanguageId(String languageCode);
 
+	/**
+	 * Converts the amount from the source currency to the target currency.
+	 * @since 1.3.13
+	 * 
+	 * @param sourceCurrencyCode The source currency code.
+	 * @param targetCurrencyCode The target currency code.
+	 * @param amount The amount to convert.
+	 */
+	double convertCurrency(String sourceCurrencyCode, String targetCurrencyCode, double amount);
 }
