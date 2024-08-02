@@ -35,7 +35,9 @@ class PluginDefinitionTest {
 		assertThat(conn.getAdditionalProperties().get(0).getPermissions(), hasSize(2));
 
 		MappedFieldDefinition mappedFieldDefinition = new MappedFieldDefinitionImpl.Builder<>()
-			.addField("field1")
+			.value()
+				.value("field1")
+				.done()
 			.type(MappedItemType.USER)
 			.build();
 
@@ -58,7 +60,8 @@ class PluginDefinitionTest {
 		ShipperDefinition shipperDefinition = new ShipperDefinitionImpl.Builder()
 				.mappedField()
 					.type(MappedItemType.USER)
-					.addField("field2")
+					.value().value("value1").done()
+					.value().value("field2").done()
 					.done()
 				.build();
 		assertThrows(PluginDefinitionException.class, () -> pluginDefinition.addConnectorDefinition(shipperDefinition));

@@ -204,7 +204,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		private boolean languageValue;
 		private boolean multipleValue;
 		private String entryValueMode;
-		private List<PropertyDefinitionValueImpl.Builder> values;
+		private List<PropertyDefinitionValueImpl.Builder<Builder<T>>> values;
 		private DefinitionLanguagesImpl.Builder<Builder<T>> languages;
 		private String reference;
 		private List<PropertyDefinitionPermissionImpl.Builder> permissions;
@@ -256,8 +256,8 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			return this;
 		}
 
-		public PropertyDefinitionValueImpl.Builder value() {
-			PropertyDefinitionValueImpl.Builder value = new PropertyDefinitionValueImpl.Builder(this);
+		public PropertyDefinitionValueImpl.Builder<Builder<T>> value() {
+			var value = new PropertyDefinitionValueImpl.Builder<>(this);
 			this.values.add(value);
 			return value;
 		}

@@ -65,16 +65,6 @@ public interface Cart {
 	CartDelivery getDelivery();
 
 	/**
-	 * <p>Get abandonedBasketLink, this link is for a recovery abandoned carts.</p>
-	 *
-	 * @since 	1.0.16
-	 * @return a {@link java.lang.String String} object
-	 * @deprecated 1.3.7 Use {@link #getBasketLink()} instead
-	 */
-	@Deprecated(forRemoval = true)
-	String getAbandonedBasketLink();
-
-	/**
 	 * <p>Get basketLink, this link is for add items to the cart.</p>
 	 *
 	 * @since 	1.3.7

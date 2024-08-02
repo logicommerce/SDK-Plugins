@@ -19,14 +19,6 @@ public interface MappedFieldDefinition {
 	MappedItemType getType();
 
 	/**
-	 * <p>getFields.</p>
-	 * @deprecated use {@link #getValues()} instead
-	 * @return a {@link java.util.List} object
-	 */
-	@Deprecated(forRemoval = true, since = "1.3.3")
-	List<String> getFields();
-
-	/**
 	 * <p>getValues.</p>
 	 *
 	 * @since 1.3.3
