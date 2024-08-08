@@ -34,17 +34,6 @@ public class OrderShipmentItemBuilder<T> {
 		this();
 		this.parentBuilder = parentBuilder;
 	}
-
-	/**
-	 * <p>id.</p>
-	 *
-	 * @deprecated since 1.3.0. For removal in future versions.
-	 * @param id a {@link java.lang.Integer} object
-	 * @return a {@link com.logicommerce.sdk.builders.order.OrderShipmentItemBuilder} object
-	 */
-	public OrderShipmentItemBuilder<T> id(Integer id) {
-		return this;
-	}
 	
 	/**
 	 * <p>quantity.</p>

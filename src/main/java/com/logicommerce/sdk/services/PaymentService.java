@@ -1,10 +1,10 @@
 package com.logicommerce.sdk.services;
 
 import java.util.List;
+import com.logicommerce.sdk.models.RequestParams;
 import com.logicommerce.sdk.models.order.Order;
 import com.logicommerce.sdk.models.payment.Payment;
 import com.logicommerce.sdk.models.payment.PaymentToken;
-import com.logicommerce.sdk.models.payment.PaymentValidateParams;
 import com.logicommerce.sdk.models.payment.PaymentValidateResponse;
 
 /**
@@ -29,11 +29,11 @@ public interface PaymentService extends PluginService {
 	 * <p>validate.</p>
 	 *
 	 * @param order a {@link com.logicommerce.sdk.models.order.Order} object
-	 * @param paymentValidateParams a {@link com.logicommerce.sdk.models.payment.PaymentValidateParams} object
+	 * @param requestParams a {@link com.logicommerce.sdk.models.RequestParams} object
 	 * @return a {@link com.logicommerce.sdk.models.payment.PaymentValidateResponse} object
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */
-	PaymentValidateResponse validate(Order order, PaymentValidateParams paymentValidateParams) throws PluginServiceException;
+	PaymentValidateResponse validate(Order order, RequestParams requestParams) throws PluginServiceException;
 
 	/**
 	 * <p>getPaymentTokens.</p>

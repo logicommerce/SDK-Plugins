@@ -20,10 +20,6 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 
 	private String company;
 
-	private String addressAdditionalInformation;
-
-	private String number;
-
 	private String nif;
 
 	private String vat;
@@ -125,48 +121,6 @@ public class UserAddressImpl extends AddressImpl implements UserAddress {
 	 */
 	public void setCompany(String company) {
 		this.company = company;
-	}
-
-	/**
-	 * <p>Getter for the field <code>addressAdditionalInformation</code>.</p>
-	 * @deprecated This method is deprecated since 1.3.3
-	 *
-	 * @return a {@link java.lang.String} object
-	 */
-	@Override
-	public String getAddressAdditionalInformation() {
-		return addressAdditionalInformation;
-	}
-
-	/**
-	 * <p>Setter for the field <code>addressAdditionalInformation</code>.</p>
-	 * @deprecated This method is deprecated since 1.3.3
-	 *
-	 * @param addressAdditionalInformation a {@link java.lang.String} object
-	 */
-	public void setAddressAdditionalInformation(String addressAdditionalInformation) {
-		this.addressAdditionalInformation = addressAdditionalInformation;
-	}
-
-	/**
-	 * <p>Getter for the field <code>number</code>.</p>
-	 * @deprecated This method is deprecated since 1.3.3
-	 *
-	 * @return a {@link java.lang.String} object
-	 */
-	@Override
-	public String getNumber() {
-		return number;
-	}
-
-	/**
-	 * <p>Setter for the field <code>number</code>.</p>
-	 * @deprecated This method is deprecated since 1.3.3
-	 *
-	 * @param number a {@link java.lang.String} object
-	 */
-	public void setNumber(String number) {
-		this.number = number;
 	}
 
 	/**
