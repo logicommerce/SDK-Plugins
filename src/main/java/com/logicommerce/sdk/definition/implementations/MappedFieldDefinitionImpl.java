@@ -14,7 +14,7 @@ import com.logicommerce.sdk.enums.MappedItemType;
 public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 
 	private MappedItemType type;
-	private List<String> values;
+	private List<String> fields;
 
 	/** {@inheritDoc} */
 	@Override
@@ -24,8 +24,8 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 
 	/** {@inheritDoc} */
 	@Override
-	public List<String> getValues() {
-		return values;
+	public List<String> getFields() {
+		return fields;
 	}
 
 	/**
@@ -40,17 +40,17 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 	/**
 	 * <p>Setter for the field <code>newFields</code>.</p>
 	 *
-	 * @param values a {@link java.util.List} object
+	 * @param fields a {@link java.util.List} object
 	 */
-	public void setValues(List<String> values) {
-		this.values = values;
+	public void setFields(List<String> fields) {
+		this.fields = fields;
 	}
 
 	public static class Builder<T> {
 		
 		private T parentBuilder;
 		private MappedItemType type;
-		private List<String> values;
+		private List<String> fields;
 
 		public Builder() {
 		}
@@ -65,11 +65,11 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 			return this;
 		}
 
-		public Builder<T> addValue(String value) {
-			if (this.values == null) {
-				this.values = new ArrayList<>();
+		public Builder<T> addField(String field) {
+			if (this.fields == null) {
+				this.fields = new ArrayList<>();
 			}
-			this.values.add(value);
+			this.fields.add(field);
 			return this;
 		}
 
@@ -80,7 +80,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 				throw new NullPointerException();
 			}
 			mappedField.setType(type);
-			mappedField.setValues(values);
+			mappedField.setFields(fields);
 			return mappedField;
 		}
 

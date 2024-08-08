@@ -19,11 +19,11 @@ public interface MappedFieldDefinition {
 	MappedItemType getType();
 
 	/**
-	 * <p>getValues.</p>
+	 * <p>getFields.</p>
 	 *
-	 * @since 2.0.0
+	 * @since 1.0.16
 	 * @return a {@link java.util.List} object
 	 */
-	List<String> getValues();
+	List<String> getFields();
 
 }
