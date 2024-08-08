@@ -21,9 +21,9 @@ public interface MappedFieldDefinition {
 	/**
 	 * <p>getValues.</p>
 	 *
-	 * @since 1.3.3
+	 * @since 2.0.0
 	 * @return a {@link java.util.List} object
 	 */
-	List<PropertyDefinitionValue> getValues();
+	List<String> getValues();
 
 }
