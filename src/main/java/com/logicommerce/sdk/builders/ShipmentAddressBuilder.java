@@ -12,6 +12,8 @@ import com.logicommerce.sdk.models.order.implementations.ShipmentAddressImpl;
 public class ShipmentAddressBuilder<T> extends AddressBuilder<T, ShipmentAddressBuilder<T>> {
 
 	protected String email;
+	
+	protected String company;
 
 	/**
 	 * <p>Constructor for ShipmentAddressBuilder.</p>
@@ -41,6 +43,19 @@ public class ShipmentAddressBuilder<T> extends AddressBuilder<T, ShipmentAddress
 	}
 
 	/**
+	 * <p>company.</p>
+	 *
+	 * @since 2.0.0
+	 * @param company a {@link java.lang.String} object
+	 * @return a {@link com.logicommerce.sdk.builders.ShipmentAddressBuilder} object
+	 */
+	public ShipmentAddressBuilder<T> company(String company) {
+		this.company = company;
+		return returnThis();
+	}
+
+	
+	/**
 	 * <p>build.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.ShipmentAddress} object
@@ -49,6 +64,7 @@ public class ShipmentAddressBuilder<T> extends AddressBuilder<T, ShipmentAddress
 		ShipmentAddressImpl shipmentAddress = new ShipmentAddressImpl();
 		setElements(shipmentAddress);
 		shipmentAddress.setEmail(email);
+		shipmentAddress.setCompany(company);
 		return shipmentAddress;
 	}
 
