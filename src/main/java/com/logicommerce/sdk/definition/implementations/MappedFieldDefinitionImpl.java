@@ -3,7 +3,6 @@ package com.logicommerce.sdk.definition.implementations;
 import java.util.ArrayList;
 import java.util.List;
 import com.logicommerce.sdk.definition.MappedFieldDefinition;
-import com.logicommerce.sdk.definition.PropertyDefinitionValue;
 import com.logicommerce.sdk.enums.MappedItemType;
 
 /**
@@ -16,7 +15,6 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 
 	private MappedItemType type;
 	private List<String> fields;
-	private List<PropertyDefinitionValue> values;
 
 	/** {@inheritDoc} */
 	@Override
@@ -30,12 +28,6 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 		return fields;
 	}
 
-	/** {@inheritDoc} */
-	@Override
-	public List<PropertyDefinitionValue> getValues() {
-		return values;
-	}
-
 	/**
 	 * <p>Setter for the field <code>type</code>.</p>
 	 *
@@ -46,7 +38,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 	}
 
 	/**
-	 * <p>Setter for the field <code>fields</code>.</p>
+	 * <p>Setter for the field <code>newFields</code>.</p>
 	 *
 	 * @param fields a {@link java.util.List} object
 	 */
@@ -54,24 +46,13 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 		this.fields = fields;
 	}
 
-	/**
-	 * <p>Setter for the field <code>newFields</code>.</p>
-	 *
-	 * @param values a {@link java.util.List} object
-	 */
-	public void setValues(List<PropertyDefinitionValue> values) {
-		this.values = values;
-	}
-
 	public static class Builder<T> {
 		
 		private T parentBuilder;
 		private MappedItemType type;
 		private List<String> fields;
-		private List<PropertyDefinitionValue> values;
 
 		public Builder() {
-			fields(null);
 		}
 
 		public Builder(T parentBuilder) {
@@ -83,25 +64,15 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 			this.type = type;
 			return this;
 		}
-		
+
 		public Builder<T> addField(String field) {
+			if (this.fields == null) {
+				this.fields = new ArrayList<>();
+			}
 			this.fields.add(field);
 			return this;
 		}
 
-		public Builder<T> addValue(PropertyDefinitionValue value) {
-			this.values.add(value);
-			return this;
-		}
-		
-		public Builder<T> fields(List<String> fields) {
-			if (fields == null) {
-				fields = new ArrayList<>();
-			}
-			this.fields = fields;
-			this.values = new ArrayList<>();
-			return this;
-		}
 		
 		public MappedFieldDefinition build() {
 			MappedFieldDefinitionImpl mappedField = new MappedFieldDefinitionImpl();
@@ -109,10 +80,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 				throw new NullPointerException();
 			}
 			mappedField.setType(type);
-			if (fields != null || !fields.isEmpty()) {
-				mappedField.setFields(fields);
-			}
-			mappedField.setValues(values);
+			mappedField.setFields(fields);
 			return mappedField;
 		}
 

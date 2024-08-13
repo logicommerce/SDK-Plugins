@@ -34,22 +34,22 @@ public class PropertyDefinitionValueImpl implements PropertyDefinitionValue {
 		this.languages = languages;
 	}
 
-	public static class Builder {
+	public static class Builder<T> {
 
-		private PropertyDefinitionImpl.Builder<?> parentBuilder;
+		private T parentBuilder;
 		private String value;
-		private DefinitionLanguagesImpl.Builder<Builder> languages;
+		private DefinitionLanguagesImpl.Builder<Builder<T>> languages;
 
-		Builder(PropertyDefinitionImpl.Builder<?> parentBuilder) {
+		public Builder(T parentBuilder) {
 			this.parentBuilder = parentBuilder;
 		}
 
-		public Builder value(String value) {
+		public Builder<T> value(String value) {
 			this.value = value;
 			return this;
 		}
 
-		public DefinitionLanguagesImpl.Builder<Builder> languages() {
+		public DefinitionLanguagesImpl.Builder<Builder<T>> languages() {
 			this.languages = new DefinitionLanguagesImpl.Builder<>(this);
 			return languages;
 		}
@@ -57,12 +57,13 @@ public class PropertyDefinitionValueImpl implements PropertyDefinitionValue {
 		PropertyDefinitionValue build() {
 			PropertyDefinitionValueImpl properyDefinitionValue = new PropertyDefinitionValueImpl();
 			properyDefinitionValue.setValue(value);
-			properyDefinitionValue.setLanguages(languages.build());
+			if (languages != null) {
+				properyDefinitionValue.setLanguages(languages.build());
+			}
 			return properyDefinitionValue;
 		}
 
-		@SuppressWarnings("squid:S1452")
-		public PropertyDefinitionImpl.Builder<?> done() {
+		public T done() {
 			return parentBuilder;
 		}
 	}
