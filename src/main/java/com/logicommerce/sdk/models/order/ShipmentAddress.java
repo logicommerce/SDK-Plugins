@@ -16,5 +16,13 @@ public interface ShipmentAddress extends Address {
 	 * @return a {@link java.lang.String} object
 	 */
 	String getEmail();
+	
+	/**
+	 * <p>getCompany.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 * @since 2.0.0
+	 */
+	String getCompany();
 
 }

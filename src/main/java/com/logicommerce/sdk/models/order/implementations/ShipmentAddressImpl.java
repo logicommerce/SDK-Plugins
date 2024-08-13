@@ -12,6 +12,8 @@ import com.logicommerce.sdk.models.order.ShipmentAddress;
 public class ShipmentAddressImpl extends AddressImpl implements ShipmentAddress {
 
 	private String email;
+	
+	private String company;
 
 	/**
 	 * <p>Getter for the field <code>email</code>.</p>
@@ -30,4 +32,24 @@ public class ShipmentAddressImpl extends AddressImpl implements ShipmentAddress 
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	/**
+	 * <p>Getter for the field <code>company</code>.</p>
+	 * 
+	 * @since 2.0.0		 
+	 * @return a {@link java.lang.String} object
+	 */
+	public String getCompany() {
+		return company;
+	}
+	
+	/**
+     * <p>Setter for the field <code>company</code>.</p>
+     * 
+     * @since 2.0.0
+     */
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	
 }

@@ -58,6 +58,7 @@ class PluginDefinitionTest {
 		ShipperDefinition shipperDefinition = new ShipperDefinitionImpl.Builder()
 				.mappedField()
 					.type(MappedItemType.USER)
+					.addField("value1")
 					.addField("field2")
 					.done()
 				.build();
