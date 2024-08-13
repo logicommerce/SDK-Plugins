@@ -16,7 +16,16 @@ Muestra las expediciones del pedido.
 - **List<[OrderShipmentItem](OrderShipmentItem.md)>** getItems()
 - **List<[OrderShipmentStatus](OrderShipmentStatus.md)>** getStatuses()
 - **[OrderShipping](OrderShipping.md)** getShipping()
-- ***ExportStatusType*** getExportStatus()
+- **ExportStatusType** getExportStatus()
+- **ShipmentAddress** getOriginAddress();
+- **ShipmentAddress** getDestinationAddress();
+- **ShipmentAddress** getDestinationUserAddress();
+- **String** getHash()
+- **String** getDocumentNumber()
+- **String** getTrackingNumber()
+- **String** getTrackingUrl()
+- **String** getDocumentUrl()
+- **DocumentProviderPickupPoint** getProviderPickupPoint()
 
 ## Referencias
 
