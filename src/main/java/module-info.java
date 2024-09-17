@@ -1,5 +1,5 @@
 module com.logicommerce.sdk {
-	requires com.logicommerce.utilities;
+	requires transitive com.logicommerce.utilities;
 
 	exports com.logicommerce.sdk;
 	exports com.logicommerce.sdk.definition;
