@@ -1,5 +1,7 @@
 package com.logicommerce.sdk.services;
 
+import java.util.Map;
+
 /**
  * InternalCacheSevice for clean cache of plugin from LogiCommerce.
  * 
@@ -9,12 +11,13 @@ package com.logicommerce.sdk.services;
 public interface InternalCacheService extends PluginService {
 	
 	/**
-	 * <p>
-	 * clean.<br>
 	 * Clean internal cache.
-	 * </p>
+	 * This method is called when a configuration is updated.
+	 * 
+	 * @param type a {@link java.lang.String} object 
+	 * @param additionalInformation a {@link java.util.Map} object
 	 *
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */
-	void clean() throws PluginServiceException;
+	void clean(String type, Map<String, String> additionalInformation) throws PluginServiceException;
 }
