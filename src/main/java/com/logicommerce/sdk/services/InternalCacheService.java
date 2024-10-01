@@ -15,9 +15,9 @@ public interface InternalCacheService extends PluginService {
 	 * This method is called when a configuration is updated.
 	 * 
 	 * @param type a {@link java.lang.String} object 
-	 * @param additionalInformation a {@link java.util.Map} object
+	 * @param data a {@link java.util.Map} object
 	 *
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */
-	void clean(String type, Map<String, String> additionalInformation) throws PluginServiceException;
+	void clean(String type, Map<String, String> data) throws PluginServiceException;
 }
