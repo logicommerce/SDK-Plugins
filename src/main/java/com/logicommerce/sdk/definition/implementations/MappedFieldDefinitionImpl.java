@@ -2,11 +2,12 @@ package com.logicommerce.sdk.definition.implementations;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.logicommerce.sdk.definition.DefinitionLanguages;
 import com.logicommerce.sdk.definition.MappedFieldDefinition;
 import com.logicommerce.sdk.enums.MappedItemType;
 
 /**
- * <p>MappedFieldDefinitionImpl class.</p>
+ * MappedFieldDefinition Implementation class.
  *
  * @author Logicommerce
  * @since 1.0.16
@@ -15,6 +16,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 
 	private MappedItemType type;
 	private List<String> fields;
+	private DefinitionLanguages description;
 
 	/** {@inheritDoc} */
 	@Override
@@ -28,8 +30,14 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 		return fields;
 	}
 
+	/** {@inheritDoc} */
+	@Override
+	public DefinitionLanguages getDescription() {
+		return description;
+	}
+
 	/**
-	 * <p>Setter for the field <code>type</code>.</p>
+	 * Defines the type of the mapped field.
 	 *
 	 * @param type a {@link com.logicommerce.sdk.enums.MappedItemType} object
 	 */
@@ -38,7 +46,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 	}
 
 	/**
-	 * <p>Setter for the field <code>newFields</code>.</p>
+	 * Set the list of fields.
 	 *
 	 * @param fields a {@link java.util.List} object
 	 */
@@ -46,13 +54,25 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 		this.fields = fields;
 	}
 
+	/** 
+	 * Set the description of the mapped field.
+	 */
+	public void setDescription(DefinitionLanguages description) {
+		this.description = description;
+	}
+
+	/**
+	 * MappedFieldDefinition Builder class.
+	 */
 	public static class Builder<T> {
 		
 		private T parentBuilder;
 		private MappedItemType type;
 		private List<String> fields;
+		private DefinitionLanguagesImpl.Builder<Builder<T>> description;
 
 		public Builder() {
+			description = new DefinitionLanguagesImpl.Builder<>(this);
 		}
 
 		public Builder(T parentBuilder) {
@@ -73,6 +93,9 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 			return this;
 		}
 
+		public DefinitionLanguagesImpl.Builder<Builder<T>> description() {
+			return description;
+		}
 		
 		public MappedFieldDefinition build() {
 			MappedFieldDefinitionImpl mappedField = new MappedFieldDefinitionImpl();
@@ -81,6 +104,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 			}
 			mappedField.setType(type);
 			mappedField.setFields(fields);
+			mappedField.setDescription(description.build());
 			return mappedField;
 		}
 

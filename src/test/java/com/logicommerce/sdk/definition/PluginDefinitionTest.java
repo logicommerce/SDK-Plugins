@@ -121,6 +121,11 @@ class PluginDefinitionTest {
 			}
 
 			@Override
+			public DefinitionLanguages getPluginDescription() {
+				return null;
+			}
+
+			@Override
 			public List<ConnectorDefinition> getConnectorDefinitions() {
 				return connectorDefinitions;
 			}
