@@ -16,7 +16,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 
 	private MappedItemType type;
 	private List<String> fields;
-	private DefinitionLanguages description;
+	private DefinitionLanguages summary;
 
 	/** {@inheritDoc} */
 	@Override
@@ -32,8 +32,8 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 
 	/** {@inheritDoc} */
 	@Override
-	public DefinitionLanguages getDescription() {
-		return description;
+	public DefinitionLanguages getSummary() {
+		return summary;
 	}
 
 	/**
@@ -55,10 +55,10 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 	}
 
 	/** 
-	 * Set the description of the mapped field.
+	 * Set the summary of the mapped field.
 	 */
-	public void setDescription(DefinitionLanguages description) {
-		this.description = description;
+	public void setSummary(DefinitionLanguages summary) {
+		this.summary = summary;
 	}
 
 	/**
@@ -69,10 +69,10 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 		private T parentBuilder;
 		private MappedItemType type;
 		private List<String> fields;
-		private DefinitionLanguagesImpl.Builder<Builder<T>> description;
+		private DefinitionLanguagesImpl.Builder<Builder<T>> summary;
 
 		public Builder() {
-			description = new DefinitionLanguagesImpl.Builder<>(this);
+			summary = new DefinitionLanguagesImpl.Builder<>(this);
 		}
 
 		public Builder(T parentBuilder) {
@@ -93,8 +93,8 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 			return this;
 		}
 
-		public DefinitionLanguagesImpl.Builder<Builder<T>> description() {
-			return description;
+		public DefinitionLanguagesImpl.Builder<Builder<T>> summary() {
+			return summary;
 		}
 		
 		public MappedFieldDefinition build() {
@@ -104,7 +104,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 			}
 			mappedField.setType(type);
 			mappedField.setFields(fields);
-			mappedField.setDescription(description.build());
+			mappedField.setSummary(summary.build());
 			return mappedField;
 		}
 

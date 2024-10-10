@@ -28,11 +28,11 @@ public interface MappedFieldDefinition {
 	List<String> getFields();
 
 	/**
-	 * Get description of the mapped field.
+	 * Get the summary of the mapped field.
 	 * 
 	 * @since 2.1.0
 	 * @return DefinitionLanguages
 	 */
-	DefinitionLanguages getDescription();
+	DefinitionLanguages getSummary();
 
 }
