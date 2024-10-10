@@ -21,7 +21,7 @@ import com.logicommerce.sdk.enums.ConnectorType;
 public interface ConnectorDefinition extends ConfigDefinition {
 
 	/**
-	 * <p>Get connector type value.</p>
+	 * Get connector type value.
 	 *
 	 * @see com.logicommerce.sdk.enums.ConnectorType ConnectorType
 	 * @since 1.0.16
@@ -30,7 +30,7 @@ public interface ConnectorDefinition extends ConfigDefinition {
 	ConnectorType getType();
 
 	/**
-	 * <p>Get additional data.</p>
+	 * Get additional data.
 	 *
 	 * @since 1.0.16
 	 * @return a {@link java.util.Map Map}&lt;{@link java.lang.String String}, {@link java.lang.Object Object}&gt; object

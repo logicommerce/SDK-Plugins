@@ -121,7 +121,7 @@ class PluginDefinitionTest {
 			}
 
 			@Override
-			public DefinitionLanguages getPluginDescription() {
+			public DefinitionLanguages getSummary() {
 				return null;
 			}
 

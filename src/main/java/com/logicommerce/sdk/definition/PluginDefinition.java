@@ -25,19 +25,11 @@ public interface PluginDefinition extends ConfigDefinition {
 	 * Get description of the plugin.
 	 *
 	 * @since 1.0.16
-	 * @deprecated since 2.1.0 use {@link #getPluginDescription()} instead
+	 * @deprecated since 2.1.0 use {@link #getSummary()} instead
 	 * @return a {@link java.lang.String String} object
 	 */
 	@Deprecated(since = "2.1.0", forRemoval = true)
 	String getDescription();
-
-	/**
-	 * Get description in multiple languages
-	 * 
-	 * @since 2.1.0
-	 * @return DefinitionLanguages
-	 */
-	DefinitionLanguages getPluginDescription();
 
 	/**
 	 * Get author of the plugin.
