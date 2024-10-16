@@ -4,8 +4,8 @@ import java.util.List;
 import com.logicommerce.sdk.enums.ConnectorType;
 
 /**
- * <p>PluginDefinition interface. To implement a plugin definition data and properties.<br>
- * Extends {@link com.logicommerce.sdk.definition.ConfigDefinition ConfigDefinition}</p>
+ * PluginDefinition interface. To implement a plugin definition data and properties.<br>
+ * Extends {@link com.logicommerce.sdk.definition.ConfigDefinition ConfigDefinition} interface.
  *
  * @see com.logicommerce.sdk.definition.ConfigDefinition ConfigDefinition
  * @author Logicommerce
@@ -14,7 +14,7 @@ import com.logicommerce.sdk.enums.ConnectorType;
 public interface PluginDefinition extends ConfigDefinition {
 
 	/**
-	 * <p>Get name of the plugin.</p>
+	 * Get name of the plugin.
 	 *
 	 * @since 1.0.16
 	 * @return a {@link java.lang.String String} object
@@ -22,15 +22,17 @@ public interface PluginDefinition extends ConfigDefinition {
 	String getName();
 
 	/**
-	 * <p>Get description of the plugin.</p>
+	 * Get description of the plugin.
 	 *
 	 * @since 1.0.16
+	 * @deprecated since 2.1.0 use {@link #getSummary()} instead
 	 * @return a {@link java.lang.String String} object
 	 */
+	@Deprecated(since = "2.1.0", forRemoval = true)
 	String getDescription();
 
 	/**
-	 * <p>Get author of the plugin.</p>
+	 * Get author of the plugin.
 	 *
 	 * @since 1.0.16
 	 * @return a {@link java.lang.String String} object
@@ -38,7 +40,7 @@ public interface PluginDefinition extends ConfigDefinition {
 	String getAuthor();
 
 	/**
-	 * <p>Get version of the plugin.</p>
+	 * Get version of the plugin.
 	 *
 	 * @since 1.0.16
 	 * @return a {@link java.lang.String String} object
@@ -46,7 +48,7 @@ public interface PluginDefinition extends ConfigDefinition {
 	String getVersion();
 	
 	/**
-	 * <p>Get true if the plugin is multiple account.</p>
+	 * Get true if the plugin is multiple account.
 	 *
 	 * @since 1.2.1
 	 * @return a {@link java.lang.String String} object
@@ -54,7 +56,7 @@ public interface PluginDefinition extends ConfigDefinition {
 	boolean getMultipleAccount();
 	
 	/**
-	 * <p>Get true if the plugin active User/groups filter.</p>
+	 * Get true if the plugin active User/groups filter.
 	 *
 	 * @since 1.2.2
 	 * @return a {@link java.lang.String String} object
@@ -62,7 +64,7 @@ public interface PluginDefinition extends ConfigDefinition {
 	boolean getUserGroupsFilter();
 
 	/**
-	 * <p>Get true if the plugin active Country/zones filter.</p>
+	 * Get true if the plugin active Country/zones filter.
 	 *
 	 * @since 1.2.2
 	 * @return a {@link java.lang.String String} object
@@ -70,7 +72,7 @@ public interface PluginDefinition extends ConfigDefinition {
 	boolean getCountryZonesFilter();
 
 	/**
-	 * <p>Get all connector definitions of the plugin.</p>
+	 * Get all connector definitions of the plugin.
 	 *
 	 * @since 1.0.16
 	 * @return a {@link java.util.List List}&lt;{@link com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition}&gt; object
@@ -78,7 +80,7 @@ public interface PluginDefinition extends ConfigDefinition {
 	List<ConnectorDefinition> getConnectorDefinitions();
 
 	/**
-	 * <p>Add connector definition.</p>
+	 * Add connector definition.
 	 *
 	 * @see com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition
 	 * @param connectorDefinition a T object
@@ -89,7 +91,7 @@ public interface PluginDefinition extends ConfigDefinition {
 	<T extends ConnectorDefinition> void addConnectorDefinition(T connectorDefinition) throws PluginDefinitionException;
 
 	/**
-	 * <p>Get connector definition by connectorType.</p>
+	 * Get connector definition by connectorType.
 	 *
 	 * @see com.logicommerce.sdk.enums.ConnectorType ConnectorType
 	 * @param connectorType a {@link com.logicommerce.sdk.enums.ConnectorType} object

@@ -15,6 +15,14 @@ import java.util.List;
 public interface ConfigDefinition {
 
 	/**
+	 * Get explanation of the plugin or connector.
+	 * 
+	 * @since 2.1.0
+	 * @return DefinitionLanguages
+	 */
+	DefinitionLanguages getSummary();
+
+	/**
 	 * <p>Get properties from the plugin definition.</p>
 	 *
 	 * @see com.logicommerce.sdk.definition.PropertyDefinition PropertyDefinition

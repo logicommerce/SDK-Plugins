@@ -24,6 +24,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	private boolean multipleValue;
 	private List<PropertyDefinitionValue> values;
 	private DefinitionLanguages languages;
+	private DefinitionLanguages hint;
 	private String entryValueMode = "single";
 	private String reference;
 	private List<PropertyDefinitionPermission> permissions;
@@ -80,6 +81,12 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	@Override
 	public DefinitionLanguages getLanguages() {
 		return languages;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public DefinitionLanguages getHint() {
+		return hint;
 	}
 
 	/** {@inheritDoc} */
@@ -176,6 +183,15 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	}
 
 	/**
+	 * Setter for the field <code>hint</code>.
+	 *
+	 * @param hint a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
+	 */
+	public void setHint(DefinitionLanguages hint) {
+		this.hint = hint;
+	}
+
+	/**
 	 * <p>Setter for the field <code>reference</code>.</p>
 	 *
 	 * @param reference a {@link java.lang.String} object
@@ -206,6 +222,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		private String entryValueMode;
 		private List<PropertyDefinitionValueImpl.Builder<Builder<T>>> values;
 		private DefinitionLanguagesImpl.Builder<Builder<T>> languages;
+		private DefinitionLanguagesImpl.Builder<Builder<T>> hint;
 		private String reference;
 		private List<PropertyDefinitionPermissionImpl.Builder> permissions;
 
@@ -213,6 +230,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			type = "string";
 			values = new ArrayList<>();
 			languages = new DefinitionLanguagesImpl.Builder<>(this);
+			hint = new DefinitionLanguagesImpl.Builder<>(this);
 			permissions = new ArrayList<>();
 		}
 
@@ -266,6 +284,10 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			return languages;
 		}
 
+		public DefinitionLanguagesImpl.Builder<Builder<T>> hint() {
+			return hint;
+		}
+
 		public Builder<T> reference(String reference) {
 			this.reference = reference;
 			return this;
@@ -290,6 +312,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 					.map(PropertyDefinitionValueImpl.Builder::build)
 					.collect(Collectors.toList()));
 			propertyDefinition.setLanguages(languages.build());
+			propertyDefinition.setHint(hint.build());
 			propertyDefinition.setReference(reference);
 			propertyDefinition.setPermissions(permissions.stream()
 					.map(PropertyDefinitionPermissionImpl.Builder::build)

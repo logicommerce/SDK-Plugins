@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import com.logicommerce.sdk.definition.ConnectorDefinition;
+import com.logicommerce.sdk.definition.DefinitionLanguages;
 import com.logicommerce.sdk.definition.MappedFieldDefinition;
 import com.logicommerce.sdk.definition.PluginActionDefinition;
 import com.logicommerce.sdk.definition.PropertyDefinition;
@@ -18,12 +19,19 @@ import com.logicommerce.sdk.definition.PropertyDefinition;
  */
 public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 
+	private DefinitionLanguages summary;
 	private List<PropertyDefinition> properties;
 	private boolean hasAdditionalProperties;
 	private List<PropertyDefinition> additionalProperties;
 	private List<MappedFieldDefinition> mappedFields;
 	private List<PluginActionDefinition> pluginActions;
 	private Map<String, Object> additionalData;
+
+	/** {@inheritDoc} */
+	@Override
+	public DefinitionLanguages getSummary() {
+		return summary;
+	}
 
 	/** {@inheritDoc} */
 	@Override
@@ -96,6 +104,15 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 	public Map<String, Object> getAdditionalData() {
 		return additionalData;
 	}
+
+	/**
+	 * <p>Setter for the field <code>summary</code>.</p>
+	 *
+	 * @param summary a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
+	 */
+	public void setSummary(DefinitionLanguages summary) {
+		this.summary = summary;
+	}
 	
 	/**
 	 * <p>Setter for the field <code>properties</code>.</p>
@@ -148,6 +165,7 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 
 	protected abstract static class Builder<T, S extends ConnectorDefinition, R extends ConnectorDefinitionImpl> {
 
+		private DefinitionLanguagesImpl.Builder<Builder<T, S, R>> summary;
 		private List<PropertyDefinitionImpl.Builder<T>> properties;
 		private boolean hasAdditionalProperties;
 		private List<PropertyDefinitionImpl.Builder<T>> additionalProperties;
@@ -156,11 +174,16 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 		private List<PluginActionDefinitionImpl.Builder<T>> pluginActions;
 
 		protected Builder() {
+			summary = new DefinitionLanguagesImpl.Builder<>(this);
 			properties = new ArrayList<>();
 			additionalProperties = new ArrayList<>();
 			mappedFields = new ArrayList<>();
 			additionalData = new HashMap<>();
 			pluginActions = new ArrayList<>();
+		}
+
+		public DefinitionLanguagesImpl.Builder<Builder<T, S, R>> summary() {
+			return summary;
 		}
 
 		public PropertyDefinitionImpl.Builder<T> property() {
@@ -202,6 +225,7 @@ public abstract class ConnectorDefinitionImpl implements ConnectorDefinition {
 		public abstract S build();
 
 		protected void setAttributes(R connector) {
+			connector.setSummary(summary.build());
 			connector.setHasAdditionalProperties(hasAdditionalProperties);
 			connector.setAdditionalData(additionalData);
 			connector.setProperties(properties.stream()
