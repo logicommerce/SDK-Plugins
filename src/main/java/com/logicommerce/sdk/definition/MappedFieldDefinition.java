@@ -35,4 +35,11 @@ public interface MappedFieldDefinition {
 	 */
 	DefinitionLanguages getSummary();
 
+	/**
+	 * Get the title of the mapped field.
+	 * 
+	 * @since 2.1.1
+	 * @return DefinitionLanguages
+	 */
+	DefinitionLanguages getTitle();
 }

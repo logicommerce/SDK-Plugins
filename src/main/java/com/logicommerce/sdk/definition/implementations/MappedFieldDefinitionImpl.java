@@ -17,6 +17,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 	private MappedItemType type;
 	private List<String> fields;
 	private DefinitionLanguages summary;
+	private DefinitionLanguages title;
 
 	/** {@inheritDoc} */
 	@Override
@@ -34,6 +35,12 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 	@Override
 	public DefinitionLanguages getSummary() {
 		return summary;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public DefinitionLanguages getTitle() {
+		return title;
 	}
 
 	/**
@@ -61,6 +68,13 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 		this.summary = summary;
 	}
 
+	/** 
+	 * Set the summary of the mapped field.
+	 */
+	public void setTitle(DefinitionLanguages title) {
+		this.title = title;
+	}
+
 	/**
 	 * MappedFieldDefinition Builder class.
 	 */
@@ -70,16 +84,18 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 		private MappedItemType type;
 		private List<String> fields;
 		private DefinitionLanguagesImpl.Builder<Builder<T>> summary;
+		private DefinitionLanguagesImpl.Builder<Builder<T>> title;
 
 		public Builder() {
 			summary = new DefinitionLanguagesImpl.Builder<>(this);
+			title = new DefinitionLanguagesImpl.Builder<>(this);
 		}
 
 		public Builder(T parentBuilder) {
 			this();
 			this.parentBuilder = parentBuilder;
 		}
-		
+
 		public Builder<T> type(MappedItemType type) {
 			this.type = type;
 			return this;
@@ -96,7 +112,11 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 		public DefinitionLanguagesImpl.Builder<Builder<T>> summary() {
 			return summary;
 		}
-		
+
+		public DefinitionLanguagesImpl.Builder<Builder<T>> title() {
+			return title;
+		}
+
 		public MappedFieldDefinition build() {
 			MappedFieldDefinitionImpl mappedField = new MappedFieldDefinitionImpl();
 			if (type == null) {
@@ -105,6 +125,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 			mappedField.setType(type);
 			mappedField.setFields(fields);
 			mappedField.setSummary(summary.build());
+			mappedField.setTitle(title.build());
 			return mappedField;
 		}
 
