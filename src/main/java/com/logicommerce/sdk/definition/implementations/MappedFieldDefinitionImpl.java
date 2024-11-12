@@ -69,7 +69,7 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 	}
 
 	/** 
-	 * Set the summary of the mapped field.
+	 * Set the title of the mapped field.
 	 */
 	public void setTitle(DefinitionLanguages title) {
 		this.title = title;
