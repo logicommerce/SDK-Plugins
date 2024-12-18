@@ -60,6 +60,7 @@
 - TRACKER
 - ASSET
 - MARKETPLACE
+- ROUTE
 - UNKNOWN
 
 ## DeliveryType
