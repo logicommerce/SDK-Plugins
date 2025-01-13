@@ -51,7 +51,7 @@ public interface PluginDefinition extends ConfigDefinition {
 	 * Get true if the plugin is multiple account.
 	 *
 	 * @since 1.2.1
-	 * @return a {@link java.lang.String String} object
+	 * @return a boolean
 	 */
 	boolean getMultipleAccount();
 	
@@ -59,15 +59,25 @@ public interface PluginDefinition extends ConfigDefinition {
 	 * Get true if the plugin active User/groups filter.
 	 *
 	 * @since 1.2.2
-	 * @return a {@link java.lang.String String} object
+	 * @deprecated since 2.2.0 use {@link #getAccountGroupsFilter()} instead
+	 * @return a boolean
 	 */
+	@Deprecated(since = "2.2.0", forRemoval = true)
 	boolean getUserGroupsFilter();
+
+	/**
+	 * Get true if the plugin active Account/groups filter.
+	 *
+	 * @since 2.2.0
+	 * @return a boolean
+	 */
+	boolean getAccountGroupsFilter();
 
 	/**
 	 * Get true if the plugin active Country/zones filter.
 	 *
 	 * @since 1.2.2
-	 * @return a {@link java.lang.String String} object
+	 * @return a boolean
 	 */
 	boolean getCountryZonesFilter();
 

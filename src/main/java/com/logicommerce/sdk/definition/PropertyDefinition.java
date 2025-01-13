@@ -35,6 +35,7 @@ public interface PropertyDefinition {
 	 *   <li>password</li>
 	 *   <li>date</li>
 	 *   <li>datetime</li>
+	 *   <li>checkbox</li>
 	 *   <li>channelvalue: A channel value.</li>
 	 *   <li>countrySelector: A country selector value.</li>
 	 *   <li>documentStatuses: A document statuses value.</li>
@@ -42,7 +43,7 @@ public interface PropertyDefinition {
 	 *   <li>headquartervalue: A headquarter value.</li>
 	 *   <li>paymentvalue: A payment value.</li>
 	 *   <li>shippervalue: A shipper value.</li>
-	 *   <li>uservalue: A user value.</li>
+	 *   <li>accountvalue: A account value.</li>
 	 *   <li>warehousevalue: A warehouse value.</li>
 	 * </ul>
 	 *
