@@ -164,8 +164,12 @@ class PluginDefinitionTest {
 				return false;
 			}
 
-			@Override
 			public boolean getUserGroupsFilter() {
+				return false;
+			}
+
+			@Override
+			public boolean getAccountGroupsFilter() {
 				return false;
 			}
 

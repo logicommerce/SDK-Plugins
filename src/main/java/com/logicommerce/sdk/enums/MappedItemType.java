@@ -7,7 +7,9 @@ package com.logicommerce.sdk.enums;
  * @since 1.0.16
  */
 public enum MappedItemType {
-	USER,
+	USER, //DEPRECATED
+	ACCOUNT,
+	ACCOUNTREGISTEREDUSER,
 	STATUS_CODE,
 	REFUND_CODE,
 	SHIPPER_ACTION,
