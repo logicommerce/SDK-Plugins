@@ -59,16 +59,16 @@ public interface PluginDefinition extends ConfigDefinition {
 	 * Get true if the plugin active User/groups filter.
 	 *
 	 * @since 1.2.2
-	 * @deprecated since 2.1.3 use {@link #getAccountGroupsFilter()} instead
+	 * @deprecated since 2.2.0 use {@link #getAccountGroupsFilter()} instead
 	 * @return a boolean
 	 */
-	@Deprecated(since = "2.1.3", forRemoval = true)
+	@Deprecated(since = "2.2.0", forRemoval = true)
 	boolean getUserGroupsFilter();
 
 	/**
 	 * Get true if the plugin active Account/groups filter.
 	 *
-	 * @since 2.1.3
+	 * @since 2.2.0
 	 * @return a boolean
 	 */
 	boolean getAccountGroupsFilter();
