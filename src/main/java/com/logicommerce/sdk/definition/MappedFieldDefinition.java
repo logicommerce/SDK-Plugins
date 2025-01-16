@@ -7,7 +7,7 @@ import com.logicommerce.sdk.enums.MappedItemType;
  * This interface is used to implement a mapped field definition data and properties. It allows to
  * link a plugin fields with LogiCommerce fields in back office configuration. 
  * 
- * @author Logicommerce
+ * @author LogiCommerce
  * @since 1.0.16
  */
 public interface MappedFieldDefinition {
@@ -25,7 +25,16 @@ public interface MappedFieldDefinition {
 	 * @since 1.0.16
 	 * @return a {@link java.util.List} object
 	 */
+	@Deprecated(since = "2.3.0", forRemoval = true)
 	List<String> getFields();
+
+	/**
+	 * Returns a list of fields.
+	 *
+	 * @since 2.3.0
+	 * @return a {@link java.util.List} object
+	 */
+	List<MappedFieldDefinitionValue> getNewFields();
 
 	/**
 	 * Get the summary of the mapped field.
