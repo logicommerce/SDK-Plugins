@@ -2,8 +2,10 @@ package com.logicommerce.sdk.definition.implementations;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import com.logicommerce.sdk.definition.DefinitionLanguages;
 import com.logicommerce.sdk.definition.MappedFieldDefinition;
+import com.logicommerce.sdk.definition.MappedFieldDefinitionValue;
 import com.logicommerce.sdk.enums.MappedItemType;
 
 /**
@@ -15,7 +17,9 @@ import com.logicommerce.sdk.enums.MappedItemType;
 public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 
 	private MappedItemType type;
+	@Deprecated(since = "2.3.0", forRemoval = true)
 	private List<String> fields;
+	private List<MappedFieldDefinitionValue> newFields;
 	private DefinitionLanguages summary;
 	private DefinitionLanguages title;
 
@@ -27,8 +31,15 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 
 	/** {@inheritDoc} */
 	@Override
+	@Deprecated(since = "2.3.0", forRemoval = true)
 	public List<String> getFields() {
 		return fields;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public List<MappedFieldDefinitionValue> getNewFields() {
+		return newFields;
 	}
 
 	/** {@inheritDoc} */
@@ -57,8 +68,18 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 	 *
 	 * @param fields a {@link java.util.List} object
 	 */
+	@Deprecated(since = "2.3.0", forRemoval = true)
 	public void setFields(List<String> fields) {
 		this.fields = fields;
+	}
+
+	/**
+	 * Set the list of fields.
+	 *
+	 * @param fields a {@link java.util.List} object
+	 */
+	public void setNewFields(List<MappedFieldDefinitionValue> fields) {
+		this.newFields = fields;
 	}
 
 	/** 
@@ -82,13 +103,16 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 		
 		private T parentBuilder;
 		private MappedItemType type;
+		@Deprecated(since = "2.3.0", forRemoval = true)
 		private List<String> fields;
+		private List<MappedFieldDefinitionValueImpl.Builder<Builder<T>>> newFields;
 		private DefinitionLanguagesImpl.Builder<Builder<T>> summary;
 		private DefinitionLanguagesImpl.Builder<Builder<T>> title;
 
 		public Builder() {
 			summary = new DefinitionLanguagesImpl.Builder<>(this);
 			title = new DefinitionLanguagesImpl.Builder<>(this);
+			newFields = new ArrayList<>();
 		}
 
 		public Builder(T parentBuilder) {
@@ -101,12 +125,19 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 			return this;
 		}
 
+		@Deprecated(since = "2.3.0", forRemoval = true)
 		public Builder<T> addField(String field) {
 			if (this.fields == null) {
 				this.fields = new ArrayList<>();
 			}
 			this.fields.add(field);
 			return this;
+		}
+
+		public MappedFieldDefinitionValueImpl.Builder<Builder<T>> addField() {
+			var field = new MappedFieldDefinitionValueImpl.Builder<>(this);
+			this.newFields.add(field);
+			return field;
 		}
 
 		public DefinitionLanguagesImpl.Builder<Builder<T>> summary() {
@@ -124,6 +155,9 @@ public class MappedFieldDefinitionImpl implements MappedFieldDefinition {
 			}
 			mappedField.setType(type);
 			mappedField.setFields(fields);
+			mappedField.setNewFields(newFields.stream()
+					.map(MappedFieldDefinitionValueImpl.Builder::build)
+					.collect(Collectors.toList()));
 			mappedField.setSummary(summary.build());
 			mappedField.setTitle(title.build());
 			return mappedField;
