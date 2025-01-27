@@ -6,20 +6,6 @@ package com.logicommerce.sdk.definition;
  * @author Logicommerce
  * @since 1.0.16
  */
-public interface PropertyDefinitionValue {
-
-	/**
-	 * <p>getValue.</p>
-	 *
-	 * @return a {@link java.lang.String} object
-	 */
-	String getValue();
-
-	/**
-	 * <p>getLanguages.</p>
-	 *
-	 * @return a {@link com.logicommerce.sdk.definition.DefinitionLanguages} object
-	 */
-	DefinitionLanguages getLanguages();
+public interface PropertyDefinitionValue extends DefinitionValue {
 
 }

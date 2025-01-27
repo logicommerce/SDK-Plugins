@@ -10,7 +10,8 @@ import com.logicommerce.sdk.definition.MappedFieldDefinitionValue;
  */
 public class MappedFieldDefinitionValueImpl extends DefinitionValueImpl implements MappedFieldDefinitionValue {
 
-	public static class Builder<T> extends DefinitionValueImpl.Builder<T, MappedFieldDefinitionValue, MappedFieldDefinitionValueImpl> {
+	public static class Builder<T>
+		extends DefinitionValueImpl.Builder<T, MappedFieldDefinitionValue, MappedFieldDefinitionValueImpl, Builder<T>> {
 
 		public Builder(T parentBuilder) {
 			super(parentBuilder);
@@ -23,5 +24,9 @@ public class MappedFieldDefinitionValueImpl extends DefinitionValueImpl implemen
 			return definitionValue;
 		}
 
+		@Override
+		public Builder<T> returnThis() {
+			return this;
+		}
 	}
 }

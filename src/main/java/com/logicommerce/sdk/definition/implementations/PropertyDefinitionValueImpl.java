@@ -10,7 +10,7 @@ import com.logicommerce.sdk.definition.PropertyDefinitionValue;
  */
 public class PropertyDefinitionValueImpl extends DefinitionValueImpl implements PropertyDefinitionValue {
 
-	public static class Builder<T> extends DefinitionValueImpl.Builder<T, PropertyDefinitionValue, PropertyDefinitionValueImpl> {
+	public static class Builder<T> extends DefinitionValueImpl.Builder<T, PropertyDefinitionValue, PropertyDefinitionValueImpl, Builder<T>> {
 
 		public Builder(T parentBuilder) {
 			super(parentBuilder);
@@ -21,6 +21,11 @@ public class PropertyDefinitionValueImpl extends DefinitionValueImpl implements 
 			PropertyDefinitionValueImpl definitionValue = new PropertyDefinitionValueImpl();
 			setAttributes(definitionValue);
 			return definitionValue;
+		}
+
+		@Override
+		public Builder<T> returnThis() {
+			return this;
 		}
 
 	}
