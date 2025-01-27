@@ -34,28 +34,30 @@ public abstract class DefinitionValueImpl implements DefinitionValue {
 		this.languages = languages;
 	}
 
-	public abstract static class Builder<T, S, R extends DefinitionValueImpl> {
+	public abstract static class Builder<T, S, R extends DefinitionValueImpl, Q extends Builder<T, S, R, Q>> {
 
 		protected T parentBuilder;
 		private String value;
-		private DefinitionLanguagesImpl.Builder<Builder<T, S, R>> languages;
+		private DefinitionLanguagesImpl.Builder<Q> languages;
 
 		public Builder(T parentBuilder) {
 			this.parentBuilder = parentBuilder;
 		}
-		
-		public Builder<T, S, R> value(String value) {
+
+		public Q value(String value) {
 			this.value = value;
-			return this;
+			return returnThis();
 		}
 
-		public DefinitionLanguagesImpl.Builder<Builder<T, S, R>> languages() {
-			this.languages = new DefinitionLanguagesImpl.Builder<>(this);
+		public DefinitionLanguagesImpl.Builder<Q> languages() {
+			this.languages = new DefinitionLanguagesImpl.Builder<>(returnThis());
 			return languages;
 		}
 
+		public abstract Q returnThis();
+
 		public abstract S build();
-		
+
 		protected void setAttributes(R defintionValue) {
 			defintionValue.setValue(value);
 			if (languages != null) {
