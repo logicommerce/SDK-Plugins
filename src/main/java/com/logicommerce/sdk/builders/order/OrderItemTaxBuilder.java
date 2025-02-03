@@ -24,10 +24,13 @@ public class OrderItemTaxBuilder<T> {
 
 	private String code;
 
+	private OrderItemTaxDefinitionBuilder<OrderItemTaxBuilder<T>> taxDefinition;
+
 	/**
 	 * <p>Constructor for OrderItemTaxBuilder.</p>
 	 */
 	public OrderItemTaxBuilder() {
+		taxDefinition = new OrderItemTaxDefinitionBuilder<>(this);
 	}
 
 	/**
@@ -94,7 +97,19 @@ public class OrderItemTaxBuilder<T> {
 		this.code = code;
 		return this;
 	}
-	
+
+	/**
+	 * <p>
+	 * taxDefinition.
+	 * </p>
+	 *
+	 * @since 2.4.0
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderItemTaxDefinitionBuilder} object
+	 */
+	public OrderItemTaxDefinitionBuilder<OrderItemTaxBuilder<T>> taxDefinition() {
+		return taxDefinition;
+	}
+
 	/**
 	 * <p>build.</p>
 	 *
@@ -107,6 +122,7 @@ public class OrderItemTaxBuilder<T> {
 		tax.setTaxRate(taxRate);
 		tax.setType(type);
 		tax.setCode(code);
+		tax.setTaxDefinition(taxDefinition.build());
 		return tax;
 	}
 

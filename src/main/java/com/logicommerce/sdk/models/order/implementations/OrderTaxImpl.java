@@ -27,7 +27,11 @@ public class OrderTaxImpl implements OrderTax {
 	private double discount;
 
 	private String code;
-	
+
+	private String name;
+
+	private Integer taxId;
+
 	/** {@inheritDoc} */
 	@Override
 	public double getTaxRate() {
@@ -74,6 +78,18 @@ public class OrderTaxImpl implements OrderTax {
 	@Override
 	public double getDiscount() {
 		return discount;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public Integer getTaxId() {
+		return taxId;
 	}
 
 	/**
@@ -167,5 +183,29 @@ public class OrderTaxImpl implements OrderTax {
 	 */
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	/**
+	 * <p>
+	 * Setter for the field <code>name</code>.
+	 * </p>
+	 * 
+	 * @since 2.4.0
+	 * @param name a {@link String} object
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * <p>
+	 * Setter for the field <code>taxId</code>.
+	 * </p>
+	 * 
+	 * @since 2.4.0
+	 * @param taxId a {@link Integer} object
+	 */
+	public void setTaxId(Integer taxId) {
+		this.taxId = taxId;
 	}
 }

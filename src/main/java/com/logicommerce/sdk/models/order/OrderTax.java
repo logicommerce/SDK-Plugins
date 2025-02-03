@@ -71,4 +71,20 @@ public interface OrderTax {
 	 * @return a String object
 	 */
 	String getCode();
+
+	/**
+	 * <p>get name</p>
+	 * 
+	 * @since 2.4.0
+	 * @return a String object
+	 */
+	String getName();
+
+	/**
+	 * <p>get taxId</p>
+	 * 
+	 * @since 2.4.0
+	 * @return a Integer object
+	 */
+	Integer getTaxId();
 }
