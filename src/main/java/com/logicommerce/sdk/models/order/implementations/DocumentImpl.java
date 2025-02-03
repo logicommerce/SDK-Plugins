@@ -7,7 +7,9 @@ import com.logicommerce.sdk.enums.ExportStatusType;
 import com.logicommerce.sdk.models.CustomTag;
 import com.logicommerce.sdk.models.ElementProperty;
 import com.logicommerce.sdk.models.ElementProperyImpl;
+import com.logicommerce.sdk.models.Headquarter;
 import com.logicommerce.sdk.models.implementations.CustomTagImpl;
+import com.logicommerce.sdk.models.implementations.HeadquarterImpl;
 import com.logicommerce.sdk.models.order.Document;
 import com.logicommerce.sdk.models.order.OrderAdditionalInformation;
 import com.logicommerce.sdk.models.order.OrderCurrency;
@@ -91,6 +93,9 @@ public abstract class DocumentImpl implements Document {
 
 	@Uses(value = OrderTaxImpl.class)
 	private List<OrderTax> taxes;
+
+	@Uses(value = HeadquarterImpl.class)
+	private Headquarter headquarter;
 
 	/**
 	 * <p>Getter for the field <code>additionalInformation</code>.</p>
@@ -593,5 +598,30 @@ public abstract class DocumentImpl implements Document {
 	 */
 	public void setTaxes(List<OrderTax> taxes) {
 		this.taxes = taxes;
+	}
+
+	/**
+	 * <p>
+	 * Getter for the field <code>headquarter</code>.
+	 * </p>
+	 *
+	 * @since 2.4.0
+	 * @return a {@link com.logicommerce.sdk.models.Headquarter} object
+	 */
+	@Override
+	public Headquarter getHeadquarter() {
+		return headquarter;
+	}
+
+	/**
+	 * <p>
+	 * Setter for the field <code>headquarter</code>.
+	 * </p>
+	 *
+	 * @since 2.4.0
+	 * @param headquarter a {@link com.logicommerce.sdk.models.Headquarter} object
+	 */
+	public void setHeadquarter(Headquarter headquarter) {
+		this.headquarter = headquarter;
 	}
 }
