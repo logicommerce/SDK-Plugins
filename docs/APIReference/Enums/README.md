@@ -201,6 +201,12 @@
 - CODE
 - IFRAME
 
+##WebhookResponseType
+
+- JSON
+- NO_DATA
+- XML
+
 ## WidgetAmbience
 
 - ALL
