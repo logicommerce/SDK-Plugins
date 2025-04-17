@@ -18,6 +18,8 @@ public class OrderTotalImpl implements OrderTotal {
 
 	private double subtotalShippings;
 
+	private double subtotalDiscounts;
+
 	private double total;
 
 	private double totalDiscounts;
@@ -228,5 +230,14 @@ public class OrderTotalImpl implements OrderTotal {
 	 */
 	public void setTotalVouchers(double totalVouchers) {
 		this.totalVouchers = totalVouchers;
+	}
+
+	@Override
+	public double getSubtotalDiscounts() {
+		return subtotalDiscounts;
+	}
+
+	public void setSubtotalDiscounts(double subtotalDiscounts) {
+		this.subtotalDiscounts = subtotalDiscounts;
 	}
 }

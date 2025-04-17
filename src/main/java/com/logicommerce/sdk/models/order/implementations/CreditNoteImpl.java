@@ -1,14 +1,14 @@
 package com.logicommerce.sdk.models.order.implementations;
 
-import com.logicommerce.sdk.models.order.Invoice;
+import com.logicommerce.sdk.models.order.CreditNote;
 
 /**
- * <p>InvoiceImpl class.</p>
+ * <p>CreditNoteImpl class.</p>
  *
  * @author Logicommerce
  * @since 2.4.1
  */
-public class InvoiceImpl extends DocumentImpl implements Invoice  {
+public class CreditNoteImpl extends DocumentImpl implements CreditNote  {
 
 	private String externalInvoiceId;
 	
