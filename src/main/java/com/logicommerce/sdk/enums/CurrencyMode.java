@@ -4,9 +4,9 @@ package com.logicommerce.sdk.enums;
  * <p>CurrencyMode class.</p>
  *
  * @author Logicommerce
- * @since 1.0.16
+ * @since 2.4.1
  */
 public enum CurrencyMode {
-	ECOMMERCE,
-	PAY;
+	INVOICING,
+	PURCHASE;
 }
