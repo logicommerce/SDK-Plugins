@@ -17,7 +17,7 @@ public enum CartItemType {
 	 */
 	GIFT,
 	/**
-	 * Indicates that the item is of type linked product  
+	 * Indicates that the item is of type linked product
 	 */
 	LINKED,
 	/**
@@ -27,5 +27,9 @@ public enum CartItemType {
 	/**
 	 * Indicates that the item is of type bundle product ??
 	 * */
-	BUNDLE_ITEM
+	BUNDLE_ITEM,
+	/**
+	 * Indicates that the item is of type voucher purchase
+	 */
+	VOUCHER_PURCHASE
 }
