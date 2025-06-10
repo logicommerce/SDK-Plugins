@@ -43,6 +43,7 @@ public interface PropertyDefinition {
 	 *   <li>headquartervalue: A headquarter value.</li>
 	 *   <li>paymentvalue: A payment value.</li>
 	 *   <li>shippervalue: A shipper value.</li>
+	 *   <li>shippingtypevalue: A shipping type value.</li>
 	 *   <li>accountvalue: A account value.</li>
 	 *   <li>warehousevalue: A warehouse value.</li>
 	 * </ul>
