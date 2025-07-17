@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import com.logicommerce.sdk.enums.AmountType;
+import com.logicommerce.sdk.enums.ConversionMode;
 import com.logicommerce.sdk.models.order.OrderPaymentSystem;
 import com.logicommerce.sdk.models.order.implementations.OrderPaymentSystemImpl;
 
@@ -35,13 +36,18 @@ public class OrderPaymentSystemBuilder<T> {
 
 	protected boolean cashOnDelivery;
 
+	protected ConversionMode conversionMode;
+
 	protected String property;
+
+	protected List<DocumentConversionCurrencyBuilder<OrderPaymentSystemBuilder<T>>> conversionCurrencies;
 
 	/**
 	 * <p>Constructor for OrderPaymentSystemBuilder.</p>
 	 */
 	public OrderPaymentSystemBuilder() {
 		taxes = new ArrayList<>();
+		conversionCurrencies = new ArrayList<>();
 	}
 
 	/**
@@ -85,6 +91,19 @@ public class OrderPaymentSystemBuilder<T> {
 		OrderTaxBuilder<OrderPaymentSystemBuilder<T>> tax = new OrderTaxBuilder<>(this);
 		taxes.add(tax);
 		return tax;
+	}
+
+	/**
+	 * <p>
+	 * conversionCurrency.
+	 * </p>
+	 *
+	 * @return a {@link com.logicommerce.sdk.builders.order.DocumentConversionCurrencyBuilder} object
+	 */
+	public DocumentConversionCurrencyBuilder<OrderPaymentSystemBuilder<T>> conversionCurrency() {
+		DocumentConversionCurrencyBuilder<OrderPaymentSystemBuilder<T>> conversionCurrency = new DocumentConversionCurrencyBuilder<>(this);
+		conversionCurrencies.add(conversionCurrency);
+		return conversionCurrency;
 	}
 
 	/**
@@ -165,6 +184,19 @@ public class OrderPaymentSystemBuilder<T> {
 	}
 
 	/**
+	 * <p>
+	 * conversionMode.
+	 * </p>
+	 *
+	 * @param conversionMode a {@link com.logicommerce.sdk.enums.ConversionMode} object
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderPaymentSystemBuilder} object
+	 */
+	public OrderPaymentSystemBuilder<T> conversionMode(ConversionMode conversionMode) {
+		this.conversionMode = conversionMode;
+		return this;
+	}
+
+	/**
 	 * <p>build.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderPaymentSystem} object
@@ -181,6 +213,9 @@ public class OrderPaymentSystemBuilder<T> {
 		paymentSystem.setIncreaseMin(increaseMin);
 		paymentSystem.setCashOnDelivery(cashOnDelivery);
 		paymentSystem.setProperty(property);
+		paymentSystem.setConversionMode(conversionMode);
+		paymentSystem.setConversionCurrencies(conversionCurrencies.stream()
+				.map(DocumentConversionCurrencyBuilder::build).collect(Collectors.toList()));
 		return paymentSystem;
 	}
 
