@@ -3,8 +3,10 @@ package com.logicommerce.sdk.models.order.implementations;
 import java.util.ArrayList;
 import java.util.List;
 import com.logicommerce.sdk.enums.AmountType;
+import com.logicommerce.sdk.enums.ConversionMode;
 import com.logicommerce.sdk.models.ElementProperty;
 import com.logicommerce.sdk.models.ElementProperyImpl;
+import com.logicommerce.sdk.models.order.DocumentConversionCurrency;
 import com.logicommerce.sdk.models.order.OrderPaymentSystem;
 import com.logicommerce.sdk.models.order.OrderTax;
 import com.logicommerce.utilities.annotations.NoMappable;
@@ -37,10 +39,14 @@ public class OrderPaymentSystemImpl implements OrderPaymentSystem {
 	private boolean cashOnDelivery;
 
 	private String property;
-	
+
+	private ConversionMode conversionMode;
+
 	@NoMappable
 	@Uses(value = ElementProperyImpl.class)
 	private List<ElementProperty> properties;
+
+	private List<DocumentConversionCurrency> conversionCurrencies;
 
 	/**
 	 * <p>Getter for the field <code>id</code>.</p>
@@ -251,6 +257,41 @@ public class OrderPaymentSystemImpl implements OrderPaymentSystem {
 	/** {@inheritDoc} */
 	public void addProperty(String name, String value) {
 		addProperty(new ElementProperyImpl(name, value));
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public ConversionMode getConversionMode() {
+		return conversionMode;
+	}
+
+	/**
+	 * <p>
+	 * Setter for the field <code>conversionMode</code>.
+	 * </p>
+	 *
+	 * @param conversionMode a {@link com.logicommerce.sdk.enums.ConversionMode} object
+	 */
+	public void setConversionMode(ConversionMode conversionMode) {
+		this.conversionMode = conversionMode;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public List<DocumentConversionCurrency> getConversionCurrencies() {
+		return conversionCurrencies;
+	}
+
+	/**
+	 * <p>
+	 * Setter for the field <code>conversionCurrencies</code>.
+	 * </p>
+	 *
+	 * @param conversionCurrencies a {@link java.util.List} object containing
+	 *        {@link com.logicommerce.sdk.models.order.DocumentConversionCurrency}
+	 */
+	public void setConversionCurrencies(List<DocumentConversionCurrency> conversionCurrencies) {
+		this.conversionCurrencies = conversionCurrencies;
 	}
 
 }
