@@ -2,6 +2,7 @@ package com.logicommerce.sdk.models.order;
 
 import java.util.List;
 import com.logicommerce.sdk.enums.AmountType;
+import com.logicommerce.sdk.enums.ConversionMode;
 import com.logicommerce.sdk.models.ElementProperty;
 
 /**
@@ -106,5 +107,26 @@ public interface OrderPaymentSystem {
 	 * @param value a {@link java.lang.String} object
 	 */
 	void addProperty(String name, String value);
+
+	/**
+	 * *
+	 * <p>
+	 * getConversionMode.
+	 * </p>
+	 *
+	 * @since 2.5.0
+	 * @return a {@link com.logicommerce.sdk.enums.ConversionMode} object
+	 */
+	ConversionMode getConversionMode();
+
+	/**
+	 * <p>
+	 * getConversionCurrencies.
+	 * </p>
+	 * 
+	 * @since 2.5.0
+	 * @return a {@link java.util.List} object containing {@link com.logicommerce.sdk.models.order.DocumentConversionCurrency}
+	 */
+	List<DocumentConversionCurrency> getConversionCurrencies();
 
 }
