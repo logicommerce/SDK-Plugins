@@ -16,11 +16,14 @@ public class OrderSdkBuilder extends DocumentSdkBuilder<OrderSdkBuilder> {
 
 	protected int substatusId;
 
+	protected OrderTotalCurrencyBuilder<OrderSdkBuilder> totalCurrency;
+
 	/**
 	 * <p>Constructor for OrderSdkBuilder.</p>
 	 */
 	public OrderSdkBuilder() {
 		status = OrderStatusType.INCIDENTS;
+		totalCurrency = new OrderTotalCurrencyBuilder<>(this);
 	}
 
 	/**
@@ -46,6 +49,17 @@ public class OrderSdkBuilder extends DocumentSdkBuilder<OrderSdkBuilder> {
 	}
 
 	/**
+	 * <p>
+	 * totalCurrency.
+	 * </p>
+	 *
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderTotalCurrencyBuilder} object
+	 */
+	public OrderTotalCurrencyBuilder<OrderSdkBuilder> totalCurrency() {
+		return totalCurrency;
+	}
+
+	/**
 	 * <p>build.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.Order} object
@@ -55,6 +69,7 @@ public class OrderSdkBuilder extends DocumentSdkBuilder<OrderSdkBuilder> {
 		setFields(order);
 		order.setStatus(status);
 		order.setSubstatusId(substatusId);
+		order.setTotalCurrency(totalCurrency.build());
 		return order;
 	}
 
