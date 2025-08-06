@@ -2,6 +2,8 @@ package com.logicommerce.sdk.models.order.implementations;
 
 import com.logicommerce.sdk.enums.OrderStatusType;
 import com.logicommerce.sdk.models.order.Order;
+import com.logicommerce.sdk.models.order.OrderTotalCurrency;
+import com.logicommerce.utilities.annotations.Uses;
 
 /**
  * <p>OrderImpl class.</p>
@@ -14,6 +16,9 @@ public class OrderImpl extends DocumentImpl implements Order  {
 	private OrderStatusType status;
 
 	private int substatusId;
+
+	@Uses(OrderTotalCurrencyImpl.class)
+	private OrderTotalCurrency totalCurrency;
 
 	/**
 	 * <p>Getter for the field <code>status</code>.</p>
@@ -52,4 +57,14 @@ public class OrderImpl extends DocumentImpl implements Order  {
 	public void setSubstatusId(int substatusId) {
 		this.substatusId = substatusId;
 	}
+
+	@Override
+	public OrderTotalCurrency getTotalCurrency() {
+		return totalCurrency;
+	}
+
+	public void setTotalCurrency(OrderTotalCurrency totalCurrency) {
+		this.totalCurrency = totalCurrency;
+	}
+
 }
