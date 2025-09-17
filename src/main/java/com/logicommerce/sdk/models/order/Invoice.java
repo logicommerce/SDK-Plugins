@@ -4,7 +4,7 @@ package com.logicommerce.sdk.models.order;
  * <p>Order interface.</p>
  *
  * @author Logicommerce
- * @since 2.4.1
+ * @since 2.5.2
  */
 public interface Invoice extends Document {
 
@@ -15,4 +15,5 @@ public interface Invoice extends Document {
 	String getOriginalInvoiceId();
 
 	void setOriginalInvoiceId(String originalInvoiceId);
+
 }

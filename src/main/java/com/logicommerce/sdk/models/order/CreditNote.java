@@ -1,10 +1,12 @@
 package com.logicommerce.sdk.models.order;
 
+import java.util.List;
+
 /**
  * <p>Order interface.</p>
  *
  * @author Logicommerce
- * @since 2.4.1
+ * @since 2.5.2
  */
 public interface CreditNote extends Document {
 
@@ -15,4 +17,8 @@ public interface CreditNote extends Document {
 	String getOriginalInvoiceId();
 	
 	void setOriginalInvoiceId(String originalInvoiceId);
+
+	List<AdditionalItem> getAdditionalItems();
+
+	void setAdditionalItems(List<AdditionalItem> additionalItems);
 }
