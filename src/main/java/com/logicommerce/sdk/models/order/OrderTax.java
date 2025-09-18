@@ -75,7 +75,7 @@ public interface OrderTax {
 	/**
 	 * <p>get name</p>
 	 * 
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @return a String object
 	 */
 	String getName();
@@ -83,7 +83,7 @@ public interface OrderTax {
 	/**
 	 * <p>get taxId</p>
 	 * 
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @return a Integer object
 	 */
 	Integer getTaxId();

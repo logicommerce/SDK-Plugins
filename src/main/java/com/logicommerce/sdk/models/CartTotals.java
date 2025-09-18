@@ -49,7 +49,7 @@ public interface CartTotals {
 	 * Get subtotal amount of the discounts applied to the cart. This is total without taxes.
 	 * </p>
 	 *
-	 * @since 2.4.1
+	 * @since 2.5.2
 	 * @return a double
 	 */
 	double getSubtotalDiscounts();

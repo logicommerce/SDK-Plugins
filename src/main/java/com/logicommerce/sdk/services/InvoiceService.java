@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.order.Invoice;
  * This service can't inject the resources Cart and Storage.
  *
  * @author LogiCommerce
- * @since 2.4.1
+ * @since 2.5.2
  */
 public interface InvoiceService extends PluginService {
 

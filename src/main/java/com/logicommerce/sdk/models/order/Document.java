@@ -215,7 +215,7 @@ public interface Document {
 	/**
 	 * Returns the headquarter.
 	 *
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @return a {@link com.logicommerce.sdk.models.Headquarter} object
 	 */
 	Headquarter getHeadquarter();

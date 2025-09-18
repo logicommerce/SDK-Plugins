@@ -190,7 +190,7 @@ public class OrderTaxImpl implements OrderTax {
 	 * Setter for the field <code>name</code>.
 	 * </p>
 	 * 
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @param name a {@link String} object
 	 */
 	public void setName(String name) {
@@ -202,7 +202,7 @@ public class OrderTaxImpl implements OrderTax {
 	 * Setter for the field <code>taxId</code>.
 	 * </p>
 	 * 
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @param taxId a {@link Integer} object
 	 */
 	public void setTaxId(Integer taxId) {

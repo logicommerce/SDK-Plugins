@@ -6,7 +6,7 @@ import com.logicommerce.sdk.models.order.OrderItemTaxDefinition;
  * <p>OrderItemTaxDefinitionImpl class.</p>
  *
  * @author Logicommerce
- * @since 2.4.0
+ * @since 2.5.2
  */
 public class OrderItemTaxDefinitionImpl implements OrderItemTaxDefinition {
 

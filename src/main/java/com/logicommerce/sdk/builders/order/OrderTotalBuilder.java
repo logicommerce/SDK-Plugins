@@ -101,6 +101,7 @@ public class OrderTotalBuilder<T> {
 	/**
 	 * <p>subtotalDiscounts.</p>
 	 *
+	 * @since 2.5.2
 	 * @param subtotalDiscounts a double
 	 * @return a {@link com.logicommerce.sdk.builders.order.OrderTotalBuilder} object
 	 */

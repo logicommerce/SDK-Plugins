@@ -605,7 +605,7 @@ public abstract class DocumentImpl implements Document {
 	 * Getter for the field <code>headquarter</code>.
 	 * </p>
 	 *
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @return a {@link com.logicommerce.sdk.models.Headquarter} object
 	 */
 	@Override
@@ -618,7 +618,7 @@ public abstract class DocumentImpl implements Document {
 	 * Setter for the field <code>headquarter</code>.
 	 * </p>
 	 *
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @param headquarter a {@link com.logicommerce.sdk.models.Headquarter} object
 	 */
 	public void setHeadquarter(Headquarter headquarter) {

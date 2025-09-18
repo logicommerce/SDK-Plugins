@@ -103,7 +103,7 @@ public class OrderItemTaxBuilder<T> {
 	 * taxDefinition.
 	 * </p>
 	 *
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @return a {@link com.logicommerce.sdk.builders.order.OrderItemTaxDefinitionBuilder} object
 	 */
 	public OrderItemTaxDefinitionBuilder<OrderItemTaxBuilder<T>> taxDefinition() {

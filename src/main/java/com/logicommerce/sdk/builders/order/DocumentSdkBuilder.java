@@ -348,7 +348,7 @@ public abstract class DocumentSdkBuilder<T extends DocumentSdkBuilder<T>> {
 	 * headquarter.
 	 * </p>
 	 * 
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @return a {@link com.logicommerce.sdk.builders.HeadquarterBuilder} object
 	 */
 	public HeadquarterBuilder<T, Headquarter> headquarter() {

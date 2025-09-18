@@ -7,7 +7,7 @@ import com.logicommerce.sdk.models.order.implementations.InvoiceImpl;
  * <p>InvoiceSdkBuilder class.</p>
  *
  * @author LogiCommerce
- * @since 2.4.1
+ * @since 2.5.2
  */
 public class InvoiceSdkBuilder extends DocumentSdkBuilder<InvoiceSdkBuilder> {
 

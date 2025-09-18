@@ -120,7 +120,7 @@ public class OrderItemTaxImpl implements OrderItemTax {
 	/**
 	 * <p>Getter for the field <code>taxDefinition</code>.</p>
 	 * 
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @return a {@link OrderItemTaxDefinition} object
      */
 	@Override
@@ -133,7 +133,7 @@ public class OrderItemTaxImpl implements OrderItemTax {
 	 * Setter for the field <code>taxDefinition</code>.
 	 * </p>
 	 * 
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @param taxDefinition a {@link OrderItemTaxDefinition} object
 	 */
 	public void setTaxDefinition(OrderItemTaxDefinition taxDefinition) {

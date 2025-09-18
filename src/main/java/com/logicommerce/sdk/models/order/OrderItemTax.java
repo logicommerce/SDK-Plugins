@@ -48,7 +48,7 @@ public interface OrderItemTax {
 	/**
 	 * <p>get tax definition</p>
 	 * 
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @return a String object
 	 */
 	OrderItemTaxDefinition getTaxDefinition();

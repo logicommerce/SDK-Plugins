@@ -154,7 +154,7 @@ public class OrderTaxBuilder<T> {
 	/**
 	 * <p>name. </p>
 	 *
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @param name a {@link String} object
 	 * @return a {@link com.logicommerce.sdk.builders.order.OrderTaxBuilder} object
 	 */
@@ -166,7 +166,7 @@ public class OrderTaxBuilder<T> {
 	/**
 	 * <p>taxId. </p>
 	 *
-	 * @since 2.4.0
+	 * @since 2.5.2
 	 * @param taxId a {@link Integer} object
 	 * @return a {@link com.logicommerce.sdk.builders.order.OrderTaxBuilder} object
 	 */
