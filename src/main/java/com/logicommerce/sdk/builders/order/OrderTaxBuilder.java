@@ -31,6 +31,10 @@ public class OrderTaxBuilder<T> {
 
 	protected String code;
 
+	protected String name;
+
+	protected Integer taxId;
+
 	/**
 	 * <p>Constructor for OrderTaxBuilder.</p>
 	 */
@@ -148,6 +152,30 @@ public class OrderTaxBuilder<T> {
 	}
 
 	/**
+	 * <p>name. </p>
+	 *
+	 * @since 2.5.2
+	 * @param name a {@link String} object
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderTaxBuilder} object
+	 */
+	public OrderTaxBuilder<T> name(String name) {
+		this.name = name;
+		return this;
+	}
+
+	/**
+	 * <p>taxId. </p>
+	 *
+	 * @since 2.5.2
+	 * @param taxId a {@link Integer} object
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderTaxBuilder} object
+	 */
+	public OrderTaxBuilder<T> taxId(Integer taxId) {
+		this.taxId = taxId;
+		return this;
+	}
+
+	/**
 	 * <p>build.</p>
 	 *
 	 * @return a {@link com.logicommerce.sdk.models.order.OrderTax} object
@@ -163,6 +191,8 @@ public class OrderTaxBuilder<T> {
 		information.setBaseWithoutDiscounts(baseWithoutDiscounts);
 		information.setDiscount(discount);
 		information.setCode(code);
+		information.setName(name);
+		information.setTaxId(taxId);
 		return information;
 	}
 

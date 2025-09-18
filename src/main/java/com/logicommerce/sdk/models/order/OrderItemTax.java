@@ -45,4 +45,12 @@ public interface OrderItemTax {
 	 */
 	String getCode();
 
+	/**
+	 * <p>get tax definition</p>
+	 * 
+	 * @since 2.5.2
+	 * @return a String object
+	 */
+	OrderItemTaxDefinition getTaxDefinition();
+
 }
