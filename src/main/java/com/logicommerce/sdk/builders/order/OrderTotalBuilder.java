@@ -21,6 +21,8 @@ public class OrderTotalBuilder<T> {
 
 	protected double subtotalShippings;
 
+	protected double subtotalDiscounts;
+
 	protected double total;
 
 	protected double totalDiscounts;
@@ -93,6 +95,18 @@ public class OrderTotalBuilder<T> {
 	 */
 	public OrderTotalBuilder<T> subtotalShippings(double subtotalShippings) {
 		this.subtotalShippings = subtotalShippings;
+		return this;
+	}
+
+	/**
+	 * <p>subtotalDiscounts.</p>
+	 *
+	 * @since 2.5.2
+	 * @param subtotalDiscounts a double
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderTotalBuilder} object
+	 */
+	public OrderTotalBuilder<T> subtotalDiscounts(double subtotalDiscounts) {
+		this.subtotalDiscounts = subtotalDiscounts;
 		return this;
 	}
 

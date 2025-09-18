@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import com.logicommerce.sdk.builders.CustomTagBuilder;
+import com.logicommerce.sdk.builders.HeadquarterBuilder;
 import com.logicommerce.sdk.enums.ExportStatusType;
+import com.logicommerce.sdk.models.Headquarter;
 import com.logicommerce.sdk.models.order.implementations.DocumentImpl;
 
 /**
@@ -64,6 +66,8 @@ public abstract class DocumentSdkBuilder<T extends DocumentSdkBuilder<T>> {
 
 	protected List<OrderTaxBuilder<T>> taxes;
 
+	protected HeadquarterBuilder<T, Headquarter> headquarter;
+
 	/**
 	 * <p>Constructor for DocumentSdkBuilder.</p>
 	 */
@@ -82,6 +86,7 @@ public abstract class DocumentSdkBuilder<T extends DocumentSdkBuilder<T>> {
 		statuses = new ArrayList<>();
 		taxes = new ArrayList<>();
 		exportStatus = ExportStatusType.PENDING_TO_SEND;
+		headquarter = new HeadquarterBuilder<>(returnThis());
 	}
 
 	/**
@@ -339,6 +344,18 @@ public abstract class DocumentSdkBuilder<T extends DocumentSdkBuilder<T>> {
 	}
 
 	/**
+	 * <p>
+	 * headquarter.
+	 * </p>
+	 * 
+	 * @since 2.5.2
+	 * @return a {@link com.logicommerce.sdk.builders.HeadquarterBuilder} object
+	 */
+	public HeadquarterBuilder<T, Headquarter> headquarter() {
+		return headquarter;
+	}
+
+	/**
 	 * Set the fields of the document.
 	 * 
 	 * @param document a {@link com.logicommerce.sdk.models.order.implementations.DocumentImpl} 
@@ -370,6 +387,7 @@ public abstract class DocumentSdkBuilder<T extends DocumentSdkBuilder<T>> {
 		document.setPaid(paid);
 		document.setReverseChargeVat(reverseChargeVat);
 		document.setTaxes(taxes.stream().map(OrderTaxBuilder::build).collect(Collectors.toList()));
+		document.setHeadquarter(headquarter.build());
 	}
 
 	/**

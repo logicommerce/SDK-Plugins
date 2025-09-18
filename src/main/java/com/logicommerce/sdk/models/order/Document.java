@@ -5,6 +5,7 @@ import java.util.List;
 import com.logicommerce.sdk.enums.ExportStatusType;
 import com.logicommerce.sdk.models.CustomTag;
 import com.logicommerce.sdk.models.ElementProperty;
+import com.logicommerce.sdk.models.Headquarter;
 
 /**
  * Document interface.
@@ -210,5 +211,13 @@ public interface Document {
 	 * @return a boolean
 	 */
 	boolean isReverseChargeVat();
+
+	/**
+	 * Returns the headquarter.
+	 *
+	 * @since 2.5.2
+	 * @return a {@link com.logicommerce.sdk.models.Headquarter} object
+	 */
+	Headquarter getHeadquarter();
 
 }
