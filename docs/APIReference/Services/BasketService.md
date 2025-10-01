@@ -44,7 +44,7 @@ parámetros:
 
 No espera ninguna respuesta.
 
-### Limpeza de la cesta
+### Limpieza de la cesta
 
 Se llama cuando se limpia la cesta.
 

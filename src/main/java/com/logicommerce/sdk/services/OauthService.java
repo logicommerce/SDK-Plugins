@@ -29,6 +29,6 @@ public interface OauthService extends PluginService {
 	 * @return a {@link com.logicommerce.sdk.models.OauthUser} object
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
 	 */
-	OauthUser callback(String redirectBaseUri, String state, String code) throws PluginServiceException;
+	OauthUser callback(String code, String state, String redirectBaseUri) throws PluginServiceException;
 
 }

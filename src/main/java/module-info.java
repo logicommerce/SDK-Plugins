@@ -9,6 +9,8 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.resources;
 	exports com.logicommerce.sdk.models;
 	exports com.logicommerce.sdk.models.implementations;
+	exports com.logicommerce.sdk.models.emailsender;
+	exports com.logicommerce.sdk.models.emailsender.implementations;
 	exports com.logicommerce.sdk.models.order;
 	exports com.logicommerce.sdk.models.order.implementations;
 	exports com.logicommerce.sdk.models.payment;
@@ -18,4 +20,5 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.enums;
 	exports com.logicommerce.sdk.builders;
 	exports com.logicommerce.sdk.builders.order;
+	exports com.logicommerce.sdk.builders.emailsender;
 }
