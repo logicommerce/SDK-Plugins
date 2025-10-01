@@ -45,7 +45,7 @@ public interface Brand {
 
 	/**
 	 * <p>Get the image URL path.</p>
-	 * <p>Ex. https://test.test/image.png<p>
+	 * <p>Ex. https://test.test/image.png</p>
 	 *
 	 * @since 1.0.18
 	 * @return a {@link java.lang.String} object
