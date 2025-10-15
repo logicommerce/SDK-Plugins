@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.services;
 
+import com.logicommerce.sdk.models.OauthResponse;
 import com.logicommerce.sdk.models.OauthUser;
 
 /**
@@ -31,4 +32,15 @@ public interface OauthService extends PluginService {
 	 */
 	OauthUser callback(String code, String state, String redirectBaseUri) throws PluginServiceException;
 
+	/**
+	 * <p>processCallback.</p>
+	 *
+	 * @since 2.6.1
+	 * @param redirectBaseUri a {@link java.lang.String} object
+	 * @param state a {@link java.lang.String} object
+	 * @param code a {@link java.lang.String} object
+	 * @return a {@link com.logicommerce.sdk.models.OauthResponse} object
+	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
+	 */
+	OauthResponse processCallback(String code, String state, String redirectBaseUri) throws PluginServiceException;
 }
