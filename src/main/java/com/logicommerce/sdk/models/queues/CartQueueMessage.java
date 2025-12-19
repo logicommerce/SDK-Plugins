@@ -12,6 +12,8 @@ import com.logicommerce.sdk.models.Cart;
 public final class CartQueueMessage extends QueueMessage {
 
 	private final String token;
+	private Integer languageId;
+	private String countryCode;
 
 	/**
 	 * CartQueueMessage constructor
@@ -30,6 +32,7 @@ public final class CartQueueMessage extends QueueMessage {
 
 	/**
 	 * Returns the type of the message
+	 * 
 	 * @return a {@link QueueMessageType} object
 	 */
 	@Override
@@ -39,6 +42,7 @@ public final class CartQueueMessage extends QueueMessage {
 
 	/**
 	 * Returns the token
+	 * 
 	 * @return a {@link String} object
 	 */
 	public String getToken() {
@@ -63,11 +67,51 @@ public final class CartQueueMessage extends QueueMessage {
 	}
 
 	/**
+	 * * Returns the language id
+	 * 
+	 * @return a {@link Integer} object
+	 */
+	public Integer getLanguageId() {
+		return languageId;
+	}
+
+	/**
+	 * Returns the currency code
+	 * 
+	 * @return a {@link String} object
+	 */
+	public String getCountryCode() {
+		return countryCode;
+	}
+
+	/**
+	 * Sets the language id
+	 * 
+	 * @param languageId a {@link Integer} object
+	 */
+	public void setLanguageId(Integer languageId) {
+		this.languageId = languageId;
+	}
+
+	/**
+	 * Sets the currency code
+	 * 
+	 * @param countryCode a {@link String} object
+	 */
+	public void setCountryCode(String countryCode) {
+		this.countryCode = countryCode;
+	}
+
+	/**
 	 * Builder for the CartQueueMessage
 	 */
 	public static final class Builder extends QueueMessageBuilder<Builder> {
 
 		private Cart cart;
+
+		private Integer languageId;
+
+		private String countryCode;
 
 		/**
 		 * Sets the cart
@@ -80,6 +124,28 @@ public final class CartQueueMessage extends QueueMessage {
 			return this;
 		}
 
+		/**
+		 * Sets the languageId id
+		 * 
+		 * @param languageId a {@link Integer} object
+		 * @return a {@link Builder} object
+		 */
+		public Builder languageId(Integer languageId) {
+			this.languageId = languageId;
+			return this;
+		}
+
+		/**
+		 * Sets the country code
+		 * 
+		 * @param countryCode a {@link String} object
+		 * @return a {@link Builder} object
+		 */
+		public Builder countryCode(String countryCode) {
+			this.countryCode = countryCode;
+			return this;
+		}
+
 		@Override
 		protected Builder returnThis() {
 			return this;
@@ -87,7 +153,10 @@ public final class CartQueueMessage extends QueueMessage {
 
 		@Override
 		protected CartQueueMessage build(String action, Set<Attribute> attributes, Settings settings) {
-			return new CartQueueMessage(action, attributes, settings, cart);
+			CartQueueMessage message = new CartQueueMessage(action, attributes, settings, cart);
+			message.setLanguageId(languageId);
+			message.setCountryCode(countryCode);
+			return message;
 		}
 	}
 }
