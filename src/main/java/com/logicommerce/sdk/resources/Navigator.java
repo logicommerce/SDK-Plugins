@@ -42,13 +42,6 @@ public interface Navigator {
 	String getLanguage();
 
 	/**
-	 * Returns the language ID of the browser.
-	 *
-	 * @return the language ID of the browser
-	 */
-	Integer getLanguageId();
-
-	/**
 	 * Returns the country code of the browser.
 	 *
 	 * @return the country of the browser

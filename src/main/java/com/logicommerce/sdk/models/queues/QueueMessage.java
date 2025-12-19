@@ -23,7 +23,7 @@ public abstract class QueueMessage {
 	 * @param attributes a {@link Set} object
 	 * @param settings a {@link Settings} object
 	 */
-	protected QueueMessage(String action, Set<Attribute> attributes, Settings settings) {
+	public QueueMessage(String action, Set<Attribute> attributes, Settings settings) {
 		validateArguments(action, attributes, settings);
 		this.action = action;
 		this.attributes = attributes;
@@ -73,4 +73,5 @@ public abstract class QueueMessage {
 	public Settings getSettings() {
 		return settings;
 	}
+
 }

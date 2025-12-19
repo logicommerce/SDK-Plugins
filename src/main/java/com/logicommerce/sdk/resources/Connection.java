@@ -1,8 +1,6 @@
 package com.logicommerce.sdk.resources;
 
 import java.nio.charset.Charset;
-import java.security.KeyStore;
-import com.logicommerce.sdk.enums.SslProtocol;
 
 /**
  * Connection for executing HTTP requests.
@@ -146,23 +144,5 @@ public interface Connection {
 	 * @return a {@link Connection} object.
 	 */
 	Connection charset(Charset charset);
-
-	/**
-	 * Sets the keyStore for the request.
-	 * 
-	 * @since 2.7.0
-	 * @param keyStore
-	 * @return a {@link Connection} object.
-	 */
-	Connection keyStore(KeyStore keyStore);
-
-	/**
-	 * Sets the SSL protocol for the request.
-	 * 
-	 * @since 2.7.0
-	 * @param sslProtocol
-	 * @return a {@link Connection} object.
-	 */
-	Connection sslProtocol(SslProtocol sslProtocol);
 
 }
