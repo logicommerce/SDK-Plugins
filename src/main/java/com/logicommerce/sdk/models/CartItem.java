@@ -40,7 +40,7 @@ public interface CartItem {
 
 	/**
 	 * <p>Get the URL SEO of this item.</p>
-	 * <p>Ex. https://test.test/category/product<p>
+	 * <p>Ex. https://test.test/category/product</p>
 	 *
 	 * @since 1.0.16
 	 * @return a {@link java.lang.String} object
@@ -49,7 +49,7 @@ public interface CartItem {
 
 	/**
 	 * <p>Get image URL of this item.</p>
-	 * <p>Ex. https://test.test/image.png<p>
+	 * <p>Ex. https://test.test/image.png</p>
 	 *
 	 * @since 1.0.16
 	 * @return a {@link java.lang.String} object
