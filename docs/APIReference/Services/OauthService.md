@@ -21,11 +21,13 @@ Parámetros:
 
 Devuelve: URL construida para poder conectar con el tercero y así realizar la autenticación.
 
-### Procesar la respuesta Oauth
+### Obtener el usuario de la respuesta Oauth
 
 Se procesa mediante el método: *callback*.
 
 El método se encarda de procesar la respuesta durante la autenticación, retornado el usuario en caso de éxito.
+
+Este método está pensado para el uso en la auteticación oauth para login en tienda.
 
 Parámetros:
 
@@ -33,16 +35,35 @@ Parámetros:
 - **String** state: Parámetro para indicar el estado.
 - **String** code: Parámetro facilitado por el tercero.
 
-Devuelve: Objeto [**OauthUser**](../Models/OauthUser.md), con los datos de usuario obtenidos en la autenticación.
+Devuelve: Objeto **[OauthUser](../Models/OauthUser.md)**, con los datos de usuario obtenidos en la autenticación.
+
+
+### Procesar la respuesta Oauth
+
+Se procesa mediante el método: *processCallback*.
+
+El método se encarda de procesar la respuesta durante la autenticación oauth, retornado el estado del proceso.
+
+Este método está pensado para el uso en la auteticación oauth en backoffice.
+
+Parámetros:
+
+- **String** redirectBaseUri: URL base de la tienda.
+- **String** state: Parámetro para indicar el estado.
+- **String** code: Parámetro facilitado por el tercero.
+
+Devuelve: Objeto **[OauthResponse](../Models/OauthResponse.md)**, con los datos de usuario obtenidos en la autenticación.
 
 ## Interfaz
 
 ```java
 public interface OauthService extends PluginService {
-		
+
 	String getOauthUri(String redirectBaseUri, String state) throws PluginServiceException;
 
-	OauthUser callback(String redirectBaseUri, String state, String code) throws PluginServiceException;
+	OauthUser callback(String code, String state, String redirectBaseUri) throws PluginServiceException;
+	
+	OauthResponse processCallback(String code, String state, String redirectBaseUri) throws PluginServiceException;
 
 }
 ```

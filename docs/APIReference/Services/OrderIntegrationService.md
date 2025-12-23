@@ -12,7 +12,8 @@ Se utiliza el método *importOrders*.
 
 parámetros:
 
-A terminar de definir qué parámetros se pasarán
+ - **[DocumentType](../../Enums/README.md#DocumentType)** documentType : tipo de documento a importar.
+ - **String** marketplaceId : identificador del marketplace
 
 Devuelve una lista de elementos de **[Order](../Models/Order/Order.md)** que LogiCommerce guardará en su sistema.
 
@@ -21,7 +22,7 @@ Devuelve una lista de elementos de **[Order](../Models/Order/Order.md)** que Log
 ```java
 public interface OrderIntegrationService extends PluginService {
 
-    List<Order> importOrders(String data) throws PluginServiceException;
+    List<Order> importOrders(DocumentType documentType, String marketplaceId) throws PluginServiceException;
 
 }
 ```

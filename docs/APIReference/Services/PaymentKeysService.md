@@ -14,7 +14,7 @@ Se tiene que detectar mediante los parámetros recibidos si el plugin es el resp
 
 parámetros:
 
-- **[PaymentValidateParams](../Models/Payment/PaymentValidateParams.md)** paymentValidateParams
+- **[PaymentValidateParams](../Models/RequestParams.md)** paymentValidateParams
 
 Devuelve **[PaymentKeys](../Models/Payment/PaymentKeys.md)**.
 
@@ -23,7 +23,7 @@ Devuelve **[PaymentKeys](../Models/Payment/PaymentKeys.md)**.
 ```java
 public interface PaymentKeysService extends PluginService {
 
-    PaymentKeys getPaymentKeys(PaymentValidateParams paymentValidateParams) throws PluginServiceException;
+    PaymentKeys getPaymentKeys(RequestParams paymentValidateParams) throws PluginServiceException;
 
 }
 ```

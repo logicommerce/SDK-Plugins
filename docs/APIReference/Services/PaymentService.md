@@ -28,7 +28,7 @@ Una vez se sabe con qué sistema se ha efectuado el pago se llama el método *va
 parámetros:
 
 - **[Order](../Models/Order/Order.md)** order
-- **[PaymentValidateParams](../Models/Payment/PaymentValidateParams.md)** paymentValidateParams
+- **[RequestParams](../Models/RequestParams.md)** requestParams
 
 Devuelve **[PaymentValidateResponse](../Models/Payment/PaymentValidateResponse.md)**.
 
@@ -53,7 +53,7 @@ public interface PaymentService extends PluginService {
 
     Payment getPayment(Order order, String transactionId) throws PluginServiceException;
 
-    PaymentValidateResponse validate(Order order, PaymentValidateParams paymentValidateParams) throws PluginServiceException;
+    PaymentValidateResponse validate(Order order, RequestParams requestParams) throws PluginServiceException;
     
    	List<PaymentToken> getPaymentTokens();
 
