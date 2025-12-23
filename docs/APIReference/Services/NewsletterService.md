@@ -1,4 +1,4 @@
-# NewsletterService
+# NewsletterSubscriptionService
 
 Servicio para el sistema de mailing.
 
@@ -10,13 +10,13 @@ Este servicio se llama en dos casos diferentes:
 ## Interfaz
 
 ```java
-public interface NewsletterService extends PluginService {
+public interface NewsletterSubscriptionService extends PluginService {
 
-    void subscribe(String email) throws PluginServiceException;
+    SubscriptionResponse subscribe(String email, final Map<String, String> data) throws PluginServiceException;
 
-    void unsubscribe(String email) throws PluginServiceException;
+    SubscriptionResponse unsubscribe(String email, final Map<String, String> data) throws PluginServiceException;
 
-    boolean isSubscribed(String email) throws PluginServiceException;
+    SubscriptionResponse getStatus(String email, final Map<String, String> data) throws PluginServiceException;
 
 }
 ```

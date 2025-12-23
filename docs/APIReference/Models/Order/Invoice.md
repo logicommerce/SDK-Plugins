@@ -1,4 +1,4 @@
-# Order
+# Invoice
 
 ## Descripción
 
@@ -7,9 +7,10 @@ Extiende de **[Document](./Document.md)**
 
 ## Métodos
 
-- **[OrderStatusType](../../Enums/README.md#OrderStatusType)** getStatus()
-- **int** getSubstatusId()
-- **[OrderTotalCurrency](./OrderTotalCurrency.md)** getTotalCurrency()
+- **String** getExternalInvoiceId();
+- **void** setExternalInvoiceId(**String** externalInvoiceId);
+- **String** getOriginalInvoiceId();
+- **void** setOriginalInvoiceId(**String** originalInvoiceId);
 
 ## Referencias
 
