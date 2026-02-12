@@ -11,6 +11,7 @@ Todas las interfaces que definan servicios tienen el sufijo *Service*.
 - [AbandonedCartService](AbandonedCartService.md)
 - [ActionService](ActionService.md)
 - [AddressService](AddressService.md)
+- [ApiPluginsServcie](ApiPluginsService.md)
 - [AssetService](AssetService.md)
 - [BasketService](BasketService.md)
 - [CartItemService](CartItemService.md)
