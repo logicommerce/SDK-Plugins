@@ -73,6 +73,10 @@ public abstract class RestPluginBase implements ApiPluginsService {
 		return currentRequest.getEndpointPath();
 	}
 
+	protected String getBody() {
+		return currentRequest.getBody();
+	}
+
 	protected PluginEndpointResponseImpl response() {
 		return new PluginEndpointResponseImpl();
 	}
