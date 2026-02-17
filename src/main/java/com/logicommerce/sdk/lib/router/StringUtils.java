@@ -11,7 +11,7 @@ public interface StringUtils {
 	 * Trims the specified prefix from the start of the string if it exists.
 	 * @param s the string to trim
 	 * @param prefix the prefix to remove
-	 * @return
+	 * @return the trimmed string
 	 */
 	static String trimStart(String s, String prefix) {
 		if (s.startsWith(prefix)) {
