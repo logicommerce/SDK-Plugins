@@ -5,6 +5,7 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.definition;
 	exports com.logicommerce.sdk.definition.implementations;
 	exports com.logicommerce.sdk.services;
+	exports com.logicommerce.sdk.services.implementations;
 	exports com.logicommerce.sdk.services.queues;
 	exports com.logicommerce.sdk.resources;
 	exports com.logicommerce.sdk.models;
@@ -21,4 +22,5 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.builders;
 	exports com.logicommerce.sdk.builders.order;
 	exports com.logicommerce.sdk.builders.emailsender;
+	exports com.logicommerce.sdk.lib.router;
 }
