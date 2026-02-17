@@ -1,6 +1,7 @@
 package com.logicommerce.sdk.models.implementations;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import com.logicommerce.sdk.models.PluginEndpointResponse;
@@ -25,8 +26,12 @@ public class PluginEndpointResponseImpl implements PluginEndpointResponse {
 		this.headers = headers;
 	}
 
+	public PluginEndpointResponseImpl(int statusCode, Object body) {
+		this(statusCode, body, new HashMap<>());
+	}
+
 	public PluginEndpointResponseImpl() {
-		this(200, null, Map.of());
+		this(200, null);
 	}
 
 	/** {@inheritDoc} */
@@ -45,7 +50,7 @@ public class PluginEndpointResponseImpl implements PluginEndpointResponse {
 	/** 
 	 * setStatusCode. HTTP status code of the response (e.g., 200 for OK, 404 for Not Found, etc.) 
 	 **/
-	public PluginEndpointResponse statusCode(int statusCode) {
+	public PluginEndpointResponseImpl statusCode(int statusCode) {
 		setStatusCode(statusCode);
 		return this;
 	}
@@ -72,7 +77,7 @@ public class PluginEndpointResponseImpl implements PluginEndpointResponse {
      * - an Object: the body will be serialized to JSON before being sent.
      * - an InputStream: the body will be sent as a stream.
      */
-	public PluginEndpointResponse body(Object body) {
+	public PluginEndpointResponseImpl body(Object body) {
 		setBody(body);
 		return this;
 	}
@@ -94,7 +99,7 @@ public class PluginEndpointResponseImpl implements PluginEndpointResponse {
 	 * set one header by key and value.<br>
 	 * If the header already exists, the value will be added to the list of values for that header. 	
 	 **/
-	public PluginEndpointResponse header(String key, String value) {
+	public PluginEndpointResponseImpl header(String key, String value) {
 		this.headers.computeIfAbsent(key, k -> new ArrayList<>()).add(value);
 		return this;
 	}
