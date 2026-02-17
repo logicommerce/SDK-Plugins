@@ -7,6 +7,12 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.util.List;
 
+/**
+ * <p>Annotations interface defines custom annotations for REST routing.</p>
+ *
+ * @author LogiCommerce
+ * @since 2.7.2
+ */
 @SuppressWarnings("checkstyle:AbbreviationAsWordInNameCheck")
 public interface Annotations {
 

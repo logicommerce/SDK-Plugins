@@ -9,6 +9,12 @@ import java.util.Optional;
 import java.util.Set;
 import com.logicommerce.sdk.lib.router.Annotations.PathParam;
 
+/**
+ * <p>RestRouter class is responsible for routing HTTP requests to the appropriate handler methods based on annotations and request paths.</p>
+ *
+ * @author LogiCommerce
+ * @since 2.7.2
+ */
 public class RestRouter<T> {
 
 	private final Object handler;

@@ -10,6 +10,12 @@ import java.util.Optional;
 import java.util.function.UnaryOperator;
 import com.logicommerce.sdk.lib.router.Annotations.Path;
 
+/**
+ * <p>RestRouteExtractor class is responsible for extracting REST routes from handler classes using reflection and caching the results for performance.</p>
+ *
+ * @author LogiCommerce
+ * @since 2.7.2
+ */
 public class RestRouteExtractor {
 
 	private static Map<Class<?>, List<RestRoute>> cache = new HashMap<>();
@@ -20,6 +26,12 @@ public class RestRouteExtractor {
 		this.pathNormalizer = pathNormalizer;
 	}
 
+	/** 
+	 * <p>Extracts REST routes from the given handler class. Uses caching to improve performance on subsequent calls for the same class.</p>
+	 * 
+	 * @param handlerClass {@link Class} object representing the handler class to extract routes from
+	 * @return List of RestRoute objects extracted from the handler class
+	 */
 	public List<RestRoute> getRoutes(Class<?> handlerClass) {
 		if (cache.containsKey(handlerClass)) {
 			return cache.get(handlerClass);
