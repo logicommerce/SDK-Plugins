@@ -1,6 +1,6 @@
 # Resources
 
-Los recursos se definen en base a la anotación *@Resource* como propiedad de la clase.
+Los recursos se definen basándose en la anotación *@Resource* como propiedad de la clase.
 
 ## Recursos "utilidades"
 
@@ -10,15 +10,14 @@ Los recursos se definen en base a la anotación *@Resource* como propiedad de la
 - *[UserData](APIReference/Resources/UserData.md)*: Este recurso permite leer y escribir datos únicos del plugin y del usuario login.
 - *[Navigator](APIReference/Resources/Navigator.md)*: Para acceder y modificar datos de navegación del usuario
 - *[Location](APIReference/Resources/Location.md)*:  Para acceder a datos de localización e idioma.
-
-- *[QueueSender](APIReference/Resources/QueueSender.md)*: Envia mensajes en una cola de procesos.
+- *[QueueSender](APIReference/Resources/QueueSender.md)*: Envía mensajes en una cola de procesos.
+- *[LocationResource](APIReference/Resources/LocationResource.md)*: Para acceder a datos de localización e idioma.
+- *[SettingsResource](APIReference/Resources/SettingsResource.md)*: Consulta los datos de configuración de la tienda.
 
 ## Recursos de modelos
 
 A algunos modelos de datos se accede como recurso.
 
 - *[PluginDefinition](APIReference/Definitions/PluginDefinition.md)*: información de plugin.json. Disponible en todos los servicios.
-
-- *[User](APIReference/Models/User.md)*: Datos del usuario. Sólo disponible en las llamadas de usuario.
-- *[Cart](APIReference/Models/Cart.md)*: Datos de la cesta. Sólo disponible en las llamadas de olmos.
-
+- *[User](APIReference/Models/User.md)*: Datos del usuario. Solo disponible en las llamadas de usuario.
+- *[Cart](APIReference/Models/Cart.md)*: Datos de la cesta. Solo disponible en las llamadas de olmos.

@@ -38,5 +38,6 @@ public enum ConnectorType {
 	PICKUP_POINT_PROVIDER,
 	ROUTE,
 	MAILER,
-	INVOICE;
+	INVOICE,
+	SITE_BUILDER;
 }

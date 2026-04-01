@@ -14,7 +14,7 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
 
 - **name**: Nombre visible al Administrador.
 - **description**: Descripción que se mostrará al Administrador.
-- **módulo**: Nombre del módulo del plugin definido en module-info.java.
+- **módulo**: Nombre del módulo del plugin definido en el archivo module-info.java.
 - **versión**: Versión del plugin.
 - **date**: Fecha de publicación.
 - **author**: Autor del Plugin.
@@ -28,6 +28,22 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
     - boolean
     - documentStatuses
     - country
+    - char
+    - float
+    - long
+    - date
+    - datetime
+    - paymentvalue
+    - channelvalue
+    - shippervalue
+    - shippingtypevalue
+    - externalshippervalue
+    - warehousevalue
+    - headquartervalue 
+    - uservalue
+    - accountvalue
+    - textarea
+    - checkbox
   - **required**: Si el valor es requerido cuando se edita en el Administrador.
   - **languageValue**: Define si sus valores son únicos por idioma de la tienda o global (por defecto es false)
   - **entryValueMode**:
@@ -112,10 +128,8 @@ La base del Plugin se encuentra en el archivo *plugin.json*. En este documento s
             "type": "defined_type",
             "hasAdditionalProperties": true,
             "properties": [
-                // ...
             ],
             "additionalData": {
-                // ...
             }
         }
     ]
@@ -138,7 +152,7 @@ public interface DefinitionService extends PluginService {
 }
 ```
 
-Para tener acceso a la definición estática des de este servicio, se tiene que inyectar el recurso PluginDefinition.
+Para tener acceso a la definición estática desde este servicio, se tiene que inyectar el recurso PluginDefinition.
 
 ```java
 	@Resource
@@ -147,7 +161,7 @@ Para tener acceso a la definición estática des de este servicio, se tiene que 
 
 ## Definición dinámica
 
-En caso de ser necesaria un definición de las propiedades de forma dinámica el SDK facilita la creación, mediante las definiciones preestablecidas:
+En caso de ser necesaria una definición de las propiedades de forma dinámica el SDK facilita la creación, mediante las definiciones preestablecidas:
 
 **[Definiciones](./APIReference/Definitions/README.md)**
 
@@ -173,7 +187,7 @@ public PluginDefinition getPluginDefinition() throws PluginServiceException {
 
 Para acceder a la definición del plugin está el recurso *PluginDefinition* que se puede inyectar vía la anotación *@Resource*. (Ver [Recursos](Resources.md) y [Anotaciones](Annotations.md)).
 
-*PluginDefinition* devuelve sólo la definición en objetos. La configuración que venga del Administrador de Logicommerce no se puede acceder desde aquí. Para acceder a la configuración están las siguientes [anotaciones](Annotations.md):
+*PluginDefinition* devuelve solo la definición en objetos. La configuración que venga del Administrador de Logicommerce no se puede acceder desde aquí. Para acceder a la configuración están las siguientes [anotaciones](Annotations.md):
 
 - *@Property*
 - *@PropertyLanguage*
