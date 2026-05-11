@@ -39,5 +39,6 @@ public enum ConnectorType {
 	ROUTE,
 	MAILER,
 	INVOICE,
-	SITE_BUILDER;
+	SITE_BUILDER,
+	REWARD_POINTS;
 }

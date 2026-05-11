@@ -133,4 +133,11 @@ public interface OrderDiscount {
 	 */
 	BenefitMode getBenefitMode();
 
+	/**
+	 * <p>set Ticket code</p>
+	 *
+	 * @param ticketCode a {@link java.lang.String} object
+	 */
+	void setTicketCode(String ticketCode);
+
 }
