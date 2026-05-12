@@ -66,3 +66,9 @@
 - [PaymentToken](PaymentToken.md)
 - [PaymentValidateParams](Payment/PaymentValidateParams.md)
 - [PaymentValidateResponse](Payment/PaymentValidateResponse.md)
+
+## [RewardPoints](RewardPoints/)
+
+- [RewardPointsBalance](RewardPoints/RewardPointsBalance.md)
+- [RewardPointsDiscount](RewardPoints/RewardPointsDiscount.md)
+- [RewardPointsDiscountResponse](RewardPoints/RewardPointsDiscountResponse.md)

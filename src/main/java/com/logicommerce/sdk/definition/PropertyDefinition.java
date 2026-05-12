@@ -85,7 +85,7 @@ public interface PropertyDefinition {
 	 * @return a {@link java.lang.String} object
 	 */
 	String getDefaultValue();
-	
+
 	/**
 	 * Determines if the property is a language value. A language value is a property that has
 	 * multiple values for different languages.
@@ -93,7 +93,7 @@ public interface PropertyDefinition {
 	 * @return a boolean
 	 */
 	boolean isLanguageValue();
-	
+
 	/**
 	 * Determines if the property is a multiple value. A multiple value is a property that has
 	 * multiple values.
@@ -123,7 +123,7 @@ public interface PropertyDefinition {
 	 * @return a {@link java.util.List} object
 	 */
 	List<PropertyDefinitionValue> getValues();
-	
+
 	/**
 	 * Retrieves the reference of the property. The reference is a string that represents the
 	 * reference of the property.
@@ -131,10 +131,10 @@ public interface PropertyDefinition {
 	 * @return a {@link java.lang.String} object
 	 */
 	String getReference();
-	
+
 	/**
 	 * Retrieves the permissions of the property.
-	 * 
+	 *
 	 * @since 1.1.1
 	 * @return a {@link com.logicommerce.sdk.enums.PermissionType} object
 	 */
