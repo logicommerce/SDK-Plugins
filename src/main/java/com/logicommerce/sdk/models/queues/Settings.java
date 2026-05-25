@@ -24,9 +24,9 @@ public final class Settings {
 	/**
 	 * Settings constructor
 	 *
-	 * @param retryCount a {@link int} object
-	 * @param delay a {@link int} object
-	 * @param interval a {@link int} object
+	 * @param retryCount an int object
+	 * @param delay an int object
+	 * @param interval an int object
 	 */
 	public Settings(int delay, int retryCount, int interval) {
 		Validator.validateRange("Delay", delay, MIN_DELAY, MAX_DELAY);
@@ -40,7 +40,7 @@ public final class Settings {
 
 	/**
 	 * Returns the delay of the message in seconds
-	 * @return a {@link int} object
+	 * @return an int object
 	 */
 	public int getDelay() {
 		return delay;
@@ -48,7 +48,7 @@ public final class Settings {
 
 	/**
 	 * Returns the retry count of the message
-	 * @return a {@link int} object
+	 * @return an int object
 	 */
 	public int getRetryCount() {
 		return retryCount;
@@ -56,7 +56,7 @@ public final class Settings {
 
 	/**
 	 * Returns the interval of the message in seconds
-	 * @return a {@link int} object
+	 * @return an int object
 	 */
 	public int getInterval() {
 		return interval;
@@ -98,7 +98,7 @@ public final class Settings {
 		 * message will be available for processing by the queue consumer.</p>
 		 * The default value is 0 and the range is 0 to 900 seconds.
 		 * 
-		 * @param delay a int in seconds
+		 * @param delay an int in seconds
 		 * @return a {@link Builder} object
 		 */
 		public Builder<T> delay(int delay) {
@@ -111,7 +111,7 @@ public final class Settings {
 		 * message will be retried if it fails to be processed by the queue consumer.</p>
 		 * The default value is 0 and the range is 0 to 10.
 		 * 
-		 * @param retryCount a int
+		 * @param retryCount an int
 		 * @return a {@link Builder} object
 		 */
 		public Builder<T> retryCount(int retryCount) {
@@ -124,7 +124,7 @@ public final class Settings {
 		 * the message will be retried if it fails to be processed by the queue consumer.</p>
 		 * The default value is 0 and the range is 0 to 900 seconds.
 		 * 
-		 * @param interval a int in seconds
+		 * @param interval an int in seconds
 		 * @return a {@link Builder} object
 		 */
 		public Builder<T> interval(int interval) {
