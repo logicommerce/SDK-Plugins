@@ -24,9 +24,9 @@ public final class Settings {
 	/**
 	 * Settings constructor
 	 *
-	 * @param retryCount a {@link int} object
-	 * @param delay a {@link int} object
-	 * @param interval a {@link int} object
+	 * @param retryCount an int object
+	 * @param delay an int object
+	 * @param interval an int object
 	 */
 	public Settings(int delay, int retryCount, int interval) {
 		Validator.validateRange("Delay", delay, MIN_DELAY, MAX_DELAY);
@@ -40,7 +40,7 @@ public final class Settings {
 
 	/**
 	 * Returns the delay of the message in seconds
-	 * @return a {@link int} object
+	 * @return an int object
 	 */
 	public int getDelay() {
 		return delay;
@@ -48,7 +48,7 @@ public final class Settings {
 
 	/**
 	 * Returns the retry count of the message
-	 * @return a {@link int} object
+	 * @return an int object
 	 */
 	public int getRetryCount() {
 		return retryCount;
@@ -56,7 +56,7 @@ public final class Settings {
 
 	/**
 	 * Returns the interval of the message in seconds
-	 * @return a {@link int} object
+	 * @return an int object
 	 */
 	public int getInterval() {
 		return interval;

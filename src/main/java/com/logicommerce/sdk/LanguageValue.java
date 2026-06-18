@@ -5,6 +5,7 @@ package com.logicommerce.sdk;
  *
  * @author Logicommerce
  * @since 1.0.16
+ * @param <T> the type parameter
  */
 public interface LanguageValue<T> {
 

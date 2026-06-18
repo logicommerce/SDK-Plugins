@@ -72,3 +72,12 @@
 - [RewardPointsBalance](RewardPoints/RewardPointsBalance.md)
 - [RewardPointsDiscount](RewardPoints/RewardPointsDiscount.md)
 - [RewardPointsDiscountResponse](RewardPoints/RewardPointsDiscountResponse.md)
+
+## [Validator](Validator/)
+
+- [Validation](Validator/Validation.md)
+- [ViesValidation](Validator/ViesValidation.md)
+- [TaxIdValidation](Validator/TaxIdValidation.md)
+- [Message](Validator/Message.md)
+- [ViesInformation](Validator/ViesInformation.md)
+- [TaxIdInformation](Validator/TaxIdInformation.md)

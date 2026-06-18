@@ -25,6 +25,8 @@ Para facilitar la creación de definiciones, se proporcionan interfaces con el t
 - ShippingTypeDefinition
 - CustomTagsDefiniton
 - OauthDefinition
+- ViesValidatorDefinition
+- TaxIdValidatorDefinition
 
 ## Referencias
 
