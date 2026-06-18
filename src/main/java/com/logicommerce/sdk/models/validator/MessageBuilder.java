@@ -7,7 +7,7 @@ import java.util.function.Consumer;
  *
  * @author LogiCommerce
  * @see Message
- * @since 2.7.5
+ * @since 2.7.6
  * @param <P> parent builder type, used when building nested
  */
 public class MessageBuilder<P> {

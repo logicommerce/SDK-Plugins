@@ -6,7 +6,7 @@ import com.logicommerce.sdk.definition.ViesValidatorDefinition;
  * <p>ViesValidatorDefinitionImpl class.</p>
  *
  * @author LogiCommerce
- * @since 2.7.5
+ * @since 2.7.6
  */
 public class ViesValidatorDefinitionImpl extends ConnectorDefinitionImpl implements ViesValidatorDefinition {
 

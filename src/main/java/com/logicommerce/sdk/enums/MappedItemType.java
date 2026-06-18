@@ -16,5 +16,5 @@ public enum MappedItemType {
 	SHIPMENT_STATUS_CODE,
 	SHIPMENT_REFUND_CODE,
 	TAX,
-	COUNTRY;
+	COUNTRY
 }

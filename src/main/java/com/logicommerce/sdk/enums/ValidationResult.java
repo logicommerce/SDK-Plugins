@@ -4,7 +4,7 @@ package com.logicommerce.sdk.enums;
  * <p>ValidationResult class.</p>
  *
  * @author LogiCommerce
- * @since 2.7.5
+ * @since 2.7.6
  */
 public enum ValidationResult {
 	VALID,

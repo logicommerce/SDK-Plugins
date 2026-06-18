@@ -5,7 +5,7 @@ package com.logicommerce.sdk.models.validator;
  *
  * @author LogiCommerce
  * @see TaxIdInformation
- * @since 2.7.5
+ * @since 2.7.6
  */
 public class TaxIdInformationBuilder {
 

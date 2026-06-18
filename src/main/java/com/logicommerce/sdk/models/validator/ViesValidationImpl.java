@@ -4,6 +4,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 import com.logicommerce.sdk.enums.ValidationResult;
 
+/**
+ * ViesValidationImpl
+ *
+ * @author LogiCommerce
+ * @see ViesValidation
+ * @since 2.7.6
+ */
 public class ViesValidationImpl implements ViesValidation {
 
 	private ValidationResult validationResult;

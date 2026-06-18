@@ -4,7 +4,7 @@ package com.logicommerce.sdk.models.validator;
  * ViesValidation model
  *
  * @author LogiCommerce
- * @since 2.7.5
+ * @since 2.7.6
  */
 public interface ViesInformation {
 

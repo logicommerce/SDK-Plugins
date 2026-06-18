@@ -10,7 +10,7 @@ import com.logicommerce.sdk.models.validator.ViesValidation;
  * RewardPointsService for Reward Points Systems
  * 
  * @author LogiCommerce
- * @since 2.7.5
+ * @since 2.7.6
  */
 public interface ValidatorService extends PluginService {
 

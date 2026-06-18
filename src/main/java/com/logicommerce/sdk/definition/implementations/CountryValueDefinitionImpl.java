@@ -6,31 +6,31 @@ import com.logicommerce.sdk.definition.CountryValueDefinition;
  * <p>CountryValueDefinitionImpl class.</p>
  *
  * @author LogiCommerce
- * @since 2.7.5
+ * @since 2.7.6
  */
 public class CountryValueDefinitionImpl implements CountryValueDefinition {
 
-	private Integer countryId;
+	private String countryCode;
 
 	/**
 	 * <p>Constructor for CountryValueDefinitionImpl.</p>
 	 *
-	 * @param countryId a {@link Integer} object
+	 * @param countryCode a {@link String} object
 	 */
-	public CountryValueDefinitionImpl(Integer countryId) {
-		this.countryId = countryId;
+	public CountryValueDefinitionImpl(String countryCode) {
+		this.countryCode = countryCode;
 	}
 
 	/** {@inheritDoc} */
 	@Override
-	public Integer getCountryId() {
-		return countryId;
+	public String getCountryCode() {
+		return countryCode;
 	}
 
 	public static class Builder<T> {
 
 		private T parentBuilder;
-		private Integer countryId;
+		private String countryCode;
 
 		public Builder() {
 
@@ -41,13 +41,13 @@ public class CountryValueDefinitionImpl implements CountryValueDefinition {
 			this.parentBuilder = parentBuilder;
 		}
 
-		public Builder<T> countryId(Integer countryId) {
-			this.countryId = countryId;
+		public Builder<T> countryCode(String countryCode) {
+			this.countryCode = countryCode;
 			return this;
 		}
 
 		public CountryValueDefinition build() {
-			return new CountryValueDefinitionImpl(countryId);
+			return new CountryValueDefinitionImpl(countryCode);
 		}
 
 		public T done() {

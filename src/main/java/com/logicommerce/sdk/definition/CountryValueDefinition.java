@@ -4,15 +4,15 @@ package com.logicommerce.sdk.definition;
  * <p>CountryValueDefinition interface.</p>
  *
  * @author Logicommerce
- * @since 2.7.5
+ * @since 2.7.6
  */
 public interface CountryValueDefinition {
 
 	/**
 	 * <p>getCountryId.</p>
 	 *
-	 * @return a {@link Integer} object
+	 * @return a {@link String} object
 	 */
-	Integer getCountryId();
+	String getCountryCode();
 
 }
