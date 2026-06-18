@@ -6,7 +6,7 @@ import com.logicommerce.sdk.enums.ConnectorType;
  * <p>ViesValidatorDefinition interface.</p>
  *
  * @author LogiCommerce
- * @since 2.7.5
+ * @since 2.7.6
  */
 public interface ViesValidatorDefinition extends ConnectorDefinition {
 	

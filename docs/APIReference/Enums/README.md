@@ -85,8 +85,10 @@
 - SEARCH_ENGINE
 - SITE_BUILDER
 - TAXES
+- TAX_ID_VALIDATOR
 - TRACKER
 - UNKNOWN
+- VIES_VALIDATOR
 
 ## DeliveryType
 
@@ -262,10 +264,28 @@
 - UNSUBSCRIBED
 - ERROR
 
+## TaxIdOwnerType
+
+- NATURAL_PERSON
+- LEGAL_ENTITY
+
+## TaxIdType
+
+- TIN
+- CONSUMPTION_TAX
+
 ## TrackerScriptType
 
 - CODE
 - IFRAME
+
+## ValidationResult
+
+- VALID
+- INVALID
+- UNSUPPORTED_SCENARIO
+- SKIPPED
+- ERROR
 
 ##WebhookResponseType
 
