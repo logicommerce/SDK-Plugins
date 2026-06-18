@@ -17,6 +17,7 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.models.payment;
 	exports com.logicommerce.sdk.models.queues;
 	exports com.logicommerce.sdk.models.rewardpoints;
+	exports com.logicommerce.sdk.models.validator;
 	exports com.logicommerce.sdk.models.taxes;
 	exports com.logicommerce.sdk.models.pickuppoints;
 	exports com.logicommerce.sdk.enums;
