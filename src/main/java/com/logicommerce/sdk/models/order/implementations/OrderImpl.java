@@ -11,7 +11,7 @@ import com.logicommerce.utilities.annotations.Uses;
  * @author Logicommerce
  * @since 1.0.16
  */
-public class OrderImpl extends DocumentImpl implements Order  {
+public class OrderImpl extends DocumentImpl implements Order {
 
 	private OrderStatusType status;
 
@@ -33,7 +33,7 @@ public class OrderImpl extends DocumentImpl implements Order  {
 	/**
 	 * <p>Getter for the field <code>substatusId</code>.</p>
 	 *
-	 * @return a int
+	 * @return an int
 	 */
 	@Override
 	public int getSubstatusId() {
@@ -52,7 +52,7 @@ public class OrderImpl extends DocumentImpl implements Order  {
 	/**
 	 * <p>Setter for the field <code>substatusId</code>.</p>
 	 *
-	 * @param substatusId a int
+	 * @param substatusId an int
 	 */
 	public void setSubstatusId(int substatusId) {
 		this.substatusId = substatusId;
