@@ -64,6 +64,18 @@ public class ProductSdkBuilder {
 	}
 
 	/**
+	 * Adds a language to the product with language builder.
+	 *
+	 * @param languageId a {@link java.lang.Integer} object
+	 * @param language a {@link ProductLanguageBuilder} object
+	 * @return a {@link ProductLanguageBuilder} object
+	 */
+	public ProductLanguageBuilder<ProductSdkBuilder> language(Integer languageId, ProductLanguageBuilder<ProductSdkBuilder> language) {
+		languages.put(languageId, language);
+		return language;
+	}
+
+	/**
 	 * Sets the main images of the product.
 	 *
 	 * @return a {@link ProductImageBuilder} object
