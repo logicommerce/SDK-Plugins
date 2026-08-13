@@ -51,6 +51,15 @@
 - BASKET
 - PAGE
 
+## CustomTagType
+
+Tipo de dato de un **[ProductCustomTag](../Models/Product/ProductCustomTag.md)**.
+
+- BOOLEAN
+- NUMBER
+- SHORT_TEXT
+- LONG_TEXT
+
 ## ConnectorType
 
 - ADDRESS_VALIDATOR

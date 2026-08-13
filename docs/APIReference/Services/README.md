@@ -34,6 +34,7 @@ Todas las interfaces que definan servicios tienen el sufijo *Service*.
 - [PaymentService](PaymentService.md)
 - [PaymentKeysService](PaymentKeysService.md)
 - [PaymentSystemService](PaymentSystemService.md)
+- [ProductIntegrationService](ProductIntegrationService.md)
 - [PropertiesValidatorService](PropertiesValidatorService.md)
 - [ProviderPickupPointService](ProviderPickupPointService.md)
 - [QueueProcessorService](QueueProcessorService.md)

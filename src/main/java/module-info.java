@@ -20,6 +20,7 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.models.validator;
 	exports com.logicommerce.sdk.models.taxes;
 	exports com.logicommerce.sdk.models.pickuppoints;
+	exports com.logicommerce.sdk.models.product;
 	exports com.logicommerce.sdk.enums;
 	exports com.logicommerce.sdk.builders;
 	exports com.logicommerce.sdk.builders.order;
