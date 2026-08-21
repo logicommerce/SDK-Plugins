@@ -140,4 +140,5 @@ Devolver `null` en *getProduct* / *getUpdateProduct* no es un error, significa "
 - **[ProductCategory](../Models/Product/ProductCategory.md)**
 - **[ProductImage](../Models/Product/ProductImage.md)**
 - **[ProductCustomTag](../Models/Product/ProductCustomTag.md)**
+- **[AdditionalAttachment](../Models/Product/AdditionalAttachment.md)**
 - **[PluginServiceException](PluginServiceException.md)**
