@@ -20,6 +20,9 @@ public class ProductImpl implements Product {
 	@Uses(ProductCustomTagImpl.class)
 	private List<ProductCustomTag> customTags;
 
+	@Uses(AdditionalAttachmentImpl.class)
+	private List<AdditionalAttachment> additionalAttachments;
+
 	@Uses(ProductCodesImpl.class)
 	private ProductCodes productCodes;
 
@@ -55,6 +58,11 @@ public class ProductImpl implements Product {
 	}
 
 	@Override
+	public List<AdditionalAttachment> getAdditionalAttachments() {
+		return additionalAttachments;
+	}
+
+	@Override
 	public ProductCodes getProductCodes() {
 		return productCodes;
 	}
@@ -87,6 +95,10 @@ public class ProductImpl implements Product {
 
 	public void setCustomTags(List<ProductCustomTag> customTags) {
 		this.customTags = customTags;
+	}
+
+	public void setAdditionalAttachments(List<AdditionalAttachment> additionalAttachments) {
+		this.additionalAttachments = additionalAttachments;
 	}
 
 	public void setProductCodes(ProductCodes productCodes) {

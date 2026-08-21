@@ -15,6 +15,7 @@ Ficha completa de un producto procedente de un proveedor externo. Es la respuest
 - **[ProductImage](ProductImage.md)** getImages(): imagen principal.
 - List<**[ProductImage](ProductImage.md)**> getAdditionalImages(): imágenes adicionales.
 - List<**[ProductCustomTag](ProductCustomTag.md)**> getCustomTags(): custom tags del producto.
+- List<**[AdditionalAttachment](AdditionalAttachment.md)**> getAdditionalAttachments(): documentos adjuntos del producto.
 - **[ProductCodes](ProductCodes.md)** getProductCodes(): códigos del producto.
 - **[ProductBrand](ProductBrand.md)** getProductBrand(): marca.
 - **[ProductCategory](ProductCategory.md)** getProductCategory(): categoría.
@@ -36,6 +37,7 @@ Métodos del builder:
 - *images()*: inicia la **[ProductImage](ProductImage.md)** principal.
 - *additionalImage()*: inicia una **[ProductImage](ProductImage.md)** adicional y la añade a la lista.
 - *customTag()*: inicia un **[ProductCustomTag](ProductCustomTag.md)** y lo añade a la lista.
+- *additionalAttachment()*: inicia un **[AdditionalAttachment](AdditionalAttachment.md)** y lo añade a la lista.
 - *productCodes()*: inicia los **[ProductCodes](ProductCodes.md)**.
 - *productBrand()*: inicia la **[ProductBrand](ProductBrand.md)**.
 - *productCategory()*: inicia la **[ProductCategory](ProductCategory.md)**.
@@ -74,3 +76,4 @@ new ProductSdkBuilder()
 - **[ProductCategory](ProductCategory.md)**
 - **[ProductImage](ProductImage.md)**
 - **[ProductCustomTag](ProductCustomTag.md)**
+- **[AdditionalAttachment](AdditionalAttachment.md)**

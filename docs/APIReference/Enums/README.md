@@ -99,6 +99,12 @@ Tipo de dato de un **[ProductCustomTag](../Models/Product/ProductCustomTag.md)**
 - UNKNOWN
 - VIES_VALIDATOR
 
+## ContentType
+
+Tipo de documento de un **[AdditionalAttachment](../Models/Product/AdditionalAttachment.md)**.
+
+- PDF
+
 ## DeliveryType
 
 - SHIPPING

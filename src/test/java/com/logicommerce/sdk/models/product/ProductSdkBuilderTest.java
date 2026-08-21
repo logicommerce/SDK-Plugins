@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
+import com.logicommerce.sdk.enums.ContentType;
 
 class ProductSdkBuilderTest {
 
@@ -18,6 +19,8 @@ class ProductSdkBuilderTest {
 	private static final String ADDITIONAL_SMALL_IMAGE = "additional-small.jpg";
 	private static final String CUSTOM_TAG_NAME = "color";
 	private static final String CUSTOM_TAG_VALUE = "red";
+	private static final String ATTACHMENT_NAME = "user-manual";
+	private static final String ATTACHMENT_URL = "https://provider.test/manual.pdf";
 	private static final String GROUP_ID = "1";
 	private static final String GROUP_NAME = "Display";
 	private static final String PID = "PID-1";
@@ -63,6 +66,11 @@ class ProductSdkBuilderTest {
 					.name(CUSTOM_TAG_NAME)
 					.value(CUSTOM_TAG_VALUE)
 					.done()
+				.done()
+			.additionalAttachment()
+				.name(ATTACHMENT_NAME)
+				.url(ATTACHMENT_URL)
+				.contentType(ContentType.PDF)
 				.done()
 			.productCodes()
 				.pId(PID)
@@ -115,6 +123,12 @@ class ProductSdkBuilderTest {
 		assertEquals(CUSTOM_TAG_NAME, customTagLanguage.getName());
 		assertEquals(CUSTOM_TAG_VALUE, customTagLanguage.getValue());
 
+		assertEquals(1, product.getAdditionalAttachments().size());
+		AdditionalAttachment additionalAttachment = product.getAdditionalAttachments().get(0);
+		assertEquals(ATTACHMENT_NAME, additionalAttachment.getName());
+		assertEquals(ATTACHMENT_URL, additionalAttachment.getUrl());
+		assertEquals(ContentType.PDF, additionalAttachment.getContentType());
+
 		ProductCodes productCodes = product.getProductCodes();
 		assertEquals(PID, productCodes.getPId());
 		assertEquals(SKU, productCodes.getSku());
@@ -141,6 +155,7 @@ class ProductSdkBuilderTest {
 		assertTrue(product.getLanguages().isEmpty());
 		assertTrue(product.getAdditionalImages().isEmpty());
 		assertTrue(product.getCustomTags().isEmpty());
+		assertTrue(product.getAdditionalAttachments().isEmpty());
 		assertNull(product.getProductCodes());
 		assertNull(product.getProductBrand());
 		assertNull(product.getProductCategory());
