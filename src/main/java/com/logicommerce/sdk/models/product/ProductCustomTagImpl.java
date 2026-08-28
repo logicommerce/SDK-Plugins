@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models.product;
 
+import java.util.List;
 import java.util.Map;
 import com.logicommerce.utilities.annotations.Uses;
 
@@ -7,6 +8,9 @@ public class ProductCustomTagImpl implements ProductCustomTag {
 
 	@Uses(ProductCustomTagLanguageImpl.class)
 	private Map<Integer, ProductCustomTagLanguage> languages;
+
+	@Uses(CustomTagSelectableValueImpl.class)
+	private List<CustomTagSelectableValue> selectableValues;
 
 	private CustomTagType type;
 
@@ -47,6 +51,15 @@ public class ProductCustomTagImpl implements ProductCustomTag {
 	@Override
 	public CustomTagGroup getCustomTagGroup() {
 		return customTagGroup;
+	}
+
+	@Override
+	public List<CustomTagSelectableValue> getSelectableValues() {
+		return selectableValues;
+	}
+
+	public void setSelectableValues(List<CustomTagSelectableValue> selectableValues) {
+		this.selectableValues = selectableValues;
 	}
 
 	public void setId(String id) {

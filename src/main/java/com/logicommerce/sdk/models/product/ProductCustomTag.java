@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models.product;
 
+import java.util.List;
 import java.util.Map;
 
 public interface ProductCustomTag {
@@ -15,5 +16,7 @@ public interface ProductCustomTag {
 	boolean isFiltrable();
 
 	boolean isSearchable();
+
+	List<CustomTagSelectableValue> getSelectableValues();
 
 }

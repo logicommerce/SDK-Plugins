@@ -1,6 +1,8 @@
 package com.logicommerce.sdk.models.product;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -27,11 +29,14 @@ public class ProductCustomTagBuilder<T> {
 
 	private CustomTagGroupBuilder<ProductCustomTagBuilder<T>> customTagGroup;
 
+	private List<CustomTagSelectableValueBuilder<ProductCustomTagBuilder<T>>> selectableValues;
+
 	/**
 	 * <p>Constructor for ProductCustomTagBuilder.</p>
 	 */
 	public ProductCustomTagBuilder() {
 		languages = new LinkedHashMap<>();
+		selectableValues = new ArrayList<>();
 	}
 
 	/**
@@ -111,6 +116,17 @@ public class ProductCustomTagBuilder<T> {
 	}
 
 	/**
+	 * Adds a selectable value (option) to the product custom tag.
+	 *
+	 * @return a {@link CustomTagSelectableValueBuilder} object
+	 */
+	public CustomTagSelectableValueBuilder<ProductCustomTagBuilder<T>> selectableValue() {
+		CustomTagSelectableValueBuilder<ProductCustomTagBuilder<T>> selectableValue = new CustomTagSelectableValueBuilder<>(this);
+		selectableValues.add(selectableValue);
+		return selectableValue;
+	}
+
+	/**
 	 * Builds a {@link ProductCustomTagImpl} object.
 	 *
 	 * @return a {@link ProductCustomTag} object
@@ -127,6 +143,9 @@ public class ProductCustomTagBuilder<T> {
 		if (customTagGroup != null) {
 			customTag.setCustomTagGroup(customTagGroup.build());
 		}
+		List<CustomTagSelectableValue> builtSelectableValues = new ArrayList<>();
+		selectableValues.forEach(builder -> builtSelectableValues.add(builder.build()));
+		customTag.setSelectableValues(builtSelectableValues);
 		return customTag;
 	}
 
