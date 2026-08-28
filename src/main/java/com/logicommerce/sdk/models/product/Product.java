@@ -15,8 +15,6 @@ public interface Product {
 
 	List<ProductCustomTag> getCustomTags();
 
-	List<AdditionalAttachment> getAdditionalAttachments();
-
 	ProductCodes getProductCodes();
 
 	ProductBrand getProductBrand();
