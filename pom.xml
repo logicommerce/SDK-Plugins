@@ -33,6 +33,12 @@
 			<organization>Logicommerce</organization>
 			<organizationUrl>https://www.logicommerce.com</organizationUrl>
 		</developer>
+		<developer>
+			<name>David Junyent Almirall</name>
+			<email>david.junyent@logicommerce.com</email>
+			<organization>Logicommerce</organization>
+			<organizationUrl>https://www.logicommerce.com</organizationUrl>
+		</developer>
 	</developers>
 
 	<scm>
