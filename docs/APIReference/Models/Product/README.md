@@ -17,11 +17,11 @@ Modelos del paquete `com.logicommerce.sdk.models.product`, usados por **[Product
 - [ProductImage](ProductImage.md): imagen principal o adicional.
 - [ProductCustomTag](ProductCustomTag.md): característica del producto.
 - [ProductCustomTagLanguage](ProductCustomTagLanguage.md): nombre y valor de la característica por idioma.
-- [AdditionalAttachment](AdditionalAttachment.md): documento adjunto del producto.
+- [CustomTagSelectableValue](CustomTagSelectableValue.md): opción seleccionable de una característica (selector / imagen).
+- [CustomTagSelectableValueLanguage](CustomTagSelectableValueLanguage.md): etiqueta de la opción por idioma.
 - [CustomTagGroup](CustomTagGroup.md): grupo de características.
 - [Language](Language.md): textos traducibles comunes.
 
 ## Enums
 
 - [CustomTagType](../../Enums/README.md#CustomTagType)
-- [ContentType](../../Enums/README.md#ContentType)

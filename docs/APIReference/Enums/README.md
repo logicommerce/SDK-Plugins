@@ -59,6 +59,11 @@ Tipo de dato de un **[ProductCustomTag](../Models/Product/ProductCustomTag.md)**
 - NUMBER
 - SHORT_TEXT
 - LONG_TEXT
+- SELECTOR
+- MULTIPLE_SELECTION
+- SINGLE_SELECTION_IMAGE
+- MULTIPLE_SELECTION_IMAGE
+- LINK
 
 ## ConnectorType
 
@@ -98,12 +103,6 @@ Tipo de dato de un **[ProductCustomTag](../Models/Product/ProductCustomTag.md)**
 - TRACKER
 - UNKNOWN
 - VIES_VALIDATOR
-
-## ContentType
-
-Tipo de documento de un **[AdditionalAttachment](../Models/Product/AdditionalAttachment.md)**.
-
-- PDF
 
 ## DeliveryType
 
