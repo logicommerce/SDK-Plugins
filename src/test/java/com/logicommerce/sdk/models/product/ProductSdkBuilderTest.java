@@ -18,6 +18,9 @@ class ProductSdkBuilderTest {
 	private static final String ADDITIONAL_SMALL_IMAGE = "additional-small.jpg";
 	private static final String CUSTOM_TAG_NAME = "color";
 	private static final String CUSTOM_TAG_VALUE = "red";
+	private static final String SELECTABLE_VALUE_KEY = "Red";
+	private static final String SELECTABLE_VALUE_IMAGE = "red.png";
+	private static final String SELECTABLE_VALUE_LABEL = "Vermell";
 	private static final String GROUP_ID = "1";
 	private static final String GROUP_NAME = "Display";
 	private static final String PID = "PID-1";
@@ -50,7 +53,7 @@ class ProductSdkBuilderTest {
 				.smallImage(ADDITIONAL_SMALL_IMAGE)
 				.done()
 			.customTag()
-				.type(CustomTagType.SHORT_TEXT)
+				.type(CustomTagType.SELECTOR)
 				.filtrable(true)
 				.searchable(true)
 				.customTagGroup()
@@ -62,6 +65,13 @@ class ProductSdkBuilderTest {
 				.language(LANGUAGE_ID)
 					.name(CUSTOM_TAG_NAME)
 					.value(CUSTOM_TAG_VALUE)
+					.done()
+				.selectableValue()
+					.value(SELECTABLE_VALUE_KEY)
+					.image(SELECTABLE_VALUE_IMAGE)
+					.language(LANGUAGE_ID)
+						.name(SELECTABLE_VALUE_LABEL)
+						.done()
 					.done()
 				.done()
 			.productCodes()
@@ -105,7 +115,7 @@ class ProductSdkBuilderTest {
 
 		assertEquals(1, product.getCustomTags().size());
 		ProductCustomTag customTag = product.getCustomTags().get(0);
-		assertEquals(CustomTagType.SHORT_TEXT, customTag.getType());
+		assertEquals(CustomTagType.SELECTOR, customTag.getType());
 		assertTrue(customTag.isFiltrable());
 		assertTrue(customTag.isSearchable());
 		CustomTagGroup customTagGroup = customTag.getCustomTagGroup();
@@ -114,6 +124,12 @@ class ProductSdkBuilderTest {
 		ProductCustomTagLanguage customTagLanguage = customTag.getLanguages().get(LANGUAGE_ID);
 		assertEquals(CUSTOM_TAG_NAME, customTagLanguage.getName());
 		assertEquals(CUSTOM_TAG_VALUE, customTagLanguage.getValue());
+
+		assertEquals(1, customTag.getSelectableValues().size());
+		CustomTagSelectableValue selectableValue = customTag.getSelectableValues().get(0);
+		assertEquals(SELECTABLE_VALUE_KEY, selectableValue.getValue());
+		assertEquals(SELECTABLE_VALUE_IMAGE, selectableValue.getImage());
+		assertEquals(SELECTABLE_VALUE_LABEL, selectableValue.getLanguages().get(LANGUAGE_ID).getName());
 
 		ProductCodes productCodes = product.getProductCodes();
 		assertEquals(PID, productCodes.getPId());

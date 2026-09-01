@@ -63,6 +63,12 @@ Tener dos métodos permite al plugin devolver **proyecciones distintas** en cada
 
 > :warning: LogiCommerce vuelca sobre el producto existente **solo los campos que vengan informados**. Un bloque que el plugin no devuelva se conserva tal cual estaba; no se borra.
 
+### Idioma de importación (getLanguageId)
+
+Idioma (identificador de idioma de LogiCommerce) en el que el plugin importa el contenido. LogiCommerce lo usa para registrar la importación **por idioma**, de modo que el mismo producto puede volver a importarse para otro idioma. Un plugin que importe contenido neutro de idioma devuelve `0`.
+
+Es un método `default` que devuelve `0`, así que solo hace falta implementarlo si el plugin importa por idioma.
+
 ## Interfaz
 
 ```java
@@ -75,6 +81,10 @@ public interface ProductIntegrationService extends PluginService {
     Product getProduct(Integer productId, String identifier, String code) throws PluginServiceException;
 
     Product getUpdateProduct(Integer productId, String identifier, String code) throws PluginServiceException;
+
+    default int getLanguageId() {
+        return 0;
+    }
 
 }
 ```
@@ -140,5 +150,4 @@ Devolver `null` en *getProduct* / *getUpdateProduct* no es un error, significa "
 - **[ProductCategory](../Models/Product/ProductCategory.md)**
 - **[ProductImage](../Models/Product/ProductImage.md)**
 - **[ProductCustomTag](../Models/Product/ProductCustomTag.md)**
-- **[AdditionalAttachment](../Models/Product/AdditionalAttachment.md)**
 - **[PluginServiceException](PluginServiceException.md)**
