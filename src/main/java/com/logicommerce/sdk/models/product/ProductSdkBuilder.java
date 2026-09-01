@@ -25,8 +25,6 @@ public class ProductSdkBuilder {
 
 	private List<ProductCustomTagBuilder<ProductSdkBuilder>> customTags;
 
-	private List<AdditionalAttachmentBuilder<ProductSdkBuilder>> additionalAttachments;
-
 	private ProductCodesBuilder<ProductSdkBuilder> productCodes;
 
 	private ProductBrandBuilder<ProductSdkBuilder> productBrand;
@@ -40,7 +38,6 @@ public class ProductSdkBuilder {
 		languages = new LinkedHashMap<>();
 		additionalImages = new ArrayList<>();
 		customTags = new ArrayList<>();
-		additionalAttachments = new ArrayList<>();
 	}
 
 	/**
@@ -111,17 +108,6 @@ public class ProductSdkBuilder {
 	}
 
 	/**
-	 * Adds a new additional attachment to the product.
-	 *
-	 * @return a {@link AdditionalAttachmentBuilder} object
-	 */
-	public AdditionalAttachmentBuilder<ProductSdkBuilder> additionalAttachment() {
-		AdditionalAttachmentBuilder<ProductSdkBuilder> additionalAttachment = new AdditionalAttachmentBuilder<>(this);
-		additionalAttachments.add(additionalAttachment);
-		return additionalAttachment;
-	}
-
-	/**
 	 * Sets the codes of the product.
 	 *
 	 * @return a {@link ProductCodesBuilder} object
@@ -167,7 +153,6 @@ public class ProductSdkBuilder {
 		}
 		product.setAdditionalImages(additionalImages.stream().map(ProductImageBuilder::build).collect(Collectors.toList()));
 		product.setCustomTags(customTags.stream().map(ProductCustomTagBuilder::build).collect(Collectors.toList()));
-		product.setAdditionalAttachments(additionalAttachments.stream().map(AdditionalAttachmentBuilder::build).collect(Collectors.toList()));
 		if (productCodes != null) {
 			product.setProductCodes(productCodes.build());
 		}
