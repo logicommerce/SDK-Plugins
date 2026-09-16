@@ -80,6 +80,8 @@ Modelos de `com.logicommerce.sdk.models.product`, usados por [ProductIntegration
 - [ProductImage](Product/ProductImage.md)
 - [ProductCustomTag](Product/ProductCustomTag.md)
 - [ProductCustomTagLanguage](Product/ProductCustomTagLanguage.md)
+- [CustomTagSelectableValue](Product/CustomTagSelectableValue.md)
+- [CustomTagSelectableValueLanguage](Product/CustomTagSelectableValueLanguage.md)
 - [CustomTagGroup](Product/CustomTagGroup.md)
 - [Language](Product/Language.md)
 

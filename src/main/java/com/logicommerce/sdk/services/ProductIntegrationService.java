@@ -61,4 +61,17 @@ public interface ProductIntegrationService extends PluginService {
 	 */
 	Product getUpdateProduct(Integer productId, String identifier, String code) throws PluginServiceException;
 
+	/**
+	 * <p>getLanguageId.</p>
+	 *
+	 * <p>The commerce language id the plugin imports content in. It lets the import be tracked per
+	 * language, so the same product can later be imported for a different language. A plugin that
+	 * imports language-neutral content returns {@code 0}.</p>
+	 *
+	 * @return the commerce language id being imported, or {@code 0} when language-neutral
+	 */
+	default int getLanguageId() {
+		return 0;
+	}
+
 }
