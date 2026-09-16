@@ -38,6 +38,10 @@ public interface DefinitionService extends PluginService {
 	 */
 	PluginDefinition getPluginDefinition() throws PluginServiceException;
 
+	default PluginDefinition getPluginDefinition(boolean loadDynamicData) throws PluginServiceException {
+		return this.getPluginDefinition();
+	}
+
 	/**
 	 * <p>Get connector definition property by a connector type. This method return plugin connector properties
 	 * settings defined in the json file and defined in this method.</p>
@@ -49,6 +53,10 @@ public interface DefinitionService extends PluginService {
 	 * @throws com.logicommerce.sdk.services.PluginServiceException PluginServiceException if any.
 	 */
 	ConnectorDefinition getConnectorDefinition(ConnectorType connectorType) throws PluginServiceException;
+
+	default ConnectorDefinition getConnectorDefinition(ConnectorType connectorType, boolean loadDynamicData) throws PluginServiceException {
+		return this.getConnectorDefinition(connectorType);
+	}
 
 	/**
 	 * <p>Get all connector definitions properties.</p>
