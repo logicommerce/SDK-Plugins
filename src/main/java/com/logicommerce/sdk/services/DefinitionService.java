@@ -38,13 +38,24 @@ public interface DefinitionService extends PluginService {
 	 */
 	PluginDefinition getPluginDefinition() throws PluginServiceException;
 
+	/**
+	 * <p>Get plugin definition data. This method return plugin properties settings defined in the JSON config file and
+	 * defined in this method.</p>
+	 *
+	 * @see com.logicommerce.sdk.definition.PluginDefinition PluginDefinition
+	 * @param loadDynamicData a boolean value to indicate if dynamic data should be loaded or
+	 * not. If true, the dynamic data will be loaded, if false, only the static data will be loaded.
+	 * @return a {@link com.logicommerce.sdk.definition.PluginDefinition PluginDefinition} object
+	 * @since 2.8.4
+	 * @throws com.logicommerce.sdk.services.PluginServiceException PluginServiceException if any.
+	 */
 	default PluginDefinition getPluginDefinition(boolean loadDynamicData) throws PluginServiceException {
 		return this.getPluginDefinition();
 	}
 
 	/**
 	 * <p>Get connector definition property by a connector type. This method return plugin connector properties
-	 * settings defined in the json file and defined in this method.</p>
+	 * settings defined in the JSON file and defined in this method.</p>
 	 *
 	 * @see com.logicommerce.sdk.enums.ConnectorType ConnectorType
 	 * @param connectorType a {@link com.logicommerce.sdk.enums.ConnectorType ConnectorType} object
@@ -54,6 +65,18 @@ public interface DefinitionService extends PluginService {
 	 */
 	ConnectorDefinition getConnectorDefinition(ConnectorType connectorType) throws PluginServiceException;
 
+	/**
+	 * <p>Get connector definition property by a connector type. This method return plugin connector properties
+	 * settings defined in the JSON file and defined in this method.</p>
+	 *
+	 * @see com.logicommerce.sdk.enums.ConnectorType ConnectorType
+	 * @param connectorType a {@link com.logicommerce.sdk.enums.ConnectorType ConnectorType} object
+	 * @param loadDynamicData a boolean value to indicate if dynamic data should be loaded or not. If true,
+	 * 	the dynamic data will be loaded, if false, only the static data will be loaded.
+	 * @return a {@link com.logicommerce.sdk.definition.ConnectorDefinition ConnectorDefinition} object
+	 * @since 2.8.4
+	 * @throws com.logicommerce.sdk.services.PluginServiceException PluginServiceException if any.
+	 */
 	default ConnectorDefinition getConnectorDefinition(ConnectorType connectorType, boolean loadDynamicData) throws PluginServiceException {
 		return this.getConnectorDefinition(connectorType);
 	}
