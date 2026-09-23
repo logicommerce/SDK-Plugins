@@ -7,6 +7,7 @@ Los recursos se definen basándose en la anotación *@Resource* como propiedad d
 - *[Logger](APIReference/Resources/Logger.md)*: Para guardar logs.
 - *[Connection](APIReference/Resources/Connection.md)*: Para hacer peticiones http. Las peticiones devuelven un objeto de tipo Response.
 - *[Storage](APIReference/Resources/Storage.md)*: Para acceder y modificar datos persistentes del plugin para cada usuario.
+- *[SessionStorage](APIReference/Resources/SessionStorage.md)*: Para leer y escribir datos en la sesión de api-plugins, y para crear o eliminar la sesión.
 - *[UserData](APIReference/Resources/UserData.md)*: Este recurso permite leer y escribir datos únicos del plugin y del usuario login.
 - *[Navigator](APIReference/Resources/Navigator.md)*: Para acceder y modificar datos de navegación del usuario
 - *[Location](APIReference/Resources/Location.md)*:  Para acceder a datos de localización e idioma.

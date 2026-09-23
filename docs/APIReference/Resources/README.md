@@ -9,6 +9,7 @@
 - [Navigator](Navigator.md)
 - [QueueSender](QueueSender.md)
 - [AtomicSharedStorage](AtomicSharedStorage.md)
+- [SessionStorage](SessionStorage.md)
 - [Storage](Storage.md)
 - [UserData](UserData.md)
 

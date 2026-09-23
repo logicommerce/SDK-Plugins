@@ -9,8 +9,8 @@ llamadas a una API externa.
 
 A diferencia de *[Cache](Cache.md)*, una lectura nunca responde con una copia local del nodo que atiende la petición,
 así que un valor escrito por un nodo lo ven inmediatamente los demás. A diferencia de *[Storage](Storage.md)* y de
-*SessionStorage*, las entradas no pertenecen a ningún usuario, sesión ni cesta, y se escriben en el momento en que se
-guardan y no al final de la petición.
+*[SessionStorage](SessionStorage.md)*, las entradas no pertenecen a ningún usuario, sesión ni cesta, y se escriben en el
+momento en que se guardan y no al final de la petición.
 
 Las claves están limitadas al comercio y al plugin: ni otro plugin ni otro comercio pueden leerlas ni sobrescribirlas.
 Un plugin que guarde más de un tipo de entrada debería prefijar sus propias claves.
