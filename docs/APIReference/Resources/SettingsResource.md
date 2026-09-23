@@ -10,3 +10,4 @@ El recurso permite consultar los datos de configuración de la tienda.
 - **Integer** getEnviromentId()
 - **String** getApiBackUrl()
 - **String** getApiFrontUrl()
+- **String** getApiPluginsUrl()
