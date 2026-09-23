@@ -8,6 +8,7 @@
 - [Logger](Logger.md)
 - [Navigator](Navigator.md)
 - [QueueSender](QueueSender.md)
+- [AtomicSharedStorage](AtomicSharedStorage.md)
 - [Storage](Storage.md)
 - [UserData](UserData.md)
 

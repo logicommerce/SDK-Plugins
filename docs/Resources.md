@@ -13,6 +13,7 @@ Los recursos se definen basándose en la anotación *@Resource* como propiedad d
 - *[QueueSender](APIReference/Resources/QueueSender.md)*: Envía mensajes en una cola de procesos.
 - *[LocationResource](APIReference/Resources/LocationResource.md)*: Para acceder a datos de localización e idioma.
 - *[SettingsResource](APIReference/Resources/SettingsResource.md)*: Consulta los datos de configuración de la tienda.
+- *[AtomicSharedStorage](APIReference/Resources/AtomicSharedStorage.md)*: Almacén de valores compartido por todos los nodos, con caducidad y operaciones atómicas, para coordinar peticiones simultáneas.
 
 ## Recursos de modelos
 
