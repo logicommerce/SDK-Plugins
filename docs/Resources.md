@@ -15,6 +15,9 @@ Los recursos se definen basándose en la anotación *@Resource* como propiedad d
 - *[LocationResource](APIReference/Resources/LocationResource.md)*: Para acceder a datos de localización e idioma.
 - *[SettingsResource](APIReference/Resources/SettingsResource.md)*: Consulta los datos de configuración de la tienda.
 - *[AtomicSharedStorage](APIReference/Resources/AtomicSharedStorage.md)*: Almacén de valores compartido por todos los nodos, con caducidad y operaciones atómicas, para coordinar peticiones simultáneas.
+- *[BasketResource](APIReference/Resources/BasketResource.md)*: Crea, lee, modifica y elimina cestas de invitado a partir de su token, en un contexto que no depende de la petición.
+- *[OrderResource](APIReference/Resources/OrderResource.md)*: Lee pedidos del comercio por id, también desde el consumidor de colas.
+- *[CatalogResource](APIReference/Resources/CatalogResource.md)*: Busca y lee productos para un país, idioma y moneda explícitos.
 
 ## Recursos de modelos
 

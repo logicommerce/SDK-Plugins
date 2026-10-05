@@ -58,6 +58,52 @@
 - [OrderUser](Order/OrderUser.md)
 - [OrderVoucher](Order/OrderVoucher.md)
 
+Vistas de pedido de [OrderResource](../Resources/OrderResource.md) (*disponibles desde la versión 2.8.5*):
+
+- [OrderView](Order/OrderView.md)
+- [OrderRowView](Order/OrderRowView.md)
+- [OrderShipmentView](Order/OrderShipmentView.md)
+- [PickupLocationView](Order/PickupLocationView.md)
+- [RMAView](Order/RMAView.md)
+- [CreditNoteView](Order/CreditNoteView.md)
+- [StatusHistory](Order/StatusHistory.md)
+- [RowQuantity](Order/RowQuantity.md)
+- [AddressView](Order/AddressView.md)
+
+## [Basket](Basket/)
+
+Modelos de `com.logicommerce.sdk.models.basket`, usados por [BasketResource](../Resources/BasketResource.md). *Disponibles desde la versión 2.8.5.*
+
+- [BasketView](Basket/BasketView.md)
+- [BasketRowView](Basket/BasketRowView.md)
+- [Allocation](Basket/Allocation.md)
+- [RowAllocation](Basket/RowAllocation.md)
+- [AppliedDiscountView](Basket/AppliedDiscountView.md)
+- [VoucherCodeResult](Basket/VoucherCodeResult.md)
+- [TotalsView](Basket/TotalsView.md)
+- [AppliedTaxView](Basket/AppliedTaxView.md)
+- [CustomerView](Basket/CustomerView.md)
+- [BasketIssue](Basket/BasketIssue.md)
+- [ChangeRejection](Basket/ChangeRejection.md)
+- [BasketContext](Basket/BasketContext.md)
+- [ClientInfo](Basket/ClientInfo.md)
+- [BasketChanges](Basket/BasketChanges.md)
+- [RowChange](Basket/RowChange.md)
+- [CustomerChange](Basket/CustomerChange.md)
+
+## [Catalog](Catalog/)
+
+Modelos de `com.logicommerce.sdk.models.catalog`, usados por [CatalogResource](../Resources/CatalogResource.md). *Disponibles desde la versión 2.8.5.*
+
+- [CatalogContext](Catalog/CatalogContext.md)
+- [CatalogQuery](Catalog/CatalogQuery.md)
+- [ProductPage](Catalog/ProductPage.md)
+- [ProductView](Catalog/ProductView.md)
+- [OptionView](Catalog/OptionView.md)
+- [OptionValueView](Catalog/OptionValueView.md)
+- [CombinationView](Catalog/CombinationView.md)
+- [PriceView](Catalog/PriceView.md)
+
 ## [Payment](Payment/)
 
 - [Payment](Payment/Payment.md)

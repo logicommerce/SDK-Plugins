@@ -30,3 +30,17 @@
 - [OrderUser](OrderUser.md)
 - [OrderVoucher](OrderVoucher.md)
 - [GeographicalZone](GeographicalZone.md)
+
+## Vistas de OrderResource
+
+*Disponibles desde la versión 2.8.5.* Devueltas por [OrderResource](../../Resources/OrderResource.md).
+
+- [OrderView](OrderView.md)
+- [OrderRowView](OrderRowView.md)
+- [OrderShipmentView](OrderShipmentView.md)
+- [PickupLocationView](PickupLocationView.md)
+- [RMAView](RMAView.md)
+- [CreditNoteView](CreditNoteView.md)
+- [StatusHistory](StatusHistory.md)
+- [RowQuantity](RowQuantity.md)
+- [AddressView](AddressView.md)

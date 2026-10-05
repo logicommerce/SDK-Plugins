@@ -13,6 +13,13 @@
 - [Storage](Storage.md)
 - [UserData](UserData.md)
 
+## Commerce Resources
+
+- [BasketResource](BasketResource.md)
+- [CatalogResource](CatalogResource.md)
+- [OrderResource](OrderResource.md)
+- [SettingsResource](SettingsResource.md)
+
 ## Exceptions
 
 - [PluginResourceException](PluginResourceException.md)

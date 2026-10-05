@@ -24,7 +24,7 @@ import java.time.Duration;
  * to expire.</p>
  *
  * @author Logicommerce
- * @since 2.8.4
+ * @since 2.8.5
  */
 public interface AtomicSharedStorage {
 

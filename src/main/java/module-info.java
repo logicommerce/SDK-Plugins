@@ -21,9 +21,15 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.models.taxes;
 	exports com.logicommerce.sdk.models.pickuppoints;
 	exports com.logicommerce.sdk.models.product;
+	exports com.logicommerce.sdk.models.basket;
+	exports com.logicommerce.sdk.models.basket.implementations;
+	exports com.logicommerce.sdk.models.catalog;
+	exports com.logicommerce.sdk.models.catalog.implementations;
 	exports com.logicommerce.sdk.enums;
 	exports com.logicommerce.sdk.builders;
 	exports com.logicommerce.sdk.builders.order;
 	exports com.logicommerce.sdk.builders.emailsender;
+	exports com.logicommerce.sdk.builders.basket;
+	exports com.logicommerce.sdk.builders.catalog;
 	exports com.logicommerce.sdk.lib.router;
 }
