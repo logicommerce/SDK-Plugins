@@ -14,6 +14,7 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.models.emailsender.implementations;
 	exports com.logicommerce.sdk.models.order;
 	exports com.logicommerce.sdk.models.order.implementations;
+	exports com.logicommerce.sdk.models.order.list;
 	exports com.logicommerce.sdk.models.payment;
 	exports com.logicommerce.sdk.models.queues;
 	exports com.logicommerce.sdk.models.rewardpoints;

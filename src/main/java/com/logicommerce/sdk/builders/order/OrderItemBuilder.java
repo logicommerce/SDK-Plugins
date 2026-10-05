@@ -361,7 +361,6 @@ public class OrderItemBuilder<T> {
 		if (id != null) {
 			item.setId(id);
 		}
-		item.setId(null);
 		item.setPId(pId);
 		item.setHash(hash);
 		item.setTaxes(taxes.stream().map(OrderItemTaxBuilder::build).collect(Collectors.toList()));
