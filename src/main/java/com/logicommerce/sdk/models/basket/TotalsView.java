@@ -3,7 +3,9 @@ package com.logicommerce.sdk.models.basket;
 import java.util.List;
 
 /**
- * <p>The totals of a basket or an order.</p>
+ * <p>The totals of a basket ({@link BasketView#getTotals()}) or of an order
+ * ({@link com.logicommerce.sdk.models.order.OrderPurchaseCurrencyAmounts#getTotals()}). For an order, the view is its
+ * purchase currency amounts, in the tax mode of {@link com.logicommerce.sdk.models.order.Order#isTaxesIncluded()}.</p>
  *
  * <p>Every amount is a non-negative magnitude in minor units of the enclosing view's currency, and every total is the
  * sum of rounded parts, so by construction:</p>

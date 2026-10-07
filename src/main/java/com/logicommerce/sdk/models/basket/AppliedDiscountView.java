@@ -4,7 +4,8 @@ import java.util.List;
 import com.logicommerce.sdk.enums.DiscountApplyTo;
 
 /**
- * <p>A discount applied to a basket or an order.</p>
+ * <p>A discount applied to a basket ({@link BasketView#getDiscounts()}) or to an order
+ * ({@link com.logicommerce.sdk.models.order.OrderPurchaseCurrencyAmounts#getDiscounts()}).</p>
  *
  * <p>Amounts are non-negative magnitudes in minor units of the enclosing view's currency. They follow the view's tax
  * mode, except basket-level ({@link DiscountApplyTo#TOTAL}) discounts of a net-priced view when the commerce subtracts
@@ -55,7 +56,7 @@ public interface AppliedDiscountView {
 	/**
 	 * Returns the discounted amount: for {@link DiscountApplyTo#PRODUCT} the sum of {@link #getRows()}; for
 	 * {@link DiscountApplyTo#SHIPPING} on an order, the sum of its allocations to the shipments
-	 * ({@link com.logicommerce.sdk.models.order.OrderShipmentView#getShippingDiscounts()}); otherwise the discount's own
+	 * ({@link com.logicommerce.sdk.models.order.OrderShipmentAmounts#getShippingDiscounts()}); otherwise the discount's own
 	 * amount, rounded once.
 	 *
 	 * @return a non-negative amount in minor units

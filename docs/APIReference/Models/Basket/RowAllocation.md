@@ -9,5 +9,5 @@ Parte de un descuento que corresponde a una fila, vista desde el descuento: el m
 
 ## Métodos
 
-- **String** getRowHash(): hash de la fila.
+- **String** getRowHash(): hash de la fila, como en *getHash()* de *[BasketRowView](BasketRowView.md)* o de *[OrderItemAmounts](../Order/OrderItemAmounts.md)*.
 - **long** getAmount(): importe descontado, no negativo, redondeado una vez.

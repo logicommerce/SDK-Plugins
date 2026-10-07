@@ -2,7 +2,8 @@
 
 ## Descripción
 
-Descuento aplicado a una cesta o a un pedido. Los importes son magnitudes no negativas en unidades menores y siguen el
+Descuento aplicado a una cesta (*getDiscounts()* de *[BasketView](BasketView.md)*) o a un pedido (*getDiscounts()* de
+*[OrderPurchaseCurrencyAmounts](../Order/OrderPurchaseCurrencyAmounts.md)*). Los importes son magnitudes no negativas en unidades menores y siguen el
 modo de impuestos de la vista, salvo los descuentos de cesta (*TOTAL*) de una vista sin impuestos cuando el comercio
 los resta después de impuestos (`TAX.discountsBeforeTax=false`, el valor por defecto): esos van con impuestos y no
 reducen el impuesto.
@@ -19,7 +20,7 @@ asignado a esa fila).
 - **String** getName(): nombre del descuento.
 - **String** getCode(): código que activa el descuento cuando tiene una condición de código y ese código está en la cesta; *null* para un descuento automático.
 - **DiscountApplyTo** getApplyTo(): qué reduce el descuento: *PRODUCT* las filas (con su reparto por fila en *getRows()*), *SHIPPING* el precio del envío y *TOTAL* la cesta en conjunto (descuento de cesta, después de las filas).
-- **long** getAmount(): importe descontado: para *PRODUCT*, la suma de *getRows()*; para *SHIPPING* en un pedido, la suma de sus repartos a los envíos (*OrderShipmentView.getShippingDiscounts()*); si no, el importe propio del descuento, redondeado una vez.
+- **long** getAmount(): importe descontado: para *PRODUCT*, la suma de *getRows()*; para *SHIPPING* en un pedido, la suma de sus repartos a los envíos (*getShippingDiscounts()* de *[OrderShipmentAmounts](../Order/OrderShipmentAmounts.md)*); si no, el importe propio del descuento, redondeado una vez.
 - **List<[RowAllocation](RowAllocation.md)>** getRows(): reparto por fila de un descuento *PRODUCT* (suma *getAmount()*); vacía para el resto.
 
 ## Referencias

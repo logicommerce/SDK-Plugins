@@ -58,17 +58,15 @@
 - [OrderUser](Order/OrderUser.md)
 - [OrderVoucher](Order/OrderVoucher.md)
 
-Vistas de pedido de [OrderResource](../Resources/OrderResource.md) (*disponibles desde la versión 2.8.5*):
+Propiedades de pedido que solo rellena [OrderResource](../Resources/OrderResource.md) (*disponibles desde la versión 2.8.5*):
 
-- [OrderView](Order/OrderView.md)
-- [OrderRowView](Order/OrderRowView.md)
-- [OrderShipmentView](Order/OrderShipmentView.md)
-- [PickupLocationView](Order/PickupLocationView.md)
-- [RMAView](Order/RMAView.md)
-- [CreditNoteView](Order/CreditNoteView.md)
-- [StatusHistory](Order/StatusHistory.md)
-- [RowQuantity](Order/RowQuantity.md)
-- [AddressView](Order/AddressView.md)
+- [OrderPurchaseCurrencyAmounts](Order/OrderPurchaseCurrencyAmounts.md)
+- [OrderItemAmounts](Order/OrderItemAmounts.md)
+- [OrderShipmentAmounts](Order/OrderShipmentAmounts.md)
+- [OrderCreditNoteAmounts](Order/OrderCreditNoteAmounts.md)
+- [OrderRMA](Order/OrderRMA.md)
+- [OrderRMAItem](Order/OrderRMAItem.md)
+- [OrderCreditNote](Order/OrderCreditNote.md)
 
 ## [Basket](Basket/)
 

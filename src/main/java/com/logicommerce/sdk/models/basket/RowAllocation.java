@@ -12,7 +12,8 @@ public interface RowAllocation {
 	/**
 	 * Returns the hash of the row the share is allocated to.
 	 *
-	 * @return the row hash, as in {@link BasketRowView#getHash()}
+	 * @return the row hash, as in {@link BasketRowView#getHash()} or
+	 *         {@link com.logicommerce.sdk.models.order.OrderItemAmounts#getHash()}
 	 */
 	String getRowHash();
 

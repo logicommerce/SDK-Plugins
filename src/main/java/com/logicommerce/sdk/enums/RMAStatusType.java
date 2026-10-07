@@ -4,7 +4,7 @@ package com.logicommerce.sdk.enums;
  * <p>Status of a return merchandise authorization (RMA) of an order, as core stores it (core
  * {@code RMAStatusType}).</p>
  *
- * <p>Returned by {@link com.logicommerce.sdk.models.order.RMAView#getStatus()}.</p>
+ * <p>Returned by {@link com.logicommerce.sdk.models.order.OrderRMA#getStatus()}.</p>
  *
  * @author Logicommerce
  * @since 2.8.5

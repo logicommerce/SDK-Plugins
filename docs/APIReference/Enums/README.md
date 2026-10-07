@@ -36,8 +36,9 @@
 ## CartItemType
 
 Tipo de fila de una cesta (*[CartItem](../Models/CartItem.md)*). Desde la versión 2.8.5 también es el tipo de fila de
-*[BasketRowView](../Models/Basket/BasketRowView.md)* y *[OrderRowView](../Models/Order/OrderRowView.md)*, que nunca
-devuelven `BUNDLE_ITEM` (un pack es una sola fila `BUNDLE`).
+*[BasketRowView](../Models/Basket/BasketRowView.md)*, que nunca devuelve `BUNDLE_ITEM` (un pack es una sola fila
+`BUNDLE`), y de *getType()* de *[OrderItem](../Models/Order/OrderItem.md)*, que solo lo devuelve para los elementos de
+una fila `BUNDLE` (*getBundleItems()*).
 
 - PRODUCT
 - GIFT: regalo automático
@@ -303,7 +304,7 @@ SDK anterior, lanza una excepción cuando encuentra la nueva constante.
 
 ## RMAStatusType
 
-*Disponible desde la versión 2.8.5.* Estado de una devolución (*[RMAView](../Models/Order/RMAView.md)*), el `RMAStatusType` de la plataforma.
+*Disponible desde la versión 2.8.5.* Estado de una devolución (*[OrderRMA](../Models/Order/OrderRMA.md)*), el `RMAStatusType` de la plataforma.
 
 - INCIDENTS
 - PENDING

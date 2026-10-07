@@ -2,7 +2,9 @@
 
 ## Descripción
 
-Totales de una cesta o de un pedido. Todos los importes son magnitudes no negativas en unidades menores y cada total es
+Totales de una cesta (*getTotals()* de *[BasketView](BasketView.md)*) o de un pedido (*getTotals()* de
+*[OrderPurchaseCurrencyAmounts](../Order/OrderPurchaseCurrencyAmounts.md)*; en un pedido, la vista son sus importes en
+la moneda de compra, en el modo de impuestos de *isTaxesIncluded()* de *[Order](../Order/Order.md)*). Todos los importes son magnitudes no negativas en unidades menores y cada total es
 la suma de partes redondeadas:
 
 ```
