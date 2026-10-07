@@ -18,6 +18,8 @@ public class OrderShipmentItemImpl implements OrderShipmentItem {
 	
 	private double weight;
 
+	private String name;
+
 	/**
 	 * <p>Getter for the field <code>id</code>.</p>
 	 *
@@ -79,6 +81,20 @@ public class OrderShipmentItemImpl implements OrderShipmentItem {
 
 	public void setWeight(double weight) {
 		this.weight = weight;
+	}
+
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <p>Setter for the field <code>name</code>.</p>
+	 *
+	 * @param name a {@link java.lang.String} object
+	 */
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 }

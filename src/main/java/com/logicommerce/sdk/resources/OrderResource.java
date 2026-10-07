@@ -1,29 +1,42 @@
 package com.logicommerce.sdk.resources;
 
-import com.logicommerce.sdk.models.order.OrderView;
+import java.util.List;
+
+import com.logicommerce.sdk.models.order.Order;
+import com.logicommerce.sdk.models.order.list.OrderList;
+import com.logicommerce.sdk.models.order.list.OrderListParam;
 
 /**
- * <p>Order resource interface: reads orders of the commerce by id, from any plugin request, the queue consumer
- * included.</p>
+ * Resource to read the orders of the commerce.
  *
- * <pre>
- * &#64;Resource
- * private OrderResource orderResource;
- * </pre>
- *
- * @author Logicommerce
+ * @author LogiCommerce
  * @since 2.8.5
  */
 public interface OrderResource {
 
 	/**
-	 * Reads an order, whatever its status.
+	 * Returns a page of orders matching the given filters.
 	 *
-	 * @param orderId the order id
-	 * @return the order, or null only when the commerce has no order with this id (a deleted order row included)
-	 * @throws PluginResourceException on any other failure (the order cannot be read or mapped), so that a caller never
-	 *         takes a failure for a missing order
+	 * @param param a {@link com.logicommerce.sdk.models.order.list.OrderListParam} object
+	 * @return a {@link java.util.List} of {@link com.logicommerce.sdk.models.order.list.OrderList}
+	 * @throws PluginResourceException if any.
 	 */
-	OrderView getOrder(int orderId) throws PluginResourceException;
+	List<OrderList> getOrders(OrderListParam param) throws PluginResourceException;
+
+	/**
+	 * Returns the order with the given id.
+	 *
+	 * @param orderId an int
+	 * @return a {@link com.logicommerce.sdk.models.order.Order} object, or null if it does not exist
+	 */
+	Order getOrder(int orderId);
+
+	/**
+	 * Returns the order with the given document number.
+	 *
+	 * @param documentNumber a {@link java.lang.String} object
+	 * @return a {@link com.logicommerce.sdk.models.order.Order} object, or null if it does not exist
+	 */
+	Order getOrder(String documentNumber);
 
 }
