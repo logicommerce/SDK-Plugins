@@ -10,12 +10,12 @@ package com.logicommerce.sdk.enums;
  */
 public enum IssueSource {
 	/**
-	 * A basket warning computed by the last recalculation. Its code is a core {@code BasketWarningCode} constant name.
+	 * A basket warning computed by the last recalculation.
 	 */
 	WARNING,
 	/**
-	 * A check that creating the order would run, evaluated as a dry run (core {@code OrderUserValidator}): at order
-	 * time it would be an error. Its code is an {@link EndOrderCode} name.
+	 * An order-time check evaluated as a dry run: creating the order would fail. Its code is an {@link EndOrderCode}
+	 * name.
 	 */
 	END_ORDER;
 }

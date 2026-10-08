@@ -3,9 +3,8 @@ package com.logicommerce.sdk.enums;
 /**
  * <p>CartItemType Enum. This contains de list of cart item types</p>
  *
- * <p>Also returned by {@link com.logicommerce.sdk.models.basket.BasketRowView#getType()}, which never returns
- * {@link #BUNDLE_ITEM}, and by {@link com.logicommerce.sdk.models.order.OrderItem#getType()}, which returns it only for
- * the items of a bundle row ({@link com.logicommerce.sdk.models.order.OrderItem#getBundleItems()}).</p>
+ * <p>{@link #BUNDLE_ITEM} is only returned for the items of a bundle row
+ * ({@link com.logicommerce.sdk.models.order.OrderItem#getBundleItems()}).</p>
  *
  * @see		com.logicommerce.sdk.models.CartItem CartItem
  * @author 	Logicommerce
@@ -37,9 +36,7 @@ public enum CartItemType {
 	 */
 	VOUCHER_PURCHASE,
 	/**
-	 * Indicates that the item is a gift the buyer selected among the ones a discount offers. Returned by
-	 * {@link com.logicommerce.sdk.models.basket.BasketRowView#getType()} and
-	 * {@link com.logicommerce.sdk.models.order.OrderItem#getType()}.
+	 * Indicates that the item is a gift the buyer selected among the ones a discount offers.
 	 *
 	 * @since 2.8.5
 	 */

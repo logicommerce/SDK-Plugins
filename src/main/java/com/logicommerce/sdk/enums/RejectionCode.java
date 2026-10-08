@@ -11,26 +11,22 @@ package com.logicommerce.sdk.enums;
  */
 public enum RejectionCode {
 	/**
-	 * The requested row does not identify an orderable combination: unknown or not visible product, a product with
-	 * combinable options requested without them, option values that are not a combination of the product, or a
-	 * combination that cannot be ordered in the basket's context ({@link StockStatus#NOT_ORDERABLE}). It is checked
-	 * before {@link #ROW_REQUIRES_NON_COMBINABLE_OPTION}. The row is not added, and an existing row it names is removed
-	 * like a row that was not requested.
+	 * The requested row does not identify an orderable combination (unknown product, invalid option values, or
+	 * {@link StockStatus#NOT_ORDERABLE}). The row is not added, and an existing row it names is removed.
 	 */
 	ROW_NOT_BUYABLE,
 	/**
-	 * The product has a required option that is not combinable (text, date, boolean, attachment, multiple
-	 * selection...): it is not added, because its value can only be given in the storefront.
+	 * The product has a required non-combinable option, which can only be given in the storefront. The row is not
+	 * added.
 	 */
 	ROW_REQUIRES_NON_COMBINABLE_OPTION,
 	/**
-	 * Core refused to add or update the row for another reason; {@link
-	 * com.logicommerce.sdk.models.basket.ChangeRejection#getDetail()} names the core error code.
+	 * The row could not be added or updated for another reason, named by
+	 * {@link com.logicommerce.sdk.models.basket.ChangeRejection#getDetail()}.
 	 */
 	ROW_ADD_FAILED,
 	/**
-	 * The currency hint is not available for the basket's country and headquarter; the basket keeps the currency the
-	 * rule chose.
+	 * The currency hint is not available for the basket's country; the basket keeps its default currency.
 	 */
 	CURRENCY_NOT_AVAILABLE,
 	/**
@@ -38,9 +34,8 @@ public enum RejectionCode {
 	 */
 	COUNTRY_NOT_COMMERCE,
 	/**
-	 * The email belongs to a registered account of a commerce that identifies users by email. Only the email is refused:
-	 * it is not set and the basket's previous email is cleared, because the request replaced it; the names and phone of
-	 * the same {@link com.logicommerce.sdk.models.basket.CustomerChange} are applied.
+	 * The email belongs to a registered account. Only the email is refused (the basket's previous email is cleared); the
+	 * other fields of the {@link com.logicommerce.sdk.models.basket.CustomerChange} are applied.
 	 */
 	CUSTOMER_EMAIL_REGISTERED;
 }

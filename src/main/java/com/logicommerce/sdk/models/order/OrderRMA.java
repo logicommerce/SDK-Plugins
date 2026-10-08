@@ -27,7 +27,7 @@ public interface OrderRMA {
 	RMAStatusType getStatus();
 
 	/**
-	 * Returns the RMA date, as stored (like {@link Document#getDate()}).
+	 * Returns the RMA date.
 	 *
 	 * @return the date
 	 */

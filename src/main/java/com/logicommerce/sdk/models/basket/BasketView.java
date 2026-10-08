@@ -7,16 +7,14 @@ import java.util.List;
 /**
  * <p>A basket as {@link com.logicommerce.sdk.resources.BasketResource} returns it.</p>
  *
- * <p>Every amount of the view (rows, discounts, totals) is an integer number of minor units of
- * {@link #getCurrencyCode()} (the ISO 4217 exponent of {@link java.util.Currency#getDefaultFractionDigits()}), computed by core: each unit price
- * and each discount allocation is rounded once, and every total is the sum of its rounded parts, so the totals always
- * add up but may differ from core's unrounded totals by a few minor units. Prices are gross (taxes included) or net
- * according to {@link #isTaxesIncluded()}.</p>
+ * <p>Every amount is an integer number of minor units of {@link #getCurrencyCode()}, gross or net according to
+ * {@link #isTaxesIncluded()}. Each unit price and discount allocation is rounded once and every total is the sum of
+ * its rounded parts, so totals always add up but may differ by a few minor units from the unrounded totals.</p>
  *
  * <p>After {@link com.logicommerce.sdk.resources.BasketResource#create create} and
- * {@link com.logicommerce.sdk.resources.BasketResource#apply apply} the view reflects the recalculation that the call
- * made; after {@link com.logicommerce.sdk.resources.BasketResource#get get} it is the basket as it was last saved,
- * never recalculated. Lists are never null.</p>
+ * {@link com.logicommerce.sdk.resources.BasketResource#apply apply} the view reflects the recalculation of the call;
+ * after {@link com.logicommerce.sdk.resources.BasketResource#get get} it is the basket as last saved. Lists are never
+ * null.</p>
  *
  * @author Logicommerce
  * @since 2.8.5
@@ -24,33 +22,28 @@ import java.util.List;
 public interface BasketView {
 
 	/**
-	 * Returns the basket token: the storefront session credential, never to be exposed to third parties.
+	 * Returns the basket token. It is a session credential: never expose it to third parties.
 	 *
-	 * @return the token (as stored, without the {@code _<basketId>} suffix that
-	 *         {@link com.logicommerce.sdk.models.Cart#getToken()} adds)
+	 * @return the token, without the {@code _<basketId>} suffix of {@link com.logicommerce.sdk.models.Cart#getToken()}
 	 */
 	String getToken();
 
 	/**
-	 * Returns the basket id (core's {@code Basket.id}, the {@code _<basketId>} suffix of
-	 * {@link com.logicommerce.sdk.models.Cart#getToken()}). Core only changes it when it regenerates the basket after the
-	 * payment flow confirmed an order ({@code /validate} answered OK, or a zero-total {@code /pay}), so an id that moved
-	 * means an order was confirmed from this basket.
+	 * Returns the basket id. It only changes when an order is confirmed from this basket.
 	 *
 	 * @return the basket id
 	 */
 	int getId();
 
 	/**
-	 * Returns the ISO 4217 code (upper case) of every amount in the view: the basket's purchase currency.
+	 * Returns the basket's currency, in which every amount of the view is expressed.
 	 *
-	 * @return the currency code
+	 * @return the ISO 4217 code, upper case
 	 */
 	String getCurrencyCode();
 
 	/**
-	 * Returns whether prices are shown with taxes included for the basket's country (the commerce's
-	 * {@code showTaxesIncluded}, overridable per country and account group). When true, unit prices and totals are gross,
+	 * Returns whether prices include taxes for the basket's country. When true, prices are gross,
 	 * {@link TotalsView#getTax()} is 0 and {@link TotalsView#getAppliedTaxes()} lists the included taxes; when false,
 	 * prices are net and the taxes are added in {@link TotalsView#getTax()}.
 	 *
@@ -68,7 +61,7 @@ public interface BasketView {
 	/**
 	 * Returns the basket's language.
 	 *
-	 * @return the LogiCommerce language code: ISO 639-1, lower case (for instance {@code es})
+	 * @return the ISO 639-1 code in lower case (for instance {@code es})
 	 */
 	String getLanguageCode();
 
@@ -80,7 +73,7 @@ public interface BasketView {
 	CustomerView getCustomer();
 
 	/**
-	 * Returns the basket rows, in insertion order (stable across calls).
+	 * Returns the basket rows, in insertion order.
 	 *
 	 * @return the rows
 	 */
@@ -94,11 +87,9 @@ public interface BasketView {
 	List<AppliedDiscountView> getDiscounts();
 
 	/**
-	 * Returns the voucher codes (discount codes and balance voucher codes). After a {@code create} or {@code apply}
-	 * whose {@link BasketChanges#getVoucherCodes()} is not null, one entry per requested code in the order of the request
-	 * (so a position maps to the request's list), rejected codes included. Otherwise (a {@code get}, or a call that left
-	 * the voucher codes unchanged) the codes stored on the basket, in the order they were added; rejected codes are never
-	 * stored, so they do not appear there.
+	 * Returns the voucher codes. After a {@code create} or {@code apply} that set
+	 * {@link BasketChanges#getVoucherCodes()}, one entry per requested code in the order of the request, rejected codes
+	 * included. Otherwise, the codes stored on the basket, which never include rejected ones.
 	 *
 	 * @return the voucher code results
 	 */
@@ -112,8 +103,7 @@ public interface BasketView {
 	TotalsView getTotals();
 
 	/**
-	 * Returns the issues of the basket: the warnings of the last recalculation (fresh after create and apply, as saved
-	 * for get) plus the order-time checks evaluated as a dry run.
+	 * Returns the warnings of the last recalculation plus the order-time checks evaluated as a dry run.
 	 *
 	 * @return the issues
 	 */
@@ -127,8 +117,7 @@ public interface BasketView {
 	List<ChangeRejection> getRejections();
 
 	/**
-	 * Returns the id of the latest order created from the basket (core's {@code Basket.documentId}), whatever its
-	 * status.
+	 * Returns the id of the latest order created from the basket, whatever its status.
 	 *
 	 * @return the order id, or null when no order was created from this basket
 	 */
@@ -142,8 +131,7 @@ public interface BasketView {
 	boolean isLoggedIn();
 
 	/**
-	 * Returns whether a login is pending on the basket (a login that matched several accounts and waits for the buyer to
-	 * choose one: core's {@code pendingLoginRegisteredUserId} is set).
+	 * Returns whether a login is pending: it matched several accounts and waits for the buyer to choose one.
 	 *
 	 * @return true when a login is pending
 	 */
@@ -164,23 +152,18 @@ public interface BasketView {
 	Instant getUpdatedAt();
 
 	/**
-	 * Returns the effective lifetime of this basket: it is deleted by the session reaper once this long has passed
-	 * since its last save ({@link #getUpdatedAt()}). It is the commerce's storefront session lifetime, except for an
-	 * empty anonymous basket (no rows, no account), which core reaps after 5 minutes.
+	 * Returns how long after its last save ({@link #getUpdatedAt()}) the basket is deleted: the storefront session
+	 * lifetime, or 5 minutes for an empty anonymous basket.
 	 *
 	 * @return the lifetime
 	 */
 	Duration getLifeTime();
 
 	/**
-	 * Returns the storefront base URL for the basket's own language and country (the URL the storefront would route the
-	 * basket to), computed by core from the basket and never from the caller's request. It falls back to the base home
-	 * URL, then to the store URL of the basket's language, then to the default store URL, when no country-level entry
-	 * matches; a candidate that is not an absolute http or https URL is skipped. Storefront paths (for instance
-	 * {@code /checkout}) are appended to it.
+	 * Returns the storefront base URL for the basket's language and country, computed from the basket, never from the
+	 * caller's request. Storefront paths (for instance {@code /checkout}) are appended to it.
 	 *
-	 * @return an absolute URL (scheme, host and an optional path), without a trailing slash, or null when the commerce
-	 *         has no absolute store URL configured
+	 * @return an absolute URL without a trailing slash, or null when the commerce has no absolute store URL configured
 	 */
 	String getStoreBaseUrl();
 

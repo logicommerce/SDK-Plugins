@@ -14,8 +14,8 @@ public enum VoucherCodeStatus {
 	 */
 	APPLIED,
 	/**
-	 * Core refused to add the code (the reason is in {@link
-	 * com.logicommerce.sdk.models.basket.VoucherCodeResult#getErrorCode()}); the code is not on the basket.
+	 * The code was refused and is not on the basket; the reason is in
+	 * {@link com.logicommerce.sdk.models.basket.VoucherCodeResult#getErrorCode()}.
 	 */
 	REJECTED,
 	/**
@@ -23,10 +23,9 @@ public enum VoucherCodeStatus {
 	 */
 	NOT_APPLYING,
 	/**
-	 * The code is a usable balance (gift) voucher. A requested one is not redeemed by the resource; a requested one that
-	 * has expired or has no balance left is {@link #REJECTED} instead, with {@code VOUCHER_CODE_EXPIRED} or
-	 * {@code VOUCHER_CODE_EXHAUSTED} as its error code. One already on the basket was redeemed in the storefront and is
-	 * counted in {@link com.logicommerce.sdk.models.basket.TotalsView#getVouchers()}.
+	 * The code is a usable balance (gift) voucher. A requested one is not redeemed by the resource; one already on the
+	 * basket was redeemed in the storefront and is counted in
+	 * {@link com.logicommerce.sdk.models.basket.TotalsView#getVouchers()}.
 	 */
 	BALANCE_VOUCHER;
 }

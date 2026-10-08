@@ -6,13 +6,8 @@ import com.logicommerce.sdk.models.basket.Allocation;
 /**
  * <p>The amounts of one order row in the order's purchase currency ({@link OrderPurchaseCurrencyAmounts#getItems()}).</p>
  *
- * <p>Amounts are minor units of {@link OrderPurchaseCurrencyAmounts#getCurrencyCode()}, gross or net per
- * {@link Order#isTaxesIncluded()}. Discount amounts are non-negative magnitudes, so
- * {@code getTotal() == getSubtotal() - sum(getDiscounts().amount)}.</p>
- *
- * <p>Unlike the usual LogiCommerce meaning of subtotal and total (without and with taxes, as in
- * {@link OrderItemPrices}), {@link #getSubtotal()} and {@link #getTotal()} are the row amount before and after its
- * discounts, both in the order's tax mode.</p>
+ * <p>Amounts are minor units, gross or net per {@link Order#isTaxesIncluded()}. Unlike {@link OrderItemPrices},
+ * subtotal and total are the row amount before and after its discounts, not without and with taxes.</p>
  *
  * @author Logicommerce
  * @since 2.8.5
@@ -27,30 +22,28 @@ public interface OrderItemAmounts {
 	String getHash();
 
 	/**
-	 * Returns the unit price, rounded once to minor units.
+	 * Returns the unit price.
 	 *
 	 * @return the unit price
 	 */
 	long getUnitPrice();
 
 	/**
-	 * Returns the unit price times the row quantity, before discounts. It is not the amount without taxes: it follows
-	 * {@link Order#isTaxesIncluded()}.
+	 * Returns the unit price times the row quantity.
 	 *
 	 * @return the subtotal, before discounts
 	 */
 	long getSubtotal();
 
 	/**
-	 * Returns the row's share of each discount applied to it, one entry per discount, each rounded once.
+	 * Returns the row's share of each discount applied to it.
 	 *
 	 * @return the allocations, never null
 	 */
 	List<Allocation> getDiscounts();
 
 	/**
-	 * Returns the subtotal minus the row's discount allocations: the row amount after discounts. It is not the amount
-	 * with taxes: it follows {@link Order#isTaxesIncluded()}.
+	 * Returns the subtotal minus the row's discount allocations.
 	 *
 	 * @return the total, after discounts
 	 */

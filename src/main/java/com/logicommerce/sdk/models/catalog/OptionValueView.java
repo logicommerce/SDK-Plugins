@@ -9,8 +9,7 @@ package com.logicommerce.sdk.models.catalog;
 public interface OptionValueView {
 
 	/**
-	 * Returns the option value id, the one {@link CombinationView#getOptionValueIds()} and
-	 * {@link com.logicommerce.sdk.models.basket.RowChange#getOptionValueIds()} use.
+	 * Returns the option value id, as used by {@link CombinationView#getOptionValueIds()}.
 	 *
 	 * @return the option value id
 	 */

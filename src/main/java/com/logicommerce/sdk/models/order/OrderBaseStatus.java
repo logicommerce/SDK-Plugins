@@ -47,15 +47,11 @@ public interface OrderBaseStatus<T> {
 	int getSubstatusId();
 
 	/**
-	 * Returns the status before this change. The platform records an entry only when the status changes, so the first
-	 * entry of a history has one too.
+	 * Returns the status before this change.
 	 *
-	 * <p>Filled only by {@link com.logicommerce.sdk.resources.OrderResource#getOrder(int)} and
-	 * {@link com.logicommerce.sdk.resources.OrderResource#getOrder(String)}: null in the orders hooks receive and in the
-	 * orders a plugin builds.</p>
+	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
-	 * @return the previous status, or null when the platform recorded none, when it has no counterpart in {@code T} (a
-	 *         shipment's {@code NONE}) or when not available
+	 * @return the previous status, or null when none was recorded or it has no counterpart in {@code T}
 	 * @since 2.8.5
 	 */
 	default T getFromStatus() {

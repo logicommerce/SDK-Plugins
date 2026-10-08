@@ -17,8 +17,7 @@ public interface OrderCreditNoteAmounts {
 	int getCreditNoteId();
 
 	/**
-	 * Returns the credited amount (the credit note's total), rounded once to minor units of
-	 * {@link OrderPurchaseCurrencyAmounts#getCurrencyCode()}.
+	 * Returns the credit note's total, in minor units.
 	 *
 	 * @return a non-negative amount
 	 */

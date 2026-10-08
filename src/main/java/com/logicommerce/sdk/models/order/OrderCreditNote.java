@@ -19,7 +19,7 @@ public interface OrderCreditNote {
 	int getId();
 
 	/**
-	 * Returns the credit note date, as stored (like {@link Document#getDate()}).
+	 * Returns the credit note date.
 	 *
 	 * @return the date
 	 */

@@ -31,7 +31,7 @@ public class CatalogQueryImpl implements CatalogQuery {
 	 * <p>Constructor for CatalogQueryImpl.</p>
 	 */
 	public CatalogQueryImpl() {
-		// fields are set with the setters; page defaults to 1 and perPage to 20, as in the builder
+		// fields are set with the setters
 	}
 
 	/** {@inheritDoc} */

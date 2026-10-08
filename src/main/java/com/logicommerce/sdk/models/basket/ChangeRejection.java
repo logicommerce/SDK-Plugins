@@ -3,9 +3,8 @@ package com.logicommerce.sdk.models.basket;
 import com.logicommerce.sdk.enums.RejectionCode;
 
 /**
- * <p>A requested basket change that could not be applied ({@link BasketView#getRejections()}). Everything valid in the
- * same call is applied: a rejection only concerns its own item. For {@link Target#CUSTOMER} that item is the email alone
- * ({@link RejectionCode#CUSTOMER_EMAIL_REGISTERED}): the names and phone of the same change are applied.</p>
+ * <p>A requested basket change that could not be applied ({@link BasketView#getRejections()}). The other valid
+ * changes of the same call are still applied.</p>
  *
  * @author Logicommerce
  * @since 2.8.5
@@ -45,10 +44,9 @@ public interface ChangeRejection {
 	Target getTarget();
 
 	/**
-	 * Returns, for a {@link Target#ROW}, the position of the row in the requested {@link BasketChanges#getRows()}
-	 * (starting at 0).
+	 * Returns, for a {@link Target#ROW}, the position of the row in the requested {@link BasketChanges#getRows()}.
 	 *
-	 * @return the position, or -1 for any other target
+	 * @return the 0-based position, or -1 for any other target
 	 */
 	int getIndex();
 
@@ -60,8 +58,7 @@ public interface ChangeRejection {
 	RejectionCode getCode();
 
 	/**
-	 * Returns diagnostic detail for logs, such as the name of the core error code that refused a row. Not meant to be
-	 * shown to buyers.
+	 * Returns diagnostic detail for logs, not meant to be shown to buyers.
 	 *
 	 * @return the detail, or null
 	 */

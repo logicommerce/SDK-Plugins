@@ -11,8 +11,8 @@ import java.util.List;
 public interface ProductPage {
 
 	/**
-	 * Returns the products of the page, in the search's order. In search results each product carries its featured
-	 * combination first and a capped number of other combinations.
+	 * Returns the products of the page, in the search's order. Each product carries its featured combination first and
+	 * a capped number of other combinations.
 	 *
 	 * @return the products, never null
 	 */

@@ -49,15 +49,11 @@ public interface OrderShipmentItem {
 	}
 
 	/**
-	 * Returns the hash of the order row this shipment item ships: the {@link OrderItem#getHash()} of a row of the order,
-	 * or of an item of a bundle row ({@link OrderItem#getBundleItems()}). Use it to find that row when
-	 * {@link #getOrderItemId()} is null or matches no row.
+	 * Returns the {@link OrderItem#getHash()} of the order row (or bundle item) this shipment item ships.
 	 *
-	 * <p>Filled only by {@link com.logicommerce.sdk.resources.OrderResource#getOrder(int)} and
-	 * {@link com.logicommerce.sdk.resources.OrderResource#getOrder(String)}: null in the orders hooks receive and in the
-	 * orders a plugin builds.</p>
+	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
-	 * @return the row hash, or null when the platform stored none or when not available
+	 * @return the row hash, or null when not available
 	 * @since 2.8.5
 	 */
 	default String getHash() {

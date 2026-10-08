@@ -212,19 +212,13 @@ public interface OrderItem {
 	String getSupplierReference();
 
 	/**
-	 * Returns the kind of row. The items of a bundle are not rows of the order: a bundle is one
-	 * {@link CartItemType#BUNDLE} row, whose {@link #getProductId()} is the bundle id and whose items are
-	 * {@link #getBundleItems()}, of type {@link CartItemType#BUNDLE_ITEM}. A {@link CartItemType#VOUCHER_PURCHASE} row is
-	 * the balance voucher product.
+	 * Returns the kind of row. A bundle is one {@link CartItemType#BUNDLE} row, whose {@link #getProductId()} is the
+	 * bundle id and whose items are {@link #getBundleItems()}.
 	 *
-	 * <p>Filled only by {@link com.logicommerce.sdk.resources.OrderResource#getOrder(int)} and
-	 * {@link com.logicommerce.sdk.resources.OrderResource#getOrder(String)}: null in the orders hooks receive and in the
-	 * orders a plugin builds.</p>
+	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
-	 * @return {@link CartItemType#PRODUCT}, {@link CartItemType#GIFT}, {@link CartItemType#BUNDLE},
-	 *         {@link CartItemType#LINKED}, {@link CartItemType#VOUCHER_PURCHASE} or
-	 *         {@link CartItemType#SELECTABLE_GIFT} for a row of the order, {@link CartItemType#BUNDLE_ITEM} for an item of
-	 *         {@link #getBundleItems()}; or null when not available
+	 * @return the row type ({@link CartItemType#BUNDLE_ITEM} only for an item of {@link #getBundleItems()}), or null
+	 *         when not available
 	 * @since 2.8.5
 	 */
 	default CartItemType getType() {
@@ -232,18 +226,12 @@ public interface OrderItem {
 	}
 
 	/**
-	 * Returns the items of a {@link CartItemType#BUNDLE} row, sorted by id. Each one is an {@link OrderItem} of type
-	 * {@link CartItemType#BUNDLE_ITEM} with its own id and hash (the ones the shipment items and the RMA items of its
-	 * units refer to: {@link OrderShipmentItem#getOrderItemId()}, {@link OrderShipmentItem#getHash()},
-	 * {@link OrderRMAItem#getHash()}) and with its quantity in the whole row: the bundle row's {@link #getQuantity()}
-	 * times the item's quantity per bundle. Its own {@link #getBundleItems()} is null.
+	 * Returns the items of a {@link CartItemType#BUNDLE} row, sorted by id. Each one has its own id and hash (referenced
+	 * by shipment and RMA items) and its quantity in the whole row, not per bundle.
 	 *
-	 * <p>Filled only by {@link com.logicommerce.sdk.resources.OrderResource#getOrder(int)} and
-	 * {@link com.logicommerce.sdk.resources.OrderResource#getOrder(String)}: null in the orders hooks receive and in the
-	 * orders a plugin builds.</p>
+	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
-	 * @return the bundle items of a {@link CartItemType#BUNDLE} row, or null for any other row type or when not
-	 *         available
+	 * @return the bundle items, or null for any other row type or when not available
 	 * @since 2.8.5
 	 */
 	default List<OrderItem> getBundleItems() {

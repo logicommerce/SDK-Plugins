@@ -6,13 +6,10 @@ import com.logicommerce.sdk.enums.CartItemType;
 /**
  * <p>A basket row ({@link BasketView#getRows()}).</p>
  *
- * <p>Amounts are minor units of the enclosing {@link BasketView#getCurrencyCode()}, gross or net per
- * {@link BasketView#isTaxesIncluded()}. Discount amounts are non-negative magnitudes, so
- * {@code getTotal() == getSubtotal() - sum(getDiscounts().amount)}.</p>
- *
- * <p>Unlike the usual LogiCommerce meaning of subtotal and total (without and with taxes, as in
- * {@link com.logicommerce.sdk.models.CartItem#getSubtotal()}), {@link #getSubtotal()} and {@link #getTotal()} are the
- * row amount before and after its discounts, both in the view's tax mode.</p>
+ * <p>Amounts are minor units of {@link BasketView#getCurrencyCode()}, gross or net per
+ * {@link BasketView#isTaxesIncluded()}. Unlike {@link com.logicommerce.sdk.models.CartItem},
+ * {@link #getSubtotal()} and {@link #getTotal()} are the row amount before and after its discounts, not without and
+ * with taxes.</p>
  *
  * @author Logicommerce
  * @since 2.8.5
@@ -20,36 +17,32 @@ import com.logicommerce.sdk.enums.CartItemType;
 public interface BasketRowView {
 
 	/**
-	 * Returns the row hash: an id computed from the product and its option values, independent of the quantity, stable
-	 * across recalculations and copied to the order rows (so an order row has the hash of the basket row).
+	 * Returns the row hash: computed from the product and its option values, stable across recalculations and copied
+	 * to the order rows.
 	 *
 	 * @return the row hash
 	 */
 	String getHash();
 
 	/**
-	 * Returns the product id. Every row type but {@link CartItemType#BUNDLE} is a product (a
-	 * {@link CartItemType#VOUCHER_PURCHASE} row is the balance voucher product); a bundle is identified by
-	 * {@link #getBundleId()}.
+	 * Returns the product id.
 	 *
-	 * @return the product id, or 0 for a {@link CartItemType#BUNDLE} row
+	 * @return the product id, or 0 for a {@link CartItemType#BUNDLE} row (see {@link #getBundleId()})
 	 */
 	int getProductId();
 
 	/**
-	 * Returns the ids of the row's combinable option values, sorted by option id. Non-combinable option values are not
-	 * listed.
+	 * Returns the ids of the row's combinable option values, sorted by option id.
 	 *
 	 * @return the option value ids, empty for a product without combinable options
 	 */
 	List<Integer> getOptionValueIds();
 
 	/**
-	 * Returns the kind of row. The items of a bundle are not rows of their own: a bundle is one
-	 * {@link CartItemType#BUNDLE} row, so {@link CartItemType#BUNDLE_ITEM} is never returned.
+	 * Returns the kind of row. A bundle is a single {@link CartItemType#BUNDLE} row, so
+	 * {@link CartItemType#BUNDLE_ITEM} is never returned.
 	 *
-	 * @return the row type: {@link CartItemType#PRODUCT}, {@link CartItemType#GIFT}, {@link CartItemType#BUNDLE},
-	 *         {@link CartItemType#LINKED}, {@link CartItemType#VOUCHER_PURCHASE} or {@link CartItemType#SELECTABLE_GIFT}
+	 * @return the row type
 	 */
 	CartItemType getType();
 
@@ -75,38 +68,36 @@ public interface BasketRowView {
 	String getImageUrl();
 
 	/**
-	 * Returns the quantity. Core never revises it: quantity and stock limits are reported as issues instead.
+	 * Returns the quantity. It is never revised: quantity and stock limits are reported as issues.
 	 *
 	 * @return the quantity
 	 */
 	long getQuantity();
 
 	/**
-	 * Returns the unit price, rounded once to minor units. An automatic gift ({@link CartItemType#GIFT}) carries the
-	 * product's real price, and a discount allocation of the same amount.
+	 * Returns the unit price. An automatic gift ({@link CartItemType#GIFT}) carries the product's real price and a
+	 * discount of the same amount.
 	 *
 	 * @return the unit price
 	 */
 	long getUnitPrice();
 
 	/**
-	 * Returns the unit price times the quantity, before discounts. It is not the amount without taxes: it follows
-	 * {@link BasketView#isTaxesIncluded()}.
+	 * Returns the unit price times the quantity.
 	 *
 	 * @return the subtotal, before discounts
 	 */
 	long getSubtotal();
 
 	/**
-	 * Returns the row's share of each discount applied to it, one entry per discount, each rounded once.
+	 * Returns the row's share of each discount applied to it.
 	 *
 	 * @return the allocations, empty when no discount applies to the row
 	 */
 	List<Allocation> getDiscounts();
 
 	/**
-	 * Returns the subtotal minus the row's discount allocations: the row amount after discounts. It is not the amount
-	 * with taxes: it follows {@link BasketView#isTaxesIncluded()}.
+	 * Returns the subtotal minus the row's discount allocations.
 	 *
 	 * @return the total, after discounts
 	 */
