@@ -27,15 +27,17 @@ public interface OrderResource {
 	 *
 	 * @param orderId an int
 	 * @return a {@link com.logicommerce.sdk.models.order.Order} object, or null if it does not exist
+	 * @throws PluginResourceException if any.
 	 */
-	Order getOrder(int orderId);
+	Order getOrder(int orderId) throws PluginResourceException;
 
 	/**
 	 * Returns the order with the given document number.
 	 *
 	 * @param documentNumber a {@link java.lang.String} object
 	 * @return a {@link com.logicommerce.sdk.models.order.Order} object, or null if it does not exist
+	 * @throws PluginResourceException if any.
 	 */
-	Order getOrder(String documentNumber);
+	Order getOrder(String documentNumber) throws PluginResourceException;
 
 }
