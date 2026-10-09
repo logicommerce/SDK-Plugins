@@ -79,6 +79,17 @@ public interface PropertyDefinition {
 	boolean isRequired();
 
 	/**
+	 * Determines if the property is read only. A read only property is displayed in the plugin
+	 * configuration on LogiCommerce backoffice but its value cannot be modified by the user.
+	 *
+	 * @since 2.8.5
+	 * @return a boolean
+	 */
+	default boolean isReadOnly() {
+		return false;
+	}
+
+	/**
 	 * Retrieves the default value of the property. The default value is a string that represents
 	 * the default value of the property.
 	 *

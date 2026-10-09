@@ -30,6 +30,14 @@ public interface SettingsResource {
 	String getApiFrontUrl();
 
 	/**
+	 * Returns the API plugins URL.
+	 *
+	 * @return the API plugins URL
+	 * @since 2.8.5
+	 */
+	String getApiPluginsUrl();
+
+	/**
 	 * Returns the environment id.
 	 *
 	 * @return the environment id

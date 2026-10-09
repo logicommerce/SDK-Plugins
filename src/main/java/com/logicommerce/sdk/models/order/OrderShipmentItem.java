@@ -36,4 +36,12 @@ public interface OrderShipmentItem {
 	 */
 	double getWeight();
 
+	/**
+	 * <p>getName.</p>
+	 *
+	 * @return a {@link java.lang.String} object
+	 * @since 2.8.5
+	 */
+	String getName();
+
 }

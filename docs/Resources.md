@@ -7,12 +7,15 @@ Los recursos se definen basándose en la anotación *@Resource* como propiedad d
 - *[Logger](APIReference/Resources/Logger.md)*: Para guardar logs.
 - *[Connection](APIReference/Resources/Connection.md)*: Para hacer peticiones http. Las peticiones devuelven un objeto de tipo Response.
 - *[Storage](APIReference/Resources/Storage.md)*: Para acceder y modificar datos persistentes del plugin para cada usuario.
+- *[SessionStorage](APIReference/Resources/SessionStorage.md)*: Para leer y escribir datos en la sesión de api-plugins, y para crear o eliminar la sesión.
 - *[UserData](APIReference/Resources/UserData.md)*: Este recurso permite leer y escribir datos únicos del plugin y del usuario login.
 - *[Navigator](APIReference/Resources/Navigator.md)*: Para acceder y modificar datos de navegación del usuario
 - *[Location](APIReference/Resources/Location.md)*:  Para acceder a datos de localización e idioma.
 - *[QueueSender](APIReference/Resources/QueueSender.md)*: Envía mensajes en una cola de procesos.
 - *[LocationResource](APIReference/Resources/LocationResource.md)*: Para acceder a datos de localización e idioma.
 - *[SettingsResource](APIReference/Resources/SettingsResource.md)*: Consulta los datos de configuración de la tienda.
+- *[OrderResource](APIReference/Resources/OrderResource.md)*: Consulta los pedidos de la tienda: listado paginado con filtros y detalle de un pedido por id o número de documento.
+- *[AtomicSharedStorage](APIReference/Resources/AtomicSharedStorage.md)*: Almacén de valores compartido por todos los nodos, con caducidad y operaciones atómicas, para coordinar peticiones simultáneas.
 
 ## Recursos de modelos
 
