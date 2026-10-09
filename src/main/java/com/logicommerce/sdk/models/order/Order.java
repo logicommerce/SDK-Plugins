@@ -25,7 +25,7 @@ public interface Order extends Document {
 	int getSubstatusId();
 
 	/**
-	 * Returns the total converted.
+	 * Returns the total converted for the payment system.
 	 * 
 	 * @return an {@link com.logicommerce.sdk.models.order.OrderTotalCurrency} object
 	 */

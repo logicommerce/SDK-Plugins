@@ -19,6 +19,8 @@ public class OrderShipmentItemBuilder<T> {
 
 	private double weight;
 
+	private String name;
+
 	/**
 	 * <p>Constructor for OrderShipmentItemBuilder.</p>
 	 */
@@ -67,6 +69,18 @@ public class OrderShipmentItemBuilder<T> {
 		this.weight = weight;
 		return this;
 	}
+
+	/**
+	 * <p>name.</p>
+	 *
+	 * @param name a {@link java.lang.String} object
+	 * @return a {@link com.logicommerce.sdk.builders.order.OrderShipmentItemBuilder} object
+	 * @since 2.8.5
+	 */
+	public OrderShipmentItemBuilder<T> name(String name) {
+		this.name = name;
+		return this;
+	}
 	
 	/**
 	 * <p>build.</p>
@@ -79,6 +93,7 @@ public class OrderShipmentItemBuilder<T> {
 		item.setQuantity(quantity);
 		item.setOrderItemId(orderItemId);
 		item.setWeight(weight);
+		item.setName(name);
 		return item;
 	}
 

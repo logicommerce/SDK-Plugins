@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Devuelve los datos de un pedido. *Order* llega como parámetro, nunca como *Resource*.
+Devuelve los datos de un pedido. *Order* llega como parámetro en los servicios de pedido, y también se puede consultar con *[OrderResource](../../Resources/OrderResource.md)*.
 Extiende de **[Document](./Document.md)**
 
 ## Métodos
