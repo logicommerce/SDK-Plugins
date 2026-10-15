@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Muestra los totales del pedido. Según configurada.
+Muestra los totales del pedido. Según moneda configurada en el sistema de pago.
 
 ## Métodos
 

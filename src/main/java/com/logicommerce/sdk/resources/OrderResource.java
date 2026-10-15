@@ -39,6 +39,7 @@ public interface OrderResource {
 	 * @throws PluginResourceException if the order cannot be read
 	 */
 	Order getOrder(int orderId) throws PluginResourceException;
+	Order getOrder(int orderId) throws PluginResourceException;
 
 	/**
 	 * Returns the order with the given document number, whatever its status.
@@ -48,6 +49,7 @@ public interface OrderResource {
 	 *         that document number
 	 * @throws PluginResourceException if the order cannot be read
 	 */
+	Order getOrder(String documentNumber) throws PluginResourceException;
 	Order getOrder(String documentNumber) throws PluginResourceException;
 
 }

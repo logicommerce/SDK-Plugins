@@ -7,6 +7,7 @@
 - [Connection](Connection.md)
 - [Logger](Logger.md)
 - [Navigator](Navigator.md)
+- [OrderResource](OrderResource.md)
 - [QueueSender](QueueSender.md)
 - [AtomicSharedStorage](AtomicSharedStorage.md)
 - [SessionStorage](SessionStorage.md)

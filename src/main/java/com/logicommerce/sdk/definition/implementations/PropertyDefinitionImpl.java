@@ -19,6 +19,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	private String identifier;
 	private String type;
 	private boolean required;
+	private boolean readOnly;
 	private String defaultValue;
 	private boolean languageValue;
 	private boolean multipleValue;
@@ -45,6 +46,12 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	@Override
 	public boolean isRequired() {
 		return required;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public boolean isReadOnly() {
+		return readOnly;
 	}
 
 	/** {@inheritDoc} */
@@ -126,6 +133,16 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 	 */
 	public void setRequired(boolean required) {
 		this.required = required;
+	}
+
+	/**
+	 * <p>Setter for the field <code>readOnly</code>.</p>
+	 *
+	 * @since 2.8.5
+	 * @param readOnly a boolean
+	 */
+	public void setReadOnly(boolean readOnly) {
+		this.readOnly = readOnly;
 	}
 
 	/**
@@ -216,6 +233,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 		private String identifier;
 		private String type;
 		private boolean required;
+		private boolean readOnly;
 		private String defaultValue;
 		private boolean languageValue;
 		private boolean multipleValue;
@@ -251,6 +269,11 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 
 		public Builder<T> required(boolean required) {
 			this.required = required;
+			return this;
+		}
+
+		public Builder<T> readOnly(boolean readOnly) {
+			this.readOnly = readOnly;
 			return this;
 		}
 
@@ -304,6 +327,7 @@ public class PropertyDefinitionImpl implements PropertyDefinition {
 			propertyDefinition.setIdentifier(identifier);
 			propertyDefinition.setType(type);
 			propertyDefinition.setRequired(required);
+			propertyDefinition.setReadOnly(readOnly);
 			propertyDefinition.setDefaultValue(defaultValue);
 			propertyDefinition.setLanguageValue(languageValue);
 			propertyDefinition.setMultipleValue(multipleValue);
