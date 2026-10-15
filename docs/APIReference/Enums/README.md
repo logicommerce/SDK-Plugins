@@ -113,6 +113,12 @@ Tipo de dato de un **[ProductCustomTag](../Models/Product/ProductCustomTag.md)**
 - UNKNOWN
 - VIES_VALIDATOR
 
+## CustomerType
+
+- INDIVIDUAL
+- COMPANY
+- FREELANCE
+
 ## DeliveryType
 
 - SHIPPING
