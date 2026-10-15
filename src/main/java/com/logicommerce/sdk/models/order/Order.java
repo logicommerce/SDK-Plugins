@@ -39,7 +39,7 @@ public interface Order extends Document {
 	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
 	 * @return true when prices include taxes, or null when not available
-	 * @since 2.8.5
+	 * @since 2.8.6
 	 */
 	default Boolean isTaxesIncluded() {
 		return null;
@@ -51,7 +51,7 @@ public interface Order extends Document {
 	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
 	 * @return the purchase currency amounts, or null when not available
-	 * @since 2.8.5
+	 * @since 2.8.6
 	 */
 	default OrderPurchaseCurrencyAmounts getPurchaseCurrencyAmounts() {
 		return null;
@@ -63,7 +63,7 @@ public interface Order extends Document {
 	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
 	 * @return the RMAs, or null when not available
-	 * @since 2.8.5
+	 * @since 2.8.6
 	 */
 	default List<OrderRMA> getRMAs() {
 		return null;
@@ -76,7 +76,7 @@ public interface Order extends Document {
 	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
 	 * @return the credit notes, or null when not available
-	 * @since 2.8.5
+	 * @since 2.8.6
 	 */
 	default List<OrderCreditNote> getCreditNotes() {
 		return null;
@@ -88,7 +88,7 @@ public interface Order extends Document {
 	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
 	 * @return an absolute URL, or null when not available
-	 * @since 2.8.5
+	 * @since 2.8.6
 	 */
 	default String getPermalinkUrl() {
 		return null;

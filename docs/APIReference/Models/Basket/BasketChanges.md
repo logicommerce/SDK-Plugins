@@ -6,7 +6,7 @@ Cambios que se aplican a una cesta en una sola llamada (*create* y *apply*). Cad
 cesta como está. Orden de aplicación: país e idioma, filas, cliente, códigos de vale y la regla de la moneda; después la
 cesta se recalcula una vez y se guarda.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

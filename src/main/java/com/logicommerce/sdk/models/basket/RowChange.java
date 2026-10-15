@@ -11,7 +11,7 @@ import java.util.List;
  * no row), it adds the product. Identical rows are merged.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public interface RowChange {
 

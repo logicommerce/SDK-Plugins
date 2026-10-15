@@ -4,7 +4,7 @@ package com.logicommerce.sdk.models.basket;
  * <p>One row's share of one discount, seen from the discount ({@link AppliedDiscountView#getRows()}).</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public interface RowAllocation {
 

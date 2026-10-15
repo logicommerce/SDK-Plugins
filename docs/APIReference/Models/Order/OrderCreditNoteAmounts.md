@@ -5,7 +5,7 @@
 Importe de una factura rectificativa del pedido en su moneda de compra (*getCreditNotes()* de
 *[OrderPurchaseCurrencyAmounts](OrderPurchaseCurrencyAmounts.md)*).
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

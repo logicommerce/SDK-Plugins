@@ -7,7 +7,7 @@ una fila del pedido (*getItems()* de *[Document](Document.md)*) o, para las unid
 de lote (*getBundleItems()* de *[OrderItem](OrderItem.md)*), cuya cantidad devuelta cuenta unidades de ese elemento, no
 lotes completos.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

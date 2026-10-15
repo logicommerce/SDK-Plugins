@@ -5,7 +5,7 @@
 Resultado de un código de vale (un código de descuento o un código de vale de saldo) en una cesta (*getVoucherCodes()*
 de *[BasketView](BasketView.md)*).
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

@@ -3,7 +3,7 @@ package com.logicommerce.sdk.enums;
 /**
  * <p>OrderStatusType class.</p>
  *
- * <p>{@link #PENDING_APPROVAL} was added in 2.8.5 before {@link #CONFIRM_DELETED}, shifting its ordinal: do not rely
+ * <p>{@link #PENDING_APPROVAL} was added in 2.8.6 before {@link #CONFIRM_DELETED}, shifting its ordinal: do not rely
  * on the ordinals.</p>
  *
  * @author Logicommerce
@@ -19,7 +19,7 @@ public enum OrderStatusType {
 	/**
 	 * The order waits for the approval of an account manager (B2B approval flows). It has no document number yet.
 	 *
-	 * @since 2.8.5
+	 * @since 2.8.6
 	 */
 	PENDING_APPROVAL,
 	CONFIRM_DELETED;

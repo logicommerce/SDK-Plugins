@@ -10,7 +10,7 @@ import com.logicommerce.sdk.models.basket.Allocation;
  * subtotal and total are the row amount before and after its discounts, not without and with taxes.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public interface OrderItemAmounts {
 

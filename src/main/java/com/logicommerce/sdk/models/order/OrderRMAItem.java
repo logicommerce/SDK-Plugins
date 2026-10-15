@@ -7,7 +7,7 @@ package com.logicommerce.sdk.models.order;
  * units of that item.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public interface OrderRMAItem {
 

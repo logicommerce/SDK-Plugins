@@ -2,7 +2,7 @@
 
 Recurso para buscar y leer productos tal como los ve un invitado de un país, idioma y moneda explícitos.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 La plataforma construye el contexto de precios y visibilidad solo a partir del
 *[CatalogContext](../Models/Catalog/CatalogContext.md)* (como para una cesta de invitado transitoria que nunca se

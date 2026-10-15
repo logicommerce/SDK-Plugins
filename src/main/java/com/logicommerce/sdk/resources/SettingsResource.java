@@ -50,7 +50,7 @@ public interface SettingsResource {
 	 *
 	 * @return an absolute URL (scheme, host and an optional path) without a trailing slash, or null when the platform
 	 *         does not provide it
-	 * @since 2.8.5
+	 * @since 2.8.6
 	 */
 	default String getDefaultStoreUrl() {
 		return null;

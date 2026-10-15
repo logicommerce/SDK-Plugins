@@ -5,7 +5,7 @@
 Precio mínimo y máximo de un producto del catálogo entre sus combinaciones (*[ProductView](ProductView.md)*:
 *getPriceRange()* y *getPreviousPriceRange()*). Los dos precios están en la misma moneda.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

@@ -3,7 +3,7 @@
 Recurso para crear, leer, modificar y eliminar cestas de invitado del comercio a partir de su token, desde cualquier
 petición del plugin y sin que la cesta sea la sesión de esa petición.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 Todos los métodos trabajan en un contexto que la plataforma reconstruye a partir de la cesta (su país, idioma, moneda y
 cliente) y del *[ClientInfo](../Models/Basket/ClientInfo.md)* recibido, nunca a partir de las cabeceras de la petición

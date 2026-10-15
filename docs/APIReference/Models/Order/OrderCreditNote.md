@@ -5,7 +5,7 @@
 Factura rectificativa emitida para un pedido (*getCreditNotes()* de *[Order](Order.md)*). Su importe está en
 *getCreditNotes()* de *[OrderPurchaseCurrencyAmounts](OrderPurchaseCurrencyAmounts.md)*.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

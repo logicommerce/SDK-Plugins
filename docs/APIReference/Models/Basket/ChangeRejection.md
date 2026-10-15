@@ -8,7 +8,7 @@ teléfono del mismo cambio sí se escriben.
 
 El enumerado anidado *ChangeRejection.Target* indica a qué se refiere: *ROW* (una fila pedida), *CUSTOMER* (el cliente), *COUNTRY* o *CURRENCY*.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

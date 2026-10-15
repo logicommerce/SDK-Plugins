@@ -12,7 +12,7 @@ cada total como la suma de sus partes redondeadas (ver *[TotalsView](../Basket/T
 impuestos según *isTaxesIncluded()* de *Order*, y el total es el importe que cobró la plataforma. Las listas nunca son
 *null*.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

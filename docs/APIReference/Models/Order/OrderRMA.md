@@ -4,7 +4,7 @@
 
 Devolución (RMA) de un pedido (*getRMAs()* de *[Order](Order.md)*).
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

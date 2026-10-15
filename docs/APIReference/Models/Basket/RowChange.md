@@ -11,7 +11,7 @@ mismas opciones pedido dos veces acaba en una sola fila.
 la implementación, y una petición con una fila que no los cumple lanza *IllegalArgumentException* antes de aplicar
 ningún cambio. *RowChangeImpl* empieza con *getOptionValueIds()* vacía y su setter trata *null* como vacía.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

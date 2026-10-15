@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.catalog.CatalogContext;
  * @see com.logicommerce.sdk.builders.catalog.CatalogContextBuilder
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public class CatalogContextImpl implements CatalogContext {
 

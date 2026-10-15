@@ -8,7 +8,7 @@ import java.util.List;
  * size out of range makes {@code search} throw {@link IllegalArgumentException}.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public interface CatalogQuery {
 

@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.basket.ClientInfo;
  * @see com.logicommerce.sdk.builders.basket.BasketContextBuilder
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public class BasketContextImpl implements BasketContext {
 

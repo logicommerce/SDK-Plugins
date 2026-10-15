@@ -8,7 +8,7 @@ import java.util.Map;
  * with {@link com.logicommerce.sdk.builders.basket.BasketChangesBuilder}.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public interface BasketChanges {
 

@@ -7,7 +7,7 @@ package com.logicommerce.sdk.enums;
  * reported as {@link com.logicommerce.sdk.models.basket.VoucherCodeResult}, not with these codes.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public enum RejectionCode {
 	/**

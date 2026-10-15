@@ -8,7 +8,7 @@ import com.logicommerce.sdk.models.basket.implementations.BasketContextImpl;
  * <p>Builder of {@link BasketContext}.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public class BasketContextBuilder {
 

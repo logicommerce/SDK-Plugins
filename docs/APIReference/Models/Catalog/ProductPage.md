@@ -4,7 +4,7 @@
 
 Página de resultados de una búsqueda.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

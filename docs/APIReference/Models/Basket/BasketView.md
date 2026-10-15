@@ -13,7 +13,7 @@ llevan impuestos o no según *isTaxesIncluded()*.
 Después de *create* y *apply* la vista refleja el recálculo de la llamada; después de *get* es la cesta tal como se
 guardó por última vez, nunca recalculada. Las listas nunca son *null*.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

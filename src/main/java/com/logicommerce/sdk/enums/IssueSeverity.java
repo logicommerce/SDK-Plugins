@@ -6,7 +6,7 @@ package com.logicommerce.sdk.enums;
  * <p>Returned by {@link com.logicommerce.sdk.models.basket.BasketIssue#getSeverity()}.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public enum IssueSeverity {
 	/**

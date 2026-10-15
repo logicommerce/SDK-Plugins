@@ -25,8 +25,8 @@ existe o pertenece a otro comercio). Cualquier otro fallo (el pedido no se puede
 inexistente.
 
 Cada llamada devuelve un *Order* nuevo, leído de la base de datos, nunca la instancia que recibe un hook. Además de los
-datos que recibe un hook, ese pedido incluye las propiedades que solo rellena este recurso (en los pedidos que reciben
-los hooks y en los que construye un plugin son *null*):
+datos que recibe un hook, ese pedido incluye las propiedades que solo rellena este recurso (*disponibles desde la versión
+2.8.6*; en los pedidos que reciben los hooks y en los que construye un plugin son *null*):
 
 - *[Order](../Models/Order/Order.md)*: *isTaxesIncluded()*, *getPurchaseCurrencyAmounts()* (los importes en unidades
   menores de la moneda de compra, ver *[OrderPurchaseCurrencyAmounts](../Models/Order/OrderPurchaseCurrencyAmounts.md)*),

@@ -15,7 +15,7 @@ import java.util.List;
  * combination's {@link CombinationView#getPrice()} are never null.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public interface ProductView {
 

@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
  * {@link OrderPurchaseCurrencyAmounts#getCreditNotes()}.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public interface OrderCreditNote {
 

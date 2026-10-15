@@ -11,7 +11,7 @@ Extiende de **[Document](./Document.md)**
 - **int** getSubstatusId()
 - **[OrderTotalCurrency](./OrderTotalCurrency.md)** getTotalCurrency()
 
-Propiedades opcionales (*disponibles desde la versión 2.8.5*). Solo las rellena
+Propiedades opcionales (*disponibles desde la versión 2.8.6*). Solo las rellena
 *[OrderResource](../../Resources/OrderResource.md)*: son *null* en los pedidos que reciben los hooks y en los que
 construye un plugin.
 

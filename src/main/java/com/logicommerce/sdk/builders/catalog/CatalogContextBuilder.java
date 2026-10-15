@@ -8,7 +8,7 @@ import com.logicommerce.sdk.models.catalog.implementations.CatalogContextImpl;
  * <p>Builder of {@link CatalogContext}.</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public class CatalogContextBuilder {
 

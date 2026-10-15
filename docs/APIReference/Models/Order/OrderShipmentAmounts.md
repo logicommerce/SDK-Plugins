@@ -6,7 +6,7 @@ Importes de envío de un envío del pedido en su moneda de compra (*getShipments
 *[OrderPurchaseCurrencyAmounts](OrderPurchaseCurrencyAmounts.md)*). Son unidades menores de la moneda de compra, con o
 sin impuestos según *isTaxesIncluded()* de *[Order](Order.md)*.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

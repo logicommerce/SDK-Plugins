@@ -6,7 +6,7 @@ import java.util.List;
  * <p>One page of catalog search results ({@link com.logicommerce.sdk.resources.CatalogResource#search search}).</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public interface ProductPage {
 

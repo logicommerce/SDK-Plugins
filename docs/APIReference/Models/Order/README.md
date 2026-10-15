@@ -33,7 +33,7 @@
 
 ## Propiedades de OrderResource
 
-*Disponibles desde la versión 2.8.5.* Solo las rellena [OrderResource](../../Resources/OrderResource.md).
+*Disponibles desde la versión 2.8.6.* Solo las rellena [OrderResource](../../Resources/OrderResource.md).
 
 - [OrderPurchaseCurrencyAmounts](OrderPurchaseCurrencyAmounts.md)
 - [OrderItemAmounts](OrderItemAmounts.md)

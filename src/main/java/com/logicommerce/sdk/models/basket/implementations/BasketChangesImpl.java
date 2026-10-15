@@ -12,7 +12,7 @@ import com.logicommerce.sdk.models.basket.RowChange;
  * @see com.logicommerce.sdk.builders.basket.BasketChangesBuilder
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public class BasketChangesImpl implements BasketChanges {
 

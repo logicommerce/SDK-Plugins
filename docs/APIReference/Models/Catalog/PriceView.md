@@ -4,7 +4,7 @@
 
 Importe con su moneda, usado donde pueden convivir importes de varias monedas (el catálogo).
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

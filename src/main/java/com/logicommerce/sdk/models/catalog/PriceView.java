@@ -4,7 +4,7 @@ package com.logicommerce.sdk.models.catalog;
  * <p>An amount with its currency, used where amounts of several currencies can coexist (the catalog).</p>
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public interface PriceView {
 

@@ -7,7 +7,7 @@ impuestos de core (tipo, tipo de recargo de equivalencia e impuesto). El recargo
 propia: se suma a la entrada de su impuesto, cuyo tipo es entonces el tipo del impuesto más el del recargo y cuyo
 importe incluye el recargo; la entrada conserva el nombre del impuesto.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

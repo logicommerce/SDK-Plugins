@@ -4,7 +4,7 @@
 
 Opción combinable de un producto, con sus valores activos.
 
-*Disponible desde la versión 2.8.5.*
+*Disponible desde la versión 2.8.6.*
 
 ## Métodos
 

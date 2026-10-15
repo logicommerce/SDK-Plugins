@@ -8,7 +8,7 @@ import com.logicommerce.sdk.models.basket.ClientInfo;
  * @see com.logicommerce.sdk.builders.basket.ClientInfoBuilder
  *
  * @author Logicommerce
- * @since 2.8.5
+ * @since 2.8.6
  */
 public class ClientInfoImpl implements ClientInfo {
 
