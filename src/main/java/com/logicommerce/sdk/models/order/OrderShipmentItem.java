@@ -37,11 +37,28 @@ public interface OrderShipmentItem {
 	double getWeight();
 
 	/**
-	 * <p>getName.</p>
+	 * Returns the name of the shipped item, as stored in the shipment.
 	 *
-	 * @return a {@link java.lang.String} object
+	 * <p>A default method since 2.9.0 (abstract in 2.8.5): implementations written before 2.8.5 do not override it and
+	 * return null.</p>
+	 *
+	 * @return the item name, or null when not available
 	 * @since 2.8.5
 	 */
-	String getName();
+	default String getName() {
+		return null;
+	}
+
+	/**
+	 * Returns the {@link OrderItem#getHash()} of the order row (or bundle item) this shipment item ships.
+	 *
+	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
+	 *
+	 * @return the row hash, or null when not available
+	 * @since 2.9.0
+	 */
+	default String getHash() {
+		return null;
+	}
 
 }

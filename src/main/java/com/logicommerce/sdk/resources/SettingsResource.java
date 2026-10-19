@@ -43,4 +43,16 @@ public interface SettingsResource {
 	 * @return the environment id
 	 */
 	Integer getEnvironmentId();
+
+	/**
+	 * Returns the commerce's default store URL, independent of the caller's request (unlike
+	 * {@link Navigator#getStoreUrl()}).
+	 *
+	 * @return an absolute URL (scheme, host and an optional path) without a trailing slash, or null when the platform
+	 *         does not provide it
+	 * @since 2.9.0
+	 */
+	default String getDefaultStoreUrl() {
+		return null;
+	}
 }

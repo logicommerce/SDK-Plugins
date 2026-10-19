@@ -30,3 +30,15 @@
 - [OrderUser](OrderUser.md)
 - [OrderVoucher](OrderVoucher.md)
 - [GeographicalZone](GeographicalZone.md)
+
+## Propiedades de OrderResource
+
+*Disponibles desde la versión 2.9.0.* Solo las rellena [OrderResource](../../Resources/OrderResource.md).
+
+- [OrderPurchaseCurrencyAmounts](OrderPurchaseCurrencyAmounts.md)
+- [OrderItemAmounts](OrderItemAmounts.md)
+- [OrderShipmentAmounts](OrderShipmentAmounts.md)
+- [OrderCreditNoteAmounts](OrderCreditNoteAmounts.md)
+- [OrderRMA](OrderRMA.md)
+- [OrderRMAItem](OrderRMAItem.md)
+- [OrderCreditNote](OrderCreditNote.md)

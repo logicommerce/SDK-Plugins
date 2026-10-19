@@ -64,6 +64,50 @@
 - [OrderUser](Order/OrderUser.md)
 - [OrderVoucher](Order/OrderVoucher.md)
 
+Propiedades de pedido que solo rellena [OrderResource](../Resources/OrderResource.md) (*disponibles desde la versión 2.9.0*):
+
+- [OrderPurchaseCurrencyAmounts](Order/OrderPurchaseCurrencyAmounts.md)
+- [OrderItemAmounts](Order/OrderItemAmounts.md)
+- [OrderShipmentAmounts](Order/OrderShipmentAmounts.md)
+- [OrderCreditNoteAmounts](Order/OrderCreditNoteAmounts.md)
+- [OrderRMA](Order/OrderRMA.md)
+- [OrderRMAItem](Order/OrderRMAItem.md)
+- [OrderCreditNote](Order/OrderCreditNote.md)
+
+## [Basket](Basket/)
+
+Modelos de `com.logicommerce.sdk.models.basket`, usados por [BasketResource](../Resources/BasketResource.md). *Disponibles desde la versión 2.9.0.*
+
+- [BasketView](Basket/BasketView.md)
+- [BasketRowView](Basket/BasketRowView.md)
+- [Allocation](Basket/Allocation.md)
+- [RowAllocation](Basket/RowAllocation.md)
+- [AppliedDiscountView](Basket/AppliedDiscountView.md)
+- [VoucherCodeResult](Basket/VoucherCodeResult.md)
+- [TotalsView](Basket/TotalsView.md)
+- [AppliedTaxView](Basket/AppliedTaxView.md)
+- [CustomerView](Basket/CustomerView.md)
+- [BasketIssue](Basket/BasketIssue.md)
+- [ChangeRejection](Basket/ChangeRejection.md)
+- [BasketContext](Basket/BasketContext.md)
+- [ClientInfo](Basket/ClientInfo.md)
+- [BasketChanges](Basket/BasketChanges.md)
+- [RowChange](Basket/RowChange.md)
+- [CustomerChange](Basket/CustomerChange.md)
+
+## [Catalog](Catalog/)
+
+Modelos de `com.logicommerce.sdk.models.catalog`, usados por [CatalogResource](../Resources/CatalogResource.md). *Disponibles desde la versión 2.9.0.*
+
+- [CatalogContext](Catalog/CatalogContext.md)
+- [CatalogQuery](Catalog/CatalogQuery.md)
+- [ProductPage](Catalog/ProductPage.md)
+- [ProductView](Catalog/ProductView.md)
+- [OptionView](Catalog/OptionView.md)
+- [OptionValueView](Catalog/OptionValueView.md)
+- [CombinationView](Catalog/CombinationView.md)
+- [PriceView](Catalog/PriceView.md)
+
 ## [Payment](Payment/)
 
 - [Payment](Payment/Payment.md)

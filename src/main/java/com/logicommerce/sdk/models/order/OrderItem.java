@@ -2,6 +2,7 @@ package com.logicommerce.sdk.models.order;
 
 import java.util.List;
 import com.logicommerce.sdk.enums.BackorderMode;
+import com.logicommerce.sdk.enums.CartItemType;
 import com.logicommerce.sdk.models.CustomTag;
 import com.logicommerce.sdk.models.RowCodes;
 
@@ -209,4 +210,31 @@ public interface OrderItem {
 	 * @return a {@link java.lang.String} object
 	 */
 	String getSupplierReference();
+
+	/**
+	 * Returns the kind of row. A bundle is one {@link CartItemType#BUNDLE} row, whose {@link #getProductId()} is the
+	 * bundle id and whose items are {@link #getBundleItems()}.
+	 *
+	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
+	 *
+	 * @return the row type ({@link CartItemType#BUNDLE_ITEM} only for an item of {@link #getBundleItems()}), or null
+	 *         when not available
+	 * @since 2.9.0
+	 */
+	default CartItemType getType() {
+		return null;
+	}
+
+	/**
+	 * Returns the items of a {@link CartItemType#BUNDLE} row, sorted by id. Each one has its own id and hash (referenced
+	 * by shipment and RMA items) and its quantity in the whole row, not per bundle.
+	 *
+	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
+	 *
+	 * @return the bundle items, or null for any other row type or when not available
+	 * @since 2.9.0
+	 */
+	default List<OrderItem> getBundleItems() {
+		return null;
+	}
 }
