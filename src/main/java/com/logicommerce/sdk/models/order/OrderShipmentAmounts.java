@@ -8,7 +8,7 @@ import com.logicommerce.sdk.models.basket.Allocation;
  * ({@link OrderPurchaseCurrencyAmounts#getShipments()}).</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface OrderShipmentAmounts {
 

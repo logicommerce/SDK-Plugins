@@ -5,7 +5,7 @@ package com.logicommerce.sdk.models.basket;
  * client is never treated as a bot. Build it with {@link com.logicommerce.sdk.builders.basket.ClientInfoBuilder}.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface ClientInfo {
 

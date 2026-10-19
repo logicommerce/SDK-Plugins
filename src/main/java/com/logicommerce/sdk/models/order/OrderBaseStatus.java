@@ -52,7 +52,7 @@ public interface OrderBaseStatus<T> {
 	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
 	 * @return the previous status, or null when none was recorded or it has no counterpart in {@code T}
-	 * @since 2.8.6
+	 * @since 2.9.0
 	 */
 	default T getFromStatus() {
 		return null;

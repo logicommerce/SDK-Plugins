@@ -33,7 +33,7 @@ Devuelve el pedido completo con el número de documento indicado, sea cual sea s
 
 Los dos *getOrder* devuelven `null` solo cuando el comercio no tiene ningún pedido con ese id o número de documento. Cualquier otro fallo (el pedido no se puede leer o convertir) lanza *[PluginResourceException](PluginResourceException.md)*, de forma que quien llama nunca confunde un fallo con un pedido inexistente.
 
-Cada llamada devuelve un *[Order](../Models/Order/Order.md)* nuevo, leído de la base de datos, nunca la instancia que recibe un hook. Además de los datos que recibe un hook, ese pedido incluye las propiedades que solo rellena este recurso (disponibles desde la versión **2.8.6** del SDK; en los pedidos que reciben los hooks y en los que construye un plugin son `null`):
+Cada llamada devuelve un *[Order](../Models/Order/Order.md)* nuevo, leído de la base de datos, nunca la instancia que recibe un hook. Además de los datos que recibe un hook, ese pedido incluye las propiedades que solo rellena este recurso (disponibles desde la versión **2.9.0** del SDK; en los pedidos que reciben los hooks y en los que construye un plugin son `null`):
 
 - *[Order](../Models/Order/Order.md)*: *isTaxesIncluded()*, *getPurchaseCurrencyAmounts()* (los importes en unidades menores de la moneda de compra, ver *[OrderPurchaseCurrencyAmounts](../Models/Order/OrderPurchaseCurrencyAmounts.md)*), *getRMAs()*, *getCreditNotes()* y *getPermalinkUrl()*.
 - *[OrderItem](../Models/Order/OrderItem.md)*: *getType()* y *getBundleItems()*.

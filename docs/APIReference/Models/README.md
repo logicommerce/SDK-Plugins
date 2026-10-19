@@ -64,7 +64,7 @@
 - [OrderUser](Order/OrderUser.md)
 - [OrderVoucher](Order/OrderVoucher.md)
 
-Propiedades de pedido que solo rellena [OrderResource](../Resources/OrderResource.md) (*disponibles desde la versión 2.8.6*):
+Propiedades de pedido que solo rellena [OrderResource](../Resources/OrderResource.md) (*disponibles desde la versión 2.9.0*):
 
 - [OrderPurchaseCurrencyAmounts](Order/OrderPurchaseCurrencyAmounts.md)
 - [OrderItemAmounts](Order/OrderItemAmounts.md)
@@ -76,7 +76,7 @@ Propiedades de pedido que solo rellena [OrderResource](../Resources/OrderResourc
 
 ## [Basket](Basket/)
 
-Modelos de `com.logicommerce.sdk.models.basket`, usados por [BasketResource](../Resources/BasketResource.md). *Disponibles desde la versión 2.8.6.*
+Modelos de `com.logicommerce.sdk.models.basket`, usados por [BasketResource](../Resources/BasketResource.md). *Disponibles desde la versión 2.9.0.*
 
 - [BasketView](Basket/BasketView.md)
 - [BasketRowView](Basket/BasketRowView.md)
@@ -97,7 +97,7 @@ Modelos de `com.logicommerce.sdk.models.basket`, usados por [BasketResource](../
 
 ## [Catalog](Catalog/)
 
-Modelos de `com.logicommerce.sdk.models.catalog`, usados por [CatalogResource](../Resources/CatalogResource.md). *Disponibles desde la versión 2.8.6.*
+Modelos de `com.logicommerce.sdk.models.catalog`, usados por [CatalogResource](../Resources/CatalogResource.md). *Disponibles desde la versión 2.9.0.*
 
 - [CatalogContext](Catalog/CatalogContext.md)
 - [CatalogQuery](Catalog/CatalogQuery.md)

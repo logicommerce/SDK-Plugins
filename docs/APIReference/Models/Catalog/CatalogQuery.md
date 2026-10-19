@@ -4,7 +4,7 @@
 
 Búsqueda en el catálogo. Los filtros *null* o vacíos no se aplican. La constante `MAX_PER_PAGE` (100) es el tamaño de página máximo. El builder valida la página; la plataforma la vuelve a validar sea cual sea la implementación, y una página o un tamaño fuera de rango hacen que *search* lance *IllegalArgumentException*. *CatalogQueryImpl* empieza con página 1 y tamaño 20, como el builder.
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

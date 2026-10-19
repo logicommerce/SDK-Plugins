@@ -6,7 +6,7 @@ Cliente del comprador, tal como lo conoce el plugin (por ejemplo a partir de las
 La plataforma lo usa en lugar de las cabeceras de la petición al reconstruir el contexto de la cesta, y nunca lo trata
 como un bot.
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

@@ -9,7 +9,7 @@ campo que falla.
 El conflicto de email registrado no es un aviso: la plataforma no guarda ese email, así que lo informa la llamada que
 intentó ponerlo, como rechazo `CUSTOMER_EMAIL_REGISTERED` (*[ChangeRejection](ChangeRejection.md)*).
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

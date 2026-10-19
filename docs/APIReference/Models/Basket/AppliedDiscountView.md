@@ -12,7 +12,7 @@ Todo descuento al que se refiere algún *[Allocation](Allocation.md)* de la vist
 descuentos de la vista, incluido el descuento automático que hace gratuita una fila de regalo (como descuento *PRODUCT*
 asignado a esa fila).
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

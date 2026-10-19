@@ -39,7 +39,7 @@ public enum CartItemType {
 	/**
 	 * Indicates that the item is a gift the buyer selected among the ones a discount offers.
 	 *
-	 * @since 2.8.6
+	 * @since 2.9.0
 	 */
 	SELECTABLE_GIFT
 }

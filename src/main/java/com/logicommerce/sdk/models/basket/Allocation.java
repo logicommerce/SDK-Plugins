@@ -6,7 +6,7 @@ package com.logicommerce.sdk.models.basket;
  * {@link AppliedDiscountView#getAmount()}.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface Allocation {
 

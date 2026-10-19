@@ -4,7 +4,7 @@
 
 Contexto en el que se crea una cesta con *create*. Sustituye lo que la plataforma tomaría de las cabeceras y cookies de la petición.
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

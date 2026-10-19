@@ -8,7 +8,7 @@ import com.logicommerce.sdk.models.basket.CustomerChange;
  * @see com.logicommerce.sdk.builders.basket.CustomerChangeBuilder
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public class CustomerChangeImpl implements CustomerChange {
 

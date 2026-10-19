@@ -8,7 +8,7 @@ package com.logicommerce.sdk.services;
  * that provides this service is notified.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface BasketTokenService extends PluginService {
 
@@ -26,7 +26,7 @@ public interface BasketTokenService extends PluginService {
 	 * @param previousToken the token the basket had before the rotation
 	 * @param newToken the token the basket has from now on
 	 * @throws com.logicommerce.sdk.services.PluginServiceException if any.
-	 * @since 2.8.6
+	 * @since 2.9.0
 	 */
 	void tokenRotated(String previousToken, String newToken) throws PluginServiceException;
 

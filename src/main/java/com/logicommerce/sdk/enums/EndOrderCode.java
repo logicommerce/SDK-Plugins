@@ -6,7 +6,7 @@ package com.logicommerce.sdk.enums;
  * {@code EndOrderCode.valueOf(issue.getCode())} never fails. Every failing field is reported as its own issue.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public enum EndOrderCode {
 	/**

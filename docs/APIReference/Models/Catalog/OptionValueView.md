@@ -4,7 +4,7 @@
 
 Valor de una opción combinable.
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

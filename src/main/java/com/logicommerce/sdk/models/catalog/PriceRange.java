@@ -6,7 +6,7 @@ package com.logicommerce.sdk.models.catalog;
  * currency.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface PriceRange {
 

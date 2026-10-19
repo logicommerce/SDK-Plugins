@@ -1,6 +1,6 @@
 # Models - Catalog
 
-Modelos de `com.logicommerce.sdk.models.catalog`, usados por [CatalogResource](../../Resources/CatalogResource.md). *Disponibles desde la versión 2.8.6.*
+Modelos de `com.logicommerce.sdk.models.catalog`, usados por [CatalogResource](../../Resources/CatalogResource.md). *Disponibles desde la versión 2.9.0.*
 
 - [PriceView](PriceView.md)
 - [PriceRange](PriceRange.md)

@@ -6,7 +6,7 @@ package com.logicommerce.sdk.enums;
  * <p>Returned by {@link com.logicommerce.sdk.models.order.OrderRMA#getStatus()}.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public enum RMAStatusType {
 	/**

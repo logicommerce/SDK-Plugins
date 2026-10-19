@@ -18,7 +18,7 @@ A diferencia del significado habitual en LogiCommerce de subtotal y total (sin y
 impuestos de la vista (con impuestos si los precios de la vista los incluyen), y *getTotal()* es el importe a pagar
 después de todos los descuentos.
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

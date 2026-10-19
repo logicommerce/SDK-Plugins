@@ -15,7 +15,7 @@ y *getPrice()* y *getPreviousPrice()* de cada combinación también son *null*, 
 *null*, se pueda pedir o no el
 producto. Quien no deba listar productos sin precio omite los que tienen *getPriceRange()* a *null*.
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

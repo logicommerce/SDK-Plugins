@@ -5,7 +5,7 @@
 Parte de un descuento que corresponde a una fila, vista desde el descuento: el mismo importe que el
 *[Allocation](Allocation.md)* de ese descuento en esa fila.
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

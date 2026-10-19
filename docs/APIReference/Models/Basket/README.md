@@ -1,6 +1,6 @@
 # Models - Basket
 
-Modelos de `com.logicommerce.sdk.models.basket`, usados por [BasketResource](../../Resources/BasketResource.md) (y algunos también por [OrderResource](../../Resources/OrderResource.md)). *Disponibles desde la versión 2.8.6.*
+Modelos de `com.logicommerce.sdk.models.basket`, usados por [BasketResource](../../Resources/BasketResource.md) (y algunos también por [OrderResource](../../Resources/OrderResource.md)). *Disponibles desde la versión 2.9.0.*
 
 - [BasketView](BasketView.md)
 - [BasketRowView](BasketRowView.md)

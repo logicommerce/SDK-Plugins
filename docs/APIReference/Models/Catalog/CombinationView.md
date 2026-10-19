@@ -18,7 +18,7 @@ combinaciones que se pueden pedir en este sentido; se añade desde la tienda.
 Los precios son los que calcularía la cesta para el mismo contexto, con o sin impuestos según
 *ProductView.isTaxesIncluded()*. Todos los precios de una misma llamada a *CatalogResource* están en la misma moneda.
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

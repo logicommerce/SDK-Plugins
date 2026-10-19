@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.catalog.implementations.CatalogQueryImpl;
  * <p>Builder of {@link CatalogQuery}.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public class CatalogQueryBuilder {
 

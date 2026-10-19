@@ -7,7 +7,7 @@ import com.logicommerce.sdk.enums.RejectionCode;
  * changes of the same call are still applied.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface ChangeRejection {
 
@@ -15,7 +15,7 @@ public interface ChangeRejection {
 	 * <p>The part of the requested changes a rejection refers to.</p>
 	 *
 	 * @author Logicommerce
-	 * @since 2.8.6
+	 * @since 2.9.0
 	 */
 	enum Target {
 		/**

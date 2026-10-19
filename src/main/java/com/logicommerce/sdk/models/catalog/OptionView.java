@@ -6,7 +6,7 @@ import java.util.List;
  * <p>A combinable option of a catalog product ({@link ProductView#getOptions()}), with its active values.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface OptionView {
 

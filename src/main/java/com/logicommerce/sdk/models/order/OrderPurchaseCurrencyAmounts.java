@@ -12,7 +12,7 @@ import com.logicommerce.sdk.models.basket.TotalsView;
  * gross or net per {@link Order#isTaxesIncluded()}. Lists are never null.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface OrderPurchaseCurrencyAmounts {
 

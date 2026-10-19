@@ -6,7 +6,7 @@ Contexto de las lecturas de *[CatalogResource](../../Resources/CatalogResource.m
 filtra el catálogo exactamente como para una cesta de invitado con el mismo país, idioma, moneda y cliente, sin leer las
 cabeceras de la petición ni la cesta de la petición.
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

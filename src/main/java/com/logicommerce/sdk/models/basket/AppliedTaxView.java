@@ -5,7 +5,7 @@ package com.logicommerce.sdk.models.basket;
  * the entry of its tax: its rate and amount include the surcharge.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface AppliedTaxView {
 

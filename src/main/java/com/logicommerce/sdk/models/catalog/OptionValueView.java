@@ -4,7 +4,7 @@ package com.logicommerce.sdk.models.catalog;
  * <p>A value of a combinable option ({@link OptionView#getValues()}).</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface OptionValueView {
 

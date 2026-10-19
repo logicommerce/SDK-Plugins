@@ -7,7 +7,7 @@ import com.logicommerce.sdk.enums.VoucherCodeStatus;
  * ({@link BasketView#getVoucherCodes()}).</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface VoucherCodeResult {
 

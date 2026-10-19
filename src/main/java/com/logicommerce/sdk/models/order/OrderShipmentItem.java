@@ -39,7 +39,7 @@ public interface OrderShipmentItem {
 	/**
 	 * Returns the name of the shipped item, as stored in the shipment.
 	 *
-	 * <p>A default method since 2.8.6 (abstract in 2.8.5): implementations written before 2.8.5 do not override it and
+	 * <p>A default method since 2.9.0 (abstract in 2.8.5): implementations written before 2.8.5 do not override it and
 	 * return null.</p>
 	 *
 	 * @return the item name, or null when not available
@@ -55,7 +55,7 @@ public interface OrderShipmentItem {
 	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
 	 * @return the row hash, or null when not available
-	 * @since 2.8.6
+	 * @since 2.9.0
 	 */
 	default String getHash() {
 		return null;

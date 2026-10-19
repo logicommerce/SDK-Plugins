@@ -28,7 +28,7 @@ import com.logicommerce.sdk.models.catalog.ProductView;
  * </pre>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface CatalogResource {
 

@@ -9,7 +9,7 @@ import com.logicommerce.sdk.models.basket.RowChange;
  * @see com.logicommerce.sdk.builders.basket.RowChangeBuilder
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public class RowChangeImpl implements RowChange {
 

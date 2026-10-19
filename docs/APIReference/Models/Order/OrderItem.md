@@ -35,7 +35,7 @@ Elemento del pedido. Forma parte de Order en forma de lista.
 - **Integer** getCombinationId()
 - **String** getSupplierReference()
 
-Propiedades opcionales (*disponibles desde la versión 2.8.6*). Solo las rellena
+Propiedades opcionales (*disponibles desde la versión 2.9.0*). Solo las rellena
 *[OrderResource](../../Resources/OrderResource.md)*: son *null* en los pedidos que reciben los hooks y en los que
 construye un plugin.
 

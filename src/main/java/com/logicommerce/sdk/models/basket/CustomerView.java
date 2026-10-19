@@ -4,7 +4,7 @@ package com.logicommerce.sdk.models.basket;
  * <p>The customer data of a basket or an order. Every field is null when unknown.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface CustomerView {
 

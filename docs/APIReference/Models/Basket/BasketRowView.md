@@ -11,7 +11,7 @@ A diferencia del significado habitual en LogiCommerce de subtotal y total (sin y
 *[CartItem](../CartItem.md)*), aquí *getSubtotal()* y *getTotal()* son el importe de la fila antes y después de sus
 descuentos, los dos en el modo de impuestos de la vista.
 
-*Disponible desde la versión 2.8.6.*
+*Disponible desde la versión 2.9.0.*
 
 ## Métodos
 

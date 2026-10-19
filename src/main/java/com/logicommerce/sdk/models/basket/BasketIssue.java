@@ -11,7 +11,7 @@ import com.logicommerce.sdk.enums.IssueSource;
  * warning that affects several rows is reported once per row; a failing order-time check once per failing field.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public interface BasketIssue {
 

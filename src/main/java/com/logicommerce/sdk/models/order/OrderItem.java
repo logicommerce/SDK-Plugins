@@ -219,7 +219,7 @@ public interface OrderItem {
 	 *
 	 * @return the row type ({@link CartItemType#BUNDLE_ITEM} only for an item of {@link #getBundleItems()}), or null
 	 *         when not available
-	 * @since 2.8.6
+	 * @since 2.9.0
 	 */
 	default CartItemType getType() {
 		return null;
@@ -232,7 +232,7 @@ public interface OrderItem {
 	 * <p>Only filled by {@link com.logicommerce.sdk.resources.OrderResource}; null otherwise.</p>
 	 *
 	 * @return the bundle items, or null for any other row type or when not available
-	 * @since 2.8.6
+	 * @since 2.9.0
 	 */
 	default List<OrderItem> getBundleItems() {
 		return null;

@@ -12,7 +12,7 @@ import com.logicommerce.sdk.models.basket.implementations.BasketChangesImpl;
  * <p>Builder of {@link BasketChanges}.</p>
  *
  * @author Logicommerce
- * @since 2.8.6
+ * @since 2.9.0
  */
 public class BasketChangesBuilder {
 
