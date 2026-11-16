@@ -13,6 +13,16 @@
 - PAYMENT
 - VOUCHER
 
+## ApiPluginsAuthenticationType
+
+*Disponible desde la versión 2.9.1.* Tipo de la definición de autenticación de api-plugins que ha autenticado una petición (ver **[PluginEndpointRequest](../Models/PluginEndpointRequest.md)**).
+
+- HEADER: credencial en una cabecera.
+- QUERY_PARAM: credencial en un parámetro de la URL.
+- JWT: JWT de LogiCommerce, por ejemplo el que usa la tienda con api-front.
+- PLUGIN_SESSION: token de una sesión del plugin.
+- PATH_PREFIX: credencial en la ruta.
+
 ## BackorderMode
 
 - NONE
@@ -86,6 +96,7 @@ Tipo de dato de un **[ProductCustomTag](../Models/Product/ProductCustomTag.md)**
 - DOCUMENT_PAYMENT_SYSTEM
 - DOCUMENT_SHIPMENT
 - EXPRESS_CHECKOUT
+- HELPDESK: plugins de atención al cliente (helpdesk). *Disponible desde la versión 2.9.1.*
 - INVOICE
 - MAILING_SYSTEM
 - MAILER
@@ -293,6 +304,14 @@ SDK anterior, lanza una excepción cuando encuentra la nueva constante.
 - CURRENCY_NOT_AVAILABLE: la moneda sugerida no está disponible
 - COUNTRY_NOT_COMMERCE: el país no es del comercio; se usa el país por defecto
 - CUSTOMER_EMAIL_REGISTERED: el email es de una cuenta registrada. Solo se rechaza el email: no se escribe y se borra el email que tuviera la cesta, porque la petición lo sustituía; el nombre, los apellidos y el teléfono del mismo *CustomerChange* sí se escriben
+
+## RegisteredUserAccountStatus
+
+*Disponible desde la versión 2.9.1.* Estado de un usuario registrado en una de sus cuentas (*[RegisteredUserAccount](../Models/User/RegisteredUserAccount.md)*).
+
+- ENABLED
+- DISABLED
+- PENDING_APPROVAL: pendiente de que la cuenta apruebe al usuario
 
 ## RelatedItemType
 

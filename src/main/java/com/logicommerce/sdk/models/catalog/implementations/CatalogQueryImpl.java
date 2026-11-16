@@ -13,7 +13,7 @@ import com.logicommerce.sdk.models.catalog.CatalogQuery;
  */
 public class CatalogQueryImpl implements CatalogQuery {
 
-	private String text;
+	private String search;
 
 	private List<String> categoryNamePaths;
 
@@ -36,17 +36,17 @@ public class CatalogQueryImpl implements CatalogQuery {
 
 	/** {@inheritDoc} */
 	@Override
-	public String getText() {
-		return text;
+	public String getSearch() {
+		return search;
 	}
 
 	/**
-	 * <p>Setter for the field <code>text</code>.</p>
+	 * <p>Setter for the field <code>search</code>.</p>
 	 *
-	 * @param text the free text to search, or null
+	 * @param search the free text to search, or null
 	 */
-	public void setText(String text) {
-		this.text = text;
+	public void setSearch(String search) {
+		this.search = search;
 	}
 
 	/** {@inheritDoc} */

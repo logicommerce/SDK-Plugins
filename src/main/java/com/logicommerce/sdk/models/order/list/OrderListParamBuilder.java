@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models.order.list;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import com.logicommerce.sdk.enums.OrderStatusType;
@@ -26,6 +27,10 @@ public class OrderListParamBuilder {
 	private String search;
 
 	private List<OrderStatusType> statuses = new ArrayList<>();
+
+	private LocalDateTime fromDate;
+
+	private LocalDateTime toDate;
 
 	/**
 	 * Sets the page number, starting at 1.
@@ -116,6 +121,30 @@ public class OrderListParamBuilder {
 	}
 
 	/**
+	 * Sets the minimum order date, inclusive.
+	 *
+	 * @param fromDate a {@link java.time.LocalDateTime} object
+	 * @return a {@link OrderListParamBuilder} object
+	 * @since 2.9.1
+	 */
+	public OrderListParamBuilder fromDate(LocalDateTime fromDate) {
+		this.fromDate = fromDate;
+		return this;
+	}
+
+	/**
+	 * Sets the maximum order date, inclusive.
+	 *
+	 * @param toDate a {@link java.time.LocalDateTime} object
+	 * @return a {@link OrderListParamBuilder} object
+	 * @since 2.9.1
+	 */
+	public OrderListParamBuilder toDate(LocalDateTime toDate) {
+		this.toDate = toDate;
+		return this;
+	}
+
+	/**
 	 * Builds a {@link OrderListParam} object.
 	 *
 	 * @return a {@link OrderListParam} object
@@ -129,6 +158,8 @@ public class OrderListParamBuilder {
 		param.setUserId(userId);
 		param.setSearch(search);
 		param.setStatuses(new ArrayList<>(statuses));
+		param.setFromDate(fromDate);
+		param.setToDate(toDate);
 		return param;
 	}
 

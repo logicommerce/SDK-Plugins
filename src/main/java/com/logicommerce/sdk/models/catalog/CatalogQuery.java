@@ -18,11 +18,13 @@ public interface CatalogQuery {
 	int MAX_PER_PAGE = 100;
 
 	/**
-	 * Returns the free text to search (names, keywords, SKU, EAN, brand).
+	 * Returns the free text to search (names, keywords, SKU, EAN, brand). Leading and trailing spaces are ignored, and a
+	 * blank text does not filter.
 	 *
 	 * @return the text, or null
+	 * @since 2.9.1
 	 */
-	String getText();
+	String getSearch();
 
 	/**
 	 * Returns the categories to filter by, as name paths in the context's language joined by {@code " > "} (for

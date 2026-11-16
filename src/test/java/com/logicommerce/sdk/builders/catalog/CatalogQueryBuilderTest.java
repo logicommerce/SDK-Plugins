@@ -16,7 +16,7 @@ class CatalogQueryBuilderTest {
 	void defaultsToTheFirstPage() {
 		CatalogQuery query = new CatalogQueryBuilder().build();
 
-		assertNull(query.getText());
+		assertNull(query.getSearch());
 		assertNull(query.getCategoryNamePaths());
 		assertNull(query.getFromPrice());
 		assertNull(query.getToPrice());
@@ -28,7 +28,7 @@ class CatalogQueryBuilderTest {
 	@Test
 	void buildsEveryField() {
 		CatalogQuery query = new CatalogQueryBuilder()
-			.text("shirt")
+			.search("shirt")
 			.categoryNamePaths(List.of("Apparel > Shirts"))
 			.fromPrice(1000L)
 			.toPrice(5000L)
@@ -37,7 +37,7 @@ class CatalogQueryBuilderTest {
 			.perPage(CatalogQuery.MAX_PER_PAGE)
 			.build();
 
-		assertEquals("shirt", query.getText());
+		assertEquals("shirt", query.getSearch());
 		assertEquals(List.of("Apparel > Shirts"), query.getCategoryNamePaths());
 		assertEquals(1000L, query.getFromPrice());
 		assertEquals(5000L, query.getToPrice());

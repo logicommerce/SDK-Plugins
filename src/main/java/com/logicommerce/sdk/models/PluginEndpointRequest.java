@@ -2,6 +2,7 @@ package com.logicommerce.sdk.models;
 
 import java.util.List;
 import java.util.Map;
+import com.logicommerce.sdk.enums.ApiPluginsAuthenticationType;
 
 /**
  * <p>PluginEndpointRequest interface.</p>
@@ -45,5 +46,17 @@ public interface PluginEndpointRequest {
 	 * @return a {@link java.util.Map Map} object
 	 **/
 	Map<String, List<String>> getQueryParams();
+
+	/**
+	 * <p>getAuthenticationType. Type of the api-plugins authentication definition that authenticated the request.
+	 * It is set by LogiCommerce, so the caller cannot forge it. Use it to restrict endpoints to a kind of caller,
+	 * for example JWT for the storefront and HEADER for a third party.</p>
+	 *
+	 * @return the {@link ApiPluginsAuthenticationType}, or null when it is unknown
+	 * @since 2.9.1
+	 **/
+	default ApiPluginsAuthenticationType getAuthenticationType() {
+		return null;
+	}
 
 }

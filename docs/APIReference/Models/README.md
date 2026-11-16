@@ -31,6 +31,13 @@
 - [UserDataProperty](UserDataProperty.md)
 - [WidgetResponse](WidgetResponse.md)
 
+## [Document](Document/)
+
+- [CustomerDocument](Document/CustomerDocument.md)
+- [CustomerDocumentListParam](Document/CustomerDocumentListParam.md)
+- [DocumentCustomer](Document/DocumentCustomer.md)
+- [DocumentItem](Document/DocumentItem.md)
+
 ## [Order](Order/)
 
 - [Order](Order/Order.md)
@@ -97,7 +104,7 @@ Modelos de `com.logicommerce.sdk.models.basket`, usados por [BasketResource](../
 
 ## [Catalog](Catalog/)
 
-Modelos de `com.logicommerce.sdk.models.catalog`, usados por [CatalogResource](../Resources/CatalogResource.md). *Disponibles desde la versión 2.9.0.*
+Modelos de `com.logicommerce.sdk.models.catalog`, usados por [CatalogResource](../Resources/CatalogResource.md). *Disponibles desde la versión 2.9.0.* En la 2.9.1, el texto de [CatalogQuery](Catalog/CatalogQuery.md) pasa de *getText()* a *getSearch()*.
 
 - [CatalogContext](Catalog/CatalogContext.md)
 - [CatalogQuery](Catalog/CatalogQuery.md)
@@ -135,11 +142,25 @@ Modelos de `com.logicommerce.sdk.models.product`, usados por [ProductIntegration
 - [CustomTagGroup](Product/CustomTagGroup.md)
 - [Language](Product/Language.md)
 
+## [RMA](RMA/)
+
+- [RMA](RMA/RMA.md)
+- [RMAItem](RMA/RMAItem.md)
+
 ## [RewardPoints](RewardPoints/)
 
 - [RewardPointsBalance](RewardPoints/RewardPointsBalance.md)
 - [RewardPointsDiscount](RewardPoints/RewardPointsDiscount.md)
 - [RewardPointsDiscountResponse](RewardPoints/RewardPointsDiscountResponse.md)
+
+## [Shipment](Shipment/)
+
+- [Shipment](Shipment/Shipment.md)
+
+## [User](User/)
+
+- [RegisteredUser](User/RegisteredUser.md)
+- [RegisteredUserAccount](User/RegisteredUserAccount.md)
 
 ## [Validator](Validator/)
 

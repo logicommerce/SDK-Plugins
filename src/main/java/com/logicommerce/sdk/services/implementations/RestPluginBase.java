@@ -3,6 +3,7 @@ package com.logicommerce.sdk.services.implementations;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Map;
+import com.logicommerce.sdk.enums.ApiPluginsAuthenticationType;
 import com.logicommerce.sdk.lib.router.RestRouter;
 import com.logicommerce.sdk.lib.router.RouterClientException;
 import com.logicommerce.sdk.models.PluginEndpointRequest;
@@ -122,6 +123,16 @@ public abstract class RestPluginBase implements ApiPluginsService {
 	 */
 	protected String getBody() {
 		return currentRequest.getBody();
+	}
+
+	/**
+	 * Get the type of the api-plugins authentication definition that authenticated the current request.
+	 *
+	 * @return the {@link ApiPluginsAuthenticationType}, or null when it is unknown
+	 * @since 2.9.1
+	 */
+	protected ApiPluginsAuthenticationType getAuthenticationType() {
+		return currentRequest.getAuthenticationType();
 	}
 
 	/**
