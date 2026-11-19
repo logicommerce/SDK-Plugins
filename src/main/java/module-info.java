@@ -26,6 +26,10 @@ module com.logicommerce.sdk {
 	exports com.logicommerce.sdk.models.basket.implementations;
 	exports com.logicommerce.sdk.models.catalog;
 	exports com.logicommerce.sdk.models.catalog.implementations;
+	exports com.logicommerce.sdk.models.document;
+	exports com.logicommerce.sdk.models.rma;
+	exports com.logicommerce.sdk.models.shipment;
+	exports com.logicommerce.sdk.models.user;
 	exports com.logicommerce.sdk.enums;
 	exports com.logicommerce.sdk.builders;
 	exports com.logicommerce.sdk.builders.order;

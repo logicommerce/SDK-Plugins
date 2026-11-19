@@ -2,6 +2,7 @@ package com.logicommerce.sdk.models.implementations;
 
 import java.util.List;
 import java.util.Map;
+import com.logicommerce.sdk.enums.ApiPluginsAuthenticationType;
 import com.logicommerce.sdk.models.PluginEndpointRequest;
 
 /**
@@ -21,7 +22,9 @@ public class PluginEndpointRequestImpl implements PluginEndpointRequest {
 	private Map<String, List<String>> queryParams;
 
 	private Map<String, List<String>> headers;
-	
+
+	private ApiPluginsAuthenticationType authenticationType;
+
 	public PluginEndpointRequestImpl() {}
 
 	public PluginEndpointRequestImpl(
@@ -36,6 +39,18 @@ public class PluginEndpointRequestImpl implements PluginEndpointRequest {
 		this.body = body;
 		this.queryParams = queryParams;
 		this.headers = headers;
+	}
+
+	public PluginEndpointRequestImpl(
+		String httpMethod,
+		String path,
+		String body,
+		Map<String, List<String>> queryParams,
+		Map<String, List<String>> headers,
+		ApiPluginsAuthenticationType authenticationType
+	) {
+		this(httpMethod, path, body, queryParams, headers);
+		this.authenticationType = authenticationType;
 	}
 
 	/** {@inheritDoc} */
@@ -66,6 +81,12 @@ public class PluginEndpointRequestImpl implements PluginEndpointRequest {
 	@Override
 	public Map<String, List<String>> getHeaders() {
 		return headers;
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public ApiPluginsAuthenticationType getAuthenticationType() {
+		return authenticationType;
 	}
 
 }

@@ -31,12 +31,22 @@ Los precios son *[PriceView](../Models/Catalog/PriceView.md)*: importe entero en
 @Resource
 private CatalogResource catalogResource;
 
+CatalogContext context = new CatalogContextBuilder()
+	.countryCode("ES")
+	.languageCode("es")
+	.currencyHint("EUR")
+	.build();
+ProductPage page = catalogResource.search(new CatalogQueryBuilder()
+	.search("camiseta")
+	.perPage(10)
+	.build(), context);
+
 ```
 
 ## Métodos disponibles
 
 - ProductPage search(CatalogQuery query, CatalogContext context): Busca en el catálogo
-  (*[CatalogQuery](../Models/Catalog/CatalogQuery.md)*: texto, categorías, rango de precios y página) y devuelve la
+  (*[CatalogQuery](../Models/Catalog/CatalogQuery.md)*: texto a buscar (*getSearch()*), categorías, rango de precios y página) y devuelve la
   página pedida (*[ProductPage](../Models/Catalog/ProductPage.md)*). Cada producto lleva su combinación destacada primero
   y un número limitado de combinaciones más; su rango de precios (*getPriceRange()*) cubre igualmente todas sus
   combinaciones.

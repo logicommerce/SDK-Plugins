@@ -4,11 +4,11 @@
 
 Búsqueda en el catálogo. Los filtros *null* o vacíos no se aplican. La constante `MAX_PER_PAGE` (100) es el tamaño de página máximo. El builder valida la página; la plataforma la vuelve a validar sea cual sea la implementación, y una página o un tamaño fuera de rango hacen que *search* lance *IllegalArgumentException*. *CatalogQueryImpl* empieza con página 1 y tamaño 20, como el builder.
 
-*Disponible desde la versión 2.9.0.*
+*Disponible desde la versión 2.9.0.* En la versión 2.9.1, *getText()* pasa a llamarse *getSearch()* (y el método *text* del builder, *search*); un plugin que use los nombres anteriores debe cambiarlos al actualizar el SDK.
 
 ## Métodos
 
-- **String** getText(): texto libre: la búsqueda de productos de la plataforma (nombres, palabras clave, SKU, EAN, marca), que un plugin *SearchProductsService* puede sustituir.
+- **String** getSearch(): texto libre a buscar con la búsqueda de productos de la plataforma (nombres, palabras clave, SKU, EAN, marca), que un plugin *SearchProductsService* puede sustituir. Se ignoran los espacios del principio y del final; un texto *null* o en blanco no filtra. *Desde la versión 2.9.1; antes, getText().*
 - **List<String>** getCategoryNamePaths(): categorías como rutas de nombres en el idioma del contexto, desde la raíz y unidos por `" > "` (`"Ropa > Camisas"`). Se comparan sin distinguir mayúsculas; un solo nombre encaja con todas las categorías con ese nombre; una ruta que no encaja con ninguna categoría no encaja con ningún producto.
 - **Long** getFromPrice(): precio mínimo en unidades menores de *getPriceCurrencyCode()*. Un mínimo de 0 o menos no pone límite inferior.
 - **Long** getToPrice(): precio máximo en unidades menores de *getPriceCurrencyCode()*. Un máximo de 0 o menos deja solo los productos gratuitos.
@@ -20,4 +20,19 @@ Búsqueda en el catálogo. Los filtros *null* o vacíos no se aplican. La consta
 
 **CatalogQueryBuilder** (`com.logicommerce.sdk.builders.catalog`) devuelve una implementación de **CatalogQuery**.
 
-Métodos del builder: text, categoryNamePaths, fromPrice, toPrice, priceCurrencyCode, page (por defecto 1), perPage (por defecto 20) y *build()*. *build()* lanza *IllegalArgumentException* si la página o el tamaño están fuera de rango, o si una ruta de categoría es *null*.
+Métodos del builder: search, categoryNamePaths, fromPrice, toPrice, priceCurrencyCode, page (por defecto 1), perPage (por defecto 20) y *build()*. *build()* lanza *IllegalArgumentException* si la página o el tamaño están fuera de rango, o si una ruta de categoría es *null*.
+
+## Ejemplo
+
+```java
+CatalogQuery query = new CatalogQueryBuilder()
+	.search("camiseta")
+	.categoryNamePaths(List.of("Ropa > Camisetas"))
+	.fromPrice(1000L)
+	.toPrice(5000L)
+	.priceCurrencyCode("EUR")
+	.page(1)
+	.perPage(10)
+	.build();
+ProductPage page = catalogResource.search(query, context);
+```

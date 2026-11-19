@@ -15,6 +15,8 @@ Disponible desde la versión **2.8.5** del SDK.
 - **Integer** getUserId(): Id del usuario propietario de los pedidos.
 - **String** getSearch(): Texto de búsqueda. Actualmente se compara con el email del cliente.
 - **List<[OrderStatusType](../../Enums/README.md#OrderStatusType)>** getStatuses(): Estados por los que filtrar. Si contiene varios, devuelve los pedidos que estén en cualquiera de ellos.
+- **LocalDateTime** getFromDate(): Fecha mínima del pedido, inclusiva. Disponible desde la versión **2.9.1**.
+- **LocalDateTime** getToDate(): Fecha máxima del pedido, inclusiva. Disponible desde la versión **2.9.1**.
 
 Cada getter tiene su setter correspondiente.
 
@@ -36,6 +38,8 @@ Métodos del builder:
 - search(String search): Texto de búsqueda (email del cliente).
 - statuses(List<OrderStatusType> statuses): Sustituye la lista de estados.
 - addStatus(OrderStatusType status): Añade un estado a la lista.
+- fromDate(LocalDateTime fromDate): Filtra los pedidos con fecha igual o posterior.
+- toDate(LocalDateTime toDate): Filtra los pedidos con fecha igual o anterior.
 - build(): Devuelve el **OrderListParam**.
 
 ```java
@@ -43,6 +47,8 @@ OrderListParam param = new OrderListParamBuilder()
 	.search("customer@example.com")
 	.addStatus(OrderStatusType.INCOMING)
 	.addStatus(OrderStatusType.IN_PROCESS)
+	.fromDate(LocalDateTime.of(2026, 1, 1, 0, 0))
+	.toDate(LocalDateTime.of(2026, 1, 31, 23, 59, 59))
 	.perPage(10)
 	.build();
 ```

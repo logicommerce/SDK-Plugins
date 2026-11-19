@@ -18,7 +18,10 @@
 - [BasketResource](BasketResource.md)
 - [CatalogResource](CatalogResource.md)
 - [OrderResource](OrderResource.md)
+- [RMAResource](RMAResource.md)
 - [SettingsResource](SettingsResource.md)
+- [ShipmentResource](ShipmentResource.md)
+- [UserResource](UserResource.md)
 
 ## Exceptions
 

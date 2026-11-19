@@ -12,6 +12,10 @@ import com.logicommerce.sdk.models.order.list.OrderListParam;
  * the properties that hooks do not receive (such as {@link Order#getPurchaseCurrencyAmounts()} or
  * {@link Order#getRMAs()}).</p>
  *
+ * <p>The id of each RMA of the order ({@link com.logicommerce.sdk.models.order.OrderRMA#getId()}) reads the whole RMA
+ * with {@link RMAResource#getRMA(int)}, and the id of each shipment
+ * ({@link com.logicommerce.sdk.models.order.OrderShipment#getId()}) reads it with {@link ShipmentResource#getShipment(int)}.</p>
+ *
  * <p>The order's {@link com.logicommerce.sdk.models.order.Document#getAdditionalInformation() properties} include those
  * of every plugin, so a value under one of a plugin's property names may not have been added by that plugin. Adding a
  * property to the returned order stores nothing.</p>

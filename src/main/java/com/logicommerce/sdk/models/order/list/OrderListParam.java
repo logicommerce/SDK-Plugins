@@ -1,5 +1,6 @@
 package com.logicommerce.sdk.models.order.list;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import com.logicommerce.sdk.enums.OrderStatusType;
@@ -22,6 +23,10 @@ public class OrderListParam extends PaginationParam {
 	private String search;
 
 	private List<OrderStatusType> statuses = new ArrayList<>();
+
+	private LocalDateTime fromDate;
+
+	private LocalDateTime toDate;
 
 	/**
 	 * Returns the order id.
@@ -111,6 +116,46 @@ public class OrderListParam extends PaginationParam {
 	 */
 	public void setStatuses(List<OrderStatusType> statuses) {
 		this.statuses = statuses;
+	}
+
+	/**
+	 * Returns the minimum order date, inclusive. A null value does not filter.
+	 *
+	 * @return a {@link java.time.LocalDateTime} object
+	 * @since 2.9.1
+	 */
+	public LocalDateTime getFromDate() {
+		return fromDate;
+	}
+
+	/**
+	 * Sets the minimum order date, inclusive. A null value does not filter.
+	 *
+	 * @param fromDate a {@link java.time.LocalDateTime} object
+	 * @since 2.9.1
+	 */
+	public void setFromDate(LocalDateTime fromDate) {
+		this.fromDate = fromDate;
+	}
+
+	/**
+	 * Returns the maximum order date, inclusive. A null value does not filter.
+	 *
+	 * @return a {@link java.time.LocalDateTime} object
+	 * @since 2.9.1
+	 */
+	public LocalDateTime getToDate() {
+		return toDate;
+	}
+
+	/**
+	 * Sets the maximum order date, inclusive. A null value does not filter.
+	 *
+	 * @param toDate a {@link java.time.LocalDateTime} object
+	 * @since 2.9.1
+	 */
+	public void setToDate(LocalDateTime toDate) {
+		this.toDate = toDate;
 	}
 
 }

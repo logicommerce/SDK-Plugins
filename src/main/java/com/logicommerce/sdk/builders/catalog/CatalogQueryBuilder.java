@@ -13,7 +13,7 @@ import com.logicommerce.sdk.models.catalog.implementations.CatalogQueryImpl;
  */
 public class CatalogQueryBuilder {
 
-	private String text;
+	private String search;
 
 	private List<String> categoryNamePaths;
 
@@ -35,13 +35,14 @@ public class CatalogQueryBuilder {
 	}
 
 	/**
-	 * <p>Sets <code>text</code>.</p>
+	 * <p>Sets <code>search</code>.</p>
 	 *
-	 * @param text the free text to search, or null
+	 * @param search the free text to search, or null
 	 * @return this builder
+	 * @since 2.9.1
 	 */
-	public CatalogQueryBuilder text(String text) {
-		this.text = text;
+	public CatalogQueryBuilder search(String search) {
+		this.search = search;
 		return this;
 	}
 
@@ -128,7 +129,7 @@ public class CatalogQueryBuilder {
 			throw new IllegalArgumentException("categoryNamePaths must not contain null");
 		}
 		CatalogQueryImpl result = new CatalogQueryImpl();
-		result.setText(text);
+		result.setSearch(search);
 		result.setCategoryNamePaths(categoryNamePaths == null ? null : List.copyOf(categoryNamePaths));
 		result.setFromPrice(fromPrice);
 		result.setToPrice(toPrice);

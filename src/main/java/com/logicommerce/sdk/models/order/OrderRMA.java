@@ -7,6 +7,9 @@ import com.logicommerce.sdk.enums.RMAStatusType;
 /**
  * <p>A return merchandise authorization (RMA) of an order ({@link Order#getRMAs()}).</p>
  *
+ * <p>It is a summary of the RMA. {@link com.logicommerce.sdk.resources.RMAResource#getRMA(int)} with
+ * {@link #getId()} returns the whole {@link com.logicommerce.sdk.models.rma.RMA}.</p>
+ *
  * @author Logicommerce
  * @since 2.9.0
  */
@@ -18,6 +21,14 @@ public interface OrderRMA {
 	 * @return the id
 	 */
 	int getId();
+
+	/**
+	 * Returns the RMA document number, the one {@link com.logicommerce.sdk.resources.RMAResource#getRMA(String)} finds.
+	 *
+	 * @return the document number, or null when the RMA has none
+	 * @since 2.9.1
+	 */
+	String getDocumentNumber();
 
 	/**
 	 * Returns the RMA status.

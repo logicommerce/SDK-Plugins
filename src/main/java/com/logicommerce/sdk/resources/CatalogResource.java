@@ -35,7 +35,7 @@ public interface CatalogResource {
 	/**
 	 * Searches the catalog.
 	 *
-	 * @param query the text, filters and page
+	 * @param query the search text, filters and page
 	 * @param context the country, language, currency hint and client
 	 * @return the requested page
 	 * @throws PluginResourceException if the catalog cannot be read
