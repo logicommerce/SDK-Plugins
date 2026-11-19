@@ -165,4 +165,47 @@ public interface Connection {
 	 */
 	Connection sslProtocol(SslProtocol sslProtocol);
 
+	/**
+	 * Sends a POST request with a multipart/form-data body. The Content-Type header is set from the body
+	 * and any value given with {@link #contentType(String)} is ignored.
+	 *
+	 * @since 2.9.1
+	 * @param body a {@link MultipartBody} object
+	 * @return a {@link Response} object
+	 * @throws PluginResourceException if any, also when the body exceeds the maximum multipart size.
+	 */
+	default Response post(MultipartBody body) throws PluginResourceException {
+		throw new UnsupportedOperationException(MULTIPART_NOT_SUPPORTED);
+	}
+
+	/**
+	 * Sends a PUT request with a multipart/form-data body. The Content-Type header is set from the body
+	 * and any value given with {@link #contentType(String)} is ignored.
+	 *
+	 * @since 2.9.1
+	 * @param body a {@link MultipartBody} object
+	 * @return a {@link Response} object
+	 * @throws PluginResourceException if any, also when the body exceeds the maximum multipart size.
+	 */
+	default Response put(MultipartBody body) throws PluginResourceException {
+		throw new UnsupportedOperationException(MULTIPART_NOT_SUPPORTED);
+	}
+
+	/**
+	 * Defines the maximum size in bytes of a multipart body. Default and maximum value is
+	 * {@link MultipartBody#MAX_SIZE}: greater values are reduced to it and values lower than 1 are ignored.
+	 *
+	 * @since 2.9.1
+	 * @param maxSize the maximum size in bytes
+	 * @return a {@link Connection} object.
+	 */
+	default Connection multipartMaxSize(int maxSize) {
+		throw new UnsupportedOperationException(MULTIPART_NOT_SUPPORTED);
+	}
+
+	/**
+	 * Message of the exception thrown by implementations without multipart support.
+	 */
+	String MULTIPART_NOT_SUPPORTED = "Multipart requests are not supported by this implementation";
+
 }
